@@ -23,8 +23,14 @@
             {{Form::label('expiresIn', 'Expires In', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{Form::select('expiresIn', ['14' => '2 Weeks', '30' => '1 Month', '60' => '2 Months',
-            '90' => '3 Months', '120' => '4 Months'])}}
+            {{--            {{Form::text('expiresIn','', ['class'=>'form-control'])}}--}}
+            <select name="expiresIn" id="">
+                <option value="1">2 Weeks</option>
+                <option value="2">1 Months</option>
+                <option value="3">2 Months</option>
+                <option value="4">3 Months</option>
+                <option value="5">4 Months</option>
+            </select>
         </div>
     </div>
     <div class="row d-flex py-2">
@@ -93,7 +99,7 @@
         </div>
         <div class="col-6">
             {{--            {{Form::text('price','', ['class'=>'form-control'])}}--}}
-            <label for=""></label><select name="backCamera" id="">
+            <select name="backCamera" id="">
                 <option value="1">None</option>
                 <option value="2">1MP</option>
                 <option value="3">2MP</option>

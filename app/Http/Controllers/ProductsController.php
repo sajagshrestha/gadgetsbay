@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Ad;
 use App\Mobile;
 use App\product;
 use Illuminate\Http\Request;
@@ -56,8 +57,6 @@ class ProductsController extends Controller
         $mobile->saveOrFail();
 
 
-
-
         return redirect(route('product.show',[$mobile->id]));
     }
 
@@ -69,10 +68,10 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $mobile = Mobile::find($id);
-        $product = product::find($mobile->ad_id);
+        $product = Ad::find($id);
+//        $mobile = $product->mobile;
+
         return view('product.show',[
-            'mobile'=>$mobile,
             'product'=>$product
         ]);
     }

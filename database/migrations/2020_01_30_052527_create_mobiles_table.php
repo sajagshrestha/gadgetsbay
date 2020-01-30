@@ -20,9 +20,11 @@ class CreateMobilesTable extends Migration
             $table->integer('RAM');
             $table->integer('internalStorage');
             $table->unsignedBigInteger('ad_id'); //id of ad detail
-            $table->timestamps();
+            $table->foreign('ad_id')
+                ->references('id')
+                ->on('ads')
+                ->onDelete('cascade');
         });
-
     }
 
     /**

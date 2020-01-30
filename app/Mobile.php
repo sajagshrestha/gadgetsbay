@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mobile extends Model
 {
-    private $id;
-
-    public function product()
+    public function ad()
     {
-        return $this->hasOne('App\Product');
+        return $this->hasOne('App\Ad');
     }
+    public $timestamps = false;
+
 }

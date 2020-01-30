@@ -9,7 +9,7 @@
                         {{$product->title}}
                     </div>
                     <div class="text-wrap">
-                        <small class="">Posted on {{$product->created_at.' expires in '.$product->expiresIn.' days'}} </small>
+                        <small class="">Posted on {{$product->record->created_at.' expires in '.$product->expiresIn.' days'}} </small>
 
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                             Front Camera:
                         </div>
                         <div class="col-6">
-                            @switch($mobile->frontCamera)
+                            @switch($product->mobile->frontCamera)
                                 @case(1)
                                 none
                                 @break
@@ -136,7 +136,7 @@
                             Back Camera:
                         </div>
                         <div class="col-6">
-                            @switch($mobile->backCamera)
+                            @switch($product->mobile->backCamera)
                                 @case(1)
                                 none
                                 @break
@@ -180,7 +180,7 @@
                             RAM:
                         </div>
                         <div class="col-6">
-                            @switch($mobile->RAM)
+                            @switch($product->mobile->RAM)
                                 @case(1)
                                 512MB or less
                                 @break
@@ -224,7 +224,7 @@
                             Internal Storage:
                         </div>
                         <div class="col-6">
-                            @switch($mobile->internalStorage)
+                            @switch($product->mobile->internalStorage)
                                 @case(1)
                                 512MB or less
                                 @break
