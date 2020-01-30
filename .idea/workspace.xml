@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c842a6a-5074-4f12-91bf-fa59510e214e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_30_123804_add_files_in_ads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/create-1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mobile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_29_070810_create_mobiles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_30_082133_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_29_071020_create_products_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_30_051701_create_ads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_30_051701_create_ads_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_30_123804_add_files_in_ads.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +160,8 @@
       <workItem from="1580360618454" duration="1212000" />
       <workItem from="1580362993105" duration="1630000" />
       <workItem from="1580365498047" duration="6010000" />
-      <workItem from="1580387670411" duration="2511000" />
+      <workItem from="1580387670411" duration="3440000" />
+      <workItem from="1580398903684" duration="1890000" />
     </task>
     <servers />
   </component>

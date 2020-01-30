@@ -22,8 +22,9 @@ class CreateAdsTable extends Migration
             $table->integer('negotiable');
             $table->integer('condition');
             $table->integer('usedFor')->nullable();
+            $table->string('imageName')->nullable();
             $table->string('productType');
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('product_id')->nullable();
         });
     }
 

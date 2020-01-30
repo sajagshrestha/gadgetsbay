@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Ad;
 use App\Mobile;
 use App\product;
+use App\Record;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -37,7 +38,9 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $description = new product();
+        $description = new Ad();
+        $mobile = new Mobile();
+
         $description->title = $request->input('title');
         $description->description = $request->input('description');
         $description->expiresIn = $request->input('expiresIn');
@@ -45,10 +48,10 @@ class ProductsController extends Controller
         $description->negotiable = $request->input('negotiable');
         $description->condition = $request->input('condition');
         $description->usedFor = $request->input('usedFor');
-        $description->viewCount = 0;
+        $description->productType = 'mobile';
         $description->saveOrFail();
 
-        $mobile = new Mobile();
+
         $mobile->frontCamera= $request->input('frontCamera');
         $mobile->backCamera= $request->input('backCamera');
         $mobile->RAM= $request->input('RAM');
@@ -56,6 +59,13 @@ class ProductsController extends Controller
         $mobile->ad_id=$description->id;
         $mobile->saveOrFail();
 
+        $description->product_id = $mobile->id;
+        $description->saveOrFail();
+
+        $record =new Record();
+        $record->ad_id=$description->id;
+        $record->viewCount=0;
+        $record->save();
 
         return redirect(route('product.show',[$mobile->id]));
     }
