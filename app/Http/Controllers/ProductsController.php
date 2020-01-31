@@ -94,7 +94,10 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $description = Ad::find($id);
+        return view('product.edit',[
+           'description'=>$description
+        ]);
     }
 
     /**

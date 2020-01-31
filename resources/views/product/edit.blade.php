@@ -1,22 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    {!! Form::open(['action'=> 'ProductsController@store','method'=>'POST']) !!}
+    {!! Form::model($description,['route'=> ['product.store',$description->id],'method'=>'PUT']) !!}
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
             {{Form::label('title', 'Title', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{Form::text('title','', ['class'=>'form-control'])}}
+            {{Form::text('title',null, ['class'=>'form-control'])}}
         </div>
     </div>
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
             {{Form::label('description', 'Description', ['class'=>'m-0'])}}
         </div>
-        <div class="col-6">
-            {{Form::textarea('description','', ['class'=>'form-control'])}}
-        </div>
+        <div class="col-6"></div>
     </div>
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
