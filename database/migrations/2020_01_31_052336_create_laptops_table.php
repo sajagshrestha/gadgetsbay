@@ -15,8 +15,15 @@ class CreateLaptopsTable extends Migration
     {
         Schema::create('laptops', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->timestamps();
+            $table->string('processGeneration');
+            $table->string('graphicCard')->nullable();
+            $table->string('HDD');
+            $table->integer('RAM');
+            $table->unsignedBigInteger('ad_id'); //id of ad detail
+            $table->foreign('ad_id')
+                ->references('id')
+                ->on('ads')
+                ->onDelete('cascade');
         });
     }
 
