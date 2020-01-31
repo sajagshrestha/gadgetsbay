@@ -61,10 +61,10 @@
     </div>
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
-            {{Form::label('usedFor', 'Used For', ['class'=>'m-0'])}}
+            {{Form::label('usedFor', 'Used For(in months', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{Form::text('usedFor','', ['class'=>'form-control'])}}
+            {{Form::text('usedFor',null, ['class'=>'form-control'])}}
         </div>
     </div>
 

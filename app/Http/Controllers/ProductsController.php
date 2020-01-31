@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth',['except' => ['show','index']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +21,10 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Ad::all();
+        return view('product.index',[
+            'products'=>$products
+        ]);
     }
 
     /**
@@ -52,22 +59,22 @@ class ProductsController extends Controller
         $description->saveOrFail();
 
 
-        $mobile->frontCamera= $request->input('frontCamera');
-        $mobile->backCamera= $request->input('backCamera');
-        $mobile->RAM= $request->input('RAM');
-        $mobile->internalStorage= $request->input('internalStorage');
-        $mobile->ad_id=$description->id;
+        $mobile->frontCamera = $request->input('frontCamera');
+        $mobile->backCamera = $request->input('backCamera');
+        $mobile->RAM = $request->input('RAM');
+        $mobile->internalStorage = $request->input('internalStorage');
+        $mobile->ad_id = $description->id;
         $mobile->saveOrFail();
 
         $description->product_id = $mobile->id;
         $description->saveOrFail();
 
-        $record =new Record();
-        $record->ad_id=$description->id;
-        $record->viewCount=0;
+        $record = new Record();
+        $record->ad_id = $description->id;
+        $record->viewCount = 0;
         $record->save();
 
-        return redirect(route('product.show',[$mobile->id]));
+        return redirect(route('product.index'));
     }
 
     /**
@@ -79,8 +86,6 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Ad::find($id);
-//        $mobile = $product->mobile;
-
         return view('product.show',[
             'product'=>$product
         ]);
@@ -120,6 +125,6 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

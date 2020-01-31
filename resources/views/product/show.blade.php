@@ -82,7 +82,12 @@
                                 Used for:
                             </div>
                             <div class="col-6">
-                                {{$product->negotiable}}
+                                {{$product->usedFor}}
+                                @if($product->usedFor==1)
+                                    month
+                                    @else
+                                months
+                                    @endif
                             </div>
                         </div>
                     @endif

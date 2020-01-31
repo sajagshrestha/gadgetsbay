@@ -14,21 +14,18 @@
         <div class="col-2 align-self-center">
             {{Form::label('description', 'Description', ['class'=>'m-0'])}}
         </div>
-        <div class="col-6"></div>
+        <div class="col-6">
+            {{Form::textarea('description',null, ['class'=>'form-control'])}}
+
+        </div>
     </div>
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
             {{Form::label('expiresIn', 'Expires In', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{--            {{Form::text('expiresIn','', ['class'=>'form-control'])}}--}}
-            <select name="expiresIn" id="">
-                <option value="1">2 Weeks</option>
-                <option value="2">1 Months</option>
-                <option value="3">2 Months</option>
-                <option value="4">3 Months</option>
-                <option value="5">4 Months</option>
-            </select>
+            {{Form::select('expiresIn', ['14' => '2 Weeks', '30' => '1 Month', '60' => '2 Months',
+            '90' => '3 Months', '120' => '4 Months'])}}
         </div>
     </div>
     <div class="row d-flex py-2">
@@ -36,7 +33,7 @@
             {{Form::label('price', 'Price', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{Form::text('price','', ['class'=>'form-control'])}}
+            {{Form::text('price',null, ['class'=>'form-control'])}}
         </div>
     </div>
 
@@ -45,7 +42,9 @@
             {{Form::label('negotiable', 'Negotiable', ['class'=>'m-0'])}}
         </div>
         <div class="col-6">
-            {{--            {{Form::text('negotiable','', ['class'=>'form-control'])}}--}}
+
+{{--            {{Form::radio('negotiable',null, ['class'=>'form-control'])}}--}}
+
             <input type="radio" name="negotiable" value="1">Yes
             <input type="radio" name="negotiable" value="2">Fixed Price
         </div>
