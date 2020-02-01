@@ -35,9 +35,9 @@
                 <ul class="navbar-nav mr-auto">
                     @auth
                     <li class="nav-item"><a href="\home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{route('product.create')}}" class="nav-link">Create</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Create</a></li>
                     @endauth
-                    <li class="nav-item"><a href="{{route('product.index')}}" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Products</a></li>
 
                 </ul>
 
@@ -79,7 +79,7 @@
 
     <main class="py-4">
         <div class="container">
-            @include('layouts.message')
+{{--            @include('layouts.message')--}}
             @yield('content')
         </div>
     </main>

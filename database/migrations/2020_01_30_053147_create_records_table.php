@@ -16,7 +16,7 @@ class CreateRecordsTable extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('ad_id');
-            $table->integer('viewCount');
+            $table->integer('viewCount')->default(0);
             $table->timestamps();
 
             $table->foreign('ad_id')

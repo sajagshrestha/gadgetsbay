@@ -25,6 +25,12 @@ class CreateAdsTable extends Migration
             $table->string('imageName')->nullable();
             $table->string('productType');
             $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

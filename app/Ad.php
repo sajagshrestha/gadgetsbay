@@ -14,5 +14,11 @@ class Ad extends Model
     {
         return $this->hasOne('App\Record');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     public $timestamps = false;
+
 }
