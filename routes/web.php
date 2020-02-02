@@ -16,9 +16,12 @@
 });*/
 
 //Redfirect to react index component
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('React-Index');
-});
+});*/
+Route::get( '/{path?}', function(){
+    return view( 'React-Index' );
+} )->where('path', '.*');
 
 //Auth::routes();
 
