@@ -9,6 +9,7 @@ function NavBar() {
                 <ul className="nav-menu">
                     <li>
                         <Link to="/">Home</Link>
+
                     </li>
                     <li>
                         <Link to="./post">Post an Ad</Link>

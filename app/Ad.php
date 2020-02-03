@@ -10,6 +10,7 @@ class Ad extends Model
     {
         return $this->hasOne('App\Mobile');
     }
+
     public function record()
     {
         return $this->hasOne('App\Record');
@@ -19,6 +20,11 @@ class Ad extends Model
     {
         return $this->belongsTo('App\User');
     }
+
     public $timestamps = false;
+    protected $guarded = [];
+
+
+
 
 }
