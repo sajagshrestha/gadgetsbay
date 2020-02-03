@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
 
-@section('content')
+{{--@section('content')--}}
     {!! Form::open(['action'=> 'ProductsController@store','method'=>'POST']) !!}
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
@@ -150,4 +150,4 @@
 
 
 
-@endsection
+{{--@endsection--}}

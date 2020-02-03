@@ -7,7 +7,7 @@ function NavBar() {
                 <div className="logo">GadgetsBay</div>
                 <ul className="nav-menu">
                     <li>
-                        <a href="">Home</a>
+                        <a href="api\products">Home</a>
                     </li>
                     <li>
                         <a href="">Post an Ad</a>

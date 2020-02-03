@@ -24,4 +24,4 @@ Route::get('/', function () {
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::resource('/product','ProductsController');
+Route::resource('/product','ProductsController');
