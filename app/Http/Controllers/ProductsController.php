@@ -47,8 +47,7 @@ class ProductsController extends Controller
         $description->condition = $request->input('condition');
         $description->usedFor = $request->input('usedFor');
         $description->productType = 'mobile';
-//        $description->user_id = auth()->user()->id;
-        $description->user_id = 1;
+        $description->user_id = auth()->user()->id;
         $description->saveOrFail();
 
 
