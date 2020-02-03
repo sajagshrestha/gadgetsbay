@@ -24,10 +24,10 @@ class StoreMobile extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
+            'title' => 'required|max:255',
             'description' => 'required',
-            'expiresIn' => 'required',
-            'price' => 'required',
+            'expiresIn' => 'required|integer',
+            'price' => 'required|integer',
             'negotiable' => 'required',
             'condition' => 'required',
             'usedFor' => 'required',

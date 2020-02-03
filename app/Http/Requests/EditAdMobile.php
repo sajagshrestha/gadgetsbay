@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreAd extends FormRequest
+class EditAdMobile extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class StoreAd extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return tue;
     }
 
     /**
@@ -24,13 +24,17 @@ class StoreAd extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:255',
+            'title' => 'required',
             'description' => 'required',
-            'expiresIn' => 'required|integer',
-            'price' => 'required|integer',
-            'negotiable' => 'required|between:1,2',
-            'condition' => 'required|between:1,5',
-            'usedFor' => 'required|integer'
+            'price' => 'required',
+            'negotiable' => 'required',
+            'condition' => 'required',
+            'usedFor' => 'required',
+            'frontCamera' =>'required',
+            'backCamera' =>'required',
+            'RAM' =>'required',
+            'internalStorage' =>'required',
+
         ];
     }
 }

@@ -9,6 +9,7 @@ use App\product;
 use App\Record;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreMobile;
+use App\Http\Requests\EditAdMobile;
 
 class ProductsController extends Controller
 {
@@ -34,35 +35,37 @@ class ProductsController extends Controller
 
     public function store(StoreMobile $request)
     {
-        $validatedData = $request->validated();
-        
+
         $description = new Ad();
         $mobile = new Mobile();
-        $description->title = $validatedData['title'];
+
+        $description->title = $request->input('title');
+        $description->description = $request->input('description');
+        $description->expiresIn = $request->input('expiresIn');
+        $description->price = $request->input('price');
+        $description->negotiable = $request->input('negotiable');
+        $description->condition = $request->input('condition');
+        $description->usedFor = $request->input('usedFor');
         $description->productType = 'mobile';
-        return $description;
+//        $description->user_id = auth()->user()->id;
+        $description->user_id = 1;
         $description->saveOrFail();
-//
-//
-//        $mobile->frontCamera = $request->input('frontCamera');
-//        $mobile->backCamera = $request->input('backCamera');
-//        $mobile->RAM = $request->input('RAM');
-//        $mobile->internalStorage = $request->input('internalStorage');
-//        $mobile->ad_id = $description->id;
-//        $mobile->saveOrFail();
-//
-//        $description->product_id = $mobile->id;
-//        $description->saveOrFail();
-//
-//        $record = new Record();
-//        $record->ad_id = $description->id;
-//        $record->viewCount = 0;
-//        $record->save();
 
 
-        return (array)$description;
+        $mobile->frontCamera = $request->input('frontCamera');
+        $mobile->backCamera = $request->input('backCamera');
+        $mobile->RAM = $request->input('RAM');
+        $mobile->internalStorage = $request->input('internalStorage');
+        $mobile->ad_id = $description->id;
+        $mobile->saveOrFail();
 
-//        return new AdResource($description);
+        $description->product_id = $mobile->id;
+        $description->saveOrFail();
+
+        $record = new Record();
+        $record->ad_id = $description->id;
+        $record->viewCount = 0;
+        $record->save();
     }
 
 
@@ -74,7 +77,7 @@ class ProductsController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(EditAdMobile $request, $id)
     {
         $description = Ad::find($id);
         $mobile = $description->mobile;

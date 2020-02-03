@@ -15,7 +15,7 @@
     return view('welcome');
 });*/
 
-//Redfirect to react index component
+//Redirect to react index component
 Route::get('/', function () {
     return view('React-Index');
 });
@@ -24,4 +24,4 @@ Route::get('/', function () {
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/product','ProductsController');
+//Route::resource('/product','ProductsController');
