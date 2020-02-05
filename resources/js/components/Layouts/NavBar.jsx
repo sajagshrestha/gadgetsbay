@@ -12,12 +12,7 @@ function NavBar() {
                 </div>
                 <ul className="nav-menu">
                     <li>
-<<<<<<< HEAD
-                        <Link to="/">Home</Link>
-
-=======
                         <Link to="/">HOME</Link>
->>>>>>> navbar
                     </li>
                     <li>
                         <Link to="./post">POST</Link>

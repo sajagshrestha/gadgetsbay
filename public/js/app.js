@@ -6522,6 +6522,45 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/NavBar.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
+
+// module
+exports.push([module.i, ".navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 4vh;\n    width: 100vw;\n    position: -webkit-sticky;\n    position: sticky;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n.nav-menu {\n    width: 400px;\n    display: -webkit-box;\n    display: flex;\n    justify-content: space-around;\n    -webkit-box-align: center;\n            align-items: center;\n    list-style: none;\n}\n\n.nav-menu li a {\n    text-decoration: none;\n    color: #f5f5f5;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/Search.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/Search.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Home.css":
 /*!**************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Home.css ***!
@@ -73720,14 +73759,142 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./resources/js/components/Layouts/NavBar.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/NavBar.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./NavBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/Layouts/NavBar.jsx":
 /*!****************************************************!*\
   !*** ./resources/js/components/Layouts/NavBar.jsx ***!
   \****************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/js/components/Layouts/NavBar.jsx: Unexpected token (15:1)\n\n\u001b[0m \u001b[90m 13 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mul\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"nav-menu\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mLink\u001b[39m to\u001b[33m=\u001b[39m\u001b[32m\"/\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mHome\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mLink\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at Object.raise (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:7013:17)\n    at Object.unexpected (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:8384:16)\n    at Object.jsxParseIdentifier (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:3890:12)\n    at Object.jsxParseNamespacedName (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:3900:23)\n    at Object.jsxParseElementName (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:3997:22)\n    at Object.jsxParseElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4030:33)\n    at Object.jsxParseElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4046:32)\n    at Object.jsxParseElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4046:32)\n    at Object.jsxParseElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4046:32)\n    at Object.jsxParseElementAt (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4046:32)\n    at Object.jsxParseElement (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4104:17)\n    at Object.parseExprAtom (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4111:19)\n    at Object.parseExprSubscripts (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9219:23)\n    at Object.parseMaybeUnary (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseParenAndDistinguishExpression (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9782:28)\n    at Object.parseExprAtom (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9560:21)\n    at Object.parseExprAtom (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:4116:20)\n    at Object.parseExprSubscripts (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9219:23)\n    at Object.parseMaybeUnary (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9199:21)\n    at Object.parseExprOps (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9067:23)\n    at Object.parseMaybeConditional (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9040:23)\n    at Object.parseMaybeAssign (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:9000:21)\n    at Object.parseExpression (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:8950:23)\n    at Object.parseReturnStatement (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:11027:28)\n    at Object.parseStatementContent (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:10706:21)\n    at Object.parseStatement (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:11234:25)\n    at Object.parseBlockBody (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:11221:10)\n    at Object.parseBlock (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:11205:10)\n    at Object.parseFunctionBody (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:10220:24)\n    at Object.parseFunctionBodyAndFinish (/home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:10190:10)\n    at /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/node_modules/@babel/parser/lib/index.js:11364:12");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.css */ "./resources/js/components/Layouts/NavBar.css");
+/* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NavBar_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Layouts/Search.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+
+
+function NavBar() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar-items"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "logo-and-search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "logo"
+  }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "nav-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/"
+  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "./post"
+  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "./find"
+  }, "FIND")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "CONTACT")))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/Search.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/Search.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Search.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/Search.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/Search.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/Search.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search.css */ "./resources/js/components/Layouts/Search.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Search = function Search(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "search-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    placeholder: "Search Here",
+    className: "search-input"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "search-button"
+  }, "SEARCH")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Search);
 
 /***/ }),
 
