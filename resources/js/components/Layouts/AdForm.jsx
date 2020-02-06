@@ -9,19 +9,26 @@ const AdForm = () => {
     });
 
     const onChangeHandler = event => {
+        console.log(event.target.name);
         setValues({
             ...values,
-            [event.target.name]: [event.target.value]
+            [event.target.name]: event.target.value
         });
     };
 
     const onSubmitHandler = event => {
         console.log(values);
+
         event.preventDefault();
         axios
             .post("/api/product", values)
             .then(res => console.log(res))
             .catch(err => console.log(err));
+        setValues({
+            title: "",
+            description: "",
+            price: ""
+        });
     };
     return (
         <div className="container mt-5 ">
@@ -75,6 +82,24 @@ const AdForm = () => {
                             value={values.price}
                             onChange={onChangeHandler}
                         />
+                    </div>
+                </div>
+                <div className="form-group row">
+                    <label className="col-sm-2 col-form-label">Photo</label>
+                    <div className="col-sm-10">
+                        <div className="custom-file">
+                            <input
+                                type="file"
+                                className="custom-file-input"
+                                id="customFile"
+                            />
+                            <label
+                                className="custom-file-label"
+                                htmlFor="customFile"
+                            >
+                                Choose Photo
+                            </label>
+                        </div>
                     </div>
                 </div>
 

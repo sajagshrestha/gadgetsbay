@@ -73871,7 +73871,8 @@ var AdForm = function AdForm() {
       setValues = _useState2[1];
 
   var onChangeHandler = function onChangeHandler(event) {
-    setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, [event.target.value])));
+    console.log(event.target.name);
+    setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
@@ -73881,6 +73882,11 @@ var AdForm = function AdForm() {
       return console.log(res);
     })["catch"](function (err) {
       return console.log(err);
+    });
+    setValues({
+      title: "",
+      description: "",
+      price: ""
     });
   };
 
@@ -73933,7 +73939,22 @@ var AdForm = function AdForm() {
     placeholder: "Rs.",
     value: values.price,
     onChange: onChangeHandler
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "col-sm-2 col-form-label"
+  }, "Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "custom-file"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file",
+    className: "custom-file-input",
+    id: "customFile"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "custom-file-label",
+    htmlFor: "customFile"
+  }, "Choose Photo")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, "Post")));
@@ -74118,10 +74139,10 @@ var AllAds = function AllAds() {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("./api/products").then(function (response) {
       setPost(response.data.data);
       console.log(response);
-    })["catch"](function (error) {
-      return console.log(error);
     });
-  }, []);
+  }, [])["catch"](function (error) {
+    return console.log(error);
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "From Form", posts.map(function (post) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: post.id
