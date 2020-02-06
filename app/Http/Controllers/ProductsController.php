@@ -27,13 +27,13 @@ class ProductsController extends Controller
 //
     }
 
-    public function create()
+  /*  public function create()
     {
         return view('product.create');
-    }
+    }*/
 
 
-    public function store(StoreMobile $request)
+    public function store(Request $request)
     {
 
         $description = new Ad();
