@@ -4,6 +4,10 @@
     <list default="true" id="5c842a6a-5074-4f12-91bf-fa59510e214e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreMobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AdResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AdResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +21,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gadgetsbay-bootstrap" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,6 +186,9 @@
       <workItem from="1580657774022" duration="4549000" />
       <workItem from="1580720831599" duration="3611000" />
       <workItem from="1580734275041" duration="2162000" />
+      <workItem from="1580907863779" duration="3346000" />
+      <workItem from="1580970806992" duration="2323000" />
+      <workItem from="1580974569994" duration="1826000" />
     </task>
     <servers />
   </component>

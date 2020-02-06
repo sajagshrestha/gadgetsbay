@@ -47,7 +47,27 @@ class ProductsController extends Controller
         $description->condition = $request->input('condition');
         $description->usedFor = $request->input('usedFor');
         $description->productType = 'mobile';
-        $description->user_id = auth()->user()->id;
+//        $description->user_id = auth()->user()->id;
+        $description->user_id = 1;
+
+        if($request->hasFile('imageName'))
+        {
+            $Ext = $request->file('imageName')->getClientOriginalExtension();
+
+//            $fileNameToStore = auth()->user()->id.'_'.time().$Ext;
+            $fileNameToStore = '1'.'_'.time().$Ext;
+
+
+            $path = $request->file('imageName')->storeAs('public/images',$fileNameToStore);
+
+
+
+        }
+        else{
+            $fileNameToStore = null;
+        }
+        $description->imageName = $fileNameToStore;
+
         $description->saveOrFail();
 
 
@@ -65,12 +85,15 @@ class ProductsController extends Controller
         $record->ad_id = $description->id;
         $record->viewCount = 0;
         $record->save();
+
+        return (new AdResource($description))
+            ->response()
+            ->setStatusCode(201);
     }
 
 
     public function show($id)
     {
-
         $product = Ad::findOrFail($id);
         return new AdResource($product);
     }

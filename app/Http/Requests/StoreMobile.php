@@ -35,6 +35,8 @@ class StoreMobile extends FormRequest
             'backCamera' =>'required',
             'RAM' =>'required',
             'internalStorage' =>'required',
+            'imageName' => 'image'
+
         ];
     }
 }

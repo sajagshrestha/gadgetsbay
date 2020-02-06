@@ -34,5 +34,11 @@ class AdResource extends JsonResource
         ];
 //        return parent::toArray($request);
 
+
+    }
+
+    public function withResponse($request, $response)
+    {
+        $response->header('X-Value','apple', 'true');
     }
 }

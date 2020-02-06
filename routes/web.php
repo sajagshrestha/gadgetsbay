@@ -15,12 +15,12 @@
     return view('welcome');
 });*/
 
-
+//
 Route::get( '/{path?}', function(){
     return view( 'React-Index' );
 } )->where('path', '.*');
 
-Auth::routes();
+//Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

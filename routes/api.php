@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // List products
 Route::get('products','ProductsController@index');
+Route::get('product/create','ProductsController@create');
 
 // Create new product
 Route::post('product','ProductsController@store');
