@@ -6,14 +6,16 @@ const FindAdd = () => {
     const [id, setId] = useState("");
 
     const FindHandler = () => {
-        axios
-            .get(`/api/product/${id}`)
-            .then(response => setAd(response.data.data));
+        axios.get(`/api/product/${id}`).then(response => {
+            console.log(response.data.data);
+            setAd(response.data.data);
+        });
         console.log("test");
     };
     return (
         <div>
             <h1>Find an add</h1>
+
             <input
                 type="text"
                 value={id}
@@ -22,6 +24,12 @@ const FindAdd = () => {
             <button onClick={() => FindHandler()}>Find</button>
             <div>
                 {ad.id} {ad.title} {ad.imageName}
+                <img
+                    src={`storage/images/${ad.imageName}`}
+                    alt=""
+                    height="100"
+                    width="100"
+                />
             </div>
         </div>
     );
