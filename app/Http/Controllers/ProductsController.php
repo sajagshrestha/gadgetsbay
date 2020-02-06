@@ -62,7 +62,7 @@ class ProductsController extends Controller
             $Ext = $request->file('imageName')->getClientOriginalExtension();
 
 //            $fileNameToStore = auth()->user()->id.'_'.time().$Ext;
-            $fileNameToStore = '1'.'_'.time().$Ext;
+            $fileNameToStore = '1'.'_'.time().'.'.$Ext;
 
 
             $path = $request->file('imageName')->storeAs('public/images',$fileNameToStore);
