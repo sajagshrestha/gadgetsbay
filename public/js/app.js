@@ -6522,6 +6522,25 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/AdForm.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css":
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/NavBar.css ***!
@@ -6535,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 4vh;\n    width: 100vw;\n    position: -webkit-sticky;\n    position: sticky;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n.nav-menu {\n    width: 400px;\n    display: -webkit-box;\n    display: flex;\n    justify-content: space-around;\n    -webkit-box-align: center;\n            align-items: center;\n    list-style: none;\n}\n\n.nav-menu li a {\n    text-decoration: none;\n    color: #f5f5f5;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 7vh;\n    width: 100vw;\n    position: -webkit-sticky;\n    position: sticky;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li a {\n    text-decoration: none;\n    color: #f5f5f5;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
 
 // exports
 
@@ -6554,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
 
 // exports
 
@@ -6574,6 +6593,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".hero-section {\n    height: 96vh;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/MainContent.css":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/MainContent.css ***!
+  \*********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -73759,6 +73797,99 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./resources/js/components/Layouts/AdForm.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/AdForm.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./AdForm.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/AdForm.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/AdForm.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _AdForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdForm.css */ "./resources/js/components/Layouts/AdForm.css");
+/* harmony import */ var _AdForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_AdForm_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var AdForm = function AdForm() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container mt-5 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "title",
+    className: "col-sm-2 col-form-label"
+  }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "title",
+    placeholder: "Enter title here"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    HtmlFor: "descrition",
+    className: "col-sm-2 col-form-label"
+  }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    className: "form-control",
+    id: "descrition",
+    placeholder: "Enter description here",
+    rows: "4"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "price",
+    className: "col-sm-2 col-form-label"
+  }, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "price",
+    placeholder: "Enter price here",
+    value: "Rs."
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AdForm);
+
+/***/ }),
+
 /***/ "./resources/js/components/Layouts/NavBar.css":
 /*!****************************************************!*\
   !*** ./resources/js/components/Layouts/NavBar.css ***!
@@ -73811,7 +73942,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function NavBar() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar"
+    className: "my-navbar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navbar-items"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -73819,7 +73950,7 @@ function NavBar() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo"
   }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "nav-menu"
+    className: "my-nav-menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/"
   }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
@@ -73891,7 +74022,9 @@ var Search = function Search(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "search-button"
-  }, "SEARCH")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fa fa-search"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Search);
@@ -74062,6 +74195,36 @@ var Home = function Home() {
 
 /***/ }),
 
+/***/ "./resources/js/components/MainContent/MainContent.css":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/MainContent/MainContent.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./MainContent.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/MainContent.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/MainContent/PostAdd.jsx":
 /*!*********************************************************!*\
   !*** ./resources/js/components/MainContent/PostAdd.jsx ***!
@@ -74073,10 +74236,17 @@ var Home = function Home() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layouts_AdForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Layouts/AdForm */ "./resources/js/components/Layouts/AdForm.jsx");
+/* harmony import */ var _MainContent_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainContent.css */ "./resources/js/components/MainContent/MainContent.css");
+/* harmony import */ var _MainContent_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_MainContent_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 var PostAdd = function PostAdd() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "PostAdd");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post-add-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_AdForm__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostAdd);
