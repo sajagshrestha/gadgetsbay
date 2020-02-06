@@ -21,7 +21,7 @@ const FindAdd = () => {
             />
             <button onClick={() => FindHandler()}>Find</button>
             <div>
-                {ad.id} {ad.title}
+                {ad.id} {ad.title} {ad.imageName}
             </div>
         </div>
     );

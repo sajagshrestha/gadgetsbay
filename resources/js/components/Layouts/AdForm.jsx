@@ -7,28 +7,38 @@ const AdForm = () => {
         description: "",
         price: ""
     });
+    const [image, setImage] = useState("");
+    const [imageUploadName, setImageUploadName] = useState("Chose Photo");
 
     const onChangeHandler = event => {
-        console.log(event.target.name);
         setValues({
             ...values,
             [event.target.name]: event.target.value
         });
     };
-
+    const imageHandler = event => {
+        setImageUploadName(event.target.files[0].name);
+        setImage(event.target.files[0]);
+    };
     const onSubmitHandler = event => {
         console.log(values);
-
+        console.log(image);
+        const fd = new FormData();
+        fd.append("title", values.title);
+        fd.append("description", values.description);
+        fd.append("price", values.price);
+        fd.append("imageName", image);
         event.preventDefault();
         axios
-            .post("/api/product", values)
-            .then(res => console.log(res))
+            .post("/api/product", fd)
+            .then(res => console.log(res.data))
             .catch(err => console.log(err));
         setValues({
             title: "",
             description: "",
             price: ""
         });
+        setImageUploadName("Choose Photo");
     };
     return (
         <div className="container mt-5 ">
@@ -92,12 +102,13 @@ const AdForm = () => {
                                 type="file"
                                 className="custom-file-input"
                                 id="customFile"
+                                onChange={imageHandler}
                             />
                             <label
                                 className="custom-file-label"
                                 htmlFor="customFile"
                             >
-                                Choose Photo
+                                {imageUploadName}
                             </label>
                         </div>
                     </div>

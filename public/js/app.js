@@ -73870,16 +73870,36 @@ var AdForm = function AdForm() {
       values = _useState2[0],
       setValues = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      image = _useState4[0],
+      setImage = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Chose Photo"),
+      _useState6 = _slicedToArray(_useState5, 2),
+      imageUploadName = _useState6[0],
+      setImageUploadName = _useState6[1];
+
   var onChangeHandler = function onChangeHandler(event) {
-    console.log(event.target.name);
     setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
+  };
+
+  var imageHandler = function imageHandler(event) {
+    setImageUploadName(event.target.files[0].name);
+    setImage(event.target.files[0]);
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
     console.log(values);
+    console.log(image);
+    var fd = new FormData();
+    fd.append("title", values.title);
+    fd.append("description", values.description);
+    fd.append("price", values.price);
+    fd.append("imageName", image);
     event.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", values).then(function (res) {
-      return console.log(res);
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd).then(function (res) {
+      return console.log(res.data);
     })["catch"](function (err) {
       return console.log(err);
     });
@@ -73888,6 +73908,7 @@ var AdForm = function AdForm() {
       description: "",
       price: ""
     });
+    setImageUploadName("Choose Photo");
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -73950,11 +73971,12 @@ var AdForm = function AdForm() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "file",
     className: "custom-file-input",
-    id: "customFile"
+    id: "customFile",
+    onChange: imageHandler
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "custom-file-label",
     htmlFor: "customFile"
-  }, "Choose Photo")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, imageUploadName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, "Post")));
@@ -74206,7 +74228,7 @@ var FindAdd = function FindAdd() {
     onClick: function onClick() {
       return FindHandler();
     }
-  }, "Find"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ad.id, " ", ad.title));
+  }, "Find"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ad.id, " ", ad.title, " ", ad.imageName));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FindAdd);
