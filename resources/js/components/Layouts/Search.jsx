@@ -10,7 +10,7 @@ const Search = props => {
             />
             <span>
                 <button type="submit" className="search-button">
-                    SEARCH
+                    <i className="fa fa-search"></i>
                 </button>
             </span>
         </form>

@@ -21,6 +21,7 @@
     background-color: #46804c;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 .search-button:hover {
     background: #3d6f42;

@@ -4,13 +4,14 @@ import Search from "./Search";
 import { Link } from "react-router-dom";
 function NavBar() {
     return (
-        <div className="navbar">
+        <div className="my-navbar">
             <div className="navbar-items">
                 <div className="logo-and-search">
                     <div className="logo">GadgetsBay</div>
                     <Search />
                 </div>
-                <ul className="nav-menu">
+
+                <ul className="my-nav-menu">
                     <li>
                         <Link to="/">HOME</Link>
                     </li>
