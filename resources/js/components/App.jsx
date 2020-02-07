@@ -10,7 +10,7 @@ function App() {
         <Router>
             <div>
                 <NavBar />
-                <Route path="/" exact component={Home} />
+                <Route path="/" exact component={AllAds} />
                 <Route path="/post" component={PostAdd} />
                 <Route path="/find" component={FindAdd} />
             </div>

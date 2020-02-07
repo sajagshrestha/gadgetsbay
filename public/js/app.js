@@ -6580,6 +6580,44 @@ exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display:
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Ad.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".main-wrapper {\n    height: 350px;\n    width: 1200px;\n    background: #f8f8f8;\n    box-shadow: 4px 4px 10px grey;\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    margin: 20px;\n}\n.box {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.left-box {\n    /*  background-color: blanchedalmond;*/\n}\n.middle-box {\n    /*  background-color: cadetblue;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr 3fr 1fr;\n}\n\n.right-box {\n    /*  background-color: crimson;\n*/\n}\n.right-box .for-line {\n    display: grid;\n}\n\n.left-box .photo {\n    width: 200px;\n    height: 200px;\n    box-shadow: 2px 2px 10px gray;\n    /*  background-color: aquamarine;\n*/\n}\n.for-line {\n    /*  background-color: hotpink;\n*/\n    width: 100%;\n    height: 220px;\n}\n.price-and-condition {\n    /*  background-color: lavender;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n}\n.price {\n    font-size: 20px;\n}\n.specs,\n.title,\n.description,\n.post-date {\n    padding: 10px 40px;\n}\n\n.title {\n    font-size: 26px;\n}\n.specs {\n    font-size: 16px;\n}\n.ad-photo {\n    height: 100%;\n    width: 100%;\n}\n.post-date {\n    font-size: 12px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/AllAds.css":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/AllAds.css ***!
+  \****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Home.css":
 /*!**************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Home.css ***!
@@ -73759,7 +73797,7 @@ function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
     path: "/",
     exact: true,
-    component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _MainContent_AllAds__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
     path: "/post",
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -74127,6 +74165,127 @@ var Search = function Search(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/MainContent/Ad.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/MainContent/Ad.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Ad.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/Ad.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/MainContent/Ad.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Ad_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ad.css */ "./resources/js/components/MainContent/Ad.css");
+/* harmony import */ var _Ad_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Ad_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Ad = function Ad(_ref) {
+  var post = _ref.post;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "panel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "panel-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "main-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "left-box box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "for-line box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "photo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "storage/images/".concat(post.imageName),
+    alt: "",
+    className: "ad-photo"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "middle-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title"
+  }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "specs"
+  }, "RAM: 8GB| Storage: 64GB| Camera: 20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "description"
+  }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post-date"
+  }, "Posted on : 2020-02-07")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "right-box box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "for-line"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "seller-info box"
+  }, "Seller Information"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price-and-condition box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price box"
+  }, post.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "(Like New)")))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Ad);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/AllAds.css":
+/*!********************************************************!*\
+  !*** ./resources/js/components/MainContent/AllAds.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./AllAds.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/AllAds.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/MainContent/AllAds.jsx":
 /*!********************************************************!*\
   !*** ./resources/js/components/MainContent/AllAds.jsx ***!
@@ -74140,6 +74299,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Ad_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad.jsx */ "./resources/js/components/MainContent/Ad.jsx");
+/* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAds.css */ "./resources/js/components/MainContent/AllAds.css");
+/* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_AllAds_css__WEBPACK_IMPORTED_MODULE_3__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -74147,6 +74309,8 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -74162,13 +74326,14 @@ var AllAds = function AllAds() {
       setPost(response.data.data);
       console.log(response);
     });
-  }, [])["catch"](function (error) {
-    return console.log(error);
-  });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "From Form", posts.map(function (post) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, [posts.id]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ads-section"
+  }, posts.map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      post: post,
       key: post.id
-    }, post.price);
+    });
   }));
 };
 
@@ -74284,6 +74449,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./resources/js/components/MainContent/Home.css");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Ad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad */ "./resources/js/components/MainContent/Ad.jsx");
+
 
 
 
