@@ -74235,7 +74235,7 @@ var Ad = function Ad(_ref) {
     className: "title"
   }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "specs"
-  }, "RAM: 8GB| Storage: 64GB| Camera: 20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "RAM: 16GB| Storage: 500Gb| Storage-Type: SSD"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "description"
   }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post-date"

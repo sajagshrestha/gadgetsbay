@@ -19,7 +19,7 @@ const Ad = ({ post }) => {
                     <div className="middle-box">
                         <div className="title">{post.title}</div>
                         <div className="specs">
-                            RAM: 8GB| Storage: 64GB| Camera: 20MP
+                            RAM: 16GB| Storage: 500Gb| Storage-Type: SSD
                         </div>
                         <div className="description">{post.description}</div>
                         <div className="post-date">Posted on : 2020-02-07</div>
