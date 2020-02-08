@@ -7,45 +7,65 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
 {
     public $successStatus = 200;
+
     /**
      * login api
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function login(){
-        if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-            $user = Auth::user();
-            $success['token'] =  $user->createToken('MyApp')-> accessToken;
+    public function login(Request $request){
+//        if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+//            $user = Auth::user();
+//            $success['token'] =  $user->createToken('authToken')-> accessToken;
+//            return response()->json(['success' => $success], $this-> successStatus);
+//        }
+//        else{
+//            return response()->json(['error'=>'Unauthorised'], 401);
+//        }
+        $input  = $request->validate([
+            'email' => 'required|email',
+            'password'=> 'required'
+        ]);
+
+        if(!auth()->attempt($input))
+        {
+            return response([
+                'message' => 'Invalid email or password'
+            ]);
+        }
+        $success['user'] = auth()->user();
+        $success['token'] =  auth()->user()->createToken('authToken')-> accessToken;
             return response()->json(['success' => $success], $this-> successStatus);
-        }
-        else{
-            return response()->json(['error'=>'Unauthorised'], 401);
-        }
+
     }
+
     /**
      * Register api
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $validator = $request->validate( [
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required',
             'c_password' => 'required|same:password',
         ]);
-        if ($validator->fails()) {
-            return response()->json(['error'=>$validator->errors()], 401);
-        }
+//        if ($validator->errors()) {
+//            return response()->json(['error'=>$validator->errors()], 401);
+//        }
         $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
+        $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
-        $success['token'] =  $user->createToken('')-> accessToken;
+        $success['token'] =  $user->createToken('authToken')-> accessToken;
         $success['name'] =  $user->name;
         return response()->json(['success'=>$success], $this-> successStatus);
     }
