@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Ad from "./Ad";
 const Home = () => {
     return (
         <div>

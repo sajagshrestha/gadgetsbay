@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Ad from "./Ad.jsx";
+import "./AllAds.css";
 
 const AllAds = () => {
     const [posts, setPost] = useState([]);
     useEffect(() => {
-        axios
-            .get("./api/products")
-            .then(response => {
-                setPost(response.data.data);
-                console.log(response);
-            })
-            .catch(error => console.log(error));
-    }, []);
+        axios.get("./api/products").then(response => {
+            setPost(response.data.data);
+            console.log(response);
+        });
+    }, [posts.id]);
 
     return (
-        <div>
-            From Form
+        <div className="ads-section">
             {posts.map(post => (
-                <li key={post.id}>{post.price}</li>
+                <Ad post={post} key={post.id} />
             ))}
         </div>
     );

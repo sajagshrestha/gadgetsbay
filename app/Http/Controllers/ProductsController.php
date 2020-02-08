@@ -27,13 +27,13 @@ class ProductsController extends Controller
 //
     }
 
-    public function create()
+  /*  public function create()
     {
         return view('product.create');
-    }
+    }*/
 
 
-    public function store(StoreMobile $request)
+    public function store(Request $request)
     {
 
         $description = new Ad();
@@ -41,11 +41,18 @@ class ProductsController extends Controller
 
         $description->title = $request->input('title');
         $description->description = $request->input('description');
-        $description->expiresIn = $request->input('expiresIn');
+
         $description->price = $request->input('price');
-        $description->negotiable = $request->input('negotiable');
-        $description->condition = $request->input('condition');
-        $description->usedFor = $request->input('usedFor');
+//        return $description;
+//        $description->expiresIn = $request->input('expiresIn');
+//        $description->negotiable = $request->input('negotiable');
+//        $description->condition = $request->input('condition');
+//        $description->usedFor = $request->input('usedFor');
+//
+        $description->expiresIn = 2;
+        $description->negotiable =1;
+        $description->condition = 1;
+        $description->usedFor = 1;
         $description->productType = 'mobile';
 //        $description->user_id = auth()->user()->id;
         $description->user_id = 1;
@@ -55,13 +62,10 @@ class ProductsController extends Controller
             $Ext = $request->file('imageName')->getClientOriginalExtension();
 
 //            $fileNameToStore = auth()->user()->id.'_'.time().$Ext;
-            $fileNameToStore = '1'.'_'.time().$Ext;
+            $fileNameToStore = '1'.'_'.time().'.'.$Ext;
 
 
             $path = $request->file('imageName')->storeAs('public/images',$fileNameToStore);
-
-
-
         }
         else{
             $fileNameToStore = null;
@@ -71,10 +75,15 @@ class ProductsController extends Controller
         $description->saveOrFail();
 
 
-        $mobile->frontCamera = $request->input('frontCamera');
-        $mobile->backCamera = $request->input('backCamera');
-        $mobile->RAM = $request->input('RAM');
-        $mobile->internalStorage = $request->input('internalStorage');
+//        $mobile->frontCamera = $request->input('frontCamera');
+//        $mobile->backCamera = $request->input('backCamera');
+//        $mobile->RAM = $request->input('RAM');
+//        $mobile->internalStorage = $request->input('internalStorage');
+
+        $mobile->frontCamera = 1;
+        $mobile->backCamera = 1;
+        $mobile->RAM = 1;
+        $mobile->internalStorage =1;
         $mobile->ad_id = $description->id;
         $mobile->saveOrFail();
 
