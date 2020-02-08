@@ -16,9 +16,9 @@
 });*/
 
 //
-Route::get( '/{path?}', function(){
-    return view( 'React-Index' );
-} )->where('path', '.*');
+//Route::get( '/{path?}', function(){
+//    return view( 'React-Index' );
+//} )->where('path', '.*');
 
 //Auth::routes();
 
