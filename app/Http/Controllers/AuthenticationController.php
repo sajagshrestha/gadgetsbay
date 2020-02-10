@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Contracts\Validation\Validator;
+//use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
@@ -53,15 +54,15 @@ class AuthenticationController extends Controller
      */
     public function register(Request $request)
     {
-        $validator = $request->validate( [
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required',
+            'password' => 'required|min:6',
             'c_password' => 'required|same:password',
         ]);
-//        if ($validator->errors()) {
-//            return response()->json(['error'=>$validator->errors()], 401);
-//        }
+        if ($validator->errors()) {
+            return response()->json(['error'=>$validator->errors()], 401);
+        }
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);

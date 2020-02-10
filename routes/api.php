@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 //Route::resource('products','ProductsController');
 
@@ -43,10 +43,10 @@ Route::post('login', 'AuthenticationController@login');
 Route::post('register', 'AuthenticationController@register');
 
 //access control route
-Route::group(['middleware' => 'auth:api'], function ()
-{
-    Route::post('details', 'AuthenticationController@details');
-});
+//Route::group(['middleware' => 'auth:api'], function ()
+//{
+//    Route::post('details', 'AuthenticationController@details');
+//});
 
 
 
