@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Exception;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -10,39 +11,37 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
-class AuthenticationController extends Controller
+class AuthenticationController extends ResponseController
 {
-    public $successStatus = 200;
 
     /**
      * login api
      *
      * @param Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function login(Request $request){
-//        if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-//            $user = Auth::user();
-//            $success['token'] =  $user->createToken('authToken')-> accessToken;
-//            return response()->json(['success' => $success], $this-> successStatus);
-//        }
-//        else{
-//            return response()->json(['error'=>'Unauthorised'], 401);
-//        }
-        $input  = $request->validate([
+    public function login(Request $request)
+    {
+        $input = $request->validate([
             'email' => 'required|email',
-            'password'=> 'required'
+            'password' => 'required'
         ]);
 
-        if(!auth()->attempt($input))
-        {
-            return response([
-                'message' => 'Invalid email or password'
-            ]);
+        if (!auth()->attempt($input)) {
+            return $this->responseUnauthorized();
         }
-        $success['user'] = auth()->user();
-        $success['token'] =  auth()->user()->createToken('authToken')-> accessToken;
-            return response()->json(['success' => $success], $this-> successStatus);
+        $user = auth()->user();
+        $token = auth()->user()->createToken('authToken')->accessToken;
+        return response()->json([
+            'status' => 200,
+            'message' => 'Authorized.',
+            'access_token' => $token,
+            'token_type' => 'bearer',
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name
+            ]
+        ], 200);
 
     }
 
@@ -50,35 +49,61 @@ class AuthenticationController extends Controller
      * Register api
      *
      * @param Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-            'c_password' => 'required|same:password',
+            'password' => 'required|min:6|confirmed',
         ]);
-        if ($validator->errors()) {
-            return response()->json(['error'=>$validator->errors()], 401);
+        if ($validator->fails()) {
+            return $this->responseUnprocessable($validator->errors());
         }
-        $input = $request->all();
-        $input['password'] = Hash::make($input['password']);
-        $user = User::create($input);
-        $success['token'] =  $user->createToken('authToken')-> accessToken;
-        $success['name'] =  $user->name;
-        return response()->json(['success'=>$success], $this-> successStatus);
+
+        try {
+            $user = $this->create($request->all());
+            return $this->responseSuccess('Registered successfully.');
+        } catch (Exception $e) {
+            return $this->responseServerError('Registration error.');
+        }
     }
+
     /**
-     * details api
+     * Register api
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function details()
+    public function logout(Request $request)
     {
-        $user = Auth::user();
-        return response()->json(['success' => $user], $this-> successStatus);
+//        $value = $request->bearerToken();
+//        $id = (new Parser())->paese(value)->getHeader('jti');
+//        $token = $request->user()->tokens->find($id);
+//        $token->revoke();
+
+        auth()->user()->token()->revoke();
+
+        return $this->responseSuccess('Logged Out successfully');
+
     }
+
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param array $data
+     * @return \App\User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
+
 
 }

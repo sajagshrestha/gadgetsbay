@@ -14,7 +14,8 @@
         "laravel/passport": "^8.3",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
-        "laravelcollective/html": "^6.0"
+        "laravelcollective/html": "^6.0",
+      "ext-http": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

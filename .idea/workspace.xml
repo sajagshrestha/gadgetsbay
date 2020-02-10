@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
@@ -22,6 +23,11 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
 >>>>>>> authentication api complete
+=======
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MainContent/AllAds.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MainContent/AllAds.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> 5eabf22146fd75b30edd29b4bbbc488b82b490e2
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,15 +226,26 @@
       <workItem from="1580974569994" duration="1826000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      <workItem from="1581065787294" duration="6667000" />
+      <workItem from="1581076033819" duration="1017000" />
+      <workItem from="1581133138326" duration="2022000" />
+=======
+>>>>>>> 5eabf22146fd75b30edd29b4bbbc488b82b490e2
+<<<<<<< HEAD
       <workItem from="1581065787294" duration="5106000" />
 =======
       <workItem from="1580978537867" duration="2197000" />
 >>>>>>> form
+<<<<<<< HEAD
 =======
       <workItem from="1581065787294" duration="6667000" />
       <workItem from="1581076033819" duration="1017000" />
       <workItem from="1581133138326" duration="2022000" />
 >>>>>>> authentication api complete
+=======
+>>>>>>> authBranch
+>>>>>>> 5eabf22146fd75b30edd29b4bbbc488b82b490e2
     </task>
     <servers />
   </component>
