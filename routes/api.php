@@ -44,7 +44,7 @@ Route::post('register', 'AuthenticationController@register');
 
 
 //logout route
-Route::get('logout', 'AuthenticationController@logout');
+Route::middleware('auth:api')->get('logout', 'AuthenticationController@logout');
 
 //access control route
 //Route::group(['middleware' => 'auth:api'], function ()
