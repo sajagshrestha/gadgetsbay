@@ -6,7 +6,7 @@ import "./AllAds.css";
 const AllAds = () => {
     const [posts, setPost] = useState([]);
     useEffect(() => {
-        axios.get("./api/products").then(response => {
+        axios.get("/api/products").then(response => {
             setPost(response.data.data);
             console.log(response);
         });

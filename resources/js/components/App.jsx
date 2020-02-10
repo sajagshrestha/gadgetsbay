@@ -4,6 +4,7 @@ import AllAds from "./MainContent/AllAds";
 import PostAdd from "./MainContent/PostAdd";
 import FindAdd from "./MainContent/FindAdd";
 import Home from "./MainContent/Home";
+import Register from "./Auth/Register";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
     return (
@@ -11,8 +12,9 @@ function App() {
             <div>
                 <NavBar />
                 <Route path="/" exact component={AllAds} />
-                <Route path="/post" component={PostAdd} />
-                <Route path="/find" component={FindAdd} />
+                <Route path="/post" exact component={PostAdd} />
+                <Route path="/find" exact component={FindAdd} />
+                <Route path="/register" exact component={Register} />
             </div>
         </Router>
     );
