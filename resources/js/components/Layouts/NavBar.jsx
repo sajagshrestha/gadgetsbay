@@ -22,7 +22,7 @@ function NavBar() {
                         <Link to="./find">FIND</Link>
                     </li>
                     <li>
-                        <a href="">CONTACT</a>
+                        <Link to="./register">REGISTER</Link>
                     </li>
                 </ul>
             </div>

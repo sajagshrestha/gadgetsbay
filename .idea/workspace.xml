@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5c842a6a-5074-4f12-91bf-fa59510e214e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MainContent/AllAds.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MainContent/AllAds.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,9 +202,17 @@
       <workItem from="1580907863779" duration="3346000" />
       <workItem from="1580970806992" duration="2323000" />
       <workItem from="1580974569994" duration="1826000" />
+<<<<<<< HEAD
       <workItem from="1581065787294" duration="6667000" />
       <workItem from="1581076033819" duration="1017000" />
       <workItem from="1581133138326" duration="2022000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1581065787294" duration="5106000" />
+=======
+      <workItem from="1580978537867" duration="2197000" />
+>>>>>>> form
+>>>>>>> authBranch
     </task>
     <servers />
   </component>
