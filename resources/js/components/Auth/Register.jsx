@@ -6,14 +6,15 @@ const Register = () => {
         name: "",
         email: "",
         password: "",
-        c_password: ""
+        password_confirmation: ""
     });
     const onSubmitHnadler = event => {
         event.preventDefault();
+        console.log(values);
         axios
             .post("/api/register", values)
             .then(() => {
-                console.log("success");
+                alert("success");
             })
             .catch(error => {
                 alert("failed");
@@ -57,8 +58,8 @@ const Register = () => {
             <input
                 className="form-control"
                 type="password"
-                name="c_password"
-                value={values.c_password}
+                name="password_confirmation"
+                value={values.password_confirmation}
                 onChange={onChangeHandler}
             />
             <button type="submit" className="btn btn-success mt-4">
