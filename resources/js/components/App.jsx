@@ -6,17 +6,44 @@ import FindAdd from "./MainContent/FindAdd";
 import Home from "./MainContent/Home";
 import Register from "./Auth/Register";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./Auth/Login";
+export const UserContext = React.createContext();
+
+const initialState = {
+    isLoggedIn: false,
+    name: "",
+    token: ""
+};
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "login":
+            return {
+                ...state,
+                isLoggedIn: true,
+                name: action.name,
+                token: action.token
+            };
+        case "logout":
+            return initialState;
+        default:
+            return;
+    }
+};
 function App() {
+    const [user, dispatch] = React.useReducer(reducer, initialState);
     return (
-        <Router>
-            <div>
-                <NavBar />
-                <Route path="/" exact component={AllAds} />
-                <Route path="/post" exact component={PostAdd} />
-                <Route path="/find" exact component={FindAdd} />
-                <Route path="/register" exact component={Register} />
-            </div>
-        </Router>
+        <UserContext.Provider value={{ user: user, dispatch: dispatch }}>
+            <Router>
+                <div>
+                    <NavBar />
+                    <Route path="/" exact component={AllAds} />
+                    <Route path="/post" exact component={PostAdd} />
+                    <Route path="/find" exact component={FindAdd} />
+                    <Route path="/register" exact component={Register} />
+                    <Route path="/login" exact component={Login} />
+                </div>
+            </Router>
+        </UserContext.Provider>
     );
 }
 

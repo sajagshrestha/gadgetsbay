@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
+import { UserContext } from "../App";
 const Login = () => {
+    const { user, dispatch } = React.useContext(UserContext);
     const [values, setValues] = React.useState({
         email: "",
         password: ""
     });
+
     const onSubmitHnadler = event => {
         event.preventDefault();
-        console.log(values);
+
         axios
             .post("/api/login", values)
             .then(res => {
                 console.log(res);
-                alert("success");
+
+                dispatch({
+                    type: "login",
+                    name: res.data.user.name,
+                    token: res.data.access_token
+                });
             })
             .catch(error => {
                 alert("failed");
@@ -25,6 +34,9 @@ const Login = () => {
             [event.target.name]: event.target.value
         });
     };
+    if (user.isLoggedIn) {
+        return <Redirect to="/" />;
+    }
     return (
         <form onSubmit={onSubmitHnadler} className="container">
             <label htmlFor="">email</label>

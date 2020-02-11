@@ -2,7 +2,21 @@ import React from "react";
 import "./NavBar.css";
 import Search from "./Search";
 import { Link } from "react-router-dom";
+import { UserContext } from "../App";
+import axios from "axios";
+const logoutUser = ({ token, dispatch }) => {
+    console.log(token);
+    axios
+        .get("api/logout", { headers: { Authorization: `Bearer ${token}` } })
+        .then(res => {
+            console.log("logout sucessfull");
+            console.log(res);
+        });
+
+    dispatch({ type: "logout" });
+};
 function NavBar() {
+    const { user, dispatch } = React.useContext(UserContext);
     return (
         <div className="my-navbar">
             <div className="navbar-items">
@@ -13,17 +27,67 @@ function NavBar() {
 
                 <ul className="my-nav-menu">
                     <li>
-                        <Link to="/">HOME</Link>
+                        <Link className="my-link" to="/">
+                            HOME
+                        </Link>
                     </li>
                     <li>
-                        <Link to="./post">POST</Link>
+                        <Link className="my-link" to="./post">
+                            POST
+                        </Link>
                     </li>
                     <li>
-                        <Link to="./find">FIND</Link>
+                        <Link className="my-link" to="./find">
+                            FIND
+                        </Link>
                     </li>
-                    <li>
-                        <Link to="./register">REGISTER</Link>
-                    </li>
+                    {user.isLoggedIn ? (
+                        <li>
+                            <div className="dropdown show">
+                                <a
+                                    className="btn btn-primary dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    id="dropdownMenuLink"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    {user.name}
+                                </a>
+
+                                <div
+                                    className="dropdown-menu"
+                                    aria-labelledby="dropdownMenuLink"
+                                >
+                                    <button
+                                        className="dropdown-item"
+                                        onClick={() => {
+                                            logoutUser({
+                                                token: user.token,
+                                                dispatch: dispatch
+                                            });
+                                        }}
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    ) : (
+                        <React.Fragment>
+                            <li>
+                                <Link className="my-link" to="./login">
+                                    LOGIN
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="my-link" to="./register">
+                                    REGISTER
+                                </Link>
+                            </li>
+                        </React.Fragment>
+                    )}
                 </ul>
             </div>
         </div>

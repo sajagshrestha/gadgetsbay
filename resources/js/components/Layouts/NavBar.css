@@ -40,7 +40,7 @@
     align-items: center;
 }*/
 .my-nav-menu {
-    width: 400px;
+    width: 500px;
     height: 100%;
     list-style: none;
     display: flex;
@@ -49,9 +49,9 @@
     margin: 0;
 }
 
-.my-nav-menu li a {
+.my-nav-menu li .my-link {
     text-decoration: none;
-    color: #f5f5f5;
+    color: white;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
