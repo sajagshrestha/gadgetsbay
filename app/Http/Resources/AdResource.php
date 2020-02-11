@@ -6,6 +6,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class AdResource extends JsonResource
 {
+    public static $wrap = 'result';
     /**
      * Transform the resource into an array.
      *
@@ -26,7 +27,6 @@ class AdResource extends JsonResource
             'imageName' => $this->imageName,
             'mobile' => $this->mobile,
             'record' => $this->record,
-//            'user' =>$this->user->id
             'user' => [
                 'name' => $this->user->name,
                 'id' => $this->user->id

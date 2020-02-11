@@ -13,7 +13,7 @@ class EditAdMobile extends FormRequest
      */
     public function authorize()
     {
-        return tue;
+        return true;
     }
 
     /**
