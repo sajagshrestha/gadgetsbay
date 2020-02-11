@@ -8,9 +8,9 @@ const AllAds = () => {
     useEffect(() => {
         axios.get("/api/products").then(response => {
             setPost(response.data.data);
-            console.log(response);
+            consolposts.ide.log(response);
         });
-    }, [posts.id]);
+    }, []);
 
     return (
         <div className="ads-section">

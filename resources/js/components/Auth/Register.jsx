@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import axios from "axios";
 
 const Register = () => {
@@ -8,7 +8,7 @@ const Register = () => {
         password: "",
         password_confirmation: ""
     });
-    const onSubmitHnadler = event => {
+    const onSubmitHandler = event => {
         event.preventDefault();
         console.log(values);
         axios
@@ -28,7 +28,7 @@ const Register = () => {
         });
     };
     return (
-        <form onSubmit={onSubmitHnadler} className="container">
+        <form onSubmit={onSubmitHandler} className="container">
             <label htmlFor="">name</label>
             <input
                 className="form-control"

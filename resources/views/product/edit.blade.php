@@ -1,7 +1,28 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-    {!! Form::model($description,['route'=> ['product.store',$description->id],'method'=>'PUT']) !!}
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+{!! Form::model($description,['route'=> ['product.update',$description->id],'method'=>'PUT']) !!}
     <div class="row d-flex py-2">
         <div class="col-2 align-self-center">
             {{Form::label('title', 'Title', ['class'=>'m-0'])}}
@@ -17,15 +38,6 @@
         <div class="col-6">
             {{Form::textarea('description',null, ['class'=>'form-control'])}}
 
-        </div>
-    </div>
-    <div class="row d-flex py-2">
-        <div class="col-2 align-self-center">
-            {{Form::label('expiresIn', 'Expires In', ['class'=>'m-0'])}}
-        </div>
-        <div class="col-6">
-            {{Form::select('expiresIn', ['14' => '2 Weeks', '30' => '1 Month', '60' => '2 Months',
-            '90' => '3 Months', '120' => '4 Months'])}}
         </div>
     </div>
     <div class="row d-flex py-2">
@@ -153,4 +165,4 @@
 
 
 
-@endsection
+</body>

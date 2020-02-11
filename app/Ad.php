@@ -24,6 +24,21 @@ class Ad extends Model
     public $timestamps = false;
     protected $guarded = [];
 
+     function setValue(array $inputs)
+    {
+        $this->title = $inputs['title'];
+        $this->description = $inputs['description'];
+        $this->price = $inputs['price'];
+        $this->negotiable = $inputs['negotiable'];
+        $this->condition = $inputs['condition'];
+        $this->usedFor = $inputs['usedFor'];
+
+        if(isset($inputs['expiresIn'])) {
+
+            $this->expiresIn = $inputs['expiresIn'];
+        }
+
+    }
 
 
 

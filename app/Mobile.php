@@ -11,5 +11,16 @@ class Mobile extends Model
         return $this->hasOne('App\Ad');
     }
     public $timestamps = false;
+    protected $guarded = [];
+
+     function setValue(array $inputs)
+    {
+        $this->frontCamera = $inputs['frontCamera'];
+        $this->backCamera = $inputs['backCamera'];
+        $this->RAM = $inputs['RAM'];
+        $this->internalStorage = $inputs['internalStorage'];
+
+
+    }
 
 }
