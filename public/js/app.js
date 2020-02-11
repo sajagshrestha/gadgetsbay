@@ -74307,7 +74307,15 @@ var AdForm = function AdForm() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: "",
     description: "",
-    price: ""
+    price: "",
+    expiresIn: "",
+    negotiable: "",
+    condition: "",
+    usedFor: "",
+    frontCamer: "",
+    backCamera: "",
+    RAM: "",
+    internalStorage: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -74334,30 +74342,37 @@ var AdForm = function AdForm() {
 
   var onSubmitHandler = function onSubmitHandler(event) {
     console.log(values);
-    console.log(image);
-    var fd = new FormData();
-    fd.append("title", values.title);
-    fd.append("description", values.description);
-    fd.append("price", values.price);
-    fd.append("imageName", image);
-    event.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd).then(function (res) {
-      return console.log(res.data);
-    })["catch"](function (err) {
-      return console.log(err);
-    });
-    setValues({
-      title: "",
-      description: "",
-      price: ""
-    });
-    setImageUploadName("Choose Photo");
+    console.log(image); // const fd = new FormData();
+    // fd.append("title", values.title);
+    // fd.append("description", values.description);
+    // fd.append("price", values.price);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+
+    event.preventDefault(); // axios
+    //     .post("/api/product", fd)
+    //     .then(res => console.log(res.data))
+    //     .catch(err => console.log(err));
+    // setValues({
+    //     title: "",
+    //     description: "",
+    //     price: ""
+    // });
+    // setImageUploadName("Choose Photo");
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mt-5 "
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: onSubmitHandler
+    onSubmit: onSubmitHandler,
+    encType: "multipart/form-data"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -74391,6 +74406,33 @@ var AdForm = function AdForm() {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "expiresIn",
+    className: "col-sm-2 col-form-label"
+  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "expiresIn",
+    id: "expiresIn",
+    className: "form-control",
+    value: values.expiresIn,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "14"
+  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "30"
+  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "60"
+  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "90"
+  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "120"
+  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "price",
     className: "col-sm-2 col-form-label"
   }, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74402,6 +74444,71 @@ var AdForm = function AdForm() {
     name: "price",
     placeholder: "Rs.",
     value: values.price,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "negotiable",
+    className: "col-sm-2 col-form-label"
+  }, "Negotiable"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "yes",
+    id: "negotiable",
+    onChange: onChangeHandler
+  }), "Yes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "fixed price",
+    id: "negotiable",
+    onChange: onChangeHandler
+  }), "Fixed Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "condition",
+    className: "col-sm-2 col-form-label"
+  }, "Condition"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Brand New(not used)",
+    onChange: onChangeHandler
+  }), "Brand New(not used)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Like New(used few times)",
+    onChange: onChangeHandler
+  }), "Like New(used few times)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Excellent",
+    onChange: onChangeHandler
+  }), "Excellent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Good/Fair",
+    onChange: onChangeHandler
+  }), "Good/Fair", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Not Working",
+    onChange: onChangeHandler
+  }), "Not Working")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "usedFor",
+    className: "col-sm-2 col-form-label"
+  }, "Used For(in months)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "usedFor",
+    name: "usedFor",
+    value: values.usedFor,
     onChange: onChangeHandler
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
@@ -74731,9 +74838,9 @@ var AllAds = function AllAds() {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/products").then(function (response) {
       setPost(response.data.data);
-      console.log(response);
+      consolposts.ide.log(response);
     });
-  }, [posts.id]);
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ads-section"
   }, posts.map(function (post) {
