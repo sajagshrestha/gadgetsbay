@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 const Register = () => {
     const [values, setValues] = React.useState({
@@ -8,13 +9,14 @@ const Register = () => {
         password: "",
         password_confirmation: ""
     });
+    const [redirect, setRedirect] = React.useState(false);
     const onSubmitHnadler = event => {
         event.preventDefault();
         console.log(values);
         axios
             .post("/api/register", values)
             .then(() => {
-                alert("success");
+                setRedirect(true);
             })
             .catch(error => {
                 alert("failed");
@@ -27,6 +29,9 @@ const Register = () => {
             [event.target.name]: event.target.value
         });
     };
+    if (redirect) {
+        return <Redirect to="login" />;
+    }
     return (
         <form onSubmit={onSubmitHnadler} className="container">
             <label htmlFor="">name</label>
