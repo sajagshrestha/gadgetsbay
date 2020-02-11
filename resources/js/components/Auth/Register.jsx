@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const Register = () => {
     });
     const [redirect, setRedirect] = React.useState(false);
     const onSubmitHnadler = event => {
+
         event.preventDefault();
         console.log(values);
         axios
@@ -33,7 +34,7 @@ const Register = () => {
         return <Redirect to="login" />;
     }
     return (
-        <form onSubmit={onSubmitHnadler} className="container">
+        <form onSubmit={onSubmitHandler} className="container">
             <label htmlFor="">name</label>
             <input
                 className="form-control"
