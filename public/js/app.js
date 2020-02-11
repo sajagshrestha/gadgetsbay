@@ -6534,7 +6534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+exports.push([module.i, ".my-container {\r\n    width: 60vw;\r\n    margin: 10vh auto;\r\n    background: rgb(250, 250, 250);\r\n    padding: 100px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6554,8 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-
-exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\r\n    background: #0c0c0c;\r\n    box-shadow: 2px 2px 10px grey;\r\n    height: 7%;\r\n    width: 100%;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    padding: 10px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 650px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #f5f5f5;\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n}\r\n/*.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}*/\r\n.my-nav-menu {\r\n    width: 500px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li .my-link {\r\n    text-decoration: none;\r\n    color: white;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6574,8 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
-
+exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 400px;\r\n    height: 30px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n.search-button {\r\n    height: 30px;\r\n    width: 100px;\r\n    border: none;\r\n    color: white;\r\n    background-color: #46804c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #3d6f42;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6594,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".main-wrapper {\n    height: 350px;\n    width: 1200px;\n    background: #f8f8f8;\n    box-shadow: 4px 4px 10px grey;\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    margin: 20px;\n}\n.box {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.left-box {\n    /*  background-color: blanchedalmond;*/\n}\n.middle-box {\n    /*  background-color: cadetblue;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr 3fr 1fr;\n}\n\n.right-box {\n    /*  background-color: crimson;\n*/\n}\n.right-box .for-line {\n    display: grid;\n}\n\n.left-box .photo {\n    width: 200px;\n    height: 200px;\n    box-shadow: 2px 2px 10px gray;\n    /*  background-color: aquamarine;\n*/\n}\n.for-line {\n    /*  background-color: hotpink;\n*/\n    width: 100%;\n    height: 220px;\n}\n.price-and-condition {\n    /*  background-color: lavender;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n}\n.price {\n    font-size: 20px;\n}\n.specs,\n.title,\n.description,\n.post-date {\n    padding: 10px 40px;\n}\n\n.title {\n    font-size: 26px;\n}\n.specs {\n    font-size: 16px;\n}\n.ad-photo {\n    height: 100%;\n    width: 100%;\n}\n.post-date {\n    font-size: 12px;\n}\n", ""]);
+exports.push([module.i, ".main-wrapper {\r\n    height: 350px;\r\n    width: 1200px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box .photo {\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6613,8 +6611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
-changes and fixes
+exports.push([module.i, ".ads-section {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6633,7 +6630,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\n    height: 96vh;\n}\n", ""]);
+exports.push([module.i, ".hero-section {\r\n    height: 96vh;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6671,7 +6668,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n}\n\n.container {\n    width: 80vw;\n    margin: auto;\n}\n", ""]);
+exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -73789,9 +73786,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainContent_FindAdd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainContent/FindAdd */ "./resources/js/components/MainContent/FindAdd.jsx");
 /* harmony import */ var _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MainContent/Home */ "./resources/js/components/MainContent/Home.jsx");
 /* harmony import */ var _Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Auth/Register */ "./resources/js/components/Auth/Register.jsx");
-
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
+/* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73805,7 +73801,6 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -73864,8 +73859,7 @@ function App() {
       user: user,
       dispatch: dispatch
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
-
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_AllAds__WEBPACK_IMPORTED_MODULE_2__["default"]
@@ -73881,12 +73875,11 @@ function App() {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/login",
     exact: true,
-    component: _Auth_Login__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
   }))));
-
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -73907,15 +73900,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -74052,7 +74042,6 @@ var Register = function Register() {
       setRedirect = _React$useState4[1];
 
   var onSubmitHnadler = function onSubmitHnadler(event) {
-
     event.preventDefault();
     console.log(values);
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/register", values).then(function () {
@@ -74209,7 +74198,15 @@ var AdForm = function AdForm() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: "",
     description: "",
-    price: ""
+    price: "",
+    expiresIn: "",
+    negotiable: "",
+    condition: "",
+    usedFor: "",
+    frontCamer: "",
+    backCamera: "",
+    RAM: "",
+    internalStorage: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -74236,30 +74233,37 @@ var AdForm = function AdForm() {
 
   var onSubmitHandler = function onSubmitHandler(event) {
     console.log(values);
-    console.log(image);
-    var fd = new FormData();
-    fd.append("title", values.title);
-    fd.append("description", values.description);
-    fd.append("price", values.price);
-    fd.append("imageName", image);
-    event.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd).then(function (res) {
-      return console.log(res.data);
-    })["catch"](function (err) {
-      return console.log(err);
-    });
-    setValues({
-      title: "",
-      description: "",
-      price: ""
-    });
-    setImageUploadName("Choose Photo");
+    console.log(image); // const fd = new FormData();
+    // fd.append("title", values.title);
+    // fd.append("description", values.description);
+    // fd.append("price", values.price);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+
+    event.preventDefault(); // axios
+    //     .post("/api/product", fd)
+    //     .then(res => console.log(res.data))
+    //     .catch(err => console.log(err));
+    // setValues({
+    //     title: "",
+    //     description: "",
+    //     price: ""
+    // });
+    // setImageUploadName("Choose Photo");
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mt-5 "
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: onSubmitHandler
+    onSubmit: onSubmitHandler,
+    encType: "multipart/form-data"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -74293,6 +74297,33 @@ var AdForm = function AdForm() {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "expiresIn",
+    className: "col-sm-2 col-form-label"
+  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "expiresIn",
+    id: "expiresIn",
+    className: "form-control",
+    value: values.expiresIn,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "14"
+  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "30"
+  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "60"
+  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "90"
+  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "120"
+  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "price",
     className: "col-sm-2 col-form-label"
   }, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74304,6 +74335,71 @@ var AdForm = function AdForm() {
     name: "price",
     placeholder: "Rs.",
     value: values.price,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "negotiable",
+    className: "col-sm-2 col-form-label"
+  }, "Negotiable"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "yes",
+    id: "negotiable",
+    onChange: onChangeHandler
+  }), "Yes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "fixed price",
+    id: "negotiable",
+    onChange: onChangeHandler
+  }), "Fixed Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "condition",
+    className: "col-sm-2 col-form-label"
+  }, "Condition"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Brand New(not used)",
+    onChange: onChangeHandler
+  }), "Brand New(not used)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Like New(used few times)",
+    onChange: onChangeHandler
+  }), "Like New(used few times)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Excellent",
+    onChange: onChangeHandler
+  }), "Excellent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Good/Fair",
+    onChange: onChangeHandler
+  }), "Good/Fair", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Not Working",
+    onChange: onChangeHandler
+  }), "Not Working")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "usedFor",
+    className: "col-sm-2 col-form-label"
+  }, "Used For(in months)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "usedFor",
+    name: "usedFor",
+    value: values.usedFor,
     onChange: onChangeHandler
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
@@ -74448,9 +74544,7 @@ function NavBar() {
   }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     className: "my-link",
     to: "./register"
-
   }, "REGISTER"))))));
-
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBar);
@@ -74682,7 +74776,7 @@ var AllAds = function AllAds() {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/products").then(function (response) {
       setPost(response.data.data);
     });
-  }, [posts.id]);
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ads-section"
   }, posts.map(function (post) {
@@ -74926,8 +75020,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

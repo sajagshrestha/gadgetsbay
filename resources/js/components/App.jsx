@@ -7,7 +7,6 @@ import Home from "./MainContent/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./Auth/Login";
 export const UserContext = React.createContext();
 
 const initialState = {
