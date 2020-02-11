@@ -18,9 +18,9 @@ class CreateAdsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('expiresIn');
-            $table->double('price');
-            $table->integer('negotiable');
-            $table->integer('condition');
+            $table->integer('price');
+            $table->string('negotiable');
+            $table->string('condition');
             $table->integer('usedFor')->nullable();
             $table->string('imageName')->nullable();
             $table->string('productType');

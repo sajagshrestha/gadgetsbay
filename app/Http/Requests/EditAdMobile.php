@@ -29,7 +29,6 @@ class EditAdMobile extends FormRequest
             'price' => 'required',
             'negotiable' => 'required',
             'condition' => 'required',
-            'usedFor' => 'required',
             'frontCamera' =>'required',
             'backCamera' =>'required',
             'RAM' =>'required',
