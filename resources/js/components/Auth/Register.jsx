@@ -9,9 +9,13 @@ const Register = () => {
         password: "",
         password_confirmation: ""
     });
+<<<<<<< HEAD
     const [redirect, setRedirect] = React.useState(false);
     const onSubmitHnadler = event => {
 
+=======
+    const onSubmitHandler = event => {
+>>>>>>> product api changes and fixes
         event.preventDefault();
         console.log(values);
         axios

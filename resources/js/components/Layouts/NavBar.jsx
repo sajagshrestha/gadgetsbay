@@ -42,6 +42,7 @@ function NavBar() {
                             FIND
                         </Link>
                     </li>
+<<<<<<< HEAD
 
                     {user.isLoggedIn ? (
                         <li>
@@ -86,6 +87,11 @@ function NavBar() {
                         </React.Fragment>
                     )}
 
+=======
+                    <li>
+                        <Link to="./login">LOGIN</Link>
+                    </li>
+>>>>>>> product api changes and fixes
                 </ul>
             </div>
         </div>
