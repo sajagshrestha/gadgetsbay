@@ -30,7 +30,6 @@ class StoreMobile extends FormRequest
             'price' => 'required|integer',
             'negotiable' => 'required',
             'condition' => 'required',
-            'usedFor' => 'required',
             'frontCamera' =>'required',
             'backCamera' =>'required',
             'RAM' =>'required',

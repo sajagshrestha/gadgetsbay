@@ -10,7 +10,7 @@ const AdForm = () => {
         negotiable:"",
         condition:"",
         usedFor:"",
-        frontCamer:"",
+        frontCamera:"",
         backCamera:"",
         RAM:"",
         internalStorage:"",
@@ -45,15 +45,15 @@ const AdForm = () => {
         // fd.append("imageName", image);
         // fd.append("imageName", image);
         event.preventDefault();
-        // axios
-        //     .post("/api/product", fd)
-        //     .then(res => console.log(res.data))
-        //     .catch(err => console.log(err));
-        // setValues({
-        //     title: "",
-        //     description: "",
-        //     price: ""
-        // });
+        axios
+            .post("/api/product", values)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
+        setValues({
+            title: "",
+            description: "",
+            price: ""
+        });
         // setImageUploadName("Choose Photo");
     };
     return (
@@ -94,24 +94,7 @@ const AdForm = () => {
                         />
                     </div>
                 </div>
-                <div className="form-group row">
-                    <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
-                        Expires In
-                    </label>
-                    <div className="col-sm-10">
-                        <select name="expiresIn" id="expiresIn"  className="form-control" 
-                        value={values.expiresIn} onChange={onChangeHandler} >
-                            <option value="" defaultValue hidden></option>
-                            <option value="14">2 Weeks</option>
-                            <option value="30">1 Month</option>
-                            <option value="60">2 Months</option>
-                            <option value="90">3 Months</option>
-                            <option value="120">4 Months</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="form-group row">
+                                <div className="form-group row">
                     <label htmlFor="price" className="col-sm-2 col-form-label">
                         Price
                     </label>
@@ -133,8 +116,8 @@ const AdForm = () => {
                         Negotiable
                     </label>
                     <div className="col-sm-10">
-                        <input type="radio" name="negotiable" value="yes" id="negotiable" onChange={onChangeHandler} />Yes
-                        <input type="radio" name="negotiable" value="fixed price" id="negotiable" onChange={onChangeHandler}/>Fixed Price
+                        <input type="radio" name="negotiable" value="yes"  onChange={onChangeHandler} />Yes
+                        <input type="radio" name="negotiable" value="fixed price"  onChange={onChangeHandler}/>Fixed Price
                     </div>
                 </div>
 
@@ -166,7 +149,102 @@ const AdForm = () => {
                         />
                     </div>
                 </div>
-                
+                <div className="form-group row">
+                    <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
+                        Expires In
+                    </label>
+                    <div className="col-sm-10">
+                        <select name="expiresIn" id="expiresIn"  className="form-control" 
+                        value={values.expiresIn} onChange={onChangeHandler} >
+                            <option value="" defaultValue hidden></option>
+                            <option value="14">2 Weeks</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="120">4 Months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="frontCamera" className="col-sm-2 col-form-label">
+                        Front Camera
+                    </label>
+                    <div className="col-sm-10">
+                        <select name="frontCamera" id="frontCamera"  className="form-control" 
+                        value={values.frontCamera} onChange={onChangeHandler} >
+                            <option value="" defaultValue hidden></option>
+                            <option value="none">None</option>
+                            <option value="1MP">1MP</option>
+                            <option value="2MP">2MP</option>
+                            <option value="3MP">3MP</option>
+                            <option value="5MP">5MP</option>
+                            <option value="10MP">10MP</option>
+                            <option value="20MP">20MP</option>
+                            <option value="More than 20MP">More than 20MP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="backCamera" className="col-sm-2 col-form-label">
+                        Back Camera
+                    </label>
+                    <div className="col-sm-10">
+                        <select name="backCamera" id="backCamera"  className="form-control" 
+                        value={values.backCamera} onChange={onChangeHandler} >
+                            <option value="" defaultValue hidden></option>
+                            <option value="none">None</option>
+                            <option value="1MP">1MP</option>
+                            <option value="2MP">2MP</option>
+                            <option value="3MP">3MP</option>
+                            <option value="5MP">5MP</option>
+                            <option value="10MP">10MP</option>
+                            <option value="20MP">20MP</option>
+                            <option value="More than 20MP">More than 20MP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="RAM" className="col-sm-2 col-form-label">
+                        RAM
+                    </label>
+                    <div className="col-sm-10">
+                        <select name="RAM" id="RAM"  className="form-control" 
+                        value={values.RAM} onChange={onChangeHandler} >
+                            <option value="" defaultValue hidden></option>
+                            <option value="512MB or less">512MB or less</option>
+                            <option value="1GB">1GB</option>
+                            <option value="2GB">2GB</option>
+                            <option value="4GB">4GB</option>
+                            <option value="6GB">6GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="More than 8BG">More than 8BG</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="form-group row">
+                    <label htmlFor="internalStorage" className="col-sm-2 col-form-label">
+                        Internal Storage
+                    </label>
+                    <div className="col-sm-10">
+                        <select name="internalStorage" id="internalStorage"  className="form-control" 
+                        value={values.internalStorage} onChange={onChangeHandler} >
+                            <option value="" defaultValue hidden></option>
+                            <option value="1GB">1GB</option>
+                            <option value="2GB">2GB</option>
+                            <option value="4GB">4GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="16GB">16GB</option>
+                            <option value="32GB">32GB</option>
+                            <option value="128GB">128GB</option>
+                            <option value="More than 128GB">More than 128BG</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Photo</label>
                     <div className="col-sm-10">
@@ -175,14 +253,15 @@ const AdForm = () => {
                                 type="file"
                                 className="custom-file-input"
                                 id="customFile"
+                                name = "imageName"
                                 onChange={imageHandler}
                             />
-                            <label
+                            {/* <label
                                 className="custom-file-label"
                                 htmlFor="customFile"
                             >
                                 {imageUploadName}
-                            </label>
+                            </label> */}
                         </div>
                     </div>
                 </div>

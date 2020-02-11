@@ -74146,7 +74146,7 @@ var Register = function Register() {
     name: "",
     email: "",
     password: "",
-    c_password: ""
+    password_confirmation: ""
   }),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       values = _React$useState2[0],
@@ -74198,8 +74198,8 @@ var Register = function Register() {
   }, "Confirm Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "form-control",
     type: "password",
-    name: "c_password",
-    value: values.c_password,
+    name: "password_confirmation",
+    value: values.password_confirmation,
     onChange: onChangeHandler
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
@@ -74307,7 +74307,7 @@ var AdForm = function AdForm() {
     negotiable: "",
     condition: "",
     usedFor: "",
-    frontCamer: "",
+    frontCamera: "",
     backCamera: "",
     RAM: "",
     internalStorage: ""
@@ -74351,16 +74351,17 @@ var AdForm = function AdForm() {
     // fd.append("imageName", image);
     // fd.append("imageName", image);
 
-    event.preventDefault(); // axios
-    //     .post("/api/product", fd)
-    //     .then(res => console.log(res.data))
-    //     .catch(err => console.log(err));
-    // setValues({
-    //     title: "",
-    //     description: "",
-    //     price: ""
-    // });
-    // setImageUploadName("Choose Photo");
+    event.preventDefault();
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", values).then(function (res) {
+      return console.log(res.data);
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+    setValues({
+      title: "",
+      description: "",
+      price: ""
+    }); // setImageUploadName("Choose Photo");
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74401,33 +74402,6 @@ var AdForm = function AdForm() {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "expiresIn",
-    className: "col-sm-2 col-form-label"
-  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-sm-10"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    name: "expiresIn",
-    id: "expiresIn",
-    className: "form-control",
-    value: values.expiresIn,
-    onChange: onChangeHandler
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "",
-    defaultValue: true,
-    hidden: true
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "14"
-  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "30"
-  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "60"
-  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "90"
-  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "120"
-  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-group row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "price",
     className: "col-sm-2 col-form-label"
   }, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74451,13 +74425,11 @@ var AdForm = function AdForm() {
     type: "radio",
     name: "negotiable",
     value: "yes",
-    id: "negotiable",
     onChange: onChangeHandler
   }), "Yes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "negotiable",
     value: "fixed price",
-    id: "negotiable",
     onChange: onChangeHandler
   }), "Fixed Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
@@ -74508,6 +74480,163 @@ var AdForm = function AdForm() {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "expiresIn",
+    className: "col-sm-2 col-form-label"
+  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "expiresIn",
+    id: "expiresIn",
+    className: "form-control",
+    value: values.expiresIn,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "14"
+  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "30"
+  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "60"
+  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "90"
+  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "120"
+  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "frontCamera",
+    className: "col-sm-2 col-form-label"
+  }, "Front Camera"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "frontCamera",
+    id: "frontCamera",
+    className: "form-control",
+    value: values.frontCamera,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "none"
+  }, "None"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1MP"
+  }, "1MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2MP"
+  }, "2MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3MP"
+  }, "3MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "5MP"
+  }, "5MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "10MP"
+  }, "10MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "20MP"
+  }, "20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 20MP"
+  }, "More than 20MP")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "backCamera",
+    className: "col-sm-2 col-form-label"
+  }, "Back Camera"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "backCamera",
+    id: "backCamera",
+    className: "form-control",
+    value: values.backCamera,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "none"
+  }, "None"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1MP"
+  }, "1MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2MP"
+  }, "2MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3MP"
+  }, "3MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "5MP"
+  }, "5MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "10MP"
+  }, "10MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "20MP"
+  }, "20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 20MP"
+  }, "More than 20MP")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "RAM",
+    className: "col-sm-2 col-form-label"
+  }, "RAM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "RAM",
+    id: "RAM",
+    className: "form-control",
+    value: values.RAM,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "512MB or less"
+  }, "512MB or less"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1GB"
+  }, "1GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2GB"
+  }, "2GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4GB"
+  }, "4GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "6GB"
+  }, "6GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "8GB"
+  }, "8GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 8BG"
+  }, "More than 8BG")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "internalStorage",
+    className: "col-sm-2 col-form-label"
+  }, "Internal Storage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "internalStorage",
+    id: "internalStorage",
+    className: "form-control",
+    value: values.internalStorage,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1GB"
+  }, "1GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2GB"
+  }, "2GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4GB"
+  }, "4GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "8GB"
+  }, "8GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "16GB"
+  }, "16GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "32GB"
+  }, "32GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "128GB"
+  }, "128GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 128GB"
+  }, "More than 128BG")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "col-sm-2 col-form-label"
   }, "Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-sm-10"
@@ -74517,11 +74646,9 @@ var AdForm = function AdForm() {
     type: "file",
     className: "custom-file-input",
     id: "customFile",
+    name: "imageName",
     onChange: imageHandler
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "custom-file-label",
-    htmlFor: "customFile"
-  }, imageUploadName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, "Post")));
