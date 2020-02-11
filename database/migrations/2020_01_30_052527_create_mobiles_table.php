@@ -15,10 +15,10 @@ class CreateMobilesTable extends Migration
     {
         Schema::create('mobiles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('frontCamera');
-            $table->integer('backCamera');
-            $table->integer('RAM');
-            $table->integer('internalStorage');
+            $table->string('frontCamera');
+            $table->string('backCamera');
+            $table->string('RAM');
+            $table->string('internalStorage');
             $table->unsignedBigInteger('ad_id'); //id of ad detail
             $table->foreign('ad_id')
                 ->references('id')
