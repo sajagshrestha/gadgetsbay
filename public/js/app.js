@@ -6554,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 7vh;\n    width: 100vw;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
 
 // exports
 
@@ -73836,10 +73836,26 @@ var reducer = function reducer(state, action) {
 };
 
 function App() {
-  var _React$useReducer = react__WEBPACK_IMPORTED_MODULE_0___default.a.useReducer(reducer, initialState),
-      _React$useReducer2 = _slicedToArray(_React$useReducer, 2),
-      user = _React$useReducer2[0],
-      dispatch = _React$useReducer2[1];
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(reducer, initialState),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      user = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var localUser = JSON.parse(localStorage.getItem("user"));
+
+    if (localUser) {
+      dispatch({
+        type: "login",
+        name: localUser.name,
+        token: localUser.token
+      });
+    }
+
+    console.log(user);
+  }, [user.token]); //check local storage for use value
+  //if value exists , dispatch, set from local storage
+  //if not then proceed normally
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserContext.Provider, {
     value: {
@@ -73929,6 +73945,12 @@ var Login = function Login() {
         name: res.data.user.name,
         token: res.data.access_token
       });
+      var localUser = {
+        isLoggedIn: true,
+        name: res.data.user.name,
+        token: res.data.access_token
+      };
+      localStorage.setItem("user", JSON.stringify(localUser));
     })["catch"](function (error) {
       alert("failed");
       console.log(error);
@@ -74356,27 +74378,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var logoutUser = function logoutUser(_ref) {
-  var token = _ref.token,
-      dispatch = _ref.dispatch;
-  console.log(token);
-  axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("api/logout", {
-    headers: {
-      Authorization: "Bearer ".concat(token)
-    }
-  }).then(function (res) {
-    console.log("logout sucessfull");
-    console.log(res);
-  });
-  dispatch({
-    type: "logout"
-  });
-};
-
 function NavBar() {
   var _React$useContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_App__WEBPACK_IMPORTED_MODULE_4__["UserContext"]),
       user = _React$useContext.user,
       dispatch = _React$useContext.dispatch;
+
+  var logoutUser = function logoutUser() {
+    axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("api/logout", {
+      headers: {
+        Authorization: "Bearer ".concat(user.token)
+      }
+    }).then(function (res) {
+      console.log("logout sucessfull");
+      dispatch({
+        type: "logout"
+      });
+      localStorage.removeItem("user");
+    });
+  };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-navbar"
@@ -74413,10 +74432,7 @@ function NavBar() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "dropdown-item",
     onClick: function onClick() {
-      logoutUser({
-        token: user.token,
-        dispatch: dispatch
-      });
+      return logoutUser();
     }
   }, "Logout")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     className: "my-link",

@@ -22,6 +22,12 @@ const Login = () => {
                     name: res.data.user.name,
                     token: res.data.access_token
                 });
+                const localUser = {
+                    isLoggedIn: true,
+                    name: res.data.user.name,
+                    token: res.data.access_token
+                };
+                localStorage.setItem("user", JSON.stringify(localUser));
             })
             .catch(error => {
                 alert("failed");

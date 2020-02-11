@@ -4,19 +4,20 @@ import Search from "./Search";
 import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 import axios from "axios";
-const logoutUser = ({ token, dispatch }) => {
-    console.log(token);
-    axios
-        .get("api/logout", { headers: { Authorization: `Bearer ${token}` } })
-        .then(res => {
-            console.log("logout sucessfull");
-            console.log(res);
-        });
 
-    dispatch({ type: "logout" });
-};
 function NavBar() {
     const { user, dispatch } = React.useContext(UserContext);
+    const logoutUser = () => {
+        axios
+            .get("api/logout", {
+                headers: { Authorization: `Bearer ${user.token}` }
+            })
+            .then(res => {
+                console.log("logout sucessfull");
+                dispatch({ type: "logout" });
+                localStorage.removeItem("user");
+            });
+    };
     return (
         <div className="my-navbar">
             <div className="navbar-items">
@@ -62,12 +63,7 @@ function NavBar() {
                                 >
                                     <button
                                         className="dropdown-item"
-                                        onClick={() => {
-                                            logoutUser({
-                                                token: user.token,
-                                                dispatch: dispatch
-                                            });
-                                        }}
+                                        onClick={() => logoutUser()}
                                     >
                                         Logout
                                     </button>
