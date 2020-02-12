@@ -4,10 +4,16 @@
 .my-navbar {
     background: #0c0c0c;
     box-shadow: 2px 2px 10px grey;
+<<<<<<< HEAD
     height: 7%;
     width: 100%;
     position: sticky;
 
+=======
+    height: 7vh;
+    width: 100vw;
+    /* position: fixed; */
+>>>>>>> d6816008bc5135fd2d1dabad840ccb958b193bd1
     top: 0;
     padding: 10px;
     display: flex;

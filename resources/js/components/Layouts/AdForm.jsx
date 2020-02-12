@@ -45,21 +45,8 @@ const AdForm = () => {
         // fd.append("imageName", image);
         // fd.append("imageName", image);
         event.preventDefault();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> added form field
-        axios
-            .post("/api/product", values)
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err));
-        setValues({
-            title: "",
-            description: "",
-            price: ""
-        });
-<<<<<<< HEAD
-=======
+
+    
         // axios
         //     .post("/api/product", fd)
         //     .then(res => console.log(res.data))
@@ -69,9 +56,6 @@ const AdForm = () => {
         //     description: "",
         //     price: ""
         // });
->>>>>>> form fields added
-=======
->>>>>>> added form field
         // setImageUploadName("Choose Photo");
     };
     return (
@@ -112,10 +96,9 @@ const AdForm = () => {
                         />
                     </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                 <div className="form-group row">
-=======
+
                 <div className="form-group row">
                     <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
                         Expires In
@@ -134,10 +117,7 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
->>>>>>> form fields added
-=======
-                                <div className="form-group row">
->>>>>>> added form field
+
                     <label htmlFor="price" className="col-sm-2 col-form-label">
                         Price
                     </label>
@@ -159,18 +139,11 @@ const AdForm = () => {
                         Negotiable
                     </label>
                     <div className="col-sm-10">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                         <input type="radio" name="negotiable" value="yes"  onChange={onChangeHandler} />Yes
                         <input type="radio" name="negotiable" value="fixed price"  onChange={onChangeHandler}/>Fixed Price
-=======
-                        <input type="radio" name="negotiable" value="yes" id="negotiable" onChange={onChangeHandler} />Yes
-                        <input type="radio" name="negotiable" value="fixed price" id="negotiable" onChange={onChangeHandler}/>Fixed Price
->>>>>>> form fields added
-=======
-                        <input type="radio" name="negotiable" value="yes"  onChange={onChangeHandler} />Yes
-                        <input type="radio" name="negotiable" value="fixed price"  onChange={onChangeHandler}/>Fixed Price
->>>>>>> added form field
+
+                       
                     </div>
                 </div>
 
@@ -202,10 +175,7 @@ const AdForm = () => {
                         />
                     </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> added form field
+
                 <div className="form-group row">
                     <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
                         Expires In
@@ -302,12 +272,7 @@ const AdForm = () => {
                     </div>
                 </div>
 
-<<<<<<< HEAD
-=======
-                
->>>>>>> form fields added
-=======
->>>>>>> added form field
+
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Photo</label>
                     <div className="col-sm-10">

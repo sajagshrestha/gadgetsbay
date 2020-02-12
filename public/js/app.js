@@ -6522,48 +6522,14 @@ module.exports = {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css":
-/*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/AdForm.css ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css":
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/NavBar.css ***!
   \************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap);", ""]);
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
-
-// module
-
-
-exports.push([module.i, ".my-navbar {\r\n    background: #0c0c0c;\r\n    box-shadow: 2px 2px 10px grey;\r\n    height: 7vh;\r\n    width: 100vw;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    padding: 10px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 650px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #f5f5f5;\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n}\r\n/*.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}*/\r\n.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li a {\r\n    text-decoration: none;\r\n    color: #f5f5f5;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n", ""]);
-
-
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/postcss-loader/src/index.js):\nSyntaxError\n\n(7:9) Unknown word\n\n \u001b[90m 5 | \u001b[39m    background\u001b[33m:\u001b[39m \u001b[35m#0c0c0c\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 6 | \u001b[39m    box-shadow\u001b[33m:\u001b[39m 2px 2px 10px grey\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 7 | \u001b[39m<<<<<<< HEAD\n \u001b[90m   | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 8 | \u001b[39m    height\u001b[33m:\u001b[39m 7%\u001b[33m;\u001b[39m\n \u001b[90m 9 | \u001b[39m    width\u001b[33m:\u001b[39m 100%\u001b[33m;\u001b[39m\n");
 
 /***/ }),
 
@@ -6579,7 +6545,6 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-
 exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 400px;\r\n    height: 30px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n.search-button {\r\n    height: 30px;\r\n    width: 100px;\r\n    border: none;\r\n    color: white;\r\n    background-color: #46804c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #3d6f42;\r\n}\r\n", ""]);
 
 // exports
@@ -6587,7 +6552,6 @@ exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    disp
 
 /***/ }),
 
->>>>>>> form fixes
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css":
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Ad.css ***!
@@ -6601,6 +6565,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".main-wrapper {\r\n    height: 350px;\r\n    width: 1200px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box .photo {\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/AllAds.css":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/AllAds.css ***!
+  \****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ads-section {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -73880,9 +73863,105 @@ function App() {
   !*** ./resources/js/components/Auth/Login.jsx ***!
   \************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Auth\\Login.jsx: Unexpected token (1:1)\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m,\u001b[39m { useState } from \u001b[32m\"react\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[36mimport\u001b[39m axios from \u001b[32m\"axios\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mRedirect\u001b[39m } from \u001b[32m\"react-router-dom\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.unexpected (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Object.jsxParseIdentifier (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3890:12)\n    at Object.jsxParseNamespacedName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3900:23)\n    at Object.jsxParseElementName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3997:22)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4030:33)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10787:23)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseTopLevel (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10589:10)\n    at Object.parse (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:12192:10)\n    at parse (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:12243:38)\n    at parser (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\core\\lib\\transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\gensync\\index.js:254:32)\n    at C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\gensync\\index.js:266:13\n    at async.call.result.err.err (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\gensync\\index.js:216:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var Login = function Login() {
+  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_App__WEBPACK_IMPORTED_MODULE_3__["UserContext"]),
+      user = _React$useContext.user,
+      dispatch = _React$useContext.dispatch;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
+    email: "",
+    password: ""
+  }),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      values = _React$useState2[0],
+      setValues = _React$useState2[1];
+
+  var onSubmitHnadler = function onSubmitHnadler(event) {
+    event.preventDefault();
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/login", values).then(function (res) {
+      console.log(res);
+      dispatch({
+        type: "login",
+        name: res.data.user.name,
+        token: res.data.access_token
+      });
+      var localUser = {
+        isLoggedIn: true,
+        name: res.data.user.name,
+        token: res.data.access_token
+      };
+      localStorage.setItem("user", JSON.stringify(localUser));
+    })["catch"](function (error) {
+      alert("failed");
+      console.log(error);
+    });
+  };
+
+  var onChangeHandler = function onChangeHandler(event) {
+    setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
+  };
+
+  if (user.isLoggedIn) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      to: "/"
+    });
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmitHnadler,
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "email",
+    name: "email",
+    value: values.email,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "password",
+    name: "password",
+    value: values.password,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "btn btn-success mt-4"
+  }, "Login"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ }),
 
@@ -73891,9 +73970,112 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   !*** ./resources/js/components/Auth/Register.jsx ***!
   \***************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Auth\\Register.jsx: Unexpected token (12:1)\n\n\u001b[0m \u001b[90m 10 | \u001b[39m        password_confirmation\u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m    })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 | \u001b[39m    \u001b[36mconst\u001b[39m [redirect\u001b[33m,\u001b[39m setRedirect] \u001b[33m=\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39museState(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m    \u001b[36mconst\u001b[39m onSubmitHnadler \u001b[33m=\u001b[39m event \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 15 | \u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.unexpected (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Object.jsxParseIdentifier (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3890:12)\n    at Object.jsxParseNamespacedName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3900:23)\n    at Object.jsxParseElementName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3997:22)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4030:33)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10787:23)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseArrowExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10177:10)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9806:12)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseVar (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11309:26)\n    at Object.parseVarStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11128:10)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10725:21)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Register = function Register() {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: ""
+  }),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      values = _React$useState2[0],
+      setValues = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      redirect = _React$useState4[0],
+      setRedirect = _React$useState4[1];
+
+  var onSubmitHnadler = function onSubmitHnadler(event) {
+    event.preventDefault();
+    console.log(values);
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/register", values).then(function () {
+      setRedirect(true);
+    })["catch"](function (error) {
+      alert("failed");
+      console.log(error);
+    });
+  };
+
+  var onChangeHandler = function onChangeHandler(event) {
+    setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
+  };
+
+  if (redirect) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      to: "login"
+    });
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmitHandler,
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "text",
+    name: "name",
+    value: values.name,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "email",
+    name: "email",
+    value: values.email,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "password",
+    name: "password",
+    value: values.password,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: ""
+  }, "Confirm Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-control",
+    type: "password",
+    name: "password_confirmation",
+    value: values.password_confirmation,
+    onChange: onChangeHandler
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "btn btn-success mt-4"
+  }, "Register"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Register);
 
 /***/ }),
 
@@ -73928,7 +74110,37 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Layouts\\AdForm.jsx: Unexpected token (48:1)\n\n\u001b[0m \u001b[90m 46 | \u001b[39m        \u001b[90m// fd.append(\"imageName\", image);\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 | \u001b[39m        event\u001b[33m.\u001b[39mpreventDefault()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 49 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 50 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 51 | \u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>\u001b[39m added form field\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.unexpected (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Object.jsxParseIdentifier (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3890:12)\n    at Object.jsxParseNamespacedName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3900:23)\n    at Object.jsxParseElementName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3997:22)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4030:33)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10787:23)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseArrowExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10177:10)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9513:18)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseVar (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11309:26)\n    at Object.parseVarStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11128:10)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10725:21)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Layouts\\AdForm.jsx: Expected corresponding JSX closing tag for <div> (300:12)\n\n\u001b[0m \u001b[90m 298 | \u001b[39m                    \u001b[33mPost\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 299 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 300 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mform\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 301 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 302 | \u001b[39m    )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 303 | \u001b[39m}\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4078:16)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9782:28)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseReturnStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11027:28)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10706:21)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseArrowExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10177:10)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9806:12)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)");
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/NavBar.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/NavBar.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./NavBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -73937,9 +74149,157 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   !*** ./resources/js/components/Layouts/NavBar.jsx ***!
   \****************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Layouts\\NavBar.jsx: Unexpected token (45:1)\n\n\u001b[0m \u001b[90m 43 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mLink\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 | \u001b[39m                    {user\u001b[33m.\u001b[39misLoggedIn \u001b[33m?\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 48 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.unexpected (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Object.jsxParseIdentifier (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3890:12)\n    at Object.jsxParseNamespacedName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3900:23)\n    at Object.jsxParseElementName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3997:22)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4030:33)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9782:28)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseReturnStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11027:28)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10706:21)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseFunctionBodyAndFinish (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10190:10)\n    at C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11364:12\n    at Object.withTopicForbiddingContext (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10533:14)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.css */ "./resources/js/components/Layouts/NavBar.css");
+/* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NavBar_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Layouts/Search.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function NavBar() {
+  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_App__WEBPACK_IMPORTED_MODULE_4__["UserContext"]),
+      user = _React$useContext.user,
+      dispatch = _React$useContext.dispatch;
+
+  var logoutUser = function logoutUser() {
+    axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("api/logout", {
+      headers: {
+        Authorization: "Bearer ".concat(user.token)
+      }
+    }).then(function (res) {
+      console.log("logout sucessfull");
+      dispatch({
+        type: "logout"
+      });
+      localStorage.removeItem("user");
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "my-navbar"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar-items"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "logo-and-search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "logo"
+  }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "my-nav-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "my-link",
+    to: "/"
+  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "my-link",
+    to: "./post"
+  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "my-link",
+    to: "./find"
+  }, "FIND")), user.isLoggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown show"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "btn btn-primary dropdown-toggle",
+    href: "#",
+    role: "button",
+    id: "dropdownMenuLink",
+    "data-toggle": "dropdown",
+    "aria-haspopup": "true",
+    "aria-expanded": "false"
+  }, user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dropdown-menu",
+    "aria-labelledby": "dropdownMenuLink"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "dropdown-item",
+    onClick: function onClick() {
+      return logoutUser();
+    }
+  }, "Logout")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "my-link",
+    to: "./login"
+  }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    className: "my-link",
+    to: "./register"
+  }, "REGISTER"))))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/Search.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/Search.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Search.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/Search.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Layouts/Search.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/Search.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search.css */ "./resources/js/components/Layouts/Search.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Search = function Search(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "search-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    placeholder: "Search Here",
+    className: "search-input"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "search-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fa fa-search"
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Search);
 
 /***/ }),
 
@@ -74034,14 +74394,87 @@ var Ad = function Ad(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/components/MainContent/AllAds.css":
+/*!********************************************************!*\
+  !*** ./resources/js/components/MainContent/AllAds.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./AllAds.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/AllAds.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/MainContent/AllAds.jsx":
 /*!********************************************************!*\
   !*** ./resources/js/components/MainContent/AllAds.jsx ***!
   \********************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\MainContent\\AllAds.jsx: Unexpected token (11:1)\n\n\u001b[0m \u001b[90m  9 | \u001b[39m        axios\u001b[33m.\u001b[39mget(\u001b[32m\"/api/products\"\u001b[39m)\u001b[33m.\u001b[39mthen(response \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m            setPost(response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m            consolposts\u001b[33m.\u001b[39mide\u001b[33m.\u001b[39mlog(response)\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.unexpected (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8384:16)\n    at Object.jsxParseIdentifier (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3890:12)\n    at Object.jsxParseNamespacedName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3900:23)\n    at Object.jsxParseElementName (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3911:21)\n    at Object.jsxParseOpeningElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:3997:22)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4030:33)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10787:23)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseArrowExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10177:10)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9513:18)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExprListItem (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10295:18)\n    at Object.parseCallExpressionArguments (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9404:22)\n    at Object.parseSubscript (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9310:31)\n    at Object.parseSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9240:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9229:17)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Ad_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad.jsx */ "./resources/js/components/MainContent/Ad.jsx");
+/* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAds.css */ "./resources/js/components/MainContent/AllAds.css");
+/* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_AllAds_css__WEBPACK_IMPORTED_MODULE_3__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var AllAds = function AllAds() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      posts = _useState2[0],
+      setPost = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/products").then(function (response) {
+      setPost(response.data.data);
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ads-section"
+  }, posts.map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      post: post,
+      key: post.id
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AllAds);
 
 /***/ }),
 

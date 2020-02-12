@@ -8,11 +8,6 @@ const AllAds = () => {
     useEffect(() => {
         axios.get("/api/products").then(response => {
             setPost(response.data.data);
-<<<<<<< HEAD
-
-=======
-            consolposts.ide.log(response);
->>>>>>> product api changes and fixes
         });
     }, []);
 
