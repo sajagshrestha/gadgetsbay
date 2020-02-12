@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext, createContext, useEffect } from "react";
 import "./NavBar.css";
+import "./Search.css";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 import axios from "axios";
-
 function NavBar() {
-    const { user, dispatch } = React.useContext(UserContext);
+    const scrollFunction = () => {
+        console.log("will run on scroll probably");
+    };
+    const { user, dispatch, isHome } = useContext(UserContext);
+    useEffect(() => {
+        scrollFunction();
+    }, []);
+    console.log(isHome);
     const logoutUser = () => {
         axios
             .get("api/logout", {
@@ -18,8 +25,9 @@ function NavBar() {
                 localStorage.removeItem("user");
             });
     };
+
     return (
-        <div className="my-navbar">
+        <div className={isHome ? "my-navbar-home" : "my-navbar"}>
             <div className="navbar-items">
                 <div className="logo-and-search">
                     <div className="logo">GadgetsBay</div>
@@ -46,9 +54,12 @@ function NavBar() {
                     {user.isLoggedIn ? (
                         <li>
                             <div className="dropdown show">
-                                <a
-                                    className="btn btn-primary dropdown-toggle"
-                                    href="#"
+                                <button
+                                    className={
+                                        isHome
+                                            ? "my-dropdown-button-home dropdown-toggle"
+                                            : "my-dropdown-button dropdown-toggle"
+                                    }
                                     role="button"
                                     id="dropdownMenuLink"
                                     data-toggle="dropdown"
@@ -56,7 +67,7 @@ function NavBar() {
                                     aria-expanded="false"
                                 >
                                     {user.name}
-                                </a>
+                                </button>
 
                                 <div
                                     className="dropdown-menu"

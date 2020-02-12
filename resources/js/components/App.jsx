@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 import NavBar from "./Layouts/NavBar.jsx";
 import AllAds from "./MainContent/AllAds";
 import PostAdd from "./MainContent/PostAdd";
@@ -31,6 +31,7 @@ const reducer = (state, action) => {
 };
 function App() {
     const [user, dispatch] = useReducer(reducer, initialState);
+    const [isHome, setHome] = useState(false);
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser) {
@@ -44,11 +45,18 @@ function App() {
     }, [user.token]);
 
     return (
-        <UserContext.Provider value={{ user: user, dispatch: dispatch }}>
+        <UserContext.Provider
+            value={{
+                user: user,
+                dispatch: dispatch,
+                isHome: isHome,
+                setHome
+            }}
+        >
             <Router>
                 <div>
                     <NavBar />
-                    <Route path="/" exact component={AllAds} />
+                    <Route path="/" exact component={Home} />
                     <Route path="/post" exact component={PostAdd} />
                     <Route path="/find" exact component={FindAdd} />
                     <Route path="/register" exact component={Register} />
@@ -56,8 +64,6 @@ function App() {
                 </div>
             </Router>
         </UserContext.Provider>
-
-
     );
 }
 

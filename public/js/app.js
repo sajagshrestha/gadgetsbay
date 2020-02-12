@@ -6554,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: #1b262c;\n    box-shadow: 2px 2px 10px grey;\n\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.my-navbar-home {\n    background-color: #008081;\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 34px;\n    cursor: pointer;\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n\n.my-dropdown-button {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.my-dropdown-button-home {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button-home {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
 
 // exports
 
@@ -6625,12 +6625,13 @@ exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display:
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".hero-section {\n    height: 96vh;\n}\n", ""]);
+exports.push([module.i, ".hero-section {\n\theight: 93vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover.jpg */ "./resources/js/components/MainContent/cover.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: fixed;\n\tbackground-position: center;\n}\n", ""]);
 
 // exports
 
@@ -6668,7 +6669,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n}\n\n.container {\n    width: 80vw;\n    margin: auto;\n}\n", ""]);
+exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\n\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n", ""]);
 
 // exports
 
@@ -6757,6 +6758,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -73841,6 +73869,11 @@ function App() {
       user = _useReducer2[0],
       dispatch = _useReducer2[1];
 
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isHome = _useState2[0],
+      setHome = _useState2[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var localUser = JSON.parse(localStorage.getItem("user"));
 
@@ -73857,12 +73890,14 @@ function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserContext.Provider, {
     value: {
       user: user,
-      dispatch: dispatch
+      dispatch: dispatch,
+      isHome: isHome,
+      setHome: setHome
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/",
     exact: true,
-    component: _MainContent_AllAds__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/post",
     exact: true,
@@ -74041,7 +74076,7 @@ var Register = function Register() {
       redirect = _React$useState4[0],
       setRedirect = _React$useState4[1];
 
-  var onSubmitHnadler = function onSubmitHnadler(event) {
+  var onSubmitHandler = function onSubmitHandler(event) {
     event.preventDefault();
     console.log(values);
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/register", values).then(function () {
@@ -74623,11 +74658,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.css */ "./resources/js/components/Layouts/NavBar.css");
 /* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NavBar_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Layouts/Search.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search.css */ "./resources/js/components/Layouts/Search.css");
+/* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Layouts/Search.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -74636,12 +74674,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NavBar() {
-  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_App__WEBPACK_IMPORTED_MODULE_4__["UserContext"]),
-      user = _React$useContext.user,
-      dispatch = _React$useContext.dispatch;
+  var scrollFunction = function scrollFunction() {
+    console.log("will run on scroll probably");
+  };
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_5__["UserContext"]),
+      user = _useContext.user,
+      dispatch = _useContext.dispatch,
+      isHome = _useContext.isHome;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    scrollFunction();
+  }, []);
+  console.log(isHome);
 
   var logoutUser = function logoutUser() {
-    axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("api/logout", {
+    axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("api/logout", {
       headers: {
         Authorization: "Bearer ".concat(user.token)
       }
@@ -74655,29 +74703,28 @@ function NavBar() {
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "my-navbar"
+    className: isHome ? "my-navbar-home" : "my-navbar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navbar-items"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo-and-search"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo"
-  }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "my-nav-menu"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "/"
-  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, "HOME")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "./post"
-  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "./find"
   }, "FIND")), user.isLoggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown show"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "btn btn-primary dropdown-toggle",
-    href: "#",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: isHome ? "my-dropdown-button-home dropdown-toggle" : "my-dropdown-button dropdown-toggle",
     role: "button",
     id: "dropdownMenuLink",
     "data-toggle": "dropdown",
@@ -74691,10 +74738,10 @@ function NavBar() {
     onClick: function onClick() {
       return logoutUser();
     }
-  }, "Logout")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, "Logout")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "./login"
-  }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "./register"
   }, "REGISTER"))))));
@@ -74747,10 +74794,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search.css */ "./resources/js/components/Layouts/Search.css");
 /* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+
 
 
 
 var Search = function Search(props) {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_2__["UserContext"]),
+      isHome = _useContext.isHome;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "search-form"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -74759,7 +74811,7 @@ var Search = function Search(props) {
     className: "search-input"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
-    className: "search-button"
+    className: isHome ? "search-button-home" : "search-button"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fa fa-search"
   }))));
@@ -75052,15 +75104,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./resources/js/components/MainContent/Home.css");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Ad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad */ "./resources/js/components/MainContent/Ad.jsx");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var _Ad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Ad */ "./resources/js/components/MainContent/Ad.jsx");
+
 
 
 
 
 var Home = function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_2__["UserContext"]),
+      setHome = _useContext.setHome;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setHome(true);
+    return function () {
+      return setHome(false);
+    };
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hero-section"
-  }));
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -75122,6 +75185,17 @@ var PostAdd = function PostAdd() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostAdd);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/cover.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/MainContent/cover.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cover.jpg?bb0e22b2d6d47743ed05bf1a667534ab";
 
 /***/ }),
 

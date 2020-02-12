@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import "./Home.css";
+import { UserContext } from "../App";
 import Ad from "./Ad";
 const Home = () => {
-    return (
-        <div>
-            <div className="hero-section"></div>
-        </div>
-    );
+	const { setHome } = useContext(UserContext);
+	useEffect(() => {
+		setHome(true);
+		return () => setHome(false);
+	}, []);
+	return <div className="hero-section"></div>;
 };
 
 export default Home;

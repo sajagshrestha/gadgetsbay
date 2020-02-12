@@ -1,3 +1,7 @@
 .hero-section {
-    height: 96vh;
+	height: 93vh;
+	background: url("cover.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 }
