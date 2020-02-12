@@ -43,9 +43,6 @@ function App() {
         console.log(user);
     }, [user.token]);
 
-    //check local storage for use value
-    //if value exists , dispatch, set from local storage
-    //if not then proceed normally
     return (
         <UserContext.Provider value={{ user: user, dispatch: dispatch }}>
             <Router>

@@ -73853,10 +73853,7 @@ function App() {
     }
 
     console.log(user);
-  }, [user.token]); //check local storage for use value
-  //if value exists , dispatch, set from local storage
-  //if not then proceed normally
-
+  }, [user.token]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserContext.Provider, {
     value: {
       user: user,
