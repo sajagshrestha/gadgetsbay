@@ -6,7 +6,7 @@
     box-shadow: 2px 2px 10px grey;
     height: 7vh;
     width: 100vw;
-    position: sticky;
+    /* position: fixed; */
     top: 0;
     padding: 10px;
     display: flex;
