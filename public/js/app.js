@@ -6555,10 +6555,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Rob
 
 // module
 
-
-exports.push([module.i, ".my-navbar {\r\n    background: #0c0c0c;\r\n    box-shadow: 2px 2px 10px grey;\r\n    height: 7vh;\r\n    width: 100vw;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    padding: 10px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 650px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #f5f5f5;\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n}\r\n/*.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}*/\r\n.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li a {\r\n    text-decoration: none;\r\n    color: #f5f5f5;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n", ""]);
-
-
+exports.push([module.i, ".my-navbar {\r\n    background: #0c0c0c;\r\n    box-shadow: 2px 2px 10px grey;\r\n    height: 7vh;\r\n    width: 100vw;\r\n    /* position: fixed; */\r\n    top: 0;\r\n    padding: 10px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 650px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #f5f5f5;\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n}\r\n/*.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}*/\r\n.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li a {\r\n    text-decoration: none;\r\n    color: #f5f5f5;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6616,8 +6613,8 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
 
+exports.push([module.i, ".ads-section {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
 
 // exports
 
