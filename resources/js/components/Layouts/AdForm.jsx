@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AdForm.css";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 const AdForm = () => {
     const [values, setValues] = useState({
         title: "",
@@ -17,6 +18,7 @@ const AdForm = () => {
     });
     const [image, setImage] = useState("");
     const [imageUploadName, setImageUploadName] = useState("Chose Photo");
+    const [redirect, setRedirect] = useState(false);
 
     const onChangeHandler = event => {
         setValues({
@@ -29,34 +31,43 @@ const AdForm = () => {
         setImage(event.target.files[0]);
     };
     const onSubmitHandler = event => {
-        console.log(values);
-        console.log(image);
-        // const fd = new FormData();
-        // fd.append("title", values.title);
-        // fd.append("description", values.description);
-        // fd.append("price", values.price);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
-        // fd.append("imageName", image);
+        const fd = new FormData();
+        fd.append("title", values.title);
+        fd.append("description", values.description);
+        fd.append("price", values.price);
+        fd.append("imageName", image);
+        fd.append("expiresIn", values.expiresIn);
+        fd.append("negotiable", values.negotiable);
+        fd.append("condition", values.condition);
+        fd.append("usedFor", values.usedFor);
+        fd.append("frontCamera", values.frontCamera);
+        fd.append("backCamera", values.backCamera);
+        fd.append("RAM", values.RAM);
+        fd.append("internalStorage", values.internalStorage);
         event.preventDefault();
 
-        // axios
-        //     .post("/api/product", fd)
-        //     .then(res => console.log(res.data))
-        //     .catch(err => console.log(err));
-        // setValues({
-        //     title: "",
-        //     description: "",
-        //     price: ""
-        // });
-        // setImageUploadName("Choose Photo");
+        axios
+            .post("/api/product", fd)
+            .then(setRedirect(true))
+            .catch(err => console.log(err));
+        setValues({
+            title: "",
+            description: "",
+            price: "",
+            expiresIn: "",
+            negotiable: "",
+            condition: "",
+            usedFor: "",
+            frontCamera: "",
+            backCamera: "",
+            RAM: "",
+            internalStorage: ""
+        });
+        setImageUploadName("Choose Photo");
     };
+    if (redirect) {
+        return <Redirect to="login" />;
+    }
     return (
         <div className="container mt-5 ">
             <form onSubmit={onSubmitHandler} encType="multipart/form-data">
@@ -214,7 +225,7 @@ const AdForm = () => {
                         htmlFor="usedFor"
                         className="col-sm-2 col-form-label"
                     >
-                        Used For(in months)
+                        Used For
                     </label>
                     <div className="col-sm-10">
                         <input
@@ -222,36 +233,13 @@ const AdForm = () => {
                             className="form-control"
                             id="usedFor"
                             name="usedFor"
+                            placeholder = "in months"
                             value={values.usedFor}
                             onChange={onChangeHandler}
                         />
                     </div>
                 </div>
 
-                <div className="form-group row">
-                    <label
-                        htmlFor="expiresIn"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Expires In
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="expiresIn"
-                            id="expiresIn"
-                            className="form-control"
-                            value={values.expiresIn}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="14">2 Weeks</option>
-                            <option value="30">1 Month</option>
-                            <option value="60">2 Months</option>
-                            <option value="90">3 Months</option>
-                            <option value="120">4 Months</option>
-                        </select>
-                    </div>
-                </div>
 
                 <div className="form-group row">
                     <label
@@ -378,12 +366,12 @@ const AdForm = () => {
                                 name="imageName"
                                 onChange={imageHandler}
                             />
-                            {/* <label
+                            { <label
                                 className="custom-file-label"
                                 htmlFor="customFile"
                             >
                                 {imageUploadName}
-                            </label> */}
+                            </label> }
                         </div>
                     </div>
                 </div>

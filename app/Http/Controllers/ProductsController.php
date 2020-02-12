@@ -14,10 +14,10 @@ use App\Http\Requests\EditAdMobile;
 class ProductsController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => ['show', 'index']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth', ['except' => ['show', 'index']]);
+    // }
 
     public function index()
     {
@@ -27,7 +27,7 @@ class ProductsController extends Controller
 //
     }
 
-    public function store(Request $request)
+    public function store(StoreMobile $request)
     {
         $inputs = $request->all();
 
