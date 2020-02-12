@@ -6522,14 +6522,42 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/AdForm.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css":
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/NavBar.css ***!
   \************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/postcss-loader/src/index.js):\nSyntaxError\n\n(7:9) Unknown word\n\n \u001b[90m 5 | \u001b[39m    background\u001b[33m:\u001b[39m \u001b[35m#0c0c0c\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 6 | \u001b[39m    box-shadow\u001b[33m:\u001b[39m 2px 2px 10px grey\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 7 | \u001b[39m<<<<<<< HEAD\n \u001b[90m   | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 8 | \u001b[39m    height\u001b[33m:\u001b[39m 7%\u001b[33m;\u001b[39m\n \u001b[90m 9 | \u001b[39m    width\u001b[33m:\u001b[39m 100%\u001b[33m;\u001b[39m\n");
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
+
+// module
+exports.push([module.i, ".my-navbar {\n    background: #0c0c0c;\n    box-shadow: 2px 2px 10px grey;\n\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 30px;\n    cursor: pointer;\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -6545,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 400px;\r\n    height: 30px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n.search-button {\r\n    height: 30px;\r\n    width: 100px;\r\n    border: none;\r\n    color: white;\r\n    background-color: #46804c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #3d6f42;\r\n}\r\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
 
 // exports
 
@@ -6564,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".main-wrapper {\r\n    height: 350px;\r\n    width: 1200px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box .photo {\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
+exports.push([module.i, ".main-wrapper {\n    height: 350px;\n    width: 1200px;\n    background: #f8f8f8;\n    box-shadow: 4px 4px 10px grey;\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    margin: 20px;\n}\n.box {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.left-box {\n    /*  background-color: blanchedalmond;*/\n}\n.middle-box {\n    /*  background-color: cadetblue;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr 3fr 1fr;\n}\n\n.right-box {\n    /*  background-color: crimson;\n*/\n}\n.right-box .for-line {\n    display: grid;\n}\n\n.left-box .photo {\n    width: 200px;\n    height: 200px;\n    box-shadow: 2px 2px 10px gray;\n    /*  background-color: aquamarine;\n*/\n}\n.for-line {\n    /*  background-color: hotpink;\n*/\n    width: 100%;\n    height: 220px;\n}\n.price-and-condition {\n    /*  background-color: lavender;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n}\n.price {\n    font-size: 20px;\n}\n.specs,\n.title,\n.description,\n.post-date {\n    padding: 10px 40px;\n}\n\n.title {\n    font-size: 26px;\n}\n.specs {\n    font-size: 16px;\n}\n.ad-photo {\n    height: 100%;\n    width: 100%;\n}\n.post-date {\n    font-size: 12px;\n}\n", ""]);
 
 // exports
 
@@ -6583,7 +6611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ads-section {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -6602,7 +6630,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\r\n    height: 96vh;\r\n}\r\n", ""]);
+exports.push([module.i, ".hero-section {\n    height: 96vh;\n}\n", ""]);
 
 // exports
 
@@ -6640,7 +6668,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n", ""]);
+exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n}\n\n.container {\n    width: 80vw;\n    margin: auto;\n}\n", ""]);
 
 // exports
 
@@ -74103,14 +74131,452 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./resources/js/components/Layouts/AdForm.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Layouts/AdForm.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./AdForm.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/Layouts/AdForm.jsx":
 /*!****************************************************!*\
   !*** ./resources/js/components/Layouts/AdForm.jsx ***!
   \****************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\resources\\js\\components\\Layouts\\AdForm.jsx: Expected corresponding JSX closing tag for <div> (300:12)\n\n\u001b[0m \u001b[90m 298 | \u001b[39m                    \u001b[33mPost\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 299 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 300 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mform\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 301 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 302 | \u001b[39m    )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 303 | \u001b[39m}\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:7013:17)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4078:16)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElementAt (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4046:32)\n    at Object.jsxParseElement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4104:17)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4111:19)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9782:28)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)\n    at Object.parseExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:8950:23)\n    at Object.parseReturnStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11027:28)\n    at Object.parseStatementContent (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10706:21)\n    at Object.parseStatement (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10658:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11234:25)\n    at Object.parseBlockBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11221:10)\n    at Object.parseBlock (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:11205:10)\n    at Object.parseFunctionBody (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10220:24)\n    at Object.parseArrowExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:10177:10)\n    at Object.parseParenAndDistinguishExpression (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9806:12)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9560:21)\n    at Object.parseExprAtom (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:4116:20)\n    at Object.parseExprSubscripts (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9219:23)\n    at Object.parseMaybeUnary (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9199:21)\n    at Object.parseExprOps (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9067:23)\n    at Object.parseMaybeConditional (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9040:23)\n    at Object.parseMaybeAssign (C:\\xampp\\htdocs\\gadgetsbay-bootstrap\\node_modules\\@babel\\parser\\lib\\index.js:9000:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _AdForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdForm.css */ "./resources/js/components/Layouts/AdForm.css");
+/* harmony import */ var _AdForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_AdForm_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var AdForm = function AdForm() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    title: "",
+    description: "",
+    price: "",
+    expiresIn: "",
+    negotiable: "",
+    condition: "",
+    usedFor: "",
+    frontCamera: "",
+    backCamera: "",
+    RAM: "",
+    internalStorage: ""
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      image = _useState4[0],
+      setImage = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Chose Photo"),
+      _useState6 = _slicedToArray(_useState5, 2),
+      imageUploadName = _useState6[0],
+      setImageUploadName = _useState6[1];
+
+  var onChangeHandler = function onChangeHandler(event) {
+    setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
+  };
+
+  var imageHandler = function imageHandler(event) {
+    setImageUploadName(event.target.files[0].name);
+    setImage(event.target.files[0]);
+  };
+
+  var onSubmitHandler = function onSubmitHandler(event) {
+    console.log(values);
+    console.log(image); // const fd = new FormData();
+    // fd.append("title", values.title);
+    // fd.append("description", values.description);
+    // fd.append("price", values.price);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+    // fd.append("imageName", image);
+
+    event.preventDefault(); // axios
+    //     .post("/api/product", fd)
+    //     .then(res => console.log(res.data))
+    //     .catch(err => console.log(err));
+    // setValues({
+    //     title: "",
+    //     description: "",
+    //     price: ""
+    // });
+    // setImageUploadName("Choose Photo");
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container mt-5 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmitHandler,
+    encType: "multipart/form-data"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "title",
+    className: "col-sm-2 col-form-label"
+  }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "title",
+    name: "title",
+    placeholder: "Enter title here",
+    value: values.title,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "description",
+    className: "col-sm-2 col-form-label"
+  }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    className: "form-control",
+    id: "descrition",
+    placeholder: "Enter description here",
+    rows: "4",
+    name: "description",
+    value: values.description,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "expiresIn",
+    className: "col-sm-2 col-form-label"
+  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "expiresIn",
+    id: "expiresIn",
+    className: "form-control",
+    value: values.expiresIn,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "14"
+  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "30"
+  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "60"
+  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "90"
+  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "120"
+  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "price",
+    className: "col-sm-2 col-form-label"
+  }, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "price",
+    name: "price",
+    placeholder: "Rs.",
+    value: values.price,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "negotiable",
+    className: "col-sm-2 col-form-label"
+  }, "Negotiable"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "yes",
+    onChange: onChangeHandler
+  }), "Yes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "negotiable",
+    value: "fixed price",
+    onChange: onChangeHandler
+  }), "Fixed Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "condition",
+    className: "col-sm-2 col-form-label"
+  }, "Condition"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Brand New(not used)",
+    onChange: onChangeHandler
+  }), "Brand New(not used)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Like New(used few times)",
+    onChange: onChangeHandler
+  }), "Like New(used few times)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Excellent",
+    onChange: onChangeHandler
+  }), "Excellent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Good/Fair",
+    onChange: onChangeHandler
+  }), "Good/Fair", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "radio",
+    name: "condition",
+    value: "Not Working",
+    onChange: onChangeHandler
+  }), "Not Working")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "usedFor",
+    className: "col-sm-2 col-form-label"
+  }, "Used For(in months)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control",
+    id: "usedFor",
+    name: "usedFor",
+    value: values.usedFor,
+    onChange: onChangeHandler
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "expiresIn",
+    className: "col-sm-2 col-form-label"
+  }, "Expires In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "expiresIn",
+    id: "expiresIn",
+    className: "form-control",
+    value: values.expiresIn,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "14"
+  }, "2 Weeks"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "30"
+  }, "1 Month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "60"
+  }, "2 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "90"
+  }, "3 Months"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "120"
+  }, "4 Months")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "frontCamera",
+    className: "col-sm-2 col-form-label"
+  }, "Front Camera"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "frontCamera",
+    id: "frontCamera",
+    className: "form-control",
+    value: values.frontCamera,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "none"
+  }, "None"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1MP"
+  }, "1MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2MP"
+  }, "2MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3MP"
+  }, "3MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "5MP"
+  }, "5MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "10MP"
+  }, "10MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "20MP"
+  }, "20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 20MP"
+  }, "More than 20MP")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "backCamera",
+    className: "col-sm-2 col-form-label"
+  }, "Back Camera"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "backCamera",
+    id: "backCamera",
+    className: "form-control",
+    value: values.backCamera,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "none"
+  }, "None"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1MP"
+  }, "1MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2MP"
+  }, "2MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "3MP"
+  }, "3MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "5MP"
+  }, "5MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "10MP"
+  }, "10MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "20MP"
+  }, "20MP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 20MP"
+  }, "More than 20MP")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "RAM",
+    className: "col-sm-2 col-form-label"
+  }, "RAM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "RAM",
+    id: "RAM",
+    className: "form-control",
+    value: values.RAM,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "512MB or less"
+  }, "512MB or less"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1GB"
+  }, "1GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2GB"
+  }, "2GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4GB"
+  }, "4GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "6GB"
+  }, "6GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "8GB"
+  }, "8GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 8BG"
+  }, "More than 8BG")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "internalStorage",
+    className: "col-sm-2 col-form-label"
+  }, "Internal Storage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "internalStorage",
+    id: "internalStorage",
+    className: "form-control",
+    value: values.internalStorage,
+    onChange: onChangeHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "",
+    defaultValue: true,
+    hidden: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "1GB"
+  }, "1GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "2GB"
+  }, "2GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "4GB"
+  }, "4GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "8GB"
+  }, "8GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "16GB"
+  }, "16GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "32GB"
+  }, "32GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "128GB"
+  }, "128GB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+    value: "More than 128GB"
+  }, "More than 128BG")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "col-sm-2 col-form-label"
+  }, "Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "custom-file"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file",
+    className: "custom-file-input",
+    id: "customFile",
+    name: "imageName",
+    onChange: imageHandler
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "btn btn-primary mt-4"
+  }, "Post")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AdForm);
 
 /***/ }),
 
@@ -74707,8 +75173,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -6,14 +6,14 @@ const AdForm = () => {
         title: "",
         description: "",
         price: "",
-        expiresIn:"",
-        negotiable:"",
-        condition:"",
-        usedFor:"",
-        frontCamera:"",
-        backCamera:"",
-        RAM:"",
-        internalStorage:"",
+        expiresIn: "",
+        negotiable: "",
+        condition: "",
+        usedFor: "",
+        frontCamera: "",
+        backCamera: "",
+        RAM: "",
+        internalStorage: ""
     });
     const [image, setImage] = useState("");
     const [imageUploadName, setImageUploadName] = useState("Chose Photo");
@@ -46,7 +46,6 @@ const AdForm = () => {
         // fd.append("imageName", image);
         event.preventDefault();
 
-    
         // axios
         //     .post("/api/product", fd)
         //     .then(res => console.log(res.data))
@@ -97,15 +96,21 @@ const AdForm = () => {
                     </div>
                 </div>
 
-                                <div className="form-group row">
-
                 <div className="form-group row">
-                    <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="expiresIn"
+                        className="col-sm-2 col-form-label"
+                    >
                         Expires In
                     </label>
                     <div className="col-sm-10">
-                        <select name="expiresIn" id="expiresIn"  className="form-control" 
-                        value={values.expiresIn} onChange={onChangeHandler} >
+                        <select
+                            name="expiresIn"
+                            id="expiresIn"
+                            className="form-control"
+                            value={values.expiresIn}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="14">2 Weeks</option>
                             <option value="30">1 Month</option>
@@ -117,7 +122,6 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
-
                     <label htmlFor="price" className="col-sm-2 col-form-label">
                         Price
                     </label>
@@ -135,33 +139,81 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="negotiable" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="negotiable"
+                        className="col-sm-2 col-form-label"
+                    >
                         Negotiable
                     </label>
                     <div className="col-sm-10">
-
-                        <input type="radio" name="negotiable" value="yes"  onChange={onChangeHandler} />Yes
-                        <input type="radio" name="negotiable" value="fixed price"  onChange={onChangeHandler}/>Fixed Price
-
-                       
+                        <input
+                            type="radio"
+                            name="negotiable"
+                            value="yes"
+                            onChange={onChangeHandler}
+                        />
+                        Yes
+                        <input
+                            type="radio"
+                            name="negotiable"
+                            value="fixed price"
+                            onChange={onChangeHandler}
+                        />
+                        Fixed Price
                     </div>
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="condition" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="condition"
+                        className="col-sm-2 col-form-label"
+                    >
                         Condition
                     </label>
                     <div className="col-sm-10">
-                        <input type="radio" name="condition" value="Brand New(not used)" onChange={onChangeHandler} />Brand New(not used)
-                        <input type="radio" name="condition" value="Like New(used few times)" onChange={onChangeHandler}/>Like New(used few times)
-                        <input type="radio" name="condition" value="Excellent" onChange={onChangeHandler}/>Excellent
-                        <input type="radio" name="condition" value="Good/Fair" onChange={onChangeHandler}/>Good/Fair
-                        <input type="radio" name="condition" value="Not Working" onChange={onChangeHandler}/>Not Working
+                        <input
+                            type="radio"
+                            name="condition"
+                            value="Brand New(not used)"
+                            onChange={onChangeHandler}
+                        />
+                        Brand New(not used)
+                        <input
+                            type="radio"
+                            name="condition"
+                            value="Like New(used few times)"
+                            onChange={onChangeHandler}
+                        />
+                        Like New(used few times)
+                        <input
+                            type="radio"
+                            name="condition"
+                            value="Excellent"
+                            onChange={onChangeHandler}
+                        />
+                        Excellent
+                        <input
+                            type="radio"
+                            name="condition"
+                            value="Good/Fair"
+                            onChange={onChangeHandler}
+                        />
+                        Good/Fair
+                        <input
+                            type="radio"
+                            name="condition"
+                            value="Not Working"
+                            onChange={onChangeHandler}
+                        />
+                        Not Working
                     </div>
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="usedFor" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="usedFor"
+                        className="col-sm-2 col-form-label"
+                    >
                         Used For(in months)
                     </label>
                     <div className="col-sm-10">
@@ -177,12 +229,20 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="expiresIn" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="expiresIn"
+                        className="col-sm-2 col-form-label"
+                    >
                         Expires In
                     </label>
                     <div className="col-sm-10">
-                        <select name="expiresIn" id="expiresIn"  className="form-control" 
-                        value={values.expiresIn} onChange={onChangeHandler} >
+                        <select
+                            name="expiresIn"
+                            id="expiresIn"
+                            className="form-control"
+                            value={values.expiresIn}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="14">2 Weeks</option>
                             <option value="30">1 Month</option>
@@ -194,12 +254,20 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="frontCamera" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="frontCamera"
+                        className="col-sm-2 col-form-label"
+                    >
                         Front Camera
                     </label>
                     <div className="col-sm-10">
-                        <select name="frontCamera" id="frontCamera"  className="form-control" 
-                        value={values.frontCamera} onChange={onChangeHandler} >
+                        <select
+                            name="frontCamera"
+                            id="frontCamera"
+                            className="form-control"
+                            value={values.frontCamera}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="none">None</option>
                             <option value="1MP">1MP</option>
@@ -208,18 +276,28 @@ const AdForm = () => {
                             <option value="5MP">5MP</option>
                             <option value="10MP">10MP</option>
                             <option value="20MP">20MP</option>
-                            <option value="More than 20MP">More than 20MP</option>
+                            <option value="More than 20MP">
+                                More than 20MP
+                            </option>
                         </select>
                     </div>
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="backCamera" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="backCamera"
+                        className="col-sm-2 col-form-label"
+                    >
                         Back Camera
                     </label>
                     <div className="col-sm-10">
-                        <select name="backCamera" id="backCamera"  className="form-control" 
-                        value={values.backCamera} onChange={onChangeHandler} >
+                        <select
+                            name="backCamera"
+                            id="backCamera"
+                            className="form-control"
+                            value={values.backCamera}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="none">None</option>
                             <option value="1MP">1MP</option>
@@ -228,7 +306,9 @@ const AdForm = () => {
                             <option value="5MP">5MP</option>
                             <option value="10MP">10MP</option>
                             <option value="20MP">20MP</option>
-                            <option value="More than 20MP">More than 20MP</option>
+                            <option value="More than 20MP">
+                                More than 20MP
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -238,8 +318,13 @@ const AdForm = () => {
                         RAM
                     </label>
                     <div className="col-sm-10">
-                        <select name="RAM" id="RAM"  className="form-control" 
-                        value={values.RAM} onChange={onChangeHandler} >
+                        <select
+                            name="RAM"
+                            id="RAM"
+                            className="form-control"
+                            value={values.RAM}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="512MB or less">512MB or less</option>
                             <option value="1GB">1GB</option>
@@ -253,12 +338,20 @@ const AdForm = () => {
                 </div>
 
                 <div className="form-group row">
-                    <label htmlFor="internalStorage" className="col-sm-2 col-form-label">
+                    <label
+                        htmlFor="internalStorage"
+                        className="col-sm-2 col-form-label"
+                    >
                         Internal Storage
                     </label>
                     <div className="col-sm-10">
-                        <select name="internalStorage" id="internalStorage"  className="form-control" 
-                        value={values.internalStorage} onChange={onChangeHandler} >
+                        <select
+                            name="internalStorage"
+                            id="internalStorage"
+                            className="form-control"
+                            value={values.internalStorage}
+                            onChange={onChangeHandler}
+                        >
                             <option value="" defaultValue hidden></option>
                             <option value="1GB">1GB</option>
                             <option value="2GB">2GB</option>
@@ -267,11 +360,12 @@ const AdForm = () => {
                             <option value="16GB">16GB</option>
                             <option value="32GB">32GB</option>
                             <option value="128GB">128GB</option>
-                            <option value="More than 128GB">More than 128BG</option>
+                            <option value="More than 128GB">
+                                More than 128BG
+                            </option>
                         </select>
                     </div>
                 </div>
-
 
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Photo</label>
@@ -281,7 +375,7 @@ const AdForm = () => {
                                 type="file"
                                 className="custom-file-input"
                                 id="customFile"
-                                name = "imageName"
+                                name="imageName"
                                 onChange={imageHandler}
                             />
                             {/* <label
