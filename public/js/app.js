@@ -6522,6 +6522,72 @@ module.exports = {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/AdForm.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/AdForm.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/NavBar.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
+
+// module
+
+
+exports.push([module.i, ".my-navbar {\r\n    background: #0c0c0c;\r\n    box-shadow: 2px 2px 10px grey;\r\n    height: 7vh;\r\n    width: 100vw;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    padding: 10px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 650px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #f5f5f5;\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n}\r\n/*.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}*/\r\n.my-nav-menu {\r\n    width: 400px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li a {\r\n    text-decoration: none;\r\n    color: #f5f5f5;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n", ""]);
+
+
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/Search.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Layouts/Search.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+
+exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 400px;\r\n    height: 30px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n.search-button {\r\n    height: 30px;\r\n    width: 100px;\r\n    border: none;\r\n    color: white;\r\n    background-color: #46804c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #3d6f42;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+>>>>>>> form fixes
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css":
 /*!************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Ad.css ***!
