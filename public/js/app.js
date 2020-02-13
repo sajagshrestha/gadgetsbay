@@ -6688,7 +6688,11 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, "* {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.container {\r\n\twidth: 80vw;\r\n\tmargin: auto;\r\n}\r\n\r\n\r\n", ""]);
+=======
+exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n\r\n\r\n", ""]);
+>>>>>>> 27358629939bbe3b2baddbf2bffb2a01c7f71748
 
 // exports
 
