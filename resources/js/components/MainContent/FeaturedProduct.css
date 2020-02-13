@@ -1,0 +1,38 @@
+.container{
+	display: flex;
+	justify-content: space-between;
+}
+.featured-product{
+	height: 300px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 10px;
+	grid-gap: 20px;
+
+
+}
+
+.product-container{
+background: #f8f8f8;
+box-shadow: 4px 4px 6px grey;
+font-weight: 600;
+padding: 5px;
+}
+
+.image-wrap{
+	padding: 20px;
+	max-height: 200px;
+	overflow: hidden;
+
+}
+img{
+	max-width:100%;
+height:auto;
+object-fit: cover;
+
+}
+
+.title-wrap{
+	text-align: center;
+}

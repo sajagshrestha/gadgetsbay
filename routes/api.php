@@ -35,6 +35,9 @@ Route::put('product/{id}', 'ProductsController@update');
 // Delete product
 Route::delete('product/{id}', 'ProductsController@destroy');
 
+// Search product
+Route::post('/search', 'ProductsController@search');
+
 //Authentication routes
 //login route
 Route::post('login', 'AuthenticationController@login');

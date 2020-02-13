@@ -34,8 +34,8 @@ class ProductsController extends Controller
         $description = new Ad();
         $description->setValue($inputs);
         $description->productType = 'mobile';
-//        $description->user_id = auth()->user()->id;
-        $description->user_id = 1;
+        $description->user_id = auth()->user()->id;
+        // $description->user_id = 1;
         if($request->hasFile('imageName'))
         {
             $Ext = $request->file('imageName')->getClientOriginalExtension();
@@ -94,6 +94,17 @@ class ProductsController extends Controller
         if ($product->delete()) {
             return new AdResource($product);
         }
+    }
+
+    public function search(Request $request)
+    {
+        $searchTerm = $request->input['search'];
+        $products = Ad::query()
+        ->where('title','LIKE', "%$searchTerm%")
+        ->orWhere('description', 'LIKE' , "%$searchTerm%")
+        ->get();
+ 
+        return AdResource::collection($products);
     }
 
 

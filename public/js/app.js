@@ -6592,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".main-wrapper {\r\n    height: 350px;\r\n    width: 1200px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box .photo {\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    height: 100%;\r\n    width: 100%;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
+exports.push([module.i, ".main-wrapper {\r\n    height: 175px;\r\n    width: 800px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box{\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    max-width: 100%;\r\n        max-height: 100%;\r\n        display: block;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6611,7 +6611,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ads-section {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n.products-section{\r\n    display: -webkit-box;\r\n    display: flex ;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/FeaturedProduct.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".container{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t        justify-content: space-between;\r\n}\r\n.featured-product{\r\n\theight: 300px;\r\n\twidth: 100%;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: repeat(4, 1fr);\r\n\tpadding: 10px;\r\n\tgrid-gap: 20px;\r\n\r\n\r\n}\r\n\r\n.product-container{\r\nbackground: #f8f8f8;\r\nbox-shadow: 4px 4px 6px grey;\r\nfont-weight: 600;\r\npadding: 5px;\r\n}\r\n\r\n.image-wrap{\r\n\tpadding: 20px;\r\n\tmax-height: 200px;\r\n\toverflow: hidden;\r\n\r\n}\r\nimg{\r\n\tmax-width:100%;\r\nheight:auto;\r\n-o-object-fit: cover;\r\n   object-fit: cover;\r\n\r\n}\r\n\r\n.title-wrap{\r\n\ttext-align: center;\r\n}", ""]);
 
 // exports
 
@@ -6668,7 +6687,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n", ""]);
+exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -74902,6 +74921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Ad_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad.jsx */ "./resources/js/components/MainContent/Ad.jsx");
 /* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAds.css */ "./resources/js/components/MainContent/AllAds.css");
 /* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_AllAds_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FeaturedProduct */ "./resources/js/components/MainContent/FeaturedProduct.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -74909,6 +74929,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -74923,20 +74944,200 @@ var AllAds = function AllAds() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/products").then(function (response) {
+      console.log(response.data.data);
       setPost(response.data.data);
     });
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "ads-section"
-  }, posts.map(function (post) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      post: post,
-      key: post.id
-    });
-  }));
+  }, []); // return (
+  //     <div className="products-section">
+  //         {posts.map(post => (
+  //             <Ad post={post} key={post.id} />
+  //         ))}
+  //     </div>
+  // );
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__["default"], null);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AllAds);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/FeaturedProduct.css":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/MainContent/FeaturedProduct.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./FeaturedProduct.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/FeaturedProduct.jsx":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/MainContent/FeaturedProduct.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeaturedProduct.css */ "./resources/js/components/MainContent/FeaturedProduct.css");
+/* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var FeaturedProduct = function FeaturedProduct(_ref) {
+  var className = _ref.className;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "featured-product"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FeaturedProduct);
 
 /***/ }),
 

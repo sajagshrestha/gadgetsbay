@@ -25,6 +25,8 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "normalize.css": "^8.0.1",
+        "prettier": "^1.19.1",
         "react-router-dom": "^5.1.2"
     }
 }
