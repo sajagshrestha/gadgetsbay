@@ -33,8 +33,8 @@ const Register = () => {
         return <Redirect to="login" />;
     }
     return (
-        <form onSubmit={onSubmitHandler} className="container">
-            <label htmlFor="">name</label>
+        <form onSubmit={onSubmitHandler} className="container mt-5">
+            <label htmlFor="">Name</label>
             <input
                 className="form-control"
                 type="text"
@@ -42,7 +42,7 @@ const Register = () => {
                 value={values.name}
                 onChange={onChangeHandler}
             />
-            <label htmlFor="">email</label>
+            <label htmlFor="">Email</label>
             <input
                 className="form-control"
                 type="email"

@@ -7,6 +7,7 @@
 	background-position: center;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+	margin-bottom: 50px;
 }
 .column-one {
 	display: grid;
@@ -60,11 +61,11 @@
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.title-wrap{
+.title-wrap {
 	font-size: 20px;
 	padding: 10px;
 }
 
-.featured-products{
+.featured-products {
 	height: 900px;
 }

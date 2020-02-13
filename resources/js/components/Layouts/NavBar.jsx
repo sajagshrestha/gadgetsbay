@@ -37,44 +37,41 @@ function NavBar({ history }) {
                             HOME
                         </Link>
                     </li>
-                    <li>
-                        <Link className="my-link" to="./post">
-                            POST
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="my-link" to="./find">
-                            FIND
-                        </Link>
-                    </li>
 
                     {user.isLoggedIn ? (
-                        <li>
-                            <div className="dropdown show">
-                                <button
-                                    className="my-dropdown-button dropdown-toggle"
-                                    role="button"
-                                    id="dropdownMenuLink"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                >
-                                    {user.name}
-                                </button>
-
-                                <div
-                                    className="dropdown-menu"
-                                    aria-labelledby="dropdownMenuLink"
-                                >
+                        <React.Fragment>
+                            <li>
+                                <Link className="my-link" to="./post">
+                                    POST
+                                </Link>
+                            </li>
+                            <li>
+                                <div className="dropdown show">
                                     <button
-                                        className="dropdown-item"
-                                        onClick={() => logoutUser()}
+                                        className="my-dropdown-button dropdown-toggle"
+                                        role="button"
+                                        id="dropdownMenuLink"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
                                     >
-                                        Logout
+                                        {user.name}
                                     </button>
+
+                                    <div
+                                        className="dropdown-menu"
+                                        aria-labelledby="dropdownMenuLink"
+                                    >
+                                        <button
+                                            className="dropdown-item"
+                                            onClick={() => logoutUser()}
+                                        >
+                                            Logout
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+                        </React.Fragment>
                     ) : (
                         <React.Fragment>
                             <li>

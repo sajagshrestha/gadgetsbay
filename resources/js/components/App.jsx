@@ -58,7 +58,7 @@ function App() {
                     <NavBar />
                     <Route path="/" exact component={Home} />
                     <Route path="/post" exact component={PostAdd} />
-                    <Route path="/find" exact component={FindAdd} />
+
                     <Route path="/register" exact component={Register} />
                     <Route path="/login" exact component={Login} />
                 </div>

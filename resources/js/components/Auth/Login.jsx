@@ -44,8 +44,8 @@ const Login = () => {
         return <Redirect to="/" />;
     }
     return (
-        <form onSubmit={onSubmitHnadler} className="container">
-            <label htmlFor="">email</label>
+        <form onSubmit={onSubmitHnadler} className="container mt-5">
+            <label htmlFor="">Email</label>
             <input
                 className="form-control"
                 type="email"
