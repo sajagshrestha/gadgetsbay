@@ -1,12 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.css";
 import { UserContext } from "../App";
-<<<<<<< HEAD
 import { withRouter } from "react-router-dom";
-
-const Home = ({ history }) => {
-
 import FeaturedProduct from "./FeaturedProduct"
+const Home = ({ history }) => {
 
 
 	return (
