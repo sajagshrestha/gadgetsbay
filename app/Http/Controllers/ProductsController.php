@@ -55,11 +55,6 @@ class ProductsController extends Controller
 
         $description->product_id = $mobile->id;
         $description->saveOrFail();
-
-        $record = new Record();
-        $record->ad_id = $description->id;
-        $record->save();
-
         return (new AdResource($description))
             ->response()
             ->setStatusCode(201);

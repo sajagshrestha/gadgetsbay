@@ -26,7 +26,6 @@ class AdResource extends JsonResource
             'usedFor' => $this->usedFor,
             'imageName' => $this->imageName,
             'mobile' => $this->mobile,
-            'record' => $this->record,
             'user' => [
                 'name' => $this->user->name,
                 'id' => $this->user->id
