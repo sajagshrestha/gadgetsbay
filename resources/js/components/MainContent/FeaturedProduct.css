@@ -1,15 +1,17 @@
-.container{
+.products-container{
 	display: flex;
 	justify-content: space-between;
 }
+
 .featured-product{
 	height: 300px;
-	width: 100%;
+	width: auto;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	padding: 10px;
-	grid-gap: 20px;
-
+	grid-gap: 30px;
+	max-width: 800px;
+	margin : 0 auto;
 
 }
 
@@ -35,4 +37,6 @@ object-fit: cover;
 
 .title-wrap{
 	text-align: center;
+	color: black;
+	font-weight:  600;
 }

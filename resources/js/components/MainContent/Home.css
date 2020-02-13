@@ -59,3 +59,12 @@
 .post-ad-btn:hover {
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
+
+.title-wrap{
+	font-size: 20px;
+	padding: 10px;
+}
+
+.featured-products{
+	height: 900px;
+}

@@ -6630,7 +6630,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".container{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t        justify-content: space-between;\r\n}\r\n.featured-product{\r\n\theight: 300px;\r\n\twidth: 100%;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: repeat(4, 1fr);\r\n\tpadding: 10px;\r\n\tgrid-gap: 20px;\r\n\r\n\r\n}\r\n\r\n.product-container{\r\nbackground: #f8f8f8;\r\nbox-shadow: 4px 4px 6px grey;\r\nfont-weight: 600;\r\npadding: 5px;\r\n}\r\n\r\n.image-wrap{\r\n\tpadding: 20px;\r\n\tmax-height: 200px;\r\n\toverflow: hidden;\r\n\r\n}\r\nimg{\r\n\tmax-width:100%;\r\nheight:auto;\r\n-o-object-fit: cover;\r\n   object-fit: cover;\r\n\r\n}\r\n\r\n.title-wrap{\r\n\ttext-align: center;\r\n}", ""]);
+exports.push([module.i, ".products-container{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t        justify-content: space-between;\r\n}\r\n\r\n.featured-product{\r\n\theight: 300px;\r\n\twidth: auto;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: repeat(3, 1fr);\r\n\tpadding: 10px;\r\n\tgrid-gap: 30px;\r\n\tmax-width: 800px;\r\n\tmargin : 0 auto;\r\n\r\n}\r\n\r\n.product-container{\r\nbackground: #f8f8f8;\r\nbox-shadow: 4px 4px 6px grey;\r\nfont-weight: 600;\r\npadding: 5px;\r\n}\r\n\r\n.image-wrap{\r\n\tpadding: 20px;\r\n\tmax-height: 200px;\r\n\toverflow: hidden;\r\n\r\n}\r\nimg{\r\n\tmax-width:100%;\r\nheight:auto;\r\n-o-object-fit: cover;\r\n   object-fit: cover;\r\n\r\n}\r\n\r\n.title-wrap{\r\n\ttext-align: center;\r\n\tcolor: black;\r\n\tfont-weight:  600;\r\n}", ""]);
 
 // exports
 
@@ -6650,7 +6650,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\r\n\theight: 60vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
+exports.push([module.i, ".hero-section {\r\n\theight: 60vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.title-wrap{\r\n\tfont-size: 20px;\r\n\tpadding: 10px;\r\n}\r\n\r\n.featured-products{\r\n\theight: 900px;\r\n}", ""]);
 
 // exports
 
@@ -74630,6 +74630,45 @@ var AdForm = function AdForm() {
 
 /***/ }),
 
+/***/ "./resources/js/components/Layouts/HomeAdView.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/Layouts/HomeAdView.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var HomeAdView = function HomeAdView(_ref) {
+  var product = _ref.product;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "storage/images/".concat(product.imageName),
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, product.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs.", product.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, product.condition))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HomeAdView);
+
+/***/ }),
+
 /***/ "./resources/js/components/Layouts/NavBar.css":
 /*!****************************************************!*\
   !*** ./resources/js/components/Layouts/NavBar.css ***!
@@ -75080,136 +75119,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeaturedProduct.css */ "./resources/js/components/MainContent/FeaturedProduct.css");
 /* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Layouts_HomeAdView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Layouts/HomeAdView */ "./resources/js/components/Layouts/HomeAdView.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
 var FeaturedProduct = function FeaturedProduct(_ref) {
   var className = _ref.className;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      products = _useState2[0],
+      setProduct = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios.get("/api/products").then(function (response) {
+      console.log(response.data.data);
+      setProduct(response.data.data);
+    });
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
+    className: "products-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "featured-product"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "product-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "image-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/images/1_1581403285.png",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tite-text"
-  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
-  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
-  }, "(Like New)")))));
+  }, products.map(function (product) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_HomeAdView__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      product: product,
+      key: product.id
+    });
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FeaturedProduct);
@@ -75325,6 +75271,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./resources/js/components/MainContent/Home.css");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var _FeaturedProduct__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FeaturedProduct */ "./resources/js/components/MainContent/FeaturedProduct.jsx");
+
 
 
 
@@ -75353,7 +75301,19 @@ var Home = function Home() {
     className: "post-ad-btn"
   }, "POST AN AD"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "column-two"
-  })));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "featured-products"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, "Featured Ads"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "products"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_3__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "featured-products"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, "Recently Listed Ads"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "products"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
