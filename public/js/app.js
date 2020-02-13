@@ -6650,7 +6650,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\r\n\theight: 50vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
+exports.push([module.i, ".hero-section {\r\n\theight: 60vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
 
 // exports
 
@@ -6688,11 +6688,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, "* {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.container {\r\n\twidth: 80vw;\r\n\tmargin: auto;\r\n}\r\n\r\n\r\n", ""]);
-=======
-exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.container {\r\n    width: 80vw;\r\n    margin: auto;\r\n}\r\n\r\n\r\n", ""]);
->>>>>>> 27358629939bbe3b2baddbf2bffb2a01c7f71748
 
 // exports
 
