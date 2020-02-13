@@ -3,8 +3,8 @@
 }
 
 .search-form input[type="text"] {
-    width: 400px;
-    height: 30px;
+    width: 500px;
+    height: 40px;
     background: #f1f1f1;
     outline: none;
     box-sizing: border-box;
@@ -15,7 +15,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .search-button {
-    height: 30px;
+    height: 40px;
     width: 100px;
     border: none;
     color: white;
@@ -26,7 +26,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .search-button-home {
-    height: 30px;
+    height: 40px;
     width: 100px;
     border: none;
     color: white;

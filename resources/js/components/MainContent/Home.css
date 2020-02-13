@@ -1,7 +1,8 @@
 .hero-section {
-	height: 93vh;
-	background: url("cover.jpg");
+	height: 100vh;
+	background: url("apple.jpg");
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: none;
+	background-size: cover;
 	background-position: center;
 }

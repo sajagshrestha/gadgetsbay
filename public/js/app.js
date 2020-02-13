@@ -6554,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background-color: #1b262c;\n    box-shadow: 2px 2px 10px grey;\n\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.my-navbar-home {\n    background-color: #008081;\n    height: 7%;\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 34px;\n    cursor: pointer;\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n\n.my-dropdown-button {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.my-dropdown-button-home {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: #1b262c;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n\n    height: 7%;\n    width: 100%;\n    position: fixed;\n    top: 0;\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.my-navbar-home {\n    background-color: rgba(0, 0, 0, 0);\n    height: 7%;\n\n    width: 100%;\n    position: fixed;\n\n    z-index: 9999;\n    padding: 10px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 800px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #f5f5f5;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 34px;\n    cursor: pointer;\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n/*.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}*/\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: white;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n\n.my-dropdown-button {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.my-dropdown-button-home {\n    height: 30px;\n    width: 150px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 400px;\n    height: 30px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button-home {\n    height: 30px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 40px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button {\n    height: 40px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #46804c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button-home {\n    height: 40px;\n    width: 100px;\n    border: none;\n    color: white;\n    background-color: #1b262c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.search-button:hover {\n    background: #3d6f42;\n}\n", ""]);
 
 // exports
 
@@ -6631,7 +6631,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\n\theight: 93vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover.jpg */ "./resources/js/components/MainContent/cover.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: fixed;\n\tbackground-position: center;\n}\n", ""]);
+exports.push([module.i, ".hero-section {\n\theight: 100vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./apple.jpg */ "./resources/js/components/MainContent/apple.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: none;\n\tbackground-size: cover;\n\tbackground-position: center;\n}\n", ""]);
 
 // exports
 
@@ -74674,18 +74674,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NavBar() {
-  var scrollFunction = function scrollFunction() {
-    console.log("will run on scroll probably");
-  };
-
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_5__["UserContext"]),
       user = _useContext.user,
       dispatch = _useContext.dispatch,
       isHome = _useContext.isHome;
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    scrollFunction();
-  }, []);
+    window.onscroll = function () {
+      var nav = document.querySelector("#navbar");
+      var searchBtn = document.querySelector("#searchButton");
+      var userBtn = document.querySelector("#dropdownMenuLink");
+
+      if (isHome == true) {
+        if (window.scrollY <= 20) {
+          nav.className = "my-navbar-home";
+          searchBtn.className = "search-button-home";
+          userBtn.className = "my-dropdown-button-home dropdown-toggle";
+        } else {
+          nav.className = "my-navbar";
+          searchBtn.className = "search-button";
+          userBtn.className = "my-dropdown-button dropdown-toggle";
+        }
+      }
+    };
+  }, [isHome]);
   console.log(isHome);
 
   var logoutUser = function logoutUser() {
@@ -74703,7 +74715,8 @@ function NavBar() {
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: isHome ? "my-navbar-home" : "my-navbar"
+    className: isHome ? "my-navbar-home" : "my-navbar",
+    id: "navbar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navbar-items"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74811,7 +74824,8 @@ var Search = function Search(props) {
     className: "search-input"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
-    className: isHome ? "search-button-home" : "search-button"
+    className: isHome ? "search-button-home" : "search-button",
+    id: "searchButton"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fa fa-search"
   }))));
@@ -75105,7 +75119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./resources/js/components/MainContent/Home.css");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
-/* harmony import */ var _Ad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Ad */ "./resources/js/components/MainContent/Ad.jsx");
+/* harmony import */ var _AllAds__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAds */ "./resources/js/components/MainContent/AllAds.jsx");
 
 
 
@@ -75121,9 +75135,9 @@ var Home = function Home() {
       return setHome(false);
     };
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hero-section"
-  });
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllAds__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -75188,14 +75202,14 @@ var PostAdd = function PostAdd() {
 
 /***/ }),
 
-/***/ "./resources/js/components/MainContent/cover.jpg":
+/***/ "./resources/js/components/MainContent/apple.jpg":
 /*!*******************************************************!*\
-  !*** ./resources/js/components/MainContent/cover.jpg ***!
+  !*** ./resources/js/components/MainContent/apple.jpg ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/cover.jpg?bb0e22b2d6d47743ed05bf1a667534ab";
+module.exports = "/images/apple.jpg?7d18369d86d13f82a837d6cfbfcd5f1c";
 
 /***/ }),
 

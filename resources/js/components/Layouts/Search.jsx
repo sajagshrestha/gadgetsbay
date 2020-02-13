@@ -15,6 +15,7 @@ const Search = props => {
                 <button
                     type="submit"
                     className={isHome ? "search-button-home" : "search-button"}
+                    id="searchButton"
                 >
                     <i className="fa fa-search"></i>
                 </button>

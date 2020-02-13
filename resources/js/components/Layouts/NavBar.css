@@ -3,11 +3,11 @@
 
 .my-navbar {
     background-color: #1b262c;
-    box-shadow: 2px 2px 10px grey;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     height: 7%;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
     padding: 10px;
@@ -17,11 +17,12 @@
     transition: background-color 0.4s ease-out;
 }
 .my-navbar-home {
-    background-color: #008081;
+    background-color: rgba(0, 0, 0, 0);
     height: 7%;
+
     width: 100%;
-    position: sticky;
-    top: 0;
+    position: fixed;
+
     z-index: 9999;
     padding: 10px;
     display: flex;
@@ -31,7 +32,7 @@
 }
 .logo-and-search {
     display: flex;
-    width: 750px;
+    width: 800px;
     justify-content: space-between;
     align-items: center;
 }
