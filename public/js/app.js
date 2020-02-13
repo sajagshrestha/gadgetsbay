@@ -6534,7 +6534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+exports.push([module.i, ".my-container {\r\n    width: 60vw;\r\n    margin: 10vh auto;\r\n    background: rgb(250, 250, 250);\r\n    padding: 100px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6554,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 65px;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px 50px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 800px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #1b262c;\n\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 34px;\n    cursor: pointer;\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    margin: 0;\n}\n\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n}\n\n.my-dropdown-button {\n    height: 40px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n", ""]);
+exports.push([module.i, ".my-navbar {\r\n    background-color: white;\r\n    height: 65px;\r\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n    width: 100%;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    z-index: 9999;\r\n    padding: 10px 50px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    -webkit-transition: background-color 0.4s ease-out;\r\n    transition: background-color 0.4s ease-out;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 800px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #1b262c;\r\n\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 34px;\r\n    cursor: pointer;\r\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n\r\n.my-nav-menu {\r\n    width: 500px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li .my-link {\r\n    text-decoration: none;\r\n    color: #1b262c;\r\n    font-weight: bold;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n\r\n.my-dropdown-button {\r\n    height: 40px;\r\n    width: 170px;\r\n    border: none;\r\n    color: #f1f1f1;\r\n    background-color: #0c0c0c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 40px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 40px;\n    width: 50px;\n    border: none;\n    color: #0c0c0c;\n    background-color: #f1f1f1;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #0c0c0c;\n    color: #f1f1f1;\n}\n", ""]);
+exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 500px;\r\n    height: 40px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n\r\n.search-button {\r\n    height: 40px;\r\n    width: 50px;\r\n    border: none;\r\n    color: #0c0c0c;\r\n    background-color: #f1f1f1;\r\n    font-weight: bold;\r\n    -webkit-transition: background-color 0.4s ease-out;\r\n    transition: background-color 0.4s ease-out;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #0c0c0c;\r\n    color: #f1f1f1;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6592,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".main-wrapper {\n    height: 350px;\n    width: 1200px;\n    background: #f8f8f8;\n    box-shadow: 4px 4px 10px grey;\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    margin: 20px;\n}\n.box {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.left-box {\n    /*  background-color: blanchedalmond;*/\n}\n.middle-box {\n    /*  background-color: cadetblue;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr 3fr 1fr;\n}\n\n.right-box {\n    /*  background-color: crimson;\n*/\n}\n.right-box .for-line {\n    display: grid;\n}\n\n.left-box .photo {\n    width: 200px;\n    height: 200px;\n    box-shadow: 2px 2px 10px gray;\n    /*  background-color: aquamarine;\n*/\n}\n.for-line {\n    /*  background-color: hotpink;\n*/\n    width: 100%;\n    height: 220px;\n}\n.price-and-condition {\n    /*  background-color: lavender;\n*/\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n}\n.price {\n    font-size: 20px;\n}\n.specs,\n.title,\n.description,\n.post-date {\n    padding: 10px 40px;\n}\n\n.title {\n    font-size: 26px;\n}\n.specs {\n    font-size: 16px;\n}\n.ad-photo {\n    height: 100%;\n    width: 100%;\n}\n.post-date {\n    font-size: 12px;\n}\n", ""]);
+exports.push([module.i, ".main-wrapper {\r\n    height: 175px;\r\n    width: 800px;\r\n    background: #f8f8f8;\r\n    box-shadow: 4px 4px 10px grey;\r\n    display: grid;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    margin: 20px;\r\n}\r\n.box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.left-box {\r\n    /*  background-color: blanchedalmond;*/\r\n}\r\n.middle-box {\r\n    /*  background-color: cadetblue;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr 3fr 1fr;\r\n}\r\n\r\n.right-box {\r\n    /*  background-color: crimson;\r\n*/\r\n}\r\n.right-box .for-line {\r\n    display: grid;\r\n}\r\n\r\n.left-box{\r\n    width: 200px;\r\n    height: 200px;\r\n    box-shadow: 2px 2px 10px gray;\r\n    /*  background-color: aquamarine;\r\n*/\r\n}\r\n.for-line {\r\n    /*  background-color: hotpink;\r\n*/\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.price-and-condition {\r\n    /*  background-color: lavender;\r\n*/\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n}\r\n.price {\r\n    font-size: 20px;\r\n}\r\n.specs,\r\n.title,\r\n.description,\r\n.post-date {\r\n    padding: 10px 40px;\r\n}\r\n\r\n.title {\r\n    font-size: 26px;\r\n}\r\n.specs {\r\n    font-size: 16px;\r\n}\r\n.ad-photo {\r\n    max-width: 100%;\r\n        max-height: 100%;\r\n        display: block;\r\n}\r\n.post-date {\r\n    font-size: 12px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6611,7 +6611,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ads-section {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
+exports.push([module.i, "\r\n.products-section{\r\n    display: -webkit-box;\r\n    display: flex ;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/FeaturedProduct.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".container{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t        justify-content: space-between;\r\n}\r\n.featured-product{\r\n\theight: 300px;\r\n\twidth: 100%;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: repeat(4, 1fr);\r\n\tpadding: 10px;\r\n\tgrid-gap: 20px;\r\n\r\n\r\n}\r\n\r\n.product-container{\r\nbackground: #f8f8f8;\r\nbox-shadow: 4px 4px 6px grey;\r\nfont-weight: 600;\r\npadding: 5px;\r\n}\r\n\r\n.image-wrap{\r\n\tpadding: 20px;\r\n\tmax-height: 200px;\r\n\toverflow: hidden;\r\n\r\n}\r\nimg{\r\n\tmax-width:100%;\r\nheight:auto;\r\n-o-object-fit: cover;\r\n   object-fit: cover;\r\n\r\n}\r\n\r\n.title-wrap{\r\n\ttext-align: center;\r\n}", ""]);
 
 // exports
 
@@ -6631,7 +6650,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\n\theight: 50vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: none;\n\tbackground-size: cover;\n\tbackground-position: center;\n\tdisplay: grid;\n\tgrid-template-columns: 2fr 1fr;\n}\n.column-one {\n\tdisplay: grid;\n\tgrid-template-rows: 2fr 50px 1fr;\n}\n.title-section {\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 120px;\n\tline-height: 169px;\n\tjustify-self: start;\n\talign-self: end;\n\tcolor: #0c0c0c;\n\tpadding-left: 70px;\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.subtitle-section {\n\tmargin-top: -35px;\n\tpadding-left: 85px;\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 24px;\n\tline-height: 28px;\n\tjustify-self: start;\n\talign-self: start;\n\tcolor: #000000;\n\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad {\n\tpadding-left: 80px;\n\tjustify-self: start;\n\talign-self: start;\n}\n.post-ad-btn {\n\theight: 50px;\n\twidth: 200px;\n\tborder: none;\n\tcolor: white;\n\tbackground-color: #0c0c0c;\n\tfont-weight: bold;\n\t-webkit-transition: background-color 0.4s ease-out;\n\ttransition: background-color 0.4s ease-out;\n\t-webkit-transition: 0.3s;\n\ttransition: 0.3s;\n\tcursor: pointer;\n\tfont-size: 20px;\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad-btn:hover {\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\n}\n", ""]);
+exports.push([module.i, ".hero-section {\r\n\theight: 50vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n", ""]);
 
 // exports
 
@@ -6669,7 +6688,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\n\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n", ""]);
+exports.push([module.i, "* {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.container {\r\n\twidth: 80vw;\r\n\tmargin: auto;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -74941,6 +74960,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Ad_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad.jsx */ "./resources/js/components/MainContent/Ad.jsx");
 /* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAds.css */ "./resources/js/components/MainContent/AllAds.css");
 /* harmony import */ var _AllAds_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_AllAds_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FeaturedProduct */ "./resources/js/components/MainContent/FeaturedProduct.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -74948,6 +74968,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -74962,20 +74983,200 @@ var AllAds = function AllAds() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/products").then(function (response) {
+      console.log(response.data.data);
       setPost(response.data.data);
     });
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "ads-section"
-  }, posts.map(function (post) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      post: post,
-      key: post.id
-    });
-  }));
+  }, []); // return (
+  //     <div className="products-section">
+  //         {posts.map(post => (
+  //             <Ad post={post} key={post.id} />
+  //         ))}
+  //     </div>
+  // );
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__["default"], null);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AllAds);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/FeaturedProduct.css":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/MainContent/FeaturedProduct.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./FeaturedProduct.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/FeaturedProduct.jsx":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/MainContent/FeaturedProduct.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeaturedProduct.css */ "./resources/js/components/MainContent/FeaturedProduct.css");
+/* harmony import */ var _FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FeaturedProduct_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var FeaturedProduct = function FeaturedProduct(_ref) {
+  var className = _ref.className;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "featured-product"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "product-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "image-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/storage/images/1_1581403285.png",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tite-text"
+  }, "Fresh Macbook Pro 2018"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price"
+  }, "Rs. 1,20,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "condition"
+  }, "(Like New)")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FeaturedProduct);
 
 /***/ }),
 
@@ -75240,8 +75441,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

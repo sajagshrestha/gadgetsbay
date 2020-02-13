@@ -1,5 +1,6 @@
-.ads-section {
-    display: flex;
+
+.products-section{
+    display: flex ;
     justify-content: center;
     align-items: center;
     flex-direction: column;
