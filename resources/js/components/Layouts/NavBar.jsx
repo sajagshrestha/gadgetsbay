@@ -6,27 +6,8 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 import axios from "axios";
 function NavBar() {
-    const { user, dispatch, isHome } = useContext(UserContext);
-    useEffect(() => {
-        window.onscroll = () => {
-            const nav = document.querySelector("#navbar");
-            const searchBtn = document.querySelector("#searchButton");
-            const userBtn = document.querySelector("#dropdownMenuLink");
-            if (isHome == true) {
-                if (window.scrollY <= 20) {
-                    nav.className = "my-navbar-home";
-                    searchBtn.className = "search-button-home";
-                    userBtn.className =
-                        "my-dropdown-button-home dropdown-toggle";
-                } else {
-                    nav.className = "my-navbar";
-                    searchBtn.className = "search-button";
-                    userBtn.className = "my-dropdown-button dropdown-toggle";
-                }
-            }
-        };
-    }, [isHome]);
-    console.log(isHome);
+    const { user, dispatch } = useContext(UserContext);
+
     const logoutUser = () => {
         axios
             .get("api/logout", {
@@ -40,7 +21,7 @@ function NavBar() {
     };
 
     return (
-        <div className={isHome ? "my-navbar-home" : "my-navbar"} id="navbar">
+        <div className="my-navbar" id="navbar">
             <div className="navbar-items">
                 <div className="logo-and-search">
                     <div className="logo">GadgetsBay</div>
@@ -68,11 +49,7 @@ function NavBar() {
                         <li>
                             <div className="dropdown show">
                                 <button
-                                    className={
-                                        isHome
-                                            ? "my-dropdown-button-home dropdown-toggle"
-                                            : "my-dropdown-button dropdown-toggle"
-                                    }
+                                    className="my-dropdown-button dropdown-toggle"
                                     role="button"
                                     id="dropdownMenuLink"
                                     data-toggle="dropdown"

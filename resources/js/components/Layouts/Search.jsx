@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Search.css";
-import { UserContext } from "../App";
 
 const Search = props => {
-    const { isHome } = useContext(UserContext);
     return (
         <form className="search-form">
             <input
@@ -14,7 +12,7 @@ const Search = props => {
             <span>
                 <button
                     type="submit"
-                    className={isHome ? "search-button-home" : "search-button"}
+                    className="search-button"
                     id="searchButton"
                 >
                     <i className="fa fa-search"></i>

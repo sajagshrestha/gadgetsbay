@@ -1,8 +1,60 @@
 .hero-section {
-	height: 100vh;
-	background: url("apple.jpg");
+	height: 50vh;
+	background: url("cover-final.jpg");
 	background-repeat: no-repeat;
 	background-attachment: none;
 	background-size: cover;
 	background-position: center;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+.column-one {
+	display: grid;
+	grid-template-rows: 2fr 90px 1fr;
+}
+.title-section {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 550;
+	font-size: 120px;
+	line-height: 169px;
+	justify-self: start;
+	align-self: end;
+	color: #0c0c0c;
+	padding-left: 70px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subtitle-section {
+	padding-left: 80px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 550;
+	font-size: 24px;
+	line-height: 28px;
+	justify-self: start;
+	align-self: start;
+	color: #000000;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.post-ad {
+	padding-left: 80px;
+	justify-self: start;
+	align-self: start;
+}
+.post-ad-btn {
+	height: 50px;
+	width: 200px;
+	border: none;
+	color: white;
+	background-color: #0c0c0c;
+	font-weight: bold;
+	transition: background-color 0.4s ease-out;
+	transition: 0.3s;
+	cursor: pointer;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.post-ad-btn:hover {
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }

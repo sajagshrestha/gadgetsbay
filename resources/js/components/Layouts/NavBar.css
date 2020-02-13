@@ -2,29 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .my-navbar {
-    background-color: #1b262c;
+    background-color: white;
+    height: 65px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    height: 7%;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 9999;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    transition: background-color 0.4s ease-out;
-}
-.my-navbar-home {
-    background-color: rgba(0, 0, 0, 0);
-    height: 7%;
-
-    width: 100%;
-    position: fixed;
-
-    z-index: 9999;
-    padding: 10px;
+    padding: 10px 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -44,19 +29,14 @@
 }
 
 .logo {
-    color: #f5f5f5;
+    color: #1b262c;
+
     font-family: "Bebas Neue", cursive;
     font-size: 34px;
     cursor: pointer;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/*.my-nav-menu {
-    width: 400px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
+
 .my-nav-menu {
     width: 500px;
     height: 100%;
@@ -69,33 +49,21 @@
 
 .my-nav-menu li .my-link {
     text-decoration: none;
-    color: white;
+    color: #1b262c;
+    font-weight: bold;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .my-dropdown-button {
-    height: 30px;
-    width: 150px;
+    height: 40px;
+    width: 170px;
     border: none;
-    color: white;
-    background-color: #46804c;
+    color: #f1f1f1;
+    background-color: #0c0c0c;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
 }
-.my-dropdown-button-home {
-    height: 30px;
-    width: 150px;
-    border: none;
-    color: white;
-    background-color: #1b262c;
-    font-weight: bold;
-    transition: background-color 0.4s ease-out;
-    transition: 0.3s;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
