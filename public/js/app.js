@@ -74688,7 +74688,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function NavBar() {
+function NavBar(_ref) {
+  var history = _ref.history;
+
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_5__["UserContext"]),
       user = _useContext.user,
       dispatch = _useContext.dispatch;
@@ -74715,7 +74717,10 @@ function NavBar() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo-and-search"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "logo"
+    className: "logo",
+    onClick: function onClick() {
+      return history.push("/");
+    }
   }, "GadgetsBay"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "my-nav-menu"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
@@ -74753,7 +74758,7 @@ function NavBar() {
   }, "REGISTER"))))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(NavBar));
 
 /***/ }),
 
@@ -75325,20 +75330,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.css */ "./resources/js/components/MainContent/Home.css");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Home_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
 
-var Home = function Home() {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_2__["UserContext"]),
-      setHome = _useContext.setHome;
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setHome(true);
-    return function () {
-      return setHome(false);
-    };
-  }, []);
+var Home = function Home(_ref) {
+  var history = _ref.history;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hero-section"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -75350,13 +75349,16 @@ var Home = function Home() {
   }, "CONNECTING BUYERS AND SELLER ALL OVER NEPAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post-ad"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return history.push("/post");
+    },
     className: "post-ad-btn"
   }, "POST AN AD"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "column-two"
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Home));
 
 /***/ }),
 
