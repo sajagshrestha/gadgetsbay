@@ -1,13 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.css";
 import { UserContext } from "../App";
+import { withRouter } from "react-router-dom";
 
-const Home = () => {
-	const { setHome } = useContext(UserContext);
-	useEffect(() => {
-		setHome(true);
-		return () => setHome(false);
-	}, []);
+const Home = ({ history }) => {
 	return (
 		<div>
 			<div className="hero-section">
@@ -17,7 +13,12 @@ const Home = () => {
 						CONNECTING BUYERS AND SELLER ALL OVER NEPAL
 					</div>
 					<div className="post-ad">
-						<button className="post-ad-btn">POST AN AD</button>
+						<button
+							onClick={() => history.push("/post")}
+							className="post-ad-btn"
+						>
+							POST AN AD
+						</button>
 					</div>
 				</div>
 				<div className="column-two"></div>
@@ -26,4 +27,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default withRouter(Home);

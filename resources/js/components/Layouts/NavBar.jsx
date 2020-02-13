@@ -2,10 +2,11 @@ import React, { useContext, createContext, useEffect } from "react";
 import "./NavBar.css";
 import "./Search.css";
 import Search from "./Search";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { UserContext } from "../App";
 import axios from "axios";
-function NavBar() {
+
+function NavBar({ history }) {
     const { user, dispatch } = useContext(UserContext);
 
     const logoutUser = () => {
@@ -24,7 +25,9 @@ function NavBar() {
         <div className="my-navbar" id="navbar">
             <div className="navbar-items">
                 <div className="logo-and-search">
-                    <div className="logo">GadgetsBay</div>
+                    <div className="logo" onClick={() => history.push("/")}>
+                        GadgetsBay
+                    </div>
                     <Search />
                 </div>
 
@@ -92,4 +95,4 @@ function NavBar() {
     );
 }
 
-export default NavBar;
+export default withRouter(NavBar);
