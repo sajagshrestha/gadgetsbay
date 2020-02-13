@@ -1,9 +1,14 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.css";
 import { UserContext } from "../App";
+<<<<<<< HEAD
 import { withRouter } from "react-router-dom";
 
 const Home = ({ history }) => {
+
+import FeaturedProduct from "./FeaturedProduct"
+
+
 	return (
 		<div>
 			<div className="hero-section">
@@ -20,8 +25,25 @@ const Home = ({ history }) => {
 							POST AN AD
 						</button>
 					</div>
+
 				</div>
 				<div className="column-two"></div>
+			</div>
+			<div className="featured-products">
+				<div className="title-wrap">
+				Featured Ads</div>
+				<div className="products">
+					< FeaturedProduct />
+				</div>
+
+			</div>
+			<div className="featured-products">
+				<div className="title-wrap">
+				Recently Listed Ads</div>
+				<div className="products">
+					< FeaturedProduct />
+				</div>
+
 			</div>
 		</div>
 	);

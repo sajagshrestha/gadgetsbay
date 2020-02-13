@@ -15,8 +15,6 @@ class Ad extends Model
     {
         return $this->belongsTo('App\User');
     }
-
-    public $timestamps = false;
     protected $guarded = [];
 
      function setValue(array $inputs)

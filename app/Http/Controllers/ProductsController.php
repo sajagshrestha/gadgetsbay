@@ -96,7 +96,6 @@ class ProductsController extends Controller
         $searchTerm = $request->input['search'];
         $products = Ad::query()
         ->where('title','LIKE', "%$searchTerm%")
-        ->orWhere('description', 'LIKE' , "%$searchTerm%")
         ->get();
  
         return AdResource::collection($products);

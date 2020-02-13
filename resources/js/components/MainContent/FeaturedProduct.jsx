@@ -1,91 +1,28 @@
-import React, { PropTypes } from "react";
+import React, { PropTypes , useEffect , useState} from "react";
 import "./FeaturedProduct.css";
+import HomeAdView from "../Layouts/HomeAdView";
+
 
 const FeaturedProduct = ({ className }) => {
+
+const [products, setProduct] = useState([]);
+    useEffect(() => {
+        axios.get("/api/products").then(response => {
+            console.log(response.data.data)
+            setProduct(response.data.data);
+        });
+    }, []);
+
 	return (
-		<div className="container">
-		<div className="featured-product">
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
+		<div className="products-container">
+			<div className="featured-product">
+			
+			{products.map(product => (
+                <HomeAdView product={product} key={product.id} />
+            ))}
+
 			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-			<div class="product-container">
-				<div className="image-wrap">
-					<img src="/storage/images/1_1581403285.png" alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">Fresh Macbook Pro 2018</div>
-					<div className="price">Rs. 1,20,000</div>
-					<div className="condition">(Like New)</div>
-				</div>
-			</div>
-		</div></div>
+		</div>
 	);
 };
 
