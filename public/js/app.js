@@ -73888,11 +73888,12 @@ function App() {
       user = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isHome = _useState2[0],
-      setHome = _useState2[1];
-
+  var globalToken = {
+    headers: {
+      Authorization: "Bearer ".concat(user.token)
+    }
+  };
+  console.log(globalToken);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var localUser = JSON.parse(localStorage.getItem("user"));
 
@@ -73910,8 +73911,7 @@ function App() {
     value: {
       user: user,
       dispatch: dispatch,
-      isHome: isHome,
-      setHome: setHome
+      globalToken: globalToken
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/",
