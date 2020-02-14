@@ -11,7 +11,7 @@ const Home = ({ history }) => {
 				<div className="column-one">
 					<div className="title-section">GADGETSBAY</div>
 					<div className="subtitle-section">
-						CONNECTING BUYERS AND SELLER ALL OVER NEPAL
+						CONNECTING BUYERS AND SELLERS ALL OVER NEPAL
 					</div>
 					<div className="post-ad">
 						<button

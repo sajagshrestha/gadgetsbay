@@ -73893,7 +73893,6 @@ function App() {
       Authorization: "Bearer ".concat(user.token)
     }
   };
-  console.log(globalToken);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var localUser = JSON.parse(localStorage.getItem("user"));
 
@@ -74728,14 +74727,11 @@ function NavBar(_ref) {
 
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_5__["UserContext"]),
       user = _useContext.user,
-      dispatch = _useContext.dispatch;
+      dispatch = _useContext.dispatch,
+      globalToken = _useContext.globalToken;
 
   var logoutUser = function logoutUser() {
-    axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("api/logout", {
-      headers: {
-        Authorization: "Bearer ".concat(user.token)
-      }
-    }).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("api/logout", globalToken).then(function (res) {
       console.log("logout sucessfull");
       dispatch({
         type: "logout"
@@ -75287,7 +75283,7 @@ var Home = function Home(_ref) {
     className: "title-section"
   }, "GADGETSBAY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "subtitle-section"
-  }, "CONNECTING BUYERS AND SELLER ALL OVER NEPAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "CONNECTING BUYERS AND SELLERS ALL OVER NEPAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post-ad"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {

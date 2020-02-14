@@ -34,7 +34,6 @@ function App() {
     const globalToken = {
         headers: { Authorization: `Bearer ${user.token}` }
     };
-    console.log(globalToken);
 
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
