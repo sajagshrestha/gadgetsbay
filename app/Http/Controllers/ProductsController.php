@@ -14,10 +14,10 @@ use App\Http\Requests\EditAdMobile;
 class ProductsController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth', ['except' => ['show', 'index']]);
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['show', 'index']]);
+    }
 
     public function index()
     {
@@ -35,7 +35,6 @@ class ProductsController extends Controller
         $description->setValue($inputs);
         $description->productType = 'mobile';
         $description->user_id = auth()->user()->id;
-        // $description->user_id = 1;
         if($request->hasFile('imageName'))
         {
             $Ext = $request->file('imageName')->getClientOriginalExtension();
