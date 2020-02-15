@@ -35,6 +35,7 @@ class ProductsController extends Controller
         $description->setValue($inputs);
         $description->productType = 'mobile';
         $description->user_id = auth()->user()->id;
+
         if($request->hasFile('imageName'))
         {
             $Ext = $request->file('imageName')->getClientOriginalExtension();
