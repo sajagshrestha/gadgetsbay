@@ -2,42 +2,66 @@ import React from "react";
 import "./Ad.css";
 const Ad = ({ post }) => {
     return (
-        <div className="panel">
-            <div className="panel-body">
-                <div className="main-wrapper">
-                    <div className="left-box box">
-                        <div className="for-line box">
-                            <div className="photo">
-                                <img
-                                    src={`storage/images/${post.imageName}`}
-                                    alt=""
-                                    className="ad-photo"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="middle-box">
-                        <div className="title">{post.title}</div>
-                        <div className="specs">
-                            RAM: 16GB| Storage: 500Gb| Storage-Type: SSD
-                        </div>
-                        <div className="description">{post.description}</div>
-                        <div className="post-date">Posted on : 2020-02-07</div>
-                    </div>
-                    <div className="right-box box">
-                        <div className="for-line">
-                            <div className="seller-info box">
-                                Seller Information
-                            </div>
-                            <div className="price-and-condition box">
-                                <div className="price box">{post.price}</div>
-                                <div>(Like New)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="product-wrapper">
+        <div class="image-wrapper">
+            <div class="image">
+                <img src="mac.jpg" alt="">
             </div>
         </div>
+        <div class="product-detail">
+            <div class="title-wrap">
+                Mac Book Pro
+            </div>
+            <div class="specification">
+                <ul class="specification-list">
+                    <li class="specification-list-items">
+                        <div class="attribute">Front Camera:</div>
+                         <div class="value">2MP</div>
+                    </li>
+                    <li class="specification-list-items">
+                        <div class="attribute">Back Camera:</div>
+                         <div class="value">5Mp</div>
+                    </li>
+                    <li class="specification-list-items">
+                        <div class="attribute">RAM:</div>
+                         <div class="value">2GB</div>
+                    </li>
+                    <li class="specification-list-items">
+                        <div class="attribute">Internal Storage:</div>
+                         <div class="value">8GB</div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maxime consequuntur velit explicabo earum exercitationem.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maxime consequuntur velit explicabo earum exercitationem.
+                
+            </div>
+            <div class="posted-on">
+                <div class="attribute">Posted on :</div> 2019-12-12
+            </div>
+        </div>
+        <div class="seller-price">
+          <div class="seller-info">
+              <ul>
+                    <li>
+                      <div class="attribute">Seller:</div>
+                      <div class="value">Purushottam Shrestha</div>
+                    </li>
+                    <li>
+                      <div class="attribute">Location:</div>
+                      <div class="value">Purushottam Shrestha</div>
+                    </li>
+                    
+              </ul>
+          </div>
+          <div class="price">
+            <div>RS 8000</div>
+            <div>Brand new</div>
+          </div>
+        </div>
+
     );
 };
 
