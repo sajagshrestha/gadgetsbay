@@ -31,7 +31,10 @@ const reducer = (state, action) => {
 };
 function App() {
     const [user, dispatch] = useReducer(reducer, initialState);
-    const [isHome, setHome] = useState(false);
+    const globalToken = {
+        headers: { Authorization: `Bearer ${user.token}` }
+    };
+
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser) {
@@ -49,8 +52,7 @@ function App() {
             value={{
                 user: user,
                 dispatch: dispatch,
-                isHome: isHome,
-                setHome
+                globalToken: globalToken
             }}
         >
             <Router>

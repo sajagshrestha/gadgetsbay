@@ -7,18 +7,14 @@ import { UserContext } from "../App";
 import axios from "axios";
 
 function NavBar({ history }) {
-    const { user, dispatch } = useContext(UserContext);
+    const { user, dispatch, globalToken } = useContext(UserContext);
 
     const logoutUser = () => {
-        axios
-            .get("api/logout", {
-                headers: { Authorization: `Bearer ${user.token}` }
-            })
-            .then(res => {
-                console.log("logout sucessfull");
-                dispatch({ type: "logout" });
-                localStorage.removeItem("user");
-            });
+        axios.get("api/logout", globalToken).then(res => {
+            console.log("logout sucessfull");
+            dispatch({ type: "logout" });
+            localStorage.removeItem("user");
+        });
     };
 
     return (

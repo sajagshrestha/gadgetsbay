@@ -73888,11 +73888,11 @@ function App() {
       user = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isHome = _useState2[0],
-      setHome = _useState2[1];
-
+  var globalToken = {
+    headers: {
+      Authorization: "Bearer ".concat(user.token)
+    }
+  };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var localUser = JSON.parse(localStorage.getItem("user"));
 
@@ -73910,8 +73910,7 @@ function App() {
     value: {
       user: user,
       dispatch: dispatch,
-      isHome: isHome,
-      setHome: setHome
+      globalToken: globalToken
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
     path: "/",
@@ -74728,14 +74727,11 @@ function NavBar(_ref) {
 
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_5__["UserContext"]),
       user = _useContext.user,
-      dispatch = _useContext.dispatch;
+      dispatch = _useContext.dispatch,
+      globalToken = _useContext.globalToken;
 
   var logoutUser = function logoutUser() {
-    axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("api/logout", {
-      headers: {
-        Authorization: "Bearer ".concat(user.token)
-      }
-    }).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("api/logout", globalToken).then(function (res) {
       console.log("logout sucessfull");
       dispatch({
         type: "logout"
@@ -75287,7 +75283,7 @@ var Home = function Home(_ref) {
     className: "title-section"
   }, "GADGETSBAY"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "subtitle-section"
-  }, "CONNECTING BUYERS AND SELLER ALL OVER NEPAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "CONNECTING BUYERS AND SELLERS ALL OVER NEPAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post-ad"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
