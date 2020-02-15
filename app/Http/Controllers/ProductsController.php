@@ -92,9 +92,10 @@ class ProductsController extends Controller
 
     public function search(Request $request)
     {
-        $searchTerm = $request->input['search'];
+        $searchTerm = $request->input('search');
         $products = Ad::query()
         ->where('title','LIKE', "%$searchTerm%")
+        ->orWhere('description','LIKE', "%$searchTerm%" )
         ->get();
  
         return AdResource::collection($products);
