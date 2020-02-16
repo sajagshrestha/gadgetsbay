@@ -1,67 +1,65 @@
 import React from "react";
-import "./Ad.css";
+// import "./Ad.css";
 const Ad = ({ post }) => {
     return (
-        <div class="product-wrapper">
-        <div class="image-wrapper">
-            <div class="image">
-                <img src="mac.jpg" alt="">
+        <div className="product-wrapper">
+            <div className="image-wrapper">
+                <div className="image">
+                    <img src="mac.jpg" alt="" />
+                </div>
+            </div>
+            <div className="product-detail">
+                <div className="title-wrap">Mac Book Pro</div>
+                <div className="specification">
+                    <ul className="specification-list">
+                        <li className="specification-list-items">
+                            <div className="attribute">Front Camera:</div>
+                            <div className="value">2MP</div>
+                        </li>
+                        <li className="specification-list-items">
+                            <div className="attribute">Back Camera:</div>
+                            <div className="value">5Mp</div>
+                        </li>
+                        <li className="specification-list-items">
+                            <div className="attribute">RAM:</div>
+                            <div className="value">2GB</div>
+                        </li>
+                        <li className="specification-list-items">
+                            <div className="attribute">Internal Storage:</div>
+                            <div className="value">8GB</div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Natus maxime consequuntur velit explicabo earum
+                    exercitationem. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Natus maxime consequuntur velit explicabo
+                    earum exercitationem.
+                </div>
+                <div className="posted-on">
+                    <div className="attribute">Posted on :</div> 2019-12-12
+                </div>
+            </div>
+            <div className="seller-price">
+                <div className="seller-info">
+                    <ul>
+                        <li>
+                            <div className="attribute">Seller:</div>
+                            <div className="value">Purushottam Shrestha</div>
+                        </li>
+                        <li>
+                            <div className="attribute">Location:</div>
+                            <div className="value">Purushottam Shrestha</div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="price">
+                    <div>RS 8000</div>
+                    <div>Brand new</div>
+                </div>
             </div>
         </div>
-        <div class="product-detail">
-            <div class="title-wrap">
-                Mac Book Pro
-            </div>
-            <div class="specification">
-                <ul class="specification-list">
-                    <li class="specification-list-items">
-                        <div class="attribute">Front Camera:</div>
-                         <div class="value">2MP</div>
-                    </li>
-                    <li class="specification-list-items">
-                        <div class="attribute">Back Camera:</div>
-                         <div class="value">5Mp</div>
-                    </li>
-                    <li class="specification-list-items">
-                        <div class="attribute">RAM:</div>
-                         <div class="value">2GB</div>
-                    </li>
-                    <li class="specification-list-items">
-                        <div class="attribute">Internal Storage:</div>
-                         <div class="value">8GB</div>
-                    </li>
-                    
-                </ul>
-            </div>
-            <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maxime consequuntur velit explicabo earum exercitationem.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus maxime consequuntur velit explicabo earum exercitationem.
-                
-            </div>
-            <div class="posted-on">
-                <div class="attribute">Posted on :</div> 2019-12-12
-            </div>
-        </div>
-        <div class="seller-price">
-          <div class="seller-info">
-              <ul>
-                    <li>
-                      <div class="attribute">Seller:</div>
-                      <div class="value">Purushottam Shrestha</div>
-                    </li>
-                    <li>
-                      <div class="attribute">Location:</div>
-                      <div class="value">Purushottam Shrestha</div>
-                    </li>
-                    
-              </ul>
-          </div>
-          <div class="price">
-            <div>RS 8000</div>
-            <div>Brand new</div>
-          </div>
-        </div>
-
     );
 };
 

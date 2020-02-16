@@ -8,7 +8,6 @@ const FeaturedProduct = ({ className }) => {
 const [products, setProduct] = useState([]);
     useEffect(() => {
         axios.get("/api/products").then(response => {
-            console.log(response.data.data)
             setProduct(response.data.data);
         });
     }, []);

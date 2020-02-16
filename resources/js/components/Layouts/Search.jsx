@@ -3,15 +3,17 @@ import "./Search.css";
 
 const Search = props => {
 
+    
     const [search,setSearch] = useState('');
     const [posts, setPost] = useState({});
     const onSubmitHandler = event => {
         event.preventDefault();
+
         axios
-        .post("/api/search" , search)
+        .post("/api/search",{search:search})
         .then(response => {
-            console.log('uolo')
-            console.log(response.data.data)
+            
+            console.log(response.data)
             setPost(response.data.data)
         })
         .catch(err => console.log(err));

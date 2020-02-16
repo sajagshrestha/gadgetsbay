@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./AdForm.css";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
+import { UserContext } from "../App";
 const AdForm = () => {
+     const {  globalToken } = useContext(UserContext);
     const [values, setValues] = useState({
         title: "",
         description: "",
@@ -15,6 +17,7 @@ const AdForm = () => {
         backCamera: "",
         RAM: "",
         internalStorage: ""
+
     });
     const [image, setImage] = useState("");
     const [imageUploadName, setImageUploadName] = useState("Chose Photo");
@@ -47,7 +50,7 @@ const AdForm = () => {
         event.preventDefault();
 
         axios
-            .post("/api/product", fd)
+            .post("/api/product", fd, globalToken)
             .then(setRedirect(true))
             .catch(err => console.log(err));
         setValues({

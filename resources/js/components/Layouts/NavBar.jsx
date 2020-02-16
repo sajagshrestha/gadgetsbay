@@ -11,7 +11,7 @@ function NavBar({ history }) {
 
     const logoutUser = () => {
         axios.get("api/logout", globalToken).then(res => {
-            console.log("logout sucessfull");
+            
             dispatch({ type: "logout" });
             localStorage.removeItem("user");
         });

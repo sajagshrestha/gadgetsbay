@@ -44,7 +44,6 @@ function App() {
                 token: localUser.token
             });
         }
-        console.log(user);
     }, [user.token]);
 
     return (
@@ -60,7 +59,6 @@ function App() {
                     <NavBar />
                     <Route path="/" exact component={Home} />
                     <Route path="/post" exact component={PostAdd} />
-
                     <Route path="/register" exact component={Register} />
                     <Route path="/login" exact component={Login} />
                 </div>
