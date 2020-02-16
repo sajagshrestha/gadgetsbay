@@ -5,7 +5,7 @@
 
 .search-form input[type="text"] {
     width: 500px;
-    height: 40px;
+    height: 35px;
     background: #f1f1f1;
     outline: none;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 }
 
 .search-button {
-    height: 40px;
+    height: 35px;
     width: 50px;
     border: none;
     color: #0c0c0c;

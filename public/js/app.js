@@ -6534,7 +6534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".my-container {\r\n    width: 60vw;\r\n    margin: 10vh auto;\r\n    background: rgb(250, 250, 250);\r\n    padding: 100px;\r\n}\r\n", ""]);
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
 
 // exports
 
@@ -6554,7 +6554,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\r\n    background-color: white;\r\n    height: 65px;\r\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n    width: 100%;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 0;\r\n    z-index: 9999;\r\n    padding: 10px 50px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    -webkit-transition: background-color 0.4s ease-out;\r\n    transition: background-color 0.4s ease-out;\r\n}\r\n.logo-and-search {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    width: 800px;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.navbar-items {\r\n    width: 90vw;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    color: #1b262c;\r\n\r\n    font-family: \"Bebas Neue\", cursive;\r\n    font-size: 34px;\r\n    cursor: pointer;\r\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n\r\n.my-nav-menu {\r\n    width: 500px;\r\n    height: 100%;\r\n    list-style: none;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    justify-content: space-around;\r\n    margin: 0;\r\n}\r\n\r\n.my-nav-menu li .my-link {\r\n    text-decoration: none;\r\n    color: #1b262c;\r\n    font-weight: bold;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n}\r\n\r\n.my-dropdown-button {\r\n    height: 40px;\r\n    width: 170px;\r\n    border: none;\r\n    color: #f1f1f1;\r\n    background-color: #0c0c0c;\r\n    font-weight: bold;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    padding: 10px 50px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    justify-content: space-around;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    width: 90vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #1b262c;\n\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n.my-nav-menu li .my-link:hover {\n    text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\r\n}\r\n\r\n.search-form input[type=\"text\"] {\r\n    width: 500px;\r\n    height: 40px;\r\n    background: #f1f1f1;\r\n    outline: none;\r\n    box-sizing: border-box;\r\n    border: none;\r\n    padding-left: 40px;\r\n    font-size: 16px;\r\n    -webkit-transition-duration: 0.4s;\r\n            transition-duration: 0.4s;\r\n}\r\n\r\n.search-button {\r\n    height: 40px;\r\n    width: 50px;\r\n    border: none;\r\n    color: #0c0c0c;\r\n    background-color: #f1f1f1;\r\n    font-weight: bold;\r\n    -webkit-transition: background-color 0.4s ease-out;\r\n    transition: background-color 0.4s ease-out;\r\n    -webkit-transition: 0.3s;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n}\r\n.search-button:hover {\r\n    background: #0c0c0c;\r\n    color: #f1f1f1;\r\n}\r\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 35px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 35px;\n    width: 50px;\n    border: none;\n    color: #0c0c0c;\n    background-color: #f1f1f1;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #0c0c0c;\n    color: #f1f1f1;\n}\n", ""]);
 
 // exports
 
@@ -6592,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\r\n.products-section{\r\n    display: -webkit-box;\r\n    display: flex ;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    width: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, "\n.products-section{\n    display: -webkit-box;\n    display: flex ;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -6611,7 +6611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".products-container{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: justify;\r\n\t        justify-content: space-between;\r\n}\r\n\r\n.featured-product{\r\n\theight: 300px;\r\n\twidth: auto;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: repeat(3, 1fr);\r\n\tpadding: 10px;\r\n\tgrid-gap: 30px;\r\n\tmax-width: 800px;\r\n\tmargin : 0 auto;\r\n\r\n}\r\n\r\n.product-container{\r\nbackground: #f8f8f8;\r\nbox-shadow: 4px 4px 6px grey;\r\nfont-weight: 600;\r\npadding: 5px;\r\n}\r\n\r\n.image-wrap{\r\n\tpadding: 20px;\r\n\tmax-height: 200px;\r\n\toverflow: hidden;\r\n\r\n}\r\nimg{\r\n\tmax-width:100%;\r\nheight:auto;\r\n-o-object-fit: cover;\r\n   object-fit: cover;\r\n\r\n}\r\n\r\n.title-wrap{\r\n\ttext-align: center;\r\n\tcolor: black;\r\n\tfont-weight:  600;\r\n}", ""]);
+exports.push([module.i, ".products-container{\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-pack: justify;\n\t        justify-content: space-between;\n}\n\n.featured-product{\n\theight: 300px;\n\twidth: auto;\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tpadding: 10px;\n\tgrid-gap: 30px;\n\tmax-width: 800px;\n\tmargin : 0 auto;\n\n}\n\n.product-container{\nbackground: #f8f8f8;\nbox-shadow: 4px 4px 6px grey;\nfont-weight: 600;\npadding: 5px;\n}\n\n.image-wrap{\n\tpadding: 20px;\n\tmax-height: 200px;\n\toverflow: hidden;\n\n}\nimg{\n\tmax-width:100%;\nheight:auto;\n-o-object-fit: cover;\n   object-fit: cover;\n\n}\n\n.title-wrap{\n\ttext-align: center;\n\tcolor: black;\n\tfont-weight:  600;\n}", ""]);
 
 // exports
 
@@ -6631,7 +6631,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section {\r\n\theight: 60vh;\r\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\r\n\tbackground-repeat: no-repeat;\r\n\tbackground-attachment: none;\r\n\tbackground-size: cover;\r\n\tbackground-position: center;\r\n\tdisplay: grid;\r\n\tgrid-template-columns: 2fr 1fr;\r\n\tmargin-bottom: 50px;\r\n}\r\n.column-one {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: 2fr 50px 1fr;\r\n}\r\n.title-section {\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 120px;\r\n\tline-height: 169px;\r\n\tjustify-self: start;\r\n\talign-self: end;\r\n\tcolor: #0c0c0c;\r\n\tpadding-left: 70px;\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.subtitle-section {\r\n\tmargin-top: -35px;\r\n\tpadding-left: 85px;\r\n\tfont-family: Roboto;\r\n\tfont-style: normal;\r\n\tfont-weight: 550;\r\n\tfont-size: 24px;\r\n\tline-height: 28px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n\tcolor: #000000;\r\n\r\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad {\r\n\tpadding-left: 80px;\r\n\tjustify-self: start;\r\n\talign-self: start;\r\n}\r\n.post-ad-btn {\r\n\theight: 50px;\r\n\twidth: 200px;\r\n\tborder: none;\r\n\tcolor: white;\r\n\tbackground-color: #0c0c0c;\r\n\tfont-weight: bold;\r\n\t-webkit-transition: background-color 0.4s ease-out;\r\n\ttransition: background-color 0.4s ease-out;\r\n\t-webkit-transition: 0.3s;\r\n\ttransition: 0.3s;\r\n\tcursor: pointer;\r\n\tfont-size: 20px;\r\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\r\n}\r\n.post-ad-btn:hover {\r\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\r\n}\r\n\r\n.title-wrap {\r\n\tfont-size: 20px;\r\n\tpadding: 10px;\r\n}\r\n\r\n.featured-products {\r\n\theight: 900px;\r\n}\r\n", ""]);
+exports.push([module.i, ".hero-section {\n\theight: 60vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: none;\n\tbackground-size: cover;\n\tbackground-position: center;\n\tdisplay: grid;\n\tgrid-template-columns: 2fr 1fr;\n\tmargin-bottom: 50px;\n}\n.column-one {\n\tdisplay: grid;\n\tgrid-template-rows: 2fr 50px 1fr;\n}\n.title-section {\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 120px;\n\tline-height: 169px;\n\tjustify-self: start;\n\talign-self: end;\n\tcolor: #0c0c0c;\n\tpadding-left: 70px;\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.subtitle-section {\n\tmargin-top: -35px;\n\tpadding-left: 85px;\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 24px;\n\tline-height: 28px;\n\tjustify-self: start;\n\talign-self: start;\n\tcolor: #000000;\n\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad {\n\tpadding-left: 80px;\n\tjustify-self: start;\n\talign-self: start;\n}\n.post-ad-btn {\n\theight: 50px;\n\twidth: 200px;\n\tborder: none;\n\tcolor: white;\n\tbackground-color: #0c0c0c;\n\tfont-weight: bold;\n\t-webkit-transition: background-color 0.4s ease-out;\n\ttransition: background-color 0.4s ease-out;\n\t-webkit-transition: 0.3s;\n\ttransition: 0.3s;\n\tcursor: pointer;\n\tfont-size: 20px;\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad-btn:hover {\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\n}\n\n.title-wrap {\n\tfont-size: 20px;\n\tpadding: 10px;\n}\n\n.featured-products {\n\theight: 900px;\n}\n", ""]);
 
 // exports
 
@@ -6669,7 +6669,27 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\toverflow: visible;\r\n}\r\n\r\n.container {\r\n\twidth: 80vw;\r\n\tmargin: auto;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\n\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/responsive.css":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/responsive.css ***!
+  \********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./Layouts/NavBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/NavBar.css"), "");
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./Layouts/Search.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Layouts/Search.css"), "");
+
+// module
+exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 350px;\n\t}\n\t.logo-and-search {\n\t\twidth: 550px;\n\t}\n}\n@media only screen and (max-width: 960px) {\n\t.my-nav-menu {\n\t\tdisplay: none;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.logo-and-search {\n\t\twidth: 700px;\n\t}\n}\n", ""]);
 
 // exports
 
@@ -73816,6 +73836,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Auth/Register */ "./resources/js/components/Auth/Register.jsx");
 /* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_9__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73829,6 +73851,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -75385,6 +75408,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/responsive.css":
+/*!************************************************!*\
+  !*** ./resources/js/components/responsive.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./responsive.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/responsive.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -75403,8 +75456,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\gadgetsbay-bootstrap\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/sj007/Documents/5th-sem-project/gadgetsbay-bootstrap/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
