@@ -1,6 +1,7 @@
 @import url("./Layouts/NavBar.css");
 @import url("./Layouts/Search.css");
 @import url("./MainContent/Home.css");
+@import url("./MainContent/FeaturedProduct.css");
 @media only screen and (max-width: 1366px) {
 	/* navbar */
 	.my-navbar {
@@ -50,13 +51,21 @@
 		height: 50px;
 		width: 170px;
 	}
+	/* featued products */
+	.featured-products {
+		grid-template-columns: 202px 202px 202px 202px;
+	}
 }
-@media only screen and (max-width: 1028px) {
+@media only screen and (max-width: 1088px) {
 	.search-form input[type="text"] {
 		width: 300px;
 	}
 	.logo-and-search {
 		width: 400px;
+	}
+	/* featued products */
+	.featured-products {
+		grid-template-columns: 202px 202px 202px;
 	}
 }
 @media only screen and (max-width: 940px) {
