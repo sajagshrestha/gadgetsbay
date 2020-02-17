@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Ad;
 use App\Http\Resources\AdResource;
 use App\Mobile;
-use App\product;
-use App\Record;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreMobile;
 use App\Http\Requests\EditAdMobile;
@@ -91,16 +89,7 @@ class ProductsController extends Controller
         }
     }
 
-    public function search(Request $request)
-    {
-        $searchTerm = $request->input('search');
-        $products = Ad::query()
-        ->where('title','LIKE', "%$searchTerm%")
-        ->orWhere('description','LIKE', "%$searchTerm%" )
-        ->get();
- 
-        return AdResource::collection($products);
-    }
+    
 
 
 }
