@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Ad.css";
+import "./Ad.css";
 const Ad = ({ post }) => {
     return (
         <div className="product-wrapper">

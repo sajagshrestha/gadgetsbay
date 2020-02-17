@@ -1,0 +1,10 @@
+.no-results-found {
+	height: 85vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Roboto;
+	font-weight: 400px;
+	font-size: 36px;
+}

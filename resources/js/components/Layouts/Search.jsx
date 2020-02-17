@@ -1,38 +1,34 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
 import "./Search.css";
-
-const Search = props => {
-
-    
-    const [search,setSearch] = useState('');
-    const [posts, setPost] = useState({});
+import { SearchContext } from "../App.jsx";
+import { withRouter } from "react-router-dom";
+const Search = ({ history }) => {
+    const [search, setSearch] = useState("");
+    const { setSearchedPosts } = useContext(SearchContext);
     const onSubmitHandler = event => {
         event.preventDefault();
 
         axios
-        .post("/api/search",{search:search})
-        .then(response => {
-            
-            console.log(response.data)
-            setPost(response.data.data)
-        })
-        .catch(err => console.log(err));
+            .post("/api/search", { search: search })
+            .then(response => {
+                setSearchedPosts(response.data.data);
 
-    }
+                history.push("/searchResults");
+            })
+            .catch(err => console.log(err));
+    };
 
     const onChangeHandler = event => {
-        setSearch(
-             event.target.value
-        );
+        setSearch(event.target.value);
     };
 
     return (
-        <form  onSubmit = {onSubmitHandler} className="search-form">
+        <form onSubmit={onSubmitHandler} className="search-form">
             <input
                 type="text"
                 placeholder="Search Here"
                 className="search-input"
-                name = "search"
+                name="search"
                 onChange={onChangeHandler}
             />
             <span>
@@ -40,7 +36,6 @@ const Search = props => {
                     type="submit"
                     className="search-button"
                     id="searchButton"
-                   
                 >
                     <i className="fa fa-search"></i>
                 </button>
@@ -49,4 +44,4 @@ const Search = props => {
     );
 };
 
-export default Search;
+export default withRouter(Search);

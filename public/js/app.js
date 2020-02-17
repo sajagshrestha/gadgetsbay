@@ -6599,6 +6599,25 @@ exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display:
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/Ad.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "*{\n    margin: 0;\n    padding: 0;\n}\na{\n    text-decoration: none;\n}\nli{\n    list-style: none;\n}\n\n.product-wrapper{\n    height: 170px;\n    /* overflow: hidden; */\n    display: grid;\n    grid-template-columns: repeat(18, 1fr);\n    grid-template-rows: repeat(5, 1fr);\n    margin-top: 100px;\n    width: 700px;\n    margin-left: 300px;\n    padding: 10px 0;\n    background: #f8f8f8;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);\n    font-family: 'Roboto', sans-serif;\n}\n\n.image-wrapper{\n    grid-row: 1/6;\n    grid-column: 1/5;\n    padding: 1em;\n    border-right: 1px #B0B0B0 solid;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.image{\n    height: 90%;\n    max-width: 100%;\n}\n\nimg{\n    max-width: 100%;\n    height: 100%;\n}\n\n.product-detail{\ngrid-row: 1/6;\ngrid-column: 5/15;\ndisplay: grid;\ngrid-template-rows: 1fr 1fr 3fr 1fr;\npadding: 1em ;\nfont-size: 12px;\n}\n.title-wrap{\nfont-size: 16px;\nfont-weight: 800;\ncolor: #383E55;\n}\n\n.specification-list{\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -.5em;\n    font-size: 12px;\n    color: #113;\n\n}\n.specification-list-items{\n    padding: 0 .5em;\n}\n.specification-list-items div{\n    display: inline;\n}\n.attribute{\n    font-weight: 600;\n}\n.description{\n    padding: .7em 0;\n    overflow: hidden;\n}\n.posted-on{\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n}\n\n.seller-price{\n    grid-column: 15/19;\n    grid-row: 1/6;\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    padding: 0 10px;\n    font-size: 14px;\n    border-left: 1px solid #B0B0B0;\n\n}\n\n.seller-info{\n    font-size: 12px;\n    margin: auto auto;\n}\n\n\n.price{\n    border-top: 1px solid #B0B0B0;\n\n    font-weight: 700;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/AllAds.css":
 /*!****************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/AllAds.css ***!
@@ -6670,6 +6689,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/SearchResults.css":
+/*!***********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/MainContent/SearchResults.css ***!
+  \***********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".no-results-found {\n\theight: 85vh;\n\twidth: 100%;\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t        align-items: center;\n\tfont-family: Roboto;\n\tfont-weight: 400px;\n\tfont-size: 36px;\n}\n", ""]);
 
 // exports
 
@@ -73841,12 +73879,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!*****************************************!*\
   !*** ./resources/js/components/App.jsx ***!
   \*****************************************/
-/*! exports provided: UserContext, default */
+/*! exports provided: UserContext, SearchContext, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserContext", function() { return UserContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchContext", function() { return SearchContext; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layouts/NavBar.jsx */ "./resources/js/components/Layouts/NavBar.jsx");
@@ -73856,9 +73895,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MainContent/Home */ "./resources/js/components/MainContent/Home.jsx");
 /* harmony import */ var _Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Auth/Register */ "./resources/js/components/Auth/Register.jsx");
 /* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MainContent/SearchResults */ "./resources/js/components/MainContent/SearchResults.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_10__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73883,7 +73923,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var UserContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+var SearchContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 var initialState = {
   isLoggedIn: false,
   name: "",
@@ -73918,6 +73960,12 @@ function App() {
       Authorization: "Bearer ".concat(user.token)
     }
   };
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      searchedPosts = _useState2[0],
+      setSearchedPosts = _useState2[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var localUser = JSON.parse(localStorage.getItem("user"));
 
@@ -73935,19 +73983,28 @@ function App() {
       dispatch: dispatch,
       globalToken: globalToken
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
+    value: {
+      searchedPosts: searchedPosts,
+      setSearchedPosts: setSearchedPosts
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+    path: "/searchResults",
+    exact: true,
+    component: _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__["default"]
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
     path: "/post",
     exact: true,
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
     path: "/login",
     exact: true,
     component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -74891,6 +74948,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search.css */ "./resources/js/components/Layouts/Search.css");
 /* harmony import */ var _Search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Search_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App.jsx */ "./resources/js/components/App.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -74902,24 +74961,26 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Search = function Search(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+
+
+var Search = function Search(_ref) {
+  var history = _ref.history;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
       _useState2 = _slicedToArray(_useState, 2),
       search = _useState2[0],
       setSearch = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({}),
-      _useState4 = _slicedToArray(_useState3, 2),
-      posts = _useState4[0],
-      setPost = _useState4[1];
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App_jsx__WEBPACK_IMPORTED_MODULE_2__["SearchContext"]),
+      setSearchedPosts = _useContext.setSearchedPosts;
 
   var onSubmitHandler = function onSubmitHandler(event) {
     event.preventDefault();
     axios.post("/api/search", {
       search: search
     }).then(function (response) {
-      console.log(response.data);
-      setPost(response.data.data);
+      setSearchedPosts(response.data.data);
+      history.push("/searchResults");
     })["catch"](function (err) {
       return console.log(err);
     });
@@ -74947,7 +75008,37 @@ var Search = function Search(props) {
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Search);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Search));
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/Ad.css":
+/*!****************************************************!*\
+  !*** ./resources/js/components/MainContent/Ad.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./Ad.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/Ad.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -74962,7 +75053,10 @@ var Search = function Search(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
- // import "./Ad.css";
+/* harmony import */ var _Ad_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ad.css */ "./resources/js/components/MainContent/Ad.css");
+/* harmony import */ var _Ad_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Ad_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
 
 var Ad = function Ad(_ref) {
   var post = _ref.post;
@@ -75412,6 +75506,98 @@ var PostAdd = function PostAdd() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostAdd);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/SearchResults.css":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/MainContent/SearchResults.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./SearchResults.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/SearchResults.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/SearchResults.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/MainContent/SearchResults.jsx ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchResults.css */ "./resources/js/components/MainContent/SearchResults.css");
+/* harmony import */ var _SearchResults_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchResults_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Ad_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ad.jsx */ "./resources/js/components/MainContent/Ad.jsx");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var SearchResults = function SearchResults() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      resultFound = _useState2[0],
+      setResultFound = _useState2[1];
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_3__["SearchContext"]),
+      searchedPosts = _useContext.searchedPosts;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (searchedPosts.length === 0) {
+      setResultFound(false);
+    } else {
+      setResultFound(true);
+    }
+  }, [searchedPosts]);
+
+  if (!resultFound) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "no-results-found"
+    }, " No Results Found");
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, searchedPosts.map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      key: post.id
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchResults);
 
 /***/ }),
 

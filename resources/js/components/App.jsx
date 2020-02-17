@@ -6,10 +6,11 @@ import FindAdd from "./MainContent/FindAdd";
 import Home from "./MainContent/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
+import SearchResults from "./MainContent/SearchResults";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./responsive.css";
 export const UserContext = React.createContext();
-
+export const SearchContext = React.createContext();
 const initialState = {
     isLoggedIn: false,
     name: "",
@@ -35,6 +36,7 @@ function App() {
     const globalToken = {
         headers: { Authorization: `Bearer ${user.token}` }
     };
+    const [searchedPosts, setSearchedPosts] = useState([]);
 
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
@@ -57,7 +59,16 @@ function App() {
         >
             <Router>
                 <div>
-                    <NavBar />
+                    <SearchContext.Provider
+                        value={{ searchedPosts, setSearchedPosts }}
+                    >
+                        <NavBar />
+                        <Route
+                            path="/searchResults"
+                            exact
+                            component={SearchResults}
+                        />
+                    </SearchContext.Provider>
                     <Route path="/" exact component={Home} />
                     <Route path="/post" exact component={PostAdd} />
                     <Route path="/register" exact component={Register} />
