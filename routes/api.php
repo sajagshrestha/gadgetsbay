@@ -36,7 +36,7 @@ Route::put('product/{id}', 'ProductsController@update');
 Route::delete('product/{id}', 'ProductsController@destroy');
 
 // Search product
-Route::post('/search', 'ProductsController@search');
+Route::post('/search', 'SearchController@search');
 
 //Authentication routes
 //login route
@@ -56,4 +56,12 @@ Route::middleware('auth:api')->get('logout', 'AuthenticationController@logout');
 //});
 
 
+//search routes
+// Search product
+Route::post('/search', 'SearchController@search');
 
+// most viewed product
+Route::get('/mostviewed', 'SearchController@mostViewed');
+
+// latest product
+Route::get('/latest', 'SearchController@latest');
