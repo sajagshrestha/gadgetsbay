@@ -14,7 +14,7 @@ class SearchController extends Controller
         ->where('title','LIKE', "%$searchTerm%")
         ->orWhere('description','LIKE', "%$searchTerm%" )
         ->get();
- 
+
         return AdResource::collection($products);
     }
 
@@ -22,5 +22,11 @@ class SearchController extends Controller
     {
     	$products = Ad::take(10)->get()->sortBy('views');
     	return AdResource::collection($products);
+    }
+
+    public function latest()
+    {
+        $products = Ad::take(10)->latest()->get();
+        return AdResource::collection($products);
     }
 }

@@ -60,5 +60,8 @@ Route::middleware('auth:api')->get('logout', 'AuthenticationController@logout');
 // Search product
 Route::post('/search', 'SearchController@search');
 
-// Search product
+// most viewed product
 Route::get('/mostviewed', 'SearchController@mostViewed');
+
+// latest product
+Route::get('/latest', 'SearchController@latest');

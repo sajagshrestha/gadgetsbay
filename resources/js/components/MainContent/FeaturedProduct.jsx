@@ -2,10 +2,10 @@ import React, { PropTypes, useEffect, useState } from "react";
 import "./FeaturedProduct.css";
 import HomeAdView from "../Layouts/HomeAdView";
 
-const FeaturedProduct = ({ className }) => {
+const FeaturedProduct = ({url}) => {
 	const [products, setProduct] = useState([]);
 	useEffect(() => {
-		axios.get("/api/products").then(response => {
+		axios.get(`/api/${url}`).then(response => {
 			setProduct(response.data.data);
 		});
 	}, []);
