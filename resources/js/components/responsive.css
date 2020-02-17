@@ -1,6 +1,6 @@
 @import url("./Layouts/NavBar.css");
 @import url("./Layouts/Search.css");
-
+@import url("./MainContent/Home.css");
 @media only screen and (max-width: 1366px) {
 	/* navbar */
 	.my-navbar {
@@ -32,21 +32,53 @@
 	}
 }
 @media only screen and (max-width: 1200px) {
+	/* navbar */
 	.search-form input[type="text"] {
-		width: 350px;
+		width: 400px;
 	}
 	.logo-and-search {
-		width: 550px;
+		width: 650px;
+	}
+	/* herosection */
+	.title-section {
+		font-size: 96px;
+	}
+	.subtitle-section {
+		font-size: 18px;
+	}
+	.post-ad-btn {
+		height: 50px;
+		width: 170px;
 	}
 }
-@media only screen and (max-width: 960px) {
-	.my-nav-menu {
-		display: none;
-	}
+@media only screen and (max-width: 1028px) {
 	.search-form input[type="text"] {
-		width: 450px;
+		width: 300px;
 	}
 	.logo-and-search {
-		width: 700px;
+		width: 400px;
+	}
+}
+@media only screen and (max-width: 940px) {
+	/* navbar */
+	.search-form input[type="text"] {
+		width: 200px;
+	}
+	/* herosection */
+	.title-section {
+		font-size: 72px;
+	}
+	.subtitle-section {
+		font-size: 12px;
+		margin-top: -45px;
+	}
+	.column-one {
+		grid-template-rows: 1fr 20px 1fr;
+	}
+}
+@media only screen and (max-width: 840px) {
+	/* navbar */
+	.search-form {
+		display: none;
 	}
 }

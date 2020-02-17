@@ -1,19 +1,17 @@
-import React, { PropTypes } from "react";
-
+import React from "react";
+import "./HomeAdView.css";
 const HomeAdView = ({ product }) => {
 	return (
-		<div className="product-container">
-			<a href="#">
-				<div className="image-wrap">
-					<img src={`storage/images/${product.imageName}`} alt="" />
-				</div>
-				<div className="title-wrap">
-					<div className="tite-text">{product.title}</div>
-					<div className="price">Rs.{product.price}</div>
-					<div className="condition">{product.condition}</div>
-				</div>
-			</a>
-		</div>
+		<a href="#" className="product-container">
+			<div className="image-wrap">
+				<img src={`storage/images/${product.imageName}`} alt="" />
+			</div>
+			<div className="title-info">
+				<div className="title-text">{product.title}</div>
+				<div className="price">Rs.{product.price}</div>
+				<div className="condition">{product.condition}</div>
+			</div>
+		</a>
 	);
 };
 

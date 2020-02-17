@@ -3,10 +3,10 @@
 	margin: 0;
 	overflow: visible;
 }
-
+body {
+	background: #f2f3f7;
+}
 .container {
 	width: 80vw;
 	margin: auto;
 }
-
-

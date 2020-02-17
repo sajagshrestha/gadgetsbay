@@ -11,14 +11,13 @@ function NavBar({ history }) {
 
     const logoutUser = () => {
         axios.get("api/logout", globalToken).then(res => {
-            
             dispatch({ type: "logout" });
             localStorage.removeItem("user");
         });
     };
 
     return (
-        <div className="my-navbar" id="navbar">
+        <div className="my-navbar">
             <div className="navbar-items">
                 <div className="logo-and-search">
                     <div className="logo" onClick={() => history.push("/")}>

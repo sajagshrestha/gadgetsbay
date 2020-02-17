@@ -9,20 +9,17 @@
     position: sticky;
     top: 0;
     z-index: 9999;
-    padding: 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    transition: background-color 0.4s ease-out;
 }
 .logo-and-search {
     display: flex;
     width: 750px;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 .navbar-items {
-    width: 90vw;
+    height: 100%;
+    margin: auto;
+    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +27,7 @@
 
 .logo {
     color: #1b262c;
-
+    margin-right: 40px;
     font-family: "Bebas Neue", cursive;
     font-size: 40px;
     cursor: pointer;

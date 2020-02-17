@@ -1,13 +1,18 @@
-.hero-section {
-	height: 60vh;
+.hero-section-container {
+	min-height: 60vh;
 	background: url("cover-final.jpg");
 	background-repeat: no-repeat;
 	background-attachment: none;
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	align-items: center;
+}
+.hero-section {
+	width: 85vw;
+	margin: auto;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	margin-bottom: 50px;
 }
 .column-one {
 	display: grid;
@@ -22,12 +27,13 @@
 	justify-self: start;
 	align-self: end;
 	color: #0c0c0c;
-	padding-left: 70px;
+	margin-left: -10px;
+
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .subtitle-section {
 	margin-top: -35px;
-	padding-left: 85px;
+
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 550;
@@ -40,7 +46,6 @@
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .post-ad {
-	padding-left: 80px;
 	justify-self: start;
 	align-self: start;
 }
@@ -66,6 +71,11 @@
 	padding: 10px;
 }
 
-.featured-products {
-	height: 900px;
+.featured-products-container {
+	width: 85vw;
+	margin: 70px auto;
+}
+.featured-products-container .title {
+	margin-bottom: 40px;
+	font-size: 22px;
 }
