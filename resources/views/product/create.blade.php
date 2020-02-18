@@ -170,7 +170,10 @@
         {{Form::file('imageName', ['class'=>'form-control'])}}
     </div>
 </div>
-
+<input type="checkbox" name="vehicle[]" value="Bike">
+<input type="checkbox" name="vehicle[]" value="Car">
+<input type="checkbox" name="vehicle[]" value="Boat" >
+<input type="checkbox" name="vehicle[]" value="Bodogat" >
 {!! Form::submit('Submit',['class'=> 'btn btn-success']) !!}
 
 {!! Form::close() !!}
