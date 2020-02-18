@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +13,6 @@ use Illuminate\Http\Request;
 Route::get('/create', function(){
     return view('product.create');
 });
-
 /*Route::get('/', function () {
     return view('welcome');
 });*/

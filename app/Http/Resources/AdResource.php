@@ -6,7 +6,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class AdResource extends JsonResource
 {
-    public static $wrap = 'data';
+    public static $wrap = 'result';
     /**
      * Transform the resource into an array.
      *
