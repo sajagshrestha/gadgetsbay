@@ -1,8 +1,12 @@
 import React from "react";
 import "./HomeAdView.css";
+import { Link } from "react-router-dom";
 const HomeAdView = ({ product }) => {
 	return (
-		<a href="#" className="product-container">
+		<Link
+			to={`/details/${product.id}/${product.title}`}
+			className="product-container"
+		>
 			<div className="image-wrap">
 				<img src={`storage/images/${product.imageName}`} alt="" />
 			</div>
@@ -11,7 +15,7 @@ const HomeAdView = ({ product }) => {
 				<div className="price">Rs.{product.price}</div>
 				<div className="condition">{product.condition}</div>
 			</div>
-		</a>
+		</Link>
 	);
 };
 

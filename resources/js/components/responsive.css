@@ -2,6 +2,7 @@
 @import url("./Layouts/Search.css");
 @import url("./MainContent/Home.css");
 @import url("./MainContent/FeaturedProduct.css");
+
 @media only screen and (max-width: 1366px) {
 	/* navbar */
 	.my-navbar {
@@ -30,6 +31,10 @@
 	.search-form input[type="text"],
 	.search-button {
 		height: 30px;
+	}
+	/* featured products */
+	.featured-products {
+		grid-template-columns: repeat(5, 220px);
 	}
 }
 @media only screen and (max-width: 1200px) {

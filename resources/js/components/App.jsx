@@ -7,6 +7,7 @@ import Home from "./MainContent/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
 import SearchResults from "./MainContent/SearchResults";
+import DetailedAdView from "./MainContent/DetailedAdView";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./responsive.css";
 export const UserContext = React.createContext();
@@ -69,10 +70,16 @@ function App() {
                             component={SearchResults}
                         />
                     </SearchContext.Provider>
+
                     <Route path="/" exact component={Home} />
                     <Route path="/post" exact component={PostAdd} />
                     <Route path="/register" exact component={Register} />
                     <Route path="/login" exact component={Login} />
+                    <Route
+                        path={`/details/:id/:title`}
+                        exact
+                        component={DetailedAdView}
+                    />
                 </div>
             </Router>
         </UserContext.Provider>

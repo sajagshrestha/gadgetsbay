@@ -6573,7 +6573,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    height: 100%;\n    margin: auto;\n    width: 85vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n.my-nav-menu li .my-link:hover {\n    text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    height: 100%;\n    margin: auto;\n    width: 85vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n", ""]);
 
 // exports
 
@@ -6649,7 +6649,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".featured-products {\n\tdisplay: grid;\n\tgrid-template-columns: 202px 202px 202px 202px 202px;\n\tgrid-row-gap: 50px;\n\t-webkit-box-pack: justify;\n\t        justify-content: space-between;\n}\n/*\n.featured-product {\n\theight: 300px;\n\tdisplay: grid;\n\twidth: 100%;\n\tgrid-template-columns: repeat(3, 1fr);\n\tpadding: 10px;\n\tgrid-gap: 30px;\n\tmax-width: 800px;\n}\n\n.product-container {\n\tbackground: #f8f8f8;\n\tbox-shadow: 4px 4px 6px grey;\n\tfont-weight: 600;\n\tpadding: 5px;\n}\n\n.image-wrap {\n\tpadding: 20px;\n\tmax-height: 200px;\n\toverflow: hidden;\n}\nimg {\n\tmax-width: 100%;\n\theight: auto;\n\tobject-fit: cover;\n}\n\n.title-wrap {\n\ttext-align: center;\n\tcolor: black;\n\tfont-weight: 600;\n}\n */\n", ""]);
+exports.push([module.i, ".featured-products {\n\tdisplay: grid;\n\tgrid-template-columns: repeat(6, 220px);\n\tgrid-row-gap: 50px;\n\t-webkit-box-pack: justify;\n\t        justify-content: space-between;\n}\n/*\n.featured-product {\n\theight: 300px;\n\tdisplay: grid;\n\twidth: 100%;\n\tgrid-template-columns: repeat(3, 1fr);\n\tpadding: 10px;\n\tgrid-gap: 30px;\n\tmax-width: 800px;\n}\n\n.product-container {\n\tbackground: #f8f8f8;\n\tbox-shadow: 4px 4px 6px grey;\n\tfont-weight: 600;\n\tpadding: 5px;\n}\n\n.image-wrap {\n\tpadding: 20px;\n\tmax-height: 200px;\n\toverflow: hidden;\n}\nimg {\n\tmax-width: 100%;\n\theight: auto;\n\tobject-fit: cover;\n}\n\n.title-wrap {\n\ttext-align: center;\n\tcolor: black;\n\tfont-weight: 600;\n}\n */\n", ""]);
 
 // exports
 
@@ -6726,7 +6726,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\nbody {\n\tbackground: #f2f3f7;\n}\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n", ""]);
+exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\nbody {\n\tbackground: #f1f1f1;\n}\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n", ""]);
 
 // exports
 
@@ -6748,7 +6748,7 @@ exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!.
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./MainContent/FeaturedProduct.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css"), "");
 
 // module
-exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 400px;\n\t}\n\t.logo-and-search {\n\t\twidth: 650px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 96px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 18px;\n\t}\n\t.post-ad-btn {\n\t\theight: 50px;\n\t\twidth: 170px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 1088px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 300px;\n\t}\n\t.logo-and-search {\n\t\twidth: 400px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 940px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 200px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 72px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 12px;\n\t\tmargin-top: -45px;\n\t}\n\t.column-one {\n\t\tgrid-template-rows: 1fr 20px 1fr;\n\t}\n}\n@media only screen and (max-width: 840px) {\n\t/* navbar */\n\t.search-form {\n\t\tdisplay: none;\n\t}\n}\n", ""]);
+exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n\t/* featured products */\n\t.featured-products {\n\t\tgrid-template-columns: repeat(5, 220px);\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 400px;\n\t}\n\t.logo-and-search {\n\t\twidth: 650px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 96px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 18px;\n\t}\n\t.post-ad-btn {\n\t\theight: 50px;\n\t\twidth: 170px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 1088px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 300px;\n\t}\n\t.logo-and-search {\n\t\twidth: 400px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 940px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 200px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 72px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 12px;\n\t\tmargin-top: -45px;\n\t}\n\t.column-one {\n\t\tgrid-template-rows: 1fr 20px 1fr;\n\t}\n}\n@media only screen and (max-width: 840px) {\n\t/* navbar */\n\t.search-form {\n\t\tdisplay: none;\n\t}\n}\n", ""]);
 
 // exports
 
@@ -73896,9 +73896,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Auth/Register */ "./resources/js/components/Auth/Register.jsx");
 /* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
 /* harmony import */ var _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MainContent/SearchResults */ "./resources/js/components/MainContent/SearchResults.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MainContent/DetailedAdView */ "./resources/js/components/MainContent/DetailedAdView.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_11__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73912,6 +73913,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -73983,31 +73985,35 @@ function App() {
       dispatch: dispatch,
       globalToken: globalToken
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
     value: {
       searchedPosts: searchedPosts,
       setSearchedPosts: setSearchedPosts
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/searchResults",
     exact: true,
     component: _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__["default"]
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/post",
     exact: true,
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/login",
     exact: true,
     component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+    path: "/details/:id/:title",
+    exact: true,
+    component: _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__["default"]
   }))));
 }
 
@@ -74753,13 +74759,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _HomeAdView_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeAdView.css */ "./resources/js/components/Layouts/HomeAdView.css");
 /* harmony import */ var _HomeAdView_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_HomeAdView_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
 var HomeAdView = function HomeAdView(_ref) {
   var product = _ref.product;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/details/".concat(product.id, "/").concat(product.title),
     className: "product-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "image-wrap"
@@ -74874,7 +74882,7 @@ function NavBar(_ref) {
     to: "/"
   }, "HOME")), user.isLoggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./post"
+    to: "/post"
   }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown show"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -74894,10 +74902,10 @@ function NavBar(_ref) {
     }
   }, "Logout"))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./login"
+    to: "/login"
   }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./register"
+    to: "/register"
   }, "REGISTER"))))));
 }
 
@@ -75212,6 +75220,40 @@ var AllAds = function AllAds() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AllAds);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/DetailedAdView.jsx":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/MainContent/DetailedAdView.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var DeatiledAdView = function DeatiledAdView() {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
+      id = _useParams.id;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/product/".concat(id)).then(function (response) {
+      return console.log(response.data.data);
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, id);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DeatiledAdView);
 
 /***/ }),
 
