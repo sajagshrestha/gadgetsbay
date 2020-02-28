@@ -1,14 +1,16 @@
 .product-container {
 	height: 300px;
 	width: 202px;
+	justify-self: center;
 	display: grid;
 	grid-template-rows: 188px 110px;
 	background: white;
-	transition: all 0.2s ease-in;
+	transition: all 0.2s ease-out;
 	color: #0c0c0c;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
 }
 .product-container:hover {
-	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.20);
 	color: #0c0c0c;
 	text-decoration: none;
 }
@@ -22,29 +24,33 @@
 	width: 100%;
 }
 
-.title-info {
+.home-title-info {
 	font-size: 16px;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	justify-content: center;
 }
 
-.title-info .title-text,
-.price,
-.condition {
+.home-title-info .home-title,
+.home-price,
+.home-condition {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	width: 100%;
 }
-.title-info .title-text {
-	font-weight: bold;
+.home-title-info .home-title{
 	font-size: 18px;
+	color: #0c0c0c;
+	
+	
 }
-.title-info .price {
-	color: green;
+.home-title-info .home-price {
+	color: #0c9463;
 	font-size: 20px;
 }
-.title-info .condition {
-	font-size: 14px;
+.home-title-info .home-condition {
+	font-size: 12px;
+	color: #4a4a4a;
+	align-self: start;
 }

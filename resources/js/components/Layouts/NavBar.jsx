@@ -17,8 +17,8 @@ function NavBar({ history }) {
     };
 
     return (
-        <div className="my-navbar">
-            <div className="navbar-items">
+        <div className="my-navbar my-body-container">
+          
                 <div className="logo-and-search">
                     <div className="logo" onClick={() => history.push("/")}>
                         GadgetsBay
@@ -82,7 +82,7 @@ function NavBar({ history }) {
                         </React.Fragment>
                     )}
                 </ul>
-            </div>
+          
         </div>
     );
 }

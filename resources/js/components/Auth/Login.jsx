@@ -9,7 +9,7 @@ const Login = () => {
         password: ""
     });
 
-    const onSubmitHnadler = event => {
+    const onSubmitHandler = event => {
         event.preventDefault();
 
         axios
@@ -44,7 +44,7 @@ const Login = () => {
         return <Redirect to="/" />;
     }
     return (
-        <form onSubmit={onSubmitHnadler} className="container mt-5">
+        <form onSubmit={onSubmitHandler} className="container mt-5">
             <label htmlFor="">Email</label>
             <input
                 className="form-control"

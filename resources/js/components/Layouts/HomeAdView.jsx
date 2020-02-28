@@ -10,10 +10,10 @@ const HomeAdView = ({ product }) => {
 			<div className="image-wrap">
 				<img src={`storage/images/${product.imageName}`} alt="" />
 			</div>
-			<div className="title-info">
-				<div className="title-text">{product.title}</div>
-				<div className="price">Rs.{product.price}</div>
-				<div className="condition">{product.condition}</div>
+			<div className="home-title-info">
+				<div className="home-title">{product.title}</div>
+				<div className="home-price">Rs.{product.price}</div>
+				<div className="home-condition">{product.condition}</div>
 			</div>
 		</Link>
 	);

@@ -3,10 +3,17 @@
 	margin: 0;
 	overflow: visible;
 }
-body {
-	background: #f1f1f1;
+body{
+	background-color: #f5f5f5;
 }
-.container {
-	width: 80vw;
-	margin: auto;
+.my-body-container {
+	padding: 0 12vw;
+
+}
+
+.width-container{
+	width: 76vw;
+	margin:  40px auto;
+	
+	
 }

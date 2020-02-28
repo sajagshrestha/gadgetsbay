@@ -1,6 +1,6 @@
 .featured-products {
 	display: grid;
-	grid-template-columns: repeat(6, 220px);
+	grid-template-columns: repeat(5, 220px);
 	grid-row-gap: 50px;
 	justify-content: space-between;
 }
