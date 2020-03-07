@@ -17,8 +17,8 @@ function NavBar({ history }) {
     };
 
     return (
-        <div className="my-navbar">
-            <div className="navbar-items">
+        <div className="my-navbar my-body-container">
+          
                 <div className="logo-and-search">
                     <div className="logo" onClick={() => history.push("/")}>
                         GadgetsBay
@@ -36,7 +36,7 @@ function NavBar({ history }) {
                     {user.isLoggedIn ? (
                         <React.Fragment>
                             <li>
-                                <Link className="my-link" to="./post">
+                                <Link className="my-link" to="/post">
                                     POST
                                 </Link>
                             </li>
@@ -70,19 +70,19 @@ function NavBar({ history }) {
                     ) : (
                         <React.Fragment>
                             <li>
-                                <Link className="my-link" to="./login">
+                                <Link className="my-link" to="/login">
                                     LOGIN
                                 </Link>
                             </li>
                             <li>
-                                <Link className="my-link" to="./register">
+                                <Link className="my-link" to="/register">
                                     REGISTER
                                 </Link>
                             </li>
                         </React.Fragment>
                     )}
                 </ul>
-            </div>
+          
         </div>
     );
 }

@@ -4,25 +4,20 @@
 .my-navbar {
     background-color: white;
     height: 55px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 9999;
-}
-.logo-and-search {
-    display: flex;
-    width: 750px;
-    justify-content: flex-start;
-    align-items: center;
-}
-.navbar-items {
-    height: 100%;
-    margin: auto;
-    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.logo-and-search {
+    display: flex;
+    width: 700px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .logo {
@@ -35,7 +30,7 @@
 }
 
 .my-nav-menu {
-    width: 500px;
+    width: 400px;
     height: 100%;
     list-style: none;
     display: flex;
@@ -50,12 +45,9 @@
     text-decoration: none;
     color: #1b262c;
     font-weight: bold;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 16px;
     transition: 0.4s ease-out;
-}
-.my-nav-menu li .my-link:hover {
-    text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
 }
 
 .my-dropdown-button {
@@ -63,9 +55,8 @@
     width: 170px;
     border: none;
     color: #f1f1f1;
-    background-color: #0c0c0c;
+    background-color: #111111;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
 }

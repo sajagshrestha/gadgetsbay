@@ -8,7 +8,7 @@ const Home = ({ history }) => {
 	return (
 		<div>
 			<div className="hero-section-container">
-				<div className="hero-section">
+				<div className="hero-section my-body-container">
 					<div className="column-one">
 						<div className="title-section">GADGETSBAY</div>
                             <div className="subtitle-section">
@@ -26,11 +26,11 @@ const Home = ({ history }) => {
 				    </div>
 				    <div className="column-two"></div>
 			    </div>
-                <div className="featured-products-container">
+                <div className="featured-products-container width-container">
                     <div className="title">Featured Products</div>
                     <FeaturedProduct url="mostviewed"/>
                 </div>
-			<div className="featured-products-container">
+			<div className="featured-products-container width-container">
 				<div className="title">Most Recent</div>
 				<FeaturedProduct url="latest"/>
 			</div>

@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 * {
-	padding: 0;
-	margin: 0;
-	overflow: visible;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
 }
 body {
-	background: #f2f3f7;
 }
-.container {
-	width: 80vw;
-	margin: auto;
+.my-body-container {
+    padding: 0 12vw;
+}
+
+.width-container {
+    width: 76vw;
+    margin: 40px auto;
 }

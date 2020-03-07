@@ -6553,7 +6553,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".product-container {\n\theight: 300px;\n\twidth: 202px;\n\tdisplay: grid;\n\tgrid-template-rows: 188px 110px;\n\tbackground: white;\n\t-webkit-transition: all 0.2s ease-in;\n\ttransition: all 0.2s ease-in;\n\tcolor: #0c0c0c;\n}\n.product-container:hover {\n\tbox-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);\n\tcolor: #0c0c0c;\n\ttext-decoration: none;\n}\n.image-wrap {\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t        align-items: center;\n}\n.image-wrap img {\n\theight: 100%;\n\twidth: 100%;\n}\n\n.title-info {\n\tfont-size: 16px;\n\tdisplay: grid;\n\tgrid-template-rows: 1fr 1fr 1fr;\n\t-webkit-box-pack: center;\n\t        justify-content: center;\n}\n\n.title-info .title-text,\n.price,\n.condition {\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t        align-items: center;\n\twidth: 100%;\n}\n.title-info .title-text {\n\tfont-weight: bold;\n\tfont-size: 18px;\n}\n.title-info .price {\n\tcolor: green;\n\tfont-size: 20px;\n}\n.title-info .condition {\n\tfont-size: 14px;\n}\n", ""]);
+exports.push([module.i, ".product-container {\n    height: 300px;\n    width: 202px;\n    justify-self: center;\n    display: grid;\n    grid-template-rows: 188px 110px;\n    background: white;\n    -webkit-transition: all 0.2s ease-out;\n    transition: all 0.2s ease-out;\n    color: #0c0c0c;\n}\n.product-container:hover {\n    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);\n    color: #0c0c0c;\n    text-decoration: none;\n}\n.image-wrap {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.image-wrap img {\n    height: 100%;\n    width: 100%;\n}\n\n.home-title-info {\n    font-size: 16px;\n    display: grid;\n    align-self: center;\n    grid-template-rows: 30px 25px 30px;\n    -webkit-box-pack: center;\n            justify-content: center;\n}\n\n.home-title-info .home-title,\n.home-price,\n.home-condition {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: end;\n            align-items: flex-end;\n    width: 100%;\n}\n.home-title-info .home-title {\n    font-size: 22px;\n    font-weight: 550;\n    color: #0c0c0c;\n}\n.home-title-info .home-price {\n    color: #17924f;\n    font-size: 16px;\n}\n.home-title-info .home-condition {\n    font-size: 12px;\n    color: #4a4a4a;\n    align-self: start;\n}\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 750px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.navbar-items {\n    height: 100%;\n    margin: auto;\n    width: 85vw;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 500px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n.my-nav-menu li .my-link:hover {\n    text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    box-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 700px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto Condensed\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #111111;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -6592,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 35px;\n    background: #f1f1f1;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 40px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 35px;\n    width: 50px;\n    border: none;\n    color: #0c0c0c;\n    background-color: #f1f1f1;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #0c0c0c;\n    color: #f1f1f1;\n}\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    border: 1px solid #e9e9e9;\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 35px;\n    background: #ffffff;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 20px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 35px;\n    width: 50px;\n    border: none;\n    color: #111111;\n    background-color: #ffffff;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #111111;\n    color: #f1f1f1;\n}\n", ""]);
 
 // exports
 
@@ -6649,7 +6649,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".featured-products {\n\tdisplay: grid;\n\tgrid-template-columns: 202px 202px 202px 202px 202px;\n\tgrid-row-gap: 50px;\n\t-webkit-box-pack: justify;\n\t        justify-content: space-between;\n}\n/*\n.featured-product {\n\theight: 300px;\n\tdisplay: grid;\n\twidth: 100%;\n\tgrid-template-columns: repeat(3, 1fr);\n\tpadding: 10px;\n\tgrid-gap: 30px;\n\tmax-width: 800px;\n}\n\n.product-container {\n\tbackground: #f8f8f8;\n\tbox-shadow: 4px 4px 6px grey;\n\tfont-weight: 600;\n\tpadding: 5px;\n}\n\n.image-wrap {\n\tpadding: 20px;\n\tmax-height: 200px;\n\toverflow: hidden;\n}\nimg {\n\tmax-width: 100%;\n\theight: auto;\n\tobject-fit: cover;\n}\n\n.title-wrap {\n\ttext-align: center;\n\tcolor: black;\n\tfont-weight: 600;\n}\n */\n", ""]);
+exports.push([module.i, ".featured-products {\n\tdisplay: grid;\n\tgrid-template-columns: repeat(5, 220px);\n\tgrid-row-gap: 50px;\n\t-webkit-box-pack: justify;\n\t        justify-content: space-between;\n}\n/*\n.featured-product {\n\theight: 300px;\n\tdisplay: grid;\n\twidth: 100%;\n\tgrid-template-columns: repeat(3, 1fr);\n\tpadding: 10px;\n\tgrid-gap: 30px;\n\tmax-width: 800px;\n}\n\n.product-container {\n\tbackground: #f8f8f8;\n\tbox-shadow: 4px 4px 6px grey;\n\tfont-weight: 600;\n\tpadding: 5px;\n}\n\n.image-wrap {\n\tpadding: 20px;\n\tmax-height: 200px;\n\toverflow: hidden;\n}\nimg {\n\tmax-width: 100%;\n\theight: auto;\n\tobject-fit: cover;\n}\n\n.title-wrap {\n\ttext-align: center;\n\tcolor: black;\n\tfont-weight: 600;\n}\n */\n", ""]);
 
 // exports
 
@@ -6669,7 +6669,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".hero-section-container {\n\tmin-height: 60vh;\n\tbackground: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\n\tbackground-repeat: no-repeat;\n\tbackground-attachment: none;\n\tbackground-size: cover;\n\tbackground-position: center;\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t        align-items: center;\n}\n.hero-section {\n\twidth: 85vw;\n\tmargin: auto;\n\tdisplay: grid;\n\tgrid-template-columns: 2fr 1fr;\n}\n.column-one {\n\tdisplay: grid;\n\tgrid-template-rows: 2fr 50px 1fr;\n}\n.title-section {\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 120px;\n\tline-height: 169px;\n\tjustify-self: start;\n\talign-self: end;\n\tcolor: #0c0c0c;\n\tmargin-left: -10px;\n\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.subtitle-section {\n\tmargin-top: -35px;\n\n\tfont-family: Roboto;\n\tfont-style: normal;\n\tfont-weight: 550;\n\tfont-size: 24px;\n\tline-height: 28px;\n\tjustify-self: start;\n\talign-self: start;\n\tcolor: #000000;\n\n\ttext-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad {\n\tjustify-self: start;\n\talign-self: start;\n}\n.post-ad-btn {\n\theight: 50px;\n\twidth: 200px;\n\tborder: none;\n\tcolor: white;\n\tbackground-color: #0c0c0c;\n\tfont-weight: bold;\n\t-webkit-transition: background-color 0.4s ease-out;\n\ttransition: background-color 0.4s ease-out;\n\t-webkit-transition: 0.3s;\n\ttransition: 0.3s;\n\tcursor: pointer;\n\tfont-size: 20px;\n\tbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n.post-ad-btn:hover {\n\tbox-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);\n}\n\n.title-wrap {\n\tfont-size: 20px;\n\tpadding: 10px;\n}\n\n.featured-products-container {\n\twidth: 85vw;\n\tmargin: 70px auto;\n}\n.featured-products-container .title {\n\tmargin-bottom: 40px;\n\tfont-size: 22px;\n}\n", ""]);
+exports.push([module.i, ".hero-section-container {\n    min-height: 60vh;\n    background: url(" + escape(__webpack_require__(/*! ./cover-final.jpg */ "./resources/js/components/MainContent/cover-final.jpg")) + ");\n    background-repeat: no-repeat;\n    background-attachment: none;\n    background-size: cover;\n    background-position: center;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.hero-section {\n    display: grid;\n    grid-template-columns: 2fr 1fr;\n}\n.column-one {\n    display: grid;\n    grid-template-rows: 2fr 50px 1fr;\n}\n.title-section {\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: 550;\n    font-size: 120px;\n    line-height: 169px;\n    justify-self: start;\n    align-self: end;\n    color: #0c0c0c;\n    margin-left: -10px;\n}\n.subtitle-section {\n    margin-top: -35px;\n\n    font-family: Roboto;\n    font-style: normal;\n    font-weight: 550;\n    font-size: 24px;\n    line-height: 28px;\n    justify-self: start;\n    align-self: start;\n    color: #000000;\n}\n.post-ad {\n    justify-self: start;\n    align-self: start;\n}\n.post-ad-btn {\n    height: 50px;\n    width: 200px;\n    border: none;\n    color: white;\n    background-color: #0c0c0c;\n    font-weight: bold;\n    -webkit-transition: background-color 0.3s ease-out;\n    transition: background-color 0.3s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    font-size: 20px;\n}\n.post-ad-btn:hover {\n    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);\n}\n\n.title-wrap {\n    font-size: 20px;\n    padding: 10px;\n}\n\n.featured-products-container {\n    margin: 70px auto;\n}\n.featured-products-container .title {\n    margin-bottom: 40px;\n    font-size: 22px;\n    font-family: \"Roboto Condensed\", sans-serif;\n}\n", ""]);
 
 // exports
 
@@ -6723,10 +6723,10 @@ exports.push([module.i, ".no-results-found {\r\n\theight: 85vh;\r\n\twidth: 100%
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);", ""]);
 
 // module
-exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\toverflow: visible;\n}\nbody {\n\tbackground: #f2f3f7;\n}\n.container {\n\twidth: 80vw;\n\tmargin: auto;\n}\n", ""]);
+exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    overflow: visible;\n}\nbody {\n}\n.my-body-container {\n    padding: 0 12vw;\n}\n\n.width-container {\n    width: 76vw;\n    margin: 40px auto;\n}\n", ""]);
 
 // exports
 
@@ -6748,7 +6748,7 @@ exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!.
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./MainContent/FeaturedProduct.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css"), "");
 
 // module
-exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 400px;\n\t}\n\t.logo-and-search {\n\t\twidth: 650px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 96px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 18px;\n\t}\n\t.post-ad-btn {\n\t\theight: 50px;\n\t\twidth: 170px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 1088px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 300px;\n\t}\n\t.logo-and-search {\n\t\twidth: 400px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 940px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 200px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 72px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 12px;\n\t\tmargin-top: -45px;\n\t}\n\t.column-one {\n\t\tgrid-template-rows: 1fr 20px 1fr;\n\t}\n}\n@media only screen and (max-width: 840px) {\n\t/* navbar */\n\t.search-form {\n\t\tdisplay: none;\n\t}\n}\n", ""]);
+exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n\t/* featured products */\n\t.featured-products {\n\t\tgrid-template-columns: repeat(4, 220px);\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 400px;\n\t}\n\t.logo-and-search {\n\t\twidth: 650px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 96px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 18px;\n\t}\n\t.post-ad-btn {\n\t\theight: 50px;\n\t\twidth: 170px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 1088px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 300px;\n\t}\n\t.logo-and-search {\n\t\twidth: 400px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 940px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 200px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 72px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 12px;\n\t\tmargin-top: -45px;\n\t}\n\t.column-one {\n\t\tgrid-template-rows: 1fr 20px 1fr;\n\t}\n}\n@media only screen and (max-width: 840px) {\n\t/* navbar */\n\t.search-form {\n\t\tdisplay: none;\n\t}\n}\n", ""]);
 
 // exports
 
@@ -73896,9 +73896,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Auth/Register */ "./resources/js/components/Auth/Register.jsx");
 /* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
 /* harmony import */ var _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MainContent/SearchResults */ "./resources/js/components/MainContent/SearchResults.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MainContent/DetailedAdView */ "./resources/js/components/MainContent/DetailedAdView.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_11__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73912,6 +73913,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -73983,31 +73985,35 @@ function App() {
       dispatch: dispatch,
       globalToken: globalToken
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
     value: {
       searchedPosts: searchedPosts,
       setSearchedPosts: setSearchedPosts
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/searchResults",
     exact: true,
     component: _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__["default"]
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/post",
     exact: true,
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
     path: "/login",
     exact: true,
     component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+    path: "/details/:id/:title",
+    exact: true,
+    component: _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__["default"]
   }))));
 }
 
@@ -74062,7 +74068,7 @@ var Login = function Login() {
       values = _React$useState2[0],
       setValues = _React$useState2[1];
 
-  var onSubmitHnadler = function onSubmitHnadler(event) {
+  var onSubmitHandler = function onSubmitHandler(event) {
     event.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/login", values).then(function (res) {
       console.log(res);
@@ -74094,7 +74100,7 @@ var Login = function Login() {
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: onSubmitHnadler,
+    onSubmit: onSubmitHandler,
     className: "container mt-5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: ""
@@ -74753,13 +74759,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _HomeAdView_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeAdView.css */ "./resources/js/components/Layouts/HomeAdView.css");
 /* harmony import */ var _HomeAdView_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_HomeAdView_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
 var HomeAdView = function HomeAdView(_ref) {
   var product = _ref.product;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/details/".concat(product.id, "/").concat(product.title),
     className: "product-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "image-wrap"
@@ -74767,13 +74775,13 @@ var HomeAdView = function HomeAdView(_ref) {
     src: "storage/images/".concat(product.imageName),
     alt: ""
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-info"
+    className: "home-title-info"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-text"
+    className: "home-title"
   }, product.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
+    className: "home-price"
   }, "Rs.", product.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "condition"
+    className: "home-condition"
   }, product.condition)));
 };
 
@@ -74857,9 +74865,7 @@ function NavBar(_ref) {
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "my-navbar"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar-items"
+    className: "my-navbar my-body-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo-and-search"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -74874,7 +74880,7 @@ function NavBar(_ref) {
     to: "/"
   }, "HOME")), user.isLoggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./post"
+    to: "/post"
   }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown show"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -74894,11 +74900,11 @@ function NavBar(_ref) {
     }
   }, "Logout"))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./login"
+    to: "/login"
   }, "LOGIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
-    to: "./register"
-  }, "REGISTER"))))));
+    to: "/register"
+  }, "REGISTER")))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(NavBar));
@@ -75215,6 +75221,55 @@ var AllAds = function AllAds() {
 
 /***/ }),
 
+/***/ "./resources/js/components/MainContent/DetailedAdView.jsx":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/MainContent/DetailedAdView.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var DeatiledAdView = function DeatiledAdView() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({}),
+      _useState2 = _slicedToArray(_useState, 2),
+      ad = _useState2[0],
+      setAd = _useState2[1];
+
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
+      id = _useParams.id;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/product/".concat(id)).then(function (response) {
+      return setAd(response.data.data);
+    })["catch"](function (error) {
+      return console.log(error);
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ad.title);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DeatiledAdView);
+
+/***/ }),
+
 /***/ "./resources/js/components/MainContent/FeaturedProduct.css":
 /*!*****************************************************************!*\
   !*** ./resources/js/components/MainContent/FeaturedProduct.css ***!
@@ -75420,7 +75475,7 @@ var Home = function Home(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hero-section-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hero-section"
+    className: "hero-section my-body-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "column-one"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -75437,13 +75492,13 @@ var Home = function Home(_ref) {
   }, "POST AN AD")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "column-two"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "featured-products-container"
+    className: "featured-products-container width-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title"
   }, "Featured Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__["default"], {
     url: "mostviewed"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "featured-products-container"
+    className: "featured-products-container width-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title"
   }, "Most Recent"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FeaturedProduct__WEBPACK_IMPORTED_MODULE_4__["default"], {
