@@ -15,7 +15,7 @@
 }
 .logo-and-search {
     display: flex;
-    width: 700px;
+    width: 650px;
     justify-content: flex-start;
     align-items: center;
 }
@@ -30,7 +30,7 @@
 }
 
 .my-nav-menu {
-    width: 400px;
+    width: 450px;
     height: 100%;
     list-style: none;
     display: flex;
@@ -39,7 +39,7 @@
     margin: 0;
 }
 .my-nav-menu li {
-    margin-left: 40px;
+    margin-left: 35px;
 }
 .my-nav-menu li .my-link {
     text-decoration: none;
@@ -53,10 +53,14 @@
 .my-dropdown-button {
     height: 35px;
     width: 170px;
+
     border: none;
+    padding: 0 5px;
     color: #f1f1f1;
     background-color: #111111;
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

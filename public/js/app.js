@@ -6553,7 +6553,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".product-container {\n    height: 300px;\n    width: 202px;\n    justify-self: center;\n    display: grid;\n    grid-template-rows: 188px 110px;\n    background: white;\n    -webkit-transition: all 0.2s ease-out;\n    transition: all 0.2s ease-out;\n    color: #0c0c0c;\n}\n.product-container:hover {\n    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);\n    color: #0c0c0c;\n    text-decoration: none;\n}\n.image-wrap {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.image-wrap img {\n    height: 100%;\n    width: 100%;\n}\n\n.home-title-info {\n    font-size: 16px;\n    display: grid;\n    align-self: center;\n    grid-template-rows: 30px 25px 30px;\n    -webkit-box-pack: center;\n            justify-content: center;\n}\n\n.home-title-info .home-title,\n.home-price,\n.home-condition {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: end;\n            align-items: flex-end;\n    width: 100%;\n}\n.home-title-info .home-title {\n    font-size: 22px;\n    font-weight: 550;\n    color: #0c0c0c;\n}\n.home-title-info .home-price {\n    color: #17924f;\n    font-size: 16px;\n}\n.home-title-info .home-condition {\n    font-size: 12px;\n    color: #4a4a4a;\n    align-self: start;\n}\n", ""]);
+exports.push([module.i, ".product-container {\n    height: 300px;\n    width: 100%;\n    display: grid;\n    grid-template-rows: 188px 110px;\n    background: white;\n    -webkit-transition: all 0.2s ease-out;\n    transition: all 0.2s ease-out;\n    color: #0c0c0c;\n}\n.product-container:hover {\n    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);\n    color: #0c0c0c;\n    text-decoration: none;\n}\n.image-wrap {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.image-wrap img {\n    height: 100%;\n    width: 100%;\n}\n\n.home-title-info {\n    display: grid;\n    align-self: center;\n    grid-template-columns: 180px;\n    grid-template-rows: 30px 25px 30px;\n    -webkit-box-pack: center;\n            justify-content: center;\n    min-width: 0;\n    min-height: 0;\n}\n\n.home-title,\n.home-price,\n.home-condition {\n    white-space: initial;\n    overflow: hidden;\n\n    justify-self: center;\n}\n.home-title-info .home-title {\n    font-size: 22px;\n\n    font-weight: 550;\n    color: #0c0c0c;\n}\n.home-title-info .home-price {\n    color: #17924f;\n    font-size: 16px;\n}\n.home-title-info .home-condition {\n    font-size: 12px;\n    color: #4a4a4a;\n    align-self: start;\n}\n", ""]);
 
 // exports
 
@@ -6573,7 +6573,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Beb
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 700px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 400px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 40px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto Condensed\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n    border: none;\n    color: #f1f1f1;\n    background-color: #111111;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, ".my-navbar {\n    background-color: white;\n    height: 55px;\n    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 9999;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n.logo-and-search {\n    display: -webkit-box;\n    display: flex;\n    width: 650px;\n    -webkit-box-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n            align-items: center;\n}\n\n.logo {\n    color: #1b262c;\n    margin-right: 40px;\n    font-family: \"Bebas Neue\", cursive;\n    font-size: 40px;\n    cursor: pointer;\n    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */\n}\n\n.my-nav-menu {\n    width: 450px;\n    height: 100%;\n    list-style: none;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n    margin: 0;\n}\n.my-nav-menu li {\n    margin-left: 35px;\n}\n.my-nav-menu li .my-link {\n    text-decoration: none;\n    color: #1b262c;\n    font-weight: bold;\n    font-family: \"Roboto Condensed\", sans-serif;\n    font-size: 16px;\n    -webkit-transition: 0.4s ease-out;\n    transition: 0.4s ease-out;\n}\n\n.my-dropdown-button {\n    height: 35px;\n    width: 170px;\n\n    border: none;\n    padding: 0 5px;\n    color: #f1f1f1;\n    background-color: #111111;\n    font-weight: bold;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n", ""]);
 
 // exports
 
@@ -6592,7 +6592,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    border: 1px solid #e9e9e9;\n}\n\n.search-form input[type=\"text\"] {\n    width: 500px;\n    height: 35px;\n    background: #ffffff;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 20px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 35px;\n    width: 50px;\n    border: none;\n    color: #111111;\n    background-color: #ffffff;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #111111;\n    color: #f1f1f1;\n}\n", ""]);
+exports.push([module.i, ".search-form {\n    display: -webkit-box;\n    display: flex;\n    border: 1px solid #e9e9e9;\n}\n\n.search-form input[type=\"text\"] {\n    width: 450px;\n    height: 35px;\n    background: #ffffff;\n    outline: none;\n    box-sizing: border-box;\n    border: none;\n    padding-left: 20px;\n    font-size: 16px;\n    -webkit-transition-duration: 0.4s;\n            transition-duration: 0.4s;\n}\n\n.search-button {\n    height: 35px;\n    width: 50px;\n    border: none;\n    color: #111111;\n    background-color: #ffffff;\n    font-weight: bold;\n    -webkit-transition: background-color 0.4s ease-out;\n    transition: background-color 0.4s ease-out;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.search-button:hover {\n    background: #111111;\n    color: #f1f1f1;\n}\n", ""]);
 
 // exports
 
@@ -6611,7 +6611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\na{\r\n    text-decoration: none;\r\n}\r\nli{\r\n    list-style: none;\r\n}\r\n\r\n.product-wrapper{\r\n    height: 170px;\r\n    /* overflow: hidden; */\r\n    display: grid;\r\n    grid-template-columns: repeat(18, 1fr);\r\n    grid-template-rows: repeat(5, 1fr);\r\n    margin-top: 100px;\r\n    width: 700px;\r\n    margin-left: 300px;\r\n    padding: 10px 0;\r\n    background: #f8f8f8;\r\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\n.image-wrapper{\r\n    grid-row: 1/6;\r\n    grid-column: 1/5;\r\n    padding: 1em;\r\n    border-right: 1px #B0B0B0 solid;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n.image{\r\n    height: 90%;\r\n    max-width: 100%;\r\n}\r\n\r\nimg{\r\n    max-width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.product-detail{\r\ngrid-row: 1/6;\r\ngrid-column: 5/15;\r\ndisplay: grid;\r\ngrid-template-rows: 1fr 1fr 3fr 1fr;\r\npadding: 1em ;\r\nfont-size: 12px;\r\n}\r\n.title-wrap{\r\nfont-size: 16px;\r\nfont-weight: 800;\r\ncolor: #383E55;\r\n}\r\n\r\n.specification-list{\r\n    display: -webkit-box;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    margin-left: -.5em;\r\n    font-size: 12px;\r\n    color: #113;\r\n\r\n}\r\n.specification-list-items{\r\n    padding: 0 .5em;\r\n}\r\n.specification-list-items div{\r\n    display: inline;\r\n}\r\n.attribute{\r\n    font-weight: 600;\r\n}\r\n.description{\r\n    padding: .7em 0;\r\n    overflow: hidden;\r\n}\r\n.posted-on{\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}\r\n\r\n.seller-price{\r\n    grid-column: 15/19;\r\n    grid-row: 1/6;\r\n    display: grid;\r\n    grid-template-rows: 1fr 1fr;\r\n    padding: 0 10px;\r\n    font-size: 14px;\r\n    border-left: 1px solid #B0B0B0;\r\n\r\n}\r\n\r\n.seller-info{\r\n    font-size: 12px;\r\n    margin: auto auto;\r\n}\r\n\r\n\r\n.price{\r\n    border-top: 1px solid #B0B0B0;\r\n\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: column;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n}", ""]);
+exports.push([module.i, "*{\n    margin: 0;\n    padding: 0;\n}\na{\n    text-decoration: none;\n}\nli{\n    list-style: none;\n}\n\n.product-wrapper{\n    height: 170px;\n    /* overflow: hidden; */\n    display: grid;\n    grid-template-columns: repeat(18, 1fr);\n    grid-template-rows: repeat(5, 1fr);\n    margin-top: 100px;\n    width: 700px;\n    margin-left: 300px;\n    padding: 10px 0;\n    background: #f8f8f8;\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);\n    font-family: 'Roboto', sans-serif;\n}\n\n.image-wrapper{\n    grid-row: 1/6;\n    grid-column: 1/5;\n    padding: 1em;\n    border-right: 1px #B0B0B0 solid;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.image{\n    height: 90%;\n    max-width: 100%;\n}\n\nimg{\n    max-width: 100%;\n    height: 100%;\n}\n\n.product-detail{\ngrid-row: 1/6;\ngrid-column: 5/15;\ndisplay: grid;\ngrid-template-rows: 1fr 1fr 3fr 1fr;\npadding: 1em ;\nfont-size: 12px;\n}\n.title-wrap{\nfont-size: 16px;\nfont-weight: 800;\ncolor: #383E55;\n}\n\n.specification-list{\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -.5em;\n    font-size: 12px;\n    color: #113;\n\n}\n.specification-list-items{\n    padding: 0 .5em;\n}\n.specification-list-items div{\n    display: inline;\n}\n.attribute{\n    font-weight: 600;\n}\n.description{\n    padding: .7em 0;\n    overflow: hidden;\n}\n.posted-on{\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-align: center;\n            align-items: center;\n}\n\n.seller-price{\n    grid-column: 15/19;\n    grid-row: 1/6;\n    display: grid;\n    grid-template-rows: 1fr 1fr;\n    padding: 0 10px;\n    font-size: 14px;\n    border-left: 1px solid #B0B0B0;\n\n}\n\n.seller-info{\n    font-size: 12px;\n    margin: auto auto;\n}\n\n\n.price{\n    border-top: 1px solid #B0B0B0;\n\n    font-weight: 700;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}", ""]);
 
 // exports
 
@@ -6707,7 +6707,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".no-results-found {\r\n\theight: 85vh;\r\n\twidth: 100%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: center;\r\n\t        justify-content: center;\r\n\t-webkit-box-align: center;\r\n\t        align-items: center;\r\n\tfont-family: Roboto;\r\n\tfont-weight: 400px;\r\n\tfont-size: 36px;\r\n}\r\n", ""]);
+exports.push([module.i, ".no-results-found {\n\theight: 85vh;\n\twidth: 100%;\n\tdisplay: -webkit-box;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t        align-items: center;\n\tfont-family: Roboto;\n\tfont-weight: 400px;\n\tfont-size: 36px;\n}\n", ""]);
 
 // exports
 
@@ -6726,7 +6726,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);", ""]);
 
 // module
-exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    overflow: visible;\n}\nbody {\n}\n.my-body-container {\n    padding: 0 12vw;\n}\n\n.width-container {\n    width: 76vw;\n    margin: 40px auto;\n}\n", ""]);
+exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    overflow: visible;\n}\nbody {\n}\n.my-body-container {\n    padding: 0 11%;\n}\n\n.width-container {\n    width: 78%;\n    margin: 40px auto;\n}\n", ""]);
 
 // exports
 
@@ -6748,7 +6748,7 @@ exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!.
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./MainContent/FeaturedProduct.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/MainContent/FeaturedProduct.css"), "");
 
 // module
-exports.push([module.i, "@media only screen and (max-width: 1366px) {\n\t/* navbar */\n\t.my-navbar {\n\t\theight: 50px;\n\t}\n\t.my-nav-menu {\n\t\twidth: 250px;\n\t}\n\t.my-nav-menu li .my-link {\n\t\tfont-size: 12px;\n\t}\n\t.logo {\n\t\tfont-size: 36px;\n\t}\n\t.logo-and-search {\n\t\twidth: 680px;\n\t}\n\t.my-dropdown-button {\n\t\theight: 30px;\n\t\twidth: 130px;\n\t\tfont-size: 12px;\n\t}\n\t.search-form input[type=\"text\"] {\n\t\twidth: 450px;\n\t}\n\t.search-form input[type=\"text\"],\n\t.search-button {\n\t\theight: 30px;\n\t}\n\t/* featured products */\n\t.featured-products {\n\t\tgrid-template-columns: repeat(4, 220px);\n\t}\n}\n@media only screen and (max-width: 1200px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 400px;\n\t}\n\t.logo-and-search {\n\t\twidth: 650px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 96px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 18px;\n\t}\n\t.post-ad-btn {\n\t\theight: 50px;\n\t\twidth: 170px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 1088px) {\n\t.search-form input[type=\"text\"] {\n\t\twidth: 300px;\n\t}\n\t.logo-and-search {\n\t\twidth: 400px;\n\t}\n\t/* featued products */\n\t.featured-products {\n\t\tgrid-template-columns: 202px 202px 202px;\n\t}\n}\n@media only screen and (max-width: 940px) {\n\t/* navbar */\n\t.search-form input[type=\"text\"] {\n\t\twidth: 200px;\n\t}\n\t/* herosection */\n\t.title-section {\n\t\tfont-size: 72px;\n\t}\n\t.subtitle-section {\n\t\tfont-size: 12px;\n\t\tmargin-top: -45px;\n\t}\n\t.column-one {\n\t\tgrid-template-rows: 1fr 20px 1fr;\n\t}\n}\n@media only screen and (max-width: 840px) {\n\t/* navbar */\n\t.search-form {\n\t\tdisplay: none;\n\t}\n}\n", ""]);
+exports.push([module.i, "@media only screen and (max-width: 1420px) {\n    /* navbar */\n    .my-navbar {\n        height: 50px;\n    }\n    .my-nav-menu {\n        width: 450px;\n    }\n    .my-nav-menu li .my-link {\n        font-size: 12px;\n    }\n    .logo {\n        font-size: 36px;\n    }\n    .logo-and-search {\n        width: 670px;\n    }\n    .my-dropdown-button {\n        height: 30px;\n        width: 130px;\n        font-size: 12px;\n    }\n    .search-form input[type=\"text\"] {\n        width: 400px;\n    }\n    .search-form input[type=\"text\"],\n    .search-button {\n        height: 30px;\n    }\n    /* featured products */\n    .featured-products {\n        grid-template-columns: repeat(4, 220px);\n    }\n}\n@media only screen and (max-width: 1300px) {\n    /* navbar */\n    .search-form input[type=\"text\"] {\n        width: 350px;\n    }\n    .logo-and-search {\n        width: 600px;\n    }\n    /* herosection */\n    .title-section {\n        font-size: 96px;\n    }\n    .subtitle-section {\n        font-size: 18px;\n    }\n    .post-ad-btn {\n        height: 50px;\n        width: 170px;\n    }\n    /* featued products */\n    .featured-products {\n        grid-template-columns: 202px 202px 202px 202px;\n    }\n}\n@media only screen and (max-width: 1250px) {\n    .search-form input[type=\"text\"] {\n        width: 200px;\n    }\n    .logo-and-search {\n        width: 400px;\n    }\n    /* featued products */\n    .featured-products {\n        grid-template-columns: 202px 202px 202px;\n    }\n}\n@media only screen and (max-width: 1020px) {\n    /* navbar */\n    .search-form {\n        display: none;\n    }\n    .my-nav-menu {\n        display: none;\n    }\n    /* herosection */\n    .title-section {\n        font-size: 72px;\n    }\n    .subtitle-section {\n        font-size: 12px;\n        margin-top: -45px;\n    }\n    .column-one {\n        grid-template-rows: 1fr 20px 1fr;\n    }\n    .featured-products {\n        grid-template-columns: 180px 180px 180px;\n    }\n}\n@media only screen and (max-width: 800px) {\n    /* navbar */\n    .search-form {\n        display: none;\n    }\n    .my-nav-menu {\n        display: none;\n    }\n    /* herosection */\n    .title-section {\n        font-size: 72px;\n    }\n    .subtitle-section {\n        font-size: 12px;\n        margin-top: -45px;\n    }\n    .column-one {\n        grid-template-rows: 1fr 20px 1fr;\n    }\n    .featured-products {\n        grid-template-columns: 202px 202px;\n    }\n}\n", ""]);
 
 // exports
 
@@ -73897,9 +73897,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Login */ "./resources/js/components/Auth/Login.jsx");
 /* harmony import */ var _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MainContent/SearchResults */ "./resources/js/components/MainContent/SearchResults.jsx");
 /* harmony import */ var _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MainContent/DetailedAdView */ "./resources/js/components/MainContent/DetailedAdView.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _MainContent_MyAds__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./MainContent/MyAds */ "./resources/js/components/MainContent/MyAds.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_12__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73913,6 +73914,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -73985,32 +73987,36 @@ function App() {
       dispatch: dispatch,
       globalToken: globalToken
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
     value: {
       searchedPosts: searchedPosts,
       setSearchedPosts: setSearchedPosts
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/searchResults",
     exact: true,
     component: _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__["default"]
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/post",
     exact: true,
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+    path: "/MyAds",
+    exact: true,
+    component: _MainContent_MyAds__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/login",
     exact: true,
     component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
     path: "/details/:id/:title",
     exact: true,
     component: _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__["default"]
@@ -74881,7 +74887,10 @@ function NavBar(_ref) {
   }, "HOME")), user.isLoggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     className: "my-link",
     to: "/post"
-  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "POST")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    className: "my-link",
+    to: "/MyAds"
+  }, "MY ADS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown show"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "my-dropdown-button dropdown-toggle",
@@ -75537,6 +75546,27 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/MainContent/MyAds.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/MainContent/MyAds.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var MyAds = function MyAds() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "my Ads");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MyAds);
 
 /***/ }),
 
