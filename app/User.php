@@ -44,9 +44,5 @@ class User extends Authenticatable
         return $this->hasMany('App\Ad');
     }
 
-    public function products()
-    {
-        $products = Ad::all();
-        return $products;
-    }
+
 }

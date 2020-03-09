@@ -91,8 +91,9 @@ class ProductsController extends ResponseController
 
     public function myProduct()
     {
-        $products = auth()->user()->products();
-        return AdResource::collection($products);
+        $user = auth()->user();
+//        $user->ad();
+        return AdResource::collection($user->ad);
     }
 
 
