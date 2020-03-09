@@ -78,8 +78,8 @@
     .search-form {
         display: none;
     }
-    .my-nav-menu {
-        display: none;
+    .logo-and-search {
+        width: 100px;
     }
     /* herosection */
     .title-section {
@@ -101,9 +101,7 @@
     .search-form {
         display: none;
     }
-    .my-nav-menu {
-        display: none;
-    }
+
     /* herosection */
     .title-section {
         font-size: 72px;
