@@ -9,7 +9,7 @@ const Search = ({ history }) => {
         event.preventDefault();
 
         axios
-            .post("/api/search", { search: search })
+            .post("/api/filter", { title: search })
             .then(response => {
                 setSearchedPosts(response.data.data);
 

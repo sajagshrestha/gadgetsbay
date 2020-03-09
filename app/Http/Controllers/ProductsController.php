@@ -6,10 +6,10 @@ use App\Ad;
 use App\Http\Resources\AdResource;
 use App\Mobile;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreMobile;
+use App\Http\Requests\MobileRequest;
 use App\Http\Requests\EditAdMobile;
 
-class ProductsController extends Controller
+class ProductsController extends ResponseController
 {
 
     public function __construct()
@@ -25,7 +25,7 @@ class ProductsController extends Controller
 //
     }
 
-    public function store(StoreMobile $request)
+    public function store(MobileRequest $request)
     {
         $inputs = $request->all();
 
@@ -65,7 +65,7 @@ class ProductsController extends Controller
         return new AdResource($product);
     }
 
-    public function update(EditAdMobile $request, $id)
+    public function update(MobileRequest $request, $id)
     {
         $description = Ad::find($id);
         $mobile = $description->mobile;
@@ -87,6 +87,12 @@ class ProductsController extends Controller
         if ($product->delete()) {
             return new AdResource($product);
         }
+    }
+
+    public function myProduct()
+    {
+        $products = auth()->user()->products();
+        return AdResource::collection($products);
     }
 
 

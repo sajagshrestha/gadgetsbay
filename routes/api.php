@@ -66,5 +66,12 @@ Route::get('/mostviewed', 'SearchController@mostViewed');
 // latest product
 Route::get('/latest', 'SearchController@latest');
 
-//filer
+//filter
 Route::post('/filter','SearchController@filter');
+
+
+
+//User
+
+//user's product
+Route::get('/user/products','ProductsController@myProduct');

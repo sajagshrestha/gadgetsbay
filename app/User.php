@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Http\Resources\AdResource;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -41,5 +42,11 @@ class User extends Authenticatable
     public function ad()
     {
         return $this->hasMany('App\Ad');
+    }
+
+    public function products()
+    {
+        $products = Ad::all();
+        return $products;
     }
 }
