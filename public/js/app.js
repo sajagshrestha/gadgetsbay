@@ -75562,9 +75562,9 @@ if(false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -75578,22 +75578,48 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var MyAds = function MyAds() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({}),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
-      Ad = _useState2[0],
-      setAd = _useState2[1];
+      ads = _useState2[0],
+      setAds = _useState2[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_1__["UserContext"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_2__["UserContext"]),
       globalToken = _useContext.globalToken;
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/user/products", globalToken).then(function (response) {
-      return console.log(response);
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/user/products", {
+      headers: {
+        Authorization: "Bearer ".concat(JSON.parse(localStorage.getItem("user")).token)
+      }
+    }).then(function (response) {
+      setAds(response.data.data);
     })["catch"](function (error) {
       return console.log(error);
     });
-  });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "my ads");
+  }, [ads.length]);
+
+  var deleteAd = function deleteAd(id) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/api/product/".concat(id), globalToken).then(function (response) {
+      var newAds = ads.filter(function () {
+        (function (ad) {
+          return ad.id !== response.data.data.id;
+        });
+      });
+      setAds(newAds);
+    })["catch"](function (error) {
+      return console.log(error);
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ads.map(function (Ad) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: Ad.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, Ad.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return deleteAd(Ad.id);
+      }
+    }, "delete"));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MyAds);
