@@ -6726,7 +6726,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".no-results-found {\r\n\theight: 85vh;\r\n\twidth: 100%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: center;\r\n\t        justify-content: center;\r\n\t-webkit-box-align: center;\r\n\t        align-items: center;\r\n\tfont-family: Roboto;\r\n\tfont-weight: 400px;\r\n\tbackground-color: blue;\r\n\tfont-size: 36px;\r\n}\r\n\r\n.search-result {\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n}", ""]);
+exports.push([module.i, ".no-results-found {\r\n\theight: 85vh;\r\n\twidth: 100%;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: center;\r\n\t        justify-content: center;\r\n\t-webkit-box-align: center;\r\n\t        align-items: center;\r\n\tfont-family: Roboto;\r\n\tfont-weight: 400px;\r\n\tfont-size: 36px;\r\n}\r\n\r\n.search-result {\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n}", ""]);
 
 // exports
 
@@ -75552,11 +75552,11 @@ var Filter = function Filter(_ref) {
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: "",
-    priceLessThan: "",
-    priceMoreThan: "",
-    location: "",
-    condition: "",
-    negotiable: ""
+    priceLessThan: null,
+    priceMoreThan: null,
+    location: null,
+    condition: null,
+    negotiable: null
   }),
       _useState2 = _slicedToArray(_useState, 2),
       filterValue = _useState2[0],
