@@ -84673,7 +84673,8 @@ var SearchResults = function SearchResults() {
     transition: pageTransition
   }, searchedPosts.map(function (post) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ad_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: post.id
+      key: post.id,
+      post: post
     });
   })));
 };

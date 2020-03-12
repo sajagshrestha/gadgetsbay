@@ -44,7 +44,7 @@ const SearchResults = () => {
             transition={pageTransition}
         >
             {searchedPosts.map(post => (
-                <Ad key={post.id} />
+                <Ad key={post.id} post={post}/>
             ))}
         </motion.div>
         </div>
