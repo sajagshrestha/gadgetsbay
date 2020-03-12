@@ -21,7 +21,6 @@ const Search = ({ history }) => {
     const onChangeHandler = event => {
         setSearch(event.target.value);
     };
-
     return (
         <form onSubmit={onSubmitHandler} className="search-form">
             <input
