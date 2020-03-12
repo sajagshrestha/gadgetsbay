@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { motion } from "framer-motion";
+import { AnimateContext } from "../App";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../App";
 const Login = () => {
+    const { pageTransition, pageVariants } = useContext(AnimateContext);
     const { user, dispatch } = React.useContext(UserContext);
     const [values, setValues] = React.useState({
         email: "",
@@ -44,28 +47,36 @@ const Login = () => {
         return <Redirect to="/" />;
     }
     return (
-        <form onSubmit={onSubmitHandler} className="container mt-5">
-            <label htmlFor="">Email</label>
-            <input
-                className="form-control"
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={onChangeHandler}
-            />
-            <label htmlFor="">Password</label>
-            <input
-                className="form-control"
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={onChangeHandler}
-            />
+        <motion.div
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={pageVariants}
+            transition={pageTransition}
+        >
+            <form onSubmit={onSubmitHandler} className="container mt-5">
+                <label htmlFor="">Email</label>
+                <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    value={values.email}
+                    onChange={onChangeHandler}
+                />
+                <label htmlFor="">Password</label>
+                <input
+                    className="form-control"
+                    type="password"
+                    name="password"
+                    value={values.password}
+                    onChange={onChangeHandler}
+                />
 
-            <button type="submit" className="btn btn-success mt-4">
-                Login
-            </button>
-        </form>
+                <button type="submit" className="btn btn-success mt-4">
+                    Login
+                </button>
+            </form>
+        </motion.div>
     );
 };
 

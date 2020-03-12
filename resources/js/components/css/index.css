@@ -5,6 +5,7 @@
     overflow: visible;
 }
 body {
+    height: 110vh;
 }
 .my-body-container {
     padding: 0 11%;

@@ -25,6 +25,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "framer-motion": "^1.9.1",
         "normalize.css": "^8.0.1",
         "prettier": "^1.19.1",
         "react-router-dom": "^5.1.2"
