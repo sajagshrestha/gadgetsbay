@@ -1,20 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Ad.css";
 const Ad = ({ post }) => {
     return (
         <div className="product-wrapper">
             <div className="image-wrapper">
                 <div className="image">
-                    <img src="mac.jpg" alt="" />
+                    <img src={`storage/images/${post.imageName}`} alt="" />
                 </div>
             </div>
             <div className="product-detail">
-                <div className="title-wrap">Mac Book Pro</div>
+                <div className="title-wrap">{post.title}</div>
                 <div className="specification">
                     <ul className="specification-list">
                         <li className="specification-list-items">
                             <div className="attribute">Front Camera:</div>
-                            <div className="value">2MP</div>
+                            <div className="value">{post.mobile.frontCamera}</div>
                         </li>
                         <li className="specification-list-items">
                             <div className="attribute">Back Camera:</div>

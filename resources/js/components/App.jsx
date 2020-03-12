@@ -62,9 +62,7 @@ function App() {
         >
             <Router>
                 <div>
-                    <SearchContext.Provider
-                        value={{ searchedPosts, setSearchedPosts }}
-                    >
+                    <SearchContext.Provider value={{ searchedPosts, setSearchedPosts }}>
                         <NavBar />
                         <Route
                             path="/searchResults"
