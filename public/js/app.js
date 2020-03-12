@@ -7455,7 +7455,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);", ""]);
 
 // module
-exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    overflow: visible;\n}\nbody {\n    height: 110vh;\n}\n.my-body-container {\n    padding: 0 11%;\n}\n\n.width-container {\n    width: 78%;\n    margin: 40px auto;\n}\n", ""]);
+exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    overflow: visible;\n}\n\n.my-body-container {\n    padding: 0 11%;\n}\n\n.width-container {\n    width: 78%;\n    margin: 40px auto;\n}\n", ""]);
 
 // exports
 
