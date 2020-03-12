@@ -1,10 +1,10 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./AdForm.css";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { UserContext } from "../App";
-const AdForm = () => {
-     const {  globalToken } = useContext(UserContext);
+const AdForm = ({ id, editValues, history }) => {
+    const { globalToken } = useContext(UserContext);
     const [values, setValues] = useState({
         title: "",
         description: "",
@@ -17,11 +17,14 @@ const AdForm = () => {
         backCamera: "",
         RAM: "",
         internalStorage: ""
-
     });
     const [image, setImage] = useState("");
+    useEffect(() => {
+        if (editValues) {
+            setValues(editValues);
+        }
+    }, [editValues]);
     const [imageUploadName, setImageUploadName] = useState("Chose Photo");
-    const [redirect, setRedirect] = useState(false);
 
     const onChangeHandler = event => {
         setValues({
@@ -48,11 +51,18 @@ const AdForm = () => {
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
         event.preventDefault();
+        if (editValues) {
+            axios
+                .put(`/api/product/${id}`, fd, globalToken)
+                .then(history.push("/myAds"))
+                .catch(err => console.log(err));
+        } else {
+            axios
+                .post("/api/product", fd, globalToken)
+                .then(history.push("/"))
+                .catch(err => console.log(err));
+        }
 
-        axios
-            .post("/api/product", fd, globalToken)
-            .then(setRedirect(true))
-            .catch(err => console.log(err));
         setValues({
             title: "",
             description: "",
@@ -68,9 +78,6 @@ const AdForm = () => {
         });
         setImageUploadName("Choose Photo");
     };
-    if (redirect) {
-        return <Redirect to="login" />;
-    }
     return (
         <div className="container mt-5 ">
             <form onSubmit={onSubmitHandler} encType="multipart/form-data">
@@ -165,6 +172,7 @@ const AdForm = () => {
                             name="negotiable"
                             value="yes"
                             onChange={onChangeHandler}
+                            checked={values.negotiable === "yes" ? true : false}
                         />
                         Yes
                         <input
@@ -172,6 +180,11 @@ const AdForm = () => {
                             name="negotiable"
                             value="fixed price"
                             onChange={onChangeHandler}
+                            checked={
+                                values.negotiable === "fixed price"
+                                    ? true
+                                    : false
+                            }
                         />
                         Fixed Price
                     </div>
@@ -190,6 +203,11 @@ const AdForm = () => {
                             name="condition"
                             value="Brand New(not used)"
                             onChange={onChangeHandler}
+                            checked={
+                                values.condition === "Brand New(not used)"
+                                    ? true
+                                    : false
+                            }
                         />
                         Brand New(not used)
                         <input
@@ -197,6 +215,11 @@ const AdForm = () => {
                             name="condition"
                             value="Like New(used few times)"
                             onChange={onChangeHandler}
+                            checked={
+                                values.condition === "Like New(used few times)"
+                                    ? true
+                                    : false
+                            }
                         />
                         Like New(used few times)
                         <input
@@ -204,6 +227,9 @@ const AdForm = () => {
                             name="condition"
                             value="Excellent"
                             onChange={onChangeHandler}
+                            checked={
+                                values.condition === "Excellent" ? true : false
+                            }
                         />
                         Excellent
                         <input
@@ -211,6 +237,9 @@ const AdForm = () => {
                             name="condition"
                             value="Good/Fair"
                             onChange={onChangeHandler}
+                            checked={
+                                values.condition === "Good/Fair" ? true : false
+                            }
                         />
                         Good/Fair
                         <input
@@ -218,6 +247,11 @@ const AdForm = () => {
                             name="condition"
                             value="Not Working"
                             onChange={onChangeHandler}
+                            checked={
+                                values.condition === "Not Working"
+                                    ? true
+                                    : false
+                            }
                         />
                         Not Working
                     </div>
@@ -236,13 +270,12 @@ const AdForm = () => {
                             className="form-control"
                             id="usedFor"
                             name="usedFor"
-                            placeholder = "in months"
+                            placeholder="in months"
                             value={values.usedFor}
                             onChange={onChangeHandler}
                         />
                     </div>
                 </div>
-
 
                 <div className="form-group row">
                     <label
@@ -369,22 +402,24 @@ const AdForm = () => {
                                 name="imageName"
                                 onChange={imageHandler}
                             />
-                            { <label
-                                className="custom-file-label"
-                                htmlFor="customFile"
-                            >
-                                {imageUploadName}
-                            </label> }
+                            {
+                                <label
+                                    className="custom-file-label"
+                                    htmlFor="customFile"
+                                >
+                                    {imageUploadName}
+                                </label>
+                            }
                         </div>
                     </div>
                 </div>
 
                 <button type="submit" className="btn btn-primary mt-4">
-                    Post
+                    {editValues ? "edit" : "post"}
                 </button>
             </form>
         </div>
     );
 };
 
-export default AdForm;
+export default withRouter(AdForm);

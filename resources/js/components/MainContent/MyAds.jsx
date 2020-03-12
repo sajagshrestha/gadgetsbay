@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { UserContext } from "../App";
+import { withRouter } from "react-router-dom";
 
-const MyAds = () => {
+const MyAds = ({ history }) => {
     const [ads, setAds] = useState([]);
     const { globalToken } = useContext(UserContext);
     useEffect(() => {
@@ -19,7 +20,9 @@ const MyAds = () => {
             })
             .catch(error => console.log(error));
     }, [ads.length]);
-
+    const editAd = id => {
+        history.push(`/edit/${id}`);
+    };
     const deleteAd = id => {
         axios
             .delete(`/api/product/${id}`, globalToken)
@@ -37,9 +40,10 @@ const MyAds = () => {
                 <div key={Ad.id}>
                     <li>{Ad.title}</li>
                     <button onClick={() => deleteAd(Ad.id)}>delete</button>
+                    <button onClick={() => editAd(Ad.id)}>edit</button>
                 </div>
             ))}
         </div>
     );
 };
-export default MyAds;
+export default withRouter(MyAds);

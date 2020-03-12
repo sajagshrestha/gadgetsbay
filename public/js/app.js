@@ -73898,9 +73898,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MainContent/SearchResults */ "./resources/js/components/MainContent/SearchResults.jsx");
 /* harmony import */ var _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MainContent/DetailedAdView */ "./resources/js/components/MainContent/DetailedAdView.jsx");
 /* harmony import */ var _MainContent_MyAds__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./MainContent/MyAds */ "./resources/js/components/MainContent/MyAds.jsx");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
-/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _MainContent_EditAd__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MainContent/EditAd */ "./resources/js/components/MainContent/EditAd.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./responsive.css */ "./resources/js/components/responsive.css");
+/* harmony import */ var _responsive_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_responsive_css__WEBPACK_IMPORTED_MODULE_13__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -73914,6 +73915,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -73987,36 +73989,40 @@ function App() {
       dispatch: dispatch,
       globalToken: globalToken
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchContext.Provider, {
     value: {
       searchedPosts: searchedPosts,
       setSearchedPosts: setSearchedPosts
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/searchResults",
     exact: true,
     component: _MainContent_SearchResults__WEBPACK_IMPORTED_MODULE_8__["default"]
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/",
     exact: true,
     component: _MainContent_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/post",
     exact: true,
     component: _MainContent_PostAdd__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/register",
     exact: true,
     component: _Auth_Register__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
-    path: "/MyAds",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
+    path: "/myAds",
     exact: true,
     component: _MainContent_MyAds__WEBPACK_IMPORTED_MODULE_10__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
+    path: "/edit/:id",
+    exact: true,
+    component: _MainContent_EditAd__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/login",
     exact: true,
     component: _Auth_Login__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["Route"], {
     path: "/details/:id/:title",
     exact: true,
     component: _MainContent_DetailedAdView__WEBPACK_IMPORTED_MODULE_9__["default"]
@@ -74339,7 +74345,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var AdForm = function AdForm() {
+var AdForm = function AdForm(_ref) {
+  var id = _ref.id,
+      editValues = _ref.editValues,
+      history = _ref.history;
+
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_4__["UserContext"]),
       globalToken = _useContext.globalToken;
 
@@ -74365,15 +74375,16 @@ var AdForm = function AdForm() {
       image = _useState4[0],
       setImage = _useState4[1];
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (editValues) {
+      setValues(editValues);
+    }
+  }, [editValues]);
+
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Chose Photo"),
       _useState6 = _slicedToArray(_useState5, 2),
       imageUploadName = _useState6[0],
       setImageUploadName = _useState6[1];
-
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      redirect = _useState8[0],
-      setRedirect = _useState8[1];
 
   var onChangeHandler = function onChangeHandler(event) {
     setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
@@ -74399,9 +74410,17 @@ var AdForm = function AdForm() {
     fd.append("RAM", values.RAM);
     fd.append("internalStorage", values.internalStorage);
     event.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd, globalToken).then(setRedirect(true))["catch"](function (err) {
-      return console.log(err);
-    });
+
+    if (editValues) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.put("/api/product/".concat(id), fd, globalToken).then(history.push("/myAds"))["catch"](function (err) {
+        return console.log(err);
+      });
+    } else {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd, globalToken).then(history.push("/"))["catch"](function (err) {
+        return console.log(err);
+      });
+    }
+
     setValues({
       title: "",
       description: "",
@@ -74417,12 +74436,6 @@ var AdForm = function AdForm() {
     });
     setImageUploadName("Choose Photo");
   };
-
-  if (redirect) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
-      to: "login"
-    });
-  }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mt-5 "
@@ -74512,12 +74525,14 @@ var AdForm = function AdForm() {
     type: "radio",
     name: "negotiable",
     value: "yes",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.negotiable === "yes" ? true : false
   }), "Yes", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "negotiable",
     value: "fixed price",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.negotiable === "fixed price" ? true : false
   }), "Fixed Price")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -74529,27 +74544,32 @@ var AdForm = function AdForm() {
     type: "radio",
     name: "condition",
     value: "Brand New(not used)",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.condition === "Brand New(not used)" ? true : false
   }), "Brand New(not used)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
     value: "Like New(used few times)",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.condition === "Like New(used few times)" ? true : false
   }), "Like New(used few times)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
     value: "Excellent",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.condition === "Excellent" ? true : false
   }), "Excellent", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
     value: "Good/Fair",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.condition === "Good/Fair" ? true : false
   }), "Good/Fair", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
     value: "Not Working",
-    onChange: onChangeHandler
+    onChange: onChangeHandler,
+    checked: values.condition === "Not Working" ? true : false
   }), "Not Working")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -74715,10 +74735,10 @@ var AdForm = function AdForm() {
   }, imageUploadName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
-  }, "Post")));
+  }, editValues ? "edit" : "post")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (AdForm);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(AdForm));
 
 /***/ }),
 
@@ -75279,6 +75299,80 @@ var DeatiledAdView = function DeatiledAdView() {
 
 /***/ }),
 
+/***/ "./resources/js/components/MainContent/EditAd.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/MainContent/EditAd.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layouts_AdForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Layouts/AdForm */ "./resources/js/components/Layouts/AdForm.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var EditAd = function EditAd() {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useParams"])(),
+      id = _useParams.id;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    title: "",
+    description: "",
+    price: "",
+    expiresIn: "",
+    negotiable: "",
+    condition: "",
+    usedFor: "",
+    frontCamera: "",
+    backCamera: "",
+    RAM: "",
+    internalStorage: ""
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      editValues = _useState2[0],
+      setEditValues = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    axios.get("/api/product/".concat(id)).then(function (response) {
+      var res = response.data.data;
+      setEditValues({
+        title: res.title,
+        description: res.description,
+        price: res.price,
+        expiresIn: res.expiresIn,
+        negotiable: res.negotiable,
+        condition: res.condition,
+        usedFor: res.usedFor,
+        frontCamera: res.FrontCamera,
+        backCamera: res.backCamera,
+        RAM: res.RAM,
+        internalStorage: res.internalStorage
+      });
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Layouts_AdForm__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    editValues: editValues,
+    id: id
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EditAd);
+
+/***/ }),
+
 /***/ "./resources/js/components/MainContent/FeaturedProduct.css":
 /*!*****************************************************************!*\
   !*** ./resources/js/components/MainContent/FeaturedProduct.css ***!
@@ -75565,6 +75659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -75577,7 +75672,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var MyAds = function MyAds() {
+
+var MyAds = function MyAds(_ref) {
+  var history = _ref.history;
+
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       ads = _useState2[0],
@@ -75597,6 +75695,10 @@ var MyAds = function MyAds() {
       return console.log(error);
     });
   }, [ads.length]);
+
+  var editAd = function editAd(id) {
+    history.push("/edit/".concat(id));
+  };
 
   var deleteAd = function deleteAd(id) {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]("/api/product/".concat(id), globalToken).then(function (response) {
@@ -75618,11 +75720,15 @@ var MyAds = function MyAds() {
       onClick: function onClick() {
         return deleteAd(Ad.id);
       }
-    }, "delete"));
+    }, "delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return editAd(Ad.id);
+      }
+    }, "edit"));
   }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MyAds);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(MyAds));
 
 /***/ }),
 
