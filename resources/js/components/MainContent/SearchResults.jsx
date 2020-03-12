@@ -4,6 +4,7 @@ import Ad from "./Ad.jsx";
 import { motion } from "framer-motion";
 import { AnimateContext } from "../App";
 import { SearchContext } from "../App";
+import Filter from "./Filter";
 const SearchResults = () => {
     const { pageTransition, pageVariants } = useContext(AnimateContext);
     const [resultFound, setResultFound] = useState(false);
@@ -17,19 +18,24 @@ const SearchResults = () => {
     }, [searchedPosts]);
     if (!resultFound) {
         return (
-            <motion.div
-                initial="out"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="no-results-found"
-            >
-                No Results Found
-            </motion.div>
+        	<div className="search-result">
+				<Filter />
+	            <motion.div
+	                initial="out"
+	                animate="in"
+	                exit="out"
+	                variants={pageVariants}
+	                transition={pageTransition}
+	                className="no-results-found"
+	            >
+	                No Results Found
+	            </motion.div>
+	            </div>
         );
     }
     return (
+    	<div className="search-result">
+			<Filter />
         <motion.div
             initial="out"
             animate="in"
@@ -41,6 +47,7 @@ const SearchResults = () => {
                 <Ad key={post.id} />
             ))}
         </motion.div>
+        </div>
     );
 };
 export default SearchResults;

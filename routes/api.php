@@ -68,6 +68,13 @@ Route::get('/latest', 'SearchController@latest');
 
 //filter
 Route::post('/filter','SearchController@filter');
+Route::post('/filter/test',function (Request $request){
+	if($request)
+	{
+		return response()->json(['data'=> $request->all()]);
+	}
+});
+
 
 
 

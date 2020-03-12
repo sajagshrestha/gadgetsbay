@@ -79,6 +79,7 @@ function App() {
                 globalToken: globalToken
             }}
         >
+
             <div>
                 <SearchContext.Provider
                     value={{ searchedPosts, setSearchedPosts }}
@@ -94,7 +95,6 @@ function App() {
                                     exact
                                     component={SearchResults}
                                 />
-
                                 <Route path="/" exact component={Home} />
                                 <Route path="/post" exact component={PostAdd} />
                                 <Route

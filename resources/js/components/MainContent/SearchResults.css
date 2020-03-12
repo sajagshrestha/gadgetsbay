@@ -8,3 +8,7 @@
 	font-weight: 400px;
 	font-size: 36px;
 }
+
+.search-result {
+	display: flex;
+}

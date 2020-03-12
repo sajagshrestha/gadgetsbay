@@ -22,7 +22,9 @@ class AdSearch
         Request $filters, Builder $query) {
         foreach ($filters->all() as $filterName => $value) {
 
-            $decorator =
+           if($value!=null)
+           {
+             $decorator =
                 __NAMESPACE__ . '\\Filters\\' .
                 str_replace(' ', '', ucwords(
                     str_replace('_', ' ', $filterName)));
@@ -30,6 +32,7 @@ class AdSearch
             if (class_exists($decorator)) {
                 $query = $decorator::apply($query, $value);
             }
+           }
 
         }
 
