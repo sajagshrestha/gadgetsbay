@@ -1,19 +1,23 @@
-import React from "react";
+import React,{useState,useContext} from "react";
 import axios from "axios";
 import "./Filter.css"
+import { SearchContext } from "../App.jsx";
+import { withRouter } from "react-router-dom";
 
-const Filter = () =>{
+const Filter = ({ history }) =>{
+
+	 const { setSearchedPosts } = useContext(SearchContext);
 	
-	const [filterValue,setFilterValue] = useState[{
+	const [filterValue,setFilterValue] = useState({
 		title:"",
 		priceLessThan:"",
 		priceMoreThan:"",
 		location:"",
 		condition:"",
 		negotiable:""
-	}];
+	});
  
-	onChangeHandler = event =>
+	const onChangeHandler = event =>
 	{
 		setFilterValue({
 			...filterValue,
@@ -21,20 +25,49 @@ const Filter = () =>{
 		});
 
 	};
+	const resetField = () =>
+	{
+		setFilterValue({
+			title:"",
+			priceLessThan:"",
+			priceMoreThan:"",
+			location:"",
+			condition:"",
+			negotiable:"",
+		});
+		
+	};
+
+	const onSubmitHandler = () => {
+		event.preventDefault();
+		axios
+			.post("api/filter",{
+				title: filterValue.title,
+				location: filterValue.location,
+				condition: filterValue.condition,
+				PriceMoreThan:filterValue.priceMoreThan,
+				PriceLessThan: filterValue.priceLessThan,
+
+			 })
+			.then(response => {
+				setSearchedPosts(response.data.data);
+				history.push("/searchResults");
+			})
+			.catch(err => console.log(err));
+
+	};
 
 	return(
 		<div className="filter-container">
-        <form >
+        <form onSubmit={onSubmitHandler}>
             
             Search
             <input type="text" 
             className=""
-            name="searchText"
+            name="title"
 			value = {filterValue.title}
 			onChange = {onChangeHandler}
              />
-			}
-			}
         
             Location
             <input type="text" className="" name="location" 
@@ -61,13 +94,13 @@ const Filter = () =>{
 			<input type="radio" name="negotiable" value="yes" onChange = {onChangeHandler}/>Yes
 			<input type="radio" name="negotiable" value="fixed price" onChange = {onChangeHandler}/>Fixed price
 
-			<button type="submit"> search </button>
-			<button type="clear"> clear </button>
+			<button type="submit" > search </button>
+			<button type="reset" onClick= {resetField}> clear </button>
 
 
-        </form>
+	        </form>
 
-    </div>
+	    </div>
 
 		);
 };

@@ -75522,6 +75522,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Filter_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Filter.css */ "./resources/js/components/MainContent/Filter.css");
 /* harmony import */ var _Filter_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Filter_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../App.jsx */ "./resources/js/components/App.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -75540,31 +75542,68 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Filter = function Filter() {
-  var _useState$title$price = _slicedToArray(useState[{
+
+
+var Filter = function Filter(_ref) {
+  var history = _ref.history;
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App_jsx__WEBPACK_IMPORTED_MODULE_3__["SearchContext"]),
+      setSearchedPosts = _useContext.setSearchedPosts;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: "",
     priceLessThan: "",
     priceMoreThan: "",
     location: "",
     condition: "",
     negotiable: ""
-  }], 2),
-      filterValue = _useState$title$price[0],
-      setFilterValue = _useState$title$price[1];
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      filterValue = _useState2[0],
+      setFilterValue = _useState2[1];
 
-  onChangeHandler = function onChangeHandler(event) {
+  var onChangeHandler = function onChangeHandler(event) {
     setFilterValue(_objectSpread({}, filterValue, _defineProperty({}, event.target.name, event.target.value)));
+  };
+
+  var resetField = function resetField() {
+    setFilterValue({
+      title: "",
+      priceLessThan: "",
+      priceMoreThan: "",
+      location: "",
+      condition: "",
+      negotiable: ""
+    });
+  };
+
+  var onSubmitHandler = function onSubmitHandler() {
+    event.preventDefault();
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("api/filter", {
+      title: filterValue.title,
+      location: filterValue.location,
+      condition: filterValue.condition,
+      PriceMoreThan: filterValue.priceMoreThan,
+      PriceLessThan: filterValue.priceLessThan
+    }).then(function (response) {
+      setSearchedPosts(response.data.data);
+      history.push("/searchResults");
+    })["catch"](function (err) {
+      return console.log(err);
+    });
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "filter-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, "Search", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmitHandler
+  }, "Search", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "",
-    name: "searchText",
+    name: "title",
     value: filterValue.title,
     onChange: onChangeHandler
-  }), "} } Location", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }), "Location", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "",
     name: "location",
@@ -75613,7 +75652,8 @@ var Filter = function Filter() {
   }), "Fixed price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit"
   }, " search "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "clear"
+    type: "reset",
+    onClick: resetField
   }, " clear ")));
 };
 
