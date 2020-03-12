@@ -57,7 +57,9 @@ function App() {
         headers: { Authorization: `Bearer ${user.token}` }
     };
     const [searchedPosts, setSearchedPosts] = useState([]);
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser) {
