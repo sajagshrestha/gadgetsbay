@@ -10,11 +10,11 @@ const Filter = ({ history }) =>{
 
 	const [filterValue,setFilterValue] = useState({
 		title:"",
-		priceLessThan:null,
-		priceMoreThan:null,
+		priceLessThan:"",
+		priceMoreThan:"",
 		location:"",
-		condition:null,
-		negotiable:"any"
+		condition:"",
+		negotiable:""
 	});
 
 	const onChangeHandler = event =>

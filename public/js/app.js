@@ -84117,11 +84117,11 @@ var Filter = function Filter(_ref) {
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: "",
-    priceLessThan: null,
-    priceMoreThan: null,
+    priceLessThan: "",
+    priceMoreThan: "",
     location: "",
-    condition: null,
-    negotiable: "any"
+    condition: "",
+    negotiable: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       filterValue = _useState2[0],

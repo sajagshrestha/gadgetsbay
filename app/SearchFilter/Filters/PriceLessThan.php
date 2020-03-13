@@ -8,7 +8,10 @@ class PriceLessThan  implements Filter
 {
     public static function apply($builder, $value)
     {
-        return $builder->where('price', '<' , $value);
+        if($value != "")
+        {
+            return $builder->where('price', '<' , $value);
+        }
     }
 
 }
