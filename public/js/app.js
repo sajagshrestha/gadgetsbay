@@ -82446,10 +82446,12 @@ var SearchContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext()
 var AnimateContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 var pageVariants = {
   "in": {
-    opacity: 1
+    opacity: 1,
+    x: 0
   },
   out: {
-    opacity: 0
+    opacity: 0,
+    x: "-100vw"
   }
 };
 var pageTransition = {
@@ -83111,15 +83113,15 @@ var AdForm = function AdForm(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
-    value: "Brand New(not used)",
+    value: "Brand New",
     onChange: onChangeHandler,
-    checked: values.condition === "Brand New(not used)" ? true : false
+    checked: values.condition === "Brand New" ? true : false
   }), "Brand New(not used)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
-    value: "Like New(used few times)",
+    value: "Like New",
     onChange: onChangeHandler,
-    checked: values.condition === "Like New(used few times)" ? true : false
+    checked: values.condition === "Like New" ? true : false
   }), "Like New(used few times)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "condition",
@@ -84117,9 +84119,9 @@ var Filter = function Filter(_ref) {
     title: "",
     priceLessThan: null,
     priceMoreThan: null,
-    location: null,
+    location: "",
     condition: null,
-    negotiable: null
+    negotiable: "any"
   }),
       _useState2 = _slicedToArray(_useState, 2),
       filterValue = _useState2[0],
@@ -84144,10 +84146,11 @@ var Filter = function Filter(_ref) {
     event.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("api/filter", {
       title: filterValue.title,
-      location: filterValue.location,
+      // location: filterValue.location,
       condition: filterValue.condition,
-      PriceMoreThan: filterValue.priceMoreThan,
-      PriceLessThan: filterValue.priceLessThan
+      priceMoreThan: filterValue.priceMoreThan,
+      priceLessThan: filterValue.priceLessThan,
+      negotiable: filterValue.negotiable
     }).then(function (response) {
       setSearchedPosts(response.data.data);
       history.push("/searchResults");
@@ -84180,10 +84183,10 @@ var Filter = function Filter(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: ""
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "Brand New(not used)"
+    value: "Brand New"
   }, "Brand New"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "used"
-  }, "used")), "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Used")), "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "price"
   }, "Rs", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
@@ -84197,7 +84200,7 @@ var Filter = function Filter(_ref) {
     name: "priceLessThan",
     value: filterValue.priceLessThan,
     onChange: onChangeHandler
-  })), "Price Negotible", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), "Price Negotiable", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "negotiable",
     value: "any",
@@ -84212,7 +84215,7 @@ var Filter = function Filter(_ref) {
     name: "negotiable",
     value: "fixed price",
     onChange: onChangeHandler
-  }), "Fixed price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), "No", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit"
   }, " search "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "reset",

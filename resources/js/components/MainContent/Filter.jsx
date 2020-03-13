@@ -7,16 +7,16 @@ import { withRouter } from "react-router-dom";
 const Filter = ({ history }) =>{
 
 	 const { setSearchedPosts } = useContext(SearchContext);
-	
+
 	const [filterValue,setFilterValue] = useState({
 		title:"",
 		priceLessThan:null,
 		priceMoreThan:null,
-		location:null,
+		location:"",
 		condition:null,
-		negotiable:null
+		negotiable:"any"
 	});
- 
+
 	const onChangeHandler = event =>
 	{
 		setFilterValue({
@@ -35,7 +35,7 @@ const Filter = ({ history }) =>{
 			condition:"",
 			negotiable:"",
 		});
-		
+
 	};
 
 	const onSubmitHandler = () => {
@@ -43,10 +43,12 @@ const Filter = ({ history }) =>{
 		axios
 			.post("api/filter",{
 				title: filterValue.title,
-				location: filterValue.location,
+				// location: filterValue.location,
 				condition: filterValue.condition,
-				PriceMoreThan:filterValue.priceMoreThan,
-				PriceLessThan: filterValue.priceLessThan,
+				priceMoreThan:filterValue.priceMoreThan,
+				priceLessThan: filterValue.priceLessThan,
+                negotiable: filterValue.negotiable
+
 
 			 })
 			.then(response => {
@@ -60,28 +62,28 @@ const Filter = ({ history }) =>{
 	return(
 		<div className="filter-container">
         <form onSubmit={onSubmitHandler}>
-            
+
             Search
-            <input type="text" 
+            <input type="text"
             className=""
             name="title"
 			value = {filterValue.title}
 			onChange = {onChangeHandler}
              />
-        
+
             Location
-            <input type="text" className="" name="location" 
+            <input type="text" className="" name="location"
             value = {filterValue.location}
 			onChange = {onChangeHandler}
 			/>
-     
+
             Condition
             <select name="condition" id="condition" value = {filterValue.condition} onChange = {onChangeHandler}>
                 <option value=""></option>
-                <option value="Brand New(not used)">Brand New</option>
-                <option value="used">used</option>
+                <option value="Brand New">Brand New</option>
+                <option value="used">Used</option>
             </select>
-            
+
 			Price
             <div className="price">
             	Rs
@@ -89,10 +91,10 @@ const Filter = ({ history }) =>{
             	to
             	<input type="text" className="" name="priceLessThan" value = {filterValue.priceLessThan} onChange = {onChangeHandler} />
             </div>
-			Price Negotible
+			Price Negotiable
 			<input type="radio" name="negotiable" value="any" onChange = {onChangeHandler}/>Any
 			<input type="radio" name="negotiable" value="yes" onChange = {onChangeHandler}/>Yes
-			<input type="radio" name="negotiable" value="fixed price" onChange = {onChangeHandler}/>Fixed price
+			<input type="radio" name="negotiable" value="fixed price" onChange = {onChangeHandler}/>No
 
 			<button type="submit" > search </button>
 			<button type="reset" onClick= {resetField}> clear </button>

@@ -19,10 +19,12 @@ export const AnimateContext = React.createContext();
 
 const pageVariants = {
     in: {
-        opacity: 1
+        opacity: 1,
+        x:0
     },
     out: {
-        opacity: 0
+        opacity: 0,
+        x: "-100vw"
     }
 };
 const pageTransition = {

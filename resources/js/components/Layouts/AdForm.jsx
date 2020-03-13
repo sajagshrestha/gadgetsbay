@@ -201,10 +201,10 @@ const AdForm = ({ id, editValues, history }) => {
                         <input
                             type="radio"
                             name="condition"
-                            value="Brand New(not used)"
+                            value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Brand New(not used)"
+                                values.condition === "Brand New"
                                     ? true
                                     : false
                             }
@@ -213,10 +213,10 @@ const AdForm = ({ id, editValues, history }) => {
                         <input
                             type="radio"
                             name="condition"
-                            value="Like New(used few times)"
+                            value="Like New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Like New(used few times)"
+                                values.condition === "Like New"
                                     ? true
                                     : false
                             }
