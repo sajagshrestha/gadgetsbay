@@ -19,12 +19,10 @@ export const AnimateContext = React.createContext();
 
 const pageVariants = {
     in: {
-        opacity: 1,
-        x:0
+        opacity: 1
     },
     out: {
-        opacity: 0,
-        x: "-100vw"
+        opacity: 0
     }
 };
 const pageTransition = {
@@ -81,7 +79,6 @@ function App() {
                 globalToken: globalToken
             }}
         >
-
             <div>
                 <SearchContext.Provider
                     value={{ searchedPosts, setSearchedPosts }}
