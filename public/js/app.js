@@ -82912,6 +82912,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+var imagesObj = [];
+var imagesArray = [];
 
 var AdForm = function AdForm(_ref) {
   var id = _ref.id,
@@ -82938,10 +82940,15 @@ var AdForm = function AdForm(_ref) {
       values = _useState2[0],
       setValues = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState4 = _slicedToArray(_useState3, 2),
-      image = _useState4[0],
-      setImage = _useState4[1];
+      images = _useState4[0],
+      setImages = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      previewImages = _useState6[0],
+      setPreviewImages = _useState6[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (editValues) {
@@ -82949,18 +82956,27 @@ var AdForm = function AdForm(_ref) {
     }
   }, [editValues]);
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Chose Photo"),
-      _useState6 = _slicedToArray(_useState5, 2),
-      imageUploadName = _useState6[0],
-      setImageUploadName = _useState6[1];
-
   var onChangeHandler = function onChangeHandler(event) {
     setValues(_objectSpread({}, values, _defineProperty({}, event.target.name, event.target.value)));
   };
 
   var imageHandler = function imageHandler(event) {
-    setImageUploadName(event.target.files[0].name);
-    setImage(event.target.files[0]);
+    imagesObj.push(event.target.files);
+
+    for (var i = 0; i < imagesObj[0].length; i++) {
+      imagesArray.push(imagesObj[0][i]);
+    }
+
+    console.log(imagesArray);
+    setPreviewImages(imagesArray);
+    setImages(imagesArray);
+  };
+
+  var removeImage = function removeImage(img) {
+    var newPreviewImages = previewImages.filter(function (i) {
+      return i !== img;
+    });
+    setPreviewImages(newPreviewImages);
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
@@ -83002,7 +83018,6 @@ var AdForm = function AdForm(_ref) {
       RAM: "",
       internalStorage: ""
     });
-    setImageUploadName("Choose Photo");
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -83289,18 +83304,28 @@ var AdForm = function AdForm(_ref) {
     className: "col-sm-2 col-form-label"
   }, "Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-sm-10"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "custom-file"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "file",
-    className: "custom-file-input",
     id: "customFile",
     name: "imageName",
-    onChange: imageHandler
+    onChange: imageHandler,
+    files: images,
+    multiple: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "custom-file-label",
-    htmlFor: "customFile"
-  }, imageUploadName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    "for": "htmlFor"
+  }, "Select file")))), previewImages.map(function (img) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: img.name
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: URL.createObjectURL(img),
+      height: "100",
+      width: "100"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick() {
+        return removeImage(img);
+      }
+    }, "X"));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, editValues ? "edit" : "post")));
@@ -83897,7 +83922,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var EditAd = function EditAd() {
-  var _useContext = useContext(_App__WEBPACK_IMPORTED_MODULE_3__["AnimateContext"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_3__["AnimateContext"]),
       pageTransition = _useContext.pageTransition,
       pageVariants = _useContext.pageVariants;
 

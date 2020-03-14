@@ -3,6 +3,8 @@ import "./AdForm.css";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../App";
+const imagesObj = [];
+const imagesArray = [];
 const AdForm = ({ id, editValues, history }) => {
     const { globalToken } = useContext(UserContext);
     const [values, setValues] = useState({
@@ -18,14 +20,13 @@ const AdForm = ({ id, editValues, history }) => {
         RAM: "",
         internalStorage: ""
     });
-    const [image, setImage] = useState("");
+    const [images, setImages] = useState([]);
+    const [previewImages, setPreviewImages] = useState([]);
     useEffect(() => {
         if (editValues) {
             setValues(editValues);
         }
     }, [editValues]);
-    const [imageUploadName, setImageUploadName] = useState("Chose Photo");
-
     const onChangeHandler = event => {
         setValues({
             ...values,
@@ -33,8 +34,18 @@ const AdForm = ({ id, editValues, history }) => {
         });
     };
     const imageHandler = event => {
-        setImageUploadName(event.target.files[0].name);
-        setImage(event.target.files[0]);
+        imagesObj.push(event.target.files);
+
+        for (let i = 0; i < imagesObj[0].length; i++) {
+            imagesArray.push(imagesObj[0][i]);
+        }
+        console.log(imagesArray);
+        setPreviewImages(imagesArray);
+        setImages(imagesArray);
+    };
+    const removeImage = img => {
+        const newPreviewImages = previewImages.filter(i => i !== img);
+        setPreviewImages(newPreviewImages);
     };
     const onSubmitHandler = event => {
         const fd = new FormData();
@@ -76,7 +87,6 @@ const AdForm = ({ id, editValues, history }) => {
             RAM: "",
             internalStorage: ""
         });
-        setImageUploadName("Choose Photo");
     };
     return (
         <div className="container mt-5 ">
@@ -204,9 +214,7 @@ const AdForm = ({ id, editValues, history }) => {
                             value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Brand New"
-                                    ? true
-                                    : false
+                                values.condition === "Brand New" ? true : false
                             }
                         />
                         Brand New(not used)
@@ -216,9 +224,7 @@ const AdForm = ({ id, editValues, history }) => {
                             value="Like New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Like New"
-                                    ? true
-                                    : false
+                                values.condition === "Like New" ? true : false
                             }
                         />
                         Like New(used few times)
@@ -394,25 +400,29 @@ const AdForm = ({ id, editValues, history }) => {
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Photo</label>
                     <div className="col-sm-10">
-                        <div className="custom-file">
+                        <div>
                             <input
                                 type="file"
-                                className="custom-file-input"
                                 id="customFile"
                                 name="imageName"
                                 onChange={imageHandler}
+                                files={images}
+                                multiple
                             />
-                            {
-                                <label
-                                    className="custom-file-label"
-                                    htmlFor="customFile"
-                                >
-                                    {imageUploadName}
-                                </label>
-                            }
+                            <label for="htmlFor">Select file</label>
                         </div>
                     </div>
                 </div>
+                {previewImages.map(img => (
+                    <div key={img.name}>
+                        <img
+                            src={URL.createObjectURL(img)}
+                            height="100"
+                            width="100"
+                        />
+                        <button onClick={() => removeImage(img)}>X</button>
+                    </div>
+                ))}
 
                 <button type="submit" className="btn btn-primary mt-4">
                     {editValues ? "edit" : "post"}
