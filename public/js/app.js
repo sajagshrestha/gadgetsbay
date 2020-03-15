@@ -7263,7 +7263,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n", ""]);
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n.images-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n.primary-image-container {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.primary-image {\n    height: 200px;\n    width: 200px;\n}\n.preview-image-container {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-column-gap: 20px;\n}\n\n.preview-images {\n    height: 100px;\n    width: 100px;\n}\n", ""]);
 
 // exports
 
@@ -83333,14 +83333,14 @@ var AdForm = function AdForm(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "col-sm-2 col-form-label"
   }, "Select primary Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-sm-10"
+    className: "col-sm-10 images-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "primary-image-container"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: URL.createObjectURL(images[images.length - 1]),
     alt: "primary image",
     className: "primary-image"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "preview-image-container"
   }, images.map(function (img) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -83348,8 +83348,6 @@ var AdForm = function AdForm(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: URL.createObjectURL(img),
       className: "preview-images",
-      height: "100",
-      width: "100",
       onClick: function onClick() {
         return addImage(img);
       }

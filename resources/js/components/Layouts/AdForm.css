@@ -4,3 +4,26 @@
     background: rgb(250, 250, 250);
     padding: 100px;
 }
+.images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.primary-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.primary-image {
+    height: 200px;
+    width: 200px;
+}
+.preview-image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+}
+
+.preview-images {
+    height: 100px;
+    width: 100px;
+}

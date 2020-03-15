@@ -442,23 +442,23 @@ const AdForm = ({ id, editValues, history }) => {
                         <label className="col-sm-2 col-form-label">
                             Select primary Photo
                         </label>
-                        <div className="col-sm-10">
-                            <div className="primary-image-container"></div>
-                            <img
-                                src={URL.createObjectURL(
-                                    images[images.length - 1]
-                                )}
-                                alt="primary image"
-                                className="primary-image"
-                            />
+                        <div className="col-sm-10 images-container">
+                            <div className="primary-image-container">
+                                <img
+                                    src={URL.createObjectURL(
+                                        images[images.length - 1]
+                                    )}
+                                    alt="primary image"
+                                    className="primary-image"
+                                />
+                            </div>
+
                             <div className="preview-image-container">
                                 {images.map(img => (
                                     <div key={img.lastModified}>
                                         <img
                                             src={URL.createObjectURL(img)}
                                             className="preview-images"
-                                            height="100"
-                                            width="100"
                                             onClick={() => addImage(img)}
                                         />
                                         <button
