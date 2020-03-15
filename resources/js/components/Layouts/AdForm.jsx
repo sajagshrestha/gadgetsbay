@@ -3,8 +3,7 @@ import "./AdForm.css";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../App";
-const imagesObj = [];
-const imagesArray = [];
+
 const AdForm = ({ id, editValues, history }) => {
     const { globalToken } = useContext(UserContext);
     const [values, setValues] = useState({
@@ -21,8 +20,10 @@ const AdForm = ({ id, editValues, history }) => {
         internalStorage: ""
     });
     const [images, setImages] = useState([]);
-    const [previewImages, setPreviewImages] = useState([]);
+    const [imagesLabel, setImagesLabel] = useState("Select one or more images");
+
     useEffect(() => {
+        console.log(images);
         if (editValues) {
             setValues(editValues);
         }
@@ -34,25 +35,40 @@ const AdForm = ({ id, editValues, history }) => {
         });
     };
     const imageHandler = event => {
+        const imagesObj = [];
+        const imagesArray = [];
         imagesObj.push(event.target.files);
 
         for (let i = 0; i < imagesObj[0].length; i++) {
             imagesArray.push(imagesObj[0][i]);
         }
         console.log(imagesArray);
-        setPreviewImages(imagesArray);
+
         setImages(imagesArray);
+        setImagesLabel(`${imagesArray.length} images selected`);
     };
     const removeImage = img => {
-        const newPreviewImages = previewImages.filter(i => i !== img);
-        setPreviewImages(newPreviewImages);
+        const newImagesArray = images.filter(i => i !== img);
+        setImages(newImagesArray);
+
+        setImagesLabel(
+            newImagesArray.length === 0
+                ? "Select one or multiple images"
+                : `${newImagesArray.length} images selected`
+        );
     };
+    const addImage = img => {
+        const newImageArray = images.filter(i => i !== img);
+        newImageArray.push(img);
+        setImages(newImageArray);
+    };
+
     const onSubmitHandler = event => {
         const fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
         fd.append("price", values.price);
-        fd.append("imageName", image);
+        fd.append("imageName", images);
         fd.append("expiresIn", values.expiresIn);
         fd.append("negotiable", values.negotiable);
         fd.append("condition", values.condition);
@@ -400,29 +416,64 @@ const AdForm = ({ id, editValues, history }) => {
                 <div className="form-group row">
                     <label className="col-sm-2 col-form-label">Photo</label>
                     <div className="col-sm-10">
-                        <div>
+                        <div className="custom-file">
                             <input
                                 type="file"
+                                className="custom-file-input"
                                 id="customFile"
                                 name="imageName"
                                 onChange={imageHandler}
-                                files={images}
                                 multiple
+                                accept="image/*"
                             />
-                            <label for="htmlFor">Select file</label>
+                            {
+                                <label
+                                    className="custom-file-label"
+                                    htmlFor="customFile"
+                                >
+                                    {imagesLabel}
+                                </label>
+                            }
                         </div>
                     </div>
                 </div>
-                {previewImages.map(img => (
-                    <div key={img.name}>
-                        <img
-                            src={URL.createObjectURL(img)}
-                            height="100"
-                            width="100"
-                        />
-                        <button onClick={() => removeImage(img)}>X</button>
+                {images.length !== 0 ? (
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">
+                            Select primary Photo
+                        </label>
+                        <div className="col-sm-10">
+                            <div className="primary-image-container"></div>
+                            <img
+                                src={URL.createObjectURL(
+                                    images[images.length - 1]
+                                )}
+                                alt="primary image"
+                                className="primary-image"
+                            />
+                            <div className="preview-image-container">
+                                {images.map(img => (
+                                    <div key={img.lastModified}>
+                                        <img
+                                            src={URL.createObjectURL(img)}
+                                            className="preview-images"
+                                            height="100"
+                                            width="100"
+                                            onClick={() => addImage(img)}
+                                        />
+                                        <button
+                                            onClick={() => removeImage(img)}
+                                        >
+                                            X
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-                ))}
+                ) : (
+                    ""
+                )}
 
                 <button type="submit" className="btn btn-primary mt-4">
                     {editValues ? "edit" : "post"}

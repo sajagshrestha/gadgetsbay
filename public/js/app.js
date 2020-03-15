@@ -82912,8 +82912,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var imagesObj = [];
-var imagesArray = [];
 
 var AdForm = function AdForm(_ref) {
   var id = _ref.id,
@@ -82945,12 +82943,14 @@ var AdForm = function AdForm(_ref) {
       images = _useState4[0],
       setImages = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Select one or more images"),
       _useState6 = _slicedToArray(_useState5, 2),
-      previewImages = _useState6[0],
-      setPreviewImages = _useState6[1];
+      imagesLabel = _useState6[0],
+      setImagesLabel = _useState6[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    console.log(images);
+
     if (editValues) {
       setValues(editValues);
     }
@@ -82961,6 +82961,8 @@ var AdForm = function AdForm(_ref) {
   };
 
   var imageHandler = function imageHandler(event) {
+    var imagesObj = [];
+    var imagesArray = [];
     imagesObj.push(event.target.files);
 
     for (var i = 0; i < imagesObj[0].length; i++) {
@@ -82968,15 +82970,24 @@ var AdForm = function AdForm(_ref) {
     }
 
     console.log(imagesArray);
-    setPreviewImages(imagesArray);
     setImages(imagesArray);
+    setImagesLabel("".concat(imagesArray.length, " images selected"));
   };
 
   var removeImage = function removeImage(img) {
-    var newPreviewImages = previewImages.filter(function (i) {
+    var newImagesArray = images.filter(function (i) {
       return i !== img;
     });
-    setPreviewImages(newPreviewImages);
+    setImages(newImagesArray);
+    setImagesLabel(newImagesArray.length === 0 ? "Select one or multiple images" : "".concat(newImagesArray.length, " images selected"));
+  };
+
+  var addImage = function addImage(img) {
+    var newImageArray = images.filter(function (i) {
+      return i !== img;
+    });
+    newImageArray.push(img);
+    setImages(newImageArray);
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
@@ -82984,7 +82995,7 @@ var AdForm = function AdForm(_ref) {
     fd.append("title", values.title);
     fd.append("description", values.description);
     fd.append("price", values.price);
-    fd.append("imageName", image);
+    fd.append("imageName", images);
     fd.append("expiresIn", values.expiresIn);
     fd.append("negotiable", values.negotiable);
     fd.append("condition", values.condition);
@@ -83304,28 +83315,50 @@ var AdForm = function AdForm(_ref) {
     className: "col-sm-2 col-form-label"
   }, "Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-sm-10"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "custom-file"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "file",
+    className: "custom-file-input",
     id: "customFile",
     name: "imageName",
     onChange: imageHandler,
-    files: images,
-    multiple: true
+    multiple: true,
+    accept: "image/*"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "htmlFor"
-  }, "Select file")))), previewImages.map(function (img) {
+    className: "custom-file-label",
+    htmlFor: "customFile"
+  }, imagesLabel)))), images.length !== 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "col-sm-2 col-form-label"
+  }, "Select primary Photo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "primary-image-container"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: URL.createObjectURL(images[images.length - 1]),
+    alt: "primary image",
+    className: "primary-image"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "preview-image-container"
+  }, images.map(function (img) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: img.name
+      key: img.lastModified
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: URL.createObjectURL(img),
+      className: "preview-images",
       height: "100",
-      width: "100"
+      width: "100",
+      onClick: function onClick() {
+        return addImage(img);
+      }
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
         return removeImage(img);
       }
     }, "X"));
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  })))) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, editValues ? "edit" : "post")));
