@@ -7,6 +7,18 @@
 .images-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1px #ced4da;
+    padding: 50px;
+}
+.preview-plus-add {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 .primary-image-container {
     display: flex;
@@ -14,16 +26,21 @@
     align-items: center;
 }
 .primary-image {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
 .preview-image-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
 }
 
 .preview-images {
     height: 100px;
-    width: 100px;
+    width: 120px;
+}
+.my-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

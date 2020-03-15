@@ -7263,7 +7263,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n.images-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n.primary-image-container {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.primary-image {\n    height: 200px;\n    width: 200px;\n}\n.preview-image-container {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-column-gap: 20px;\n}\n\n.preview-images {\n    height: 100px;\n    width: 100px;\n}\n", ""]);
+exports.push([module.i, ".my-container {\n    width: 60vw;\n    margin: 10vh auto;\n    background: rgb(250, 250, 250);\n    padding: 100px;\n}\n.images-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n\n    -webkit-box-pack: center;\n\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n\n    border: solid 1px #ced4da;\n    padding: 50px;\n}\n.preview-plus-add {\n    display: grid;\n    grid-template-rows: 2fr 1fr;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.primary-image-container {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n            align-items: center;\n}\n.primary-image {\n    height: 300px;\n    width: 300px;\n}\n.preview-image-container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-column-gap: 20px;\n}\n\n.preview-images {\n    height: 100px;\n    width: 120px;\n}\n.my-label {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n", ""]);
 
 // exports
 
@@ -82943,10 +82943,18 @@ var AdForm = function AdForm(_ref) {
       images = _useState4[0],
       setImages = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Select one or more images"),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    name: "Add new Image",
+    file: {}
+  }),
       _useState6 = _slicedToArray(_useState5, 2),
-      imagesLabel = _useState6[0],
-      setImagesLabel = _useState6[1];
+      imageToBeAdded = _useState6[0],
+      setImageToBeAdded = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("Select one or more images"),
+      _useState8 = _slicedToArray(_useState7, 2),
+      imagesLabel = _useState8[0],
+      setImagesLabel = _useState8[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     console.log(images);
@@ -82982,12 +82990,30 @@ var AdForm = function AdForm(_ref) {
     setImagesLabel(newImagesArray.length === 0 ? "Select one or multiple images" : "".concat(newImagesArray.length, " images selected"));
   };
 
-  var addImage = function addImage(img) {
+  var setPrimary = function setPrimary(img) {
     var newImageArray = images.filter(function (i) {
       return i !== img;
     });
-    newImageArray.push(img);
+    newImageArray.unshift(img);
     setImages(newImageArray);
+  };
+
+  var handleAddImage = function handleAddImage(event) {
+    setImageToBeAdded({
+      name: event.target.files[0].name,
+      file: event.target.files[0]
+    });
+  };
+
+  var addNewImage = function addNewImage() {
+    var newImages = images.filter(function (i) {
+      return i.name !== "yeet";
+    });
+    newImages.push(imageToBeAdded.file);
+    setImages(newImages);
+    setImageToBeAdded({
+      name: "Add new Image"
+    });
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
@@ -83337,26 +83363,49 @@ var AdForm = function AdForm(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "primary-image-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: URL.createObjectURL(images[images.length - 1]),
+    src: URL.createObjectURL(images[0]),
     alt: "primary image",
     className: "primary-image"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "preview-plus-add"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "preview-image-container"
-  }, images.map(function (img) {
+  }, images.map(function (img, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: img.lastModified
+      key: index
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: URL.createObjectURL(img),
       className: "preview-images",
       onClick: function onClick() {
-        return addImage(img);
+        return setPrimary(img);
       }
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "button",
       onClick: function onClick() {
         return removeImage(img);
-      }
-    }, "X"));
-  })))) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      },
+      value: "X"
+    }));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "add-more"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "custom-file"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file",
+    className: "custom-file-input",
+    id: "inputGroupFile02",
+    onChange: handleAddImage
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "custom-file-label my-label",
+    htmlFor: "inputGroupFile02"
+  }, imageToBeAdded.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "button",
+    onClick: function onClick() {
+      return addNewImage();
+    },
+    disabled: imageToBeAdded.name === "Add new Image" ? true : false,
+    value: "Add"
+  }))))) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "btn btn-primary mt-4"
   }, editValues ? "edit" : "post")));

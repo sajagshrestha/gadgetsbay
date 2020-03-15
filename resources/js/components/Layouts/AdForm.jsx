@@ -20,6 +20,10 @@ const AdForm = ({ id, editValues, history }) => {
         internalStorage: ""
     });
     const [images, setImages] = useState([]);
+    const [imageToBeAdded, setImageToBeAdded] = useState({
+        name: "Add new Image",
+        file: {}
+    });
     const [imagesLabel, setImagesLabel] = useState("Select one or more images");
 
     useEffect(() => {
@@ -57,12 +61,23 @@ const AdForm = ({ id, editValues, history }) => {
                 : `${newImagesArray.length} images selected`
         );
     };
-    const addImage = img => {
+    const setPrimary = img => {
         const newImageArray = images.filter(i => i !== img);
-        newImageArray.push(img);
+        newImageArray.unshift(img);
         setImages(newImageArray);
     };
-
+    const handleAddImage = event => {
+        setImageToBeAdded({
+            name: event.target.files[0].name,
+            file: event.target.files[0]
+        });
+    };
+    const addNewImage = () => {
+        const newImages = images.filter(i => i.name !== "yeet");
+        newImages.push(imageToBeAdded.file);
+        setImages(newImages);
+        setImageToBeAdded({ name: "Add new Image" });
+    };
     const onSubmitHandler = event => {
         const fd = new FormData();
         fd.append("title", values.title);
@@ -445,29 +460,55 @@ const AdForm = ({ id, editValues, history }) => {
                         <div className="col-sm-10 images-container">
                             <div className="primary-image-container">
                                 <img
-                                    src={URL.createObjectURL(
-                                        images[images.length - 1]
-                                    )}
+                                    src={URL.createObjectURL(images[0])}
                                     alt="primary image"
                                     className="primary-image"
                                 />
                             </div>
-
-                            <div className="preview-image-container">
-                                {images.map(img => (
-                                    <div key={img.lastModified}>
-                                        <img
-                                            src={URL.createObjectURL(img)}
-                                            className="preview-images"
-                                            onClick={() => addImage(img)}
+                            <div className="preview-plus-add">
+                                <div className="preview-image-container">
+                                    {images.map((img, index) => (
+                                        <div key={index}>
+                                            <img
+                                                src={URL.createObjectURL(img)}
+                                                className="preview-images"
+                                                onClick={() => setPrimary(img)}
+                                            />
+                                            <input
+                                                type="button"
+                                                onClick={() => removeImage(img)}
+                                                value="X"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="add-more">
+                                    <div className="custom-file">
+                                        <input
+                                            type="file"
+                                            className="custom-file-input"
+                                            id="inputGroupFile02"
+                                            onChange={handleAddImage}
                                         />
-                                        <button
-                                            onClick={() => removeImage(img)}
+                                        <label
+                                            className="custom-file-label my-label"
+                                            htmlFor="inputGroupFile02"
                                         >
-                                            X
-                                        </button>
+                                            {imageToBeAdded.name}
+                                        </label>
                                     </div>
-                                ))}
+                                    <input
+                                        type="button"
+                                        onClick={() => addNewImage()}
+                                        disabled={
+                                            imageToBeAdded.name ===
+                                            "Add new Image"
+                                                ? true
+                                                : false
+                                        }
+                                        value="Add"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
