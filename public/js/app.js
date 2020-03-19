@@ -83032,7 +83032,7 @@ var AdForm = function AdForm(_ref) {
     fd.append("price", values.price);
 
     for (var i = 0; i < images.length; i++) {
-      fd.append("imageName", images[i]);
+      fd.append("imageName[]", images[i]);
     }
 
     fd.append("expiresIn", values.expiresIn);
@@ -83044,7 +83044,6 @@ var AdForm = function AdForm(_ref) {
     fd.append("RAM", values.RAM);
     fd.append("internalStorage", values.internalStorage);
     event.preventDefault();
-    console.log(fd);
 
     if (editValues) {
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.put("/api/product/".concat(id), fd, globalToken).then(history.push("/myAds"))["catch"](function (err) {
@@ -83052,7 +83051,7 @@ var AdForm = function AdForm(_ref) {
       });
     } else {
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product", fd, globalToken).then(function (response) {
-        // history.push("/");
+        history.push("/");
         console.log(response.data.data);
       })["catch"](function (err) {
         return console.log(err);
@@ -83488,7 +83487,7 @@ var HomeAdView = function HomeAdView(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "image-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "storage/images/".concat(product.imageName),
+    src: "storage/images/".concat(product.imageName[0]),
     alt: ""
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-title-info"
@@ -83792,7 +83791,7 @@ var Ad = function Ad(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "image"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "storage/images/".concat(post.imageName),
+    src: "storage/images/".concat(post.imageName[0]),
     alt: ""
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "product-detail"

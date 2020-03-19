@@ -24,7 +24,7 @@ class AdResource extends JsonResource
             'negotiable' => $this->negotiable,
             'condition' => $this->condition,
             'usedFor' => $this->usedFor,
-            'imageName' => $this->imageName,
+            'imageName' => explode(" ",$this->imageName),
             'created_at' => $this->created_at,
             'mobile' => $this->mobile,
             'user' => [

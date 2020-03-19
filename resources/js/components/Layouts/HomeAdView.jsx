@@ -8,7 +8,7 @@ const HomeAdView = ({ product }) => {
             className="product-container"
         >
             <div className="image-wrap">
-                <img src={`storage/images/${product.imageName}`} alt="" />
+                <img src={`storage/images/${product.imageName[0]}`} alt="" />
             </div>
             <div className="home-title-info">
                 <div className="home-title">{product.title}</div>

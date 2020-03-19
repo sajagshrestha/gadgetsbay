@@ -25,11 +25,8 @@ class ProductsController extends ResponseController
 //
     }
 
-    public function store(Request $request)
+    public function store(MobileRequest $request)
     {
-
-        dd($this->getImageNames($request));
-        return response()->json(['imageNames',$images]);
         $inputs = $request->all();
         $description = new Ad();
         $description->setValue($inputs);
@@ -91,7 +88,7 @@ class ProductsController extends ResponseController
     public function getImageNames(Request $request)
     {
         $images = $request->file('imageName');
-        $imageNameArray =["randi" , "bhalu"];
+        $imageNameArray =[];
         if(!empty($images))
         {
            foreach ($images as $image)
@@ -99,10 +96,11 @@ class ProductsController extends ResponseController
                $Ext = $image->getClientOriginalExtension();
                $fileNameToStore = auth()->id().'_'.time().'.'.$Ext;
                array_push($imageNameArray,$fileNameToStore);
-               $request->file('imageName')->storeAs('public/images',$fileNameToStore);
+               $image->storeAs('public/images',$fileNameToStore);
            }
         }
         return implode(" ",$imageNameArray);
+
     }
 
 

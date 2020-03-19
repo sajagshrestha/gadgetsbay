@@ -93,7 +93,7 @@ const AdForm = ({ id, editValues, history }) => {
         fd.append("description", values.description);
         fd.append("price", values.price);
         for (let i = 0; i < images.length; i++) {
-            fd.append("imageName", images[i]);
+            fd.append("imageName[]", images[i]);
         }
 
         fd.append("expiresIn", values.expiresIn);
@@ -105,7 +105,6 @@ const AdForm = ({ id, editValues, history }) => {
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
         event.preventDefault();
-        console.log(fd);
         if (editValues) {
             axios
                 .put(`/api/product/${id}`, fd, globalToken)
@@ -116,7 +115,7 @@ const AdForm = ({ id, editValues, history }) => {
                 .post("/api/product", fd, globalToken)
                 .then(
                     response => {
-                        // history.push("/");
+                        history.push("/");
                         console.log(response.data.data);
                     })
                 .catch(err => console.log(err));

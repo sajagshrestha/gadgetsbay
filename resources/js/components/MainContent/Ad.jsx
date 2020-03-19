@@ -5,7 +5,7 @@ const Ad = ({ post }) => {
         <div className="product-wrapper">
             <div className="image-wrapper">
                 <div className="image">
-                    <img src={`storage/images/${post.imageName}`} alt="" />
+                    <img src={`storage/images/${post.imageName[0]}`} alt="" />
                 </div>
             </div>
             <div className="product-detail">
