@@ -42,13 +42,19 @@ const AdForm = ({ id, editValues, history }) => {
         const imagesObj = [];
         const imagesArray = [];
         imagesObj.push(event.target.files);
+        if (imagesObj[0].length > 6) {
+            alert("You Can only select 6 images");
+        } else {
+            for (let i = 0; i < imagesObj[0].length; i++) {
+                imagesArray.push(imagesObj[0][i]);
+            }
 
-        for (let i = 0; i < imagesObj[0].length; i++) {
-            imagesArray.push(imagesObj[0][i]);
+            setImages(imagesArray);
+            setImagesLabel(`${imagesArray.length} images selected`);
         }
-
         setImages(imagesArray);
         setImagesLabel(`${imagesArray.length} images selected`);
+
     };
     const removeImage = img => {
         const newImagesArray = images.filter(i => i !== img);
@@ -72,10 +78,14 @@ const AdForm = ({ id, editValues, history }) => {
         });
     };
     const addNewImage = () => {
-        const newImages = images.filter(i => i.name !== "yeet");
+        const newImages = [].concat(images);
         newImages.push(imageToBeAdded.file);
-        setImages(newImages);
-        setImageToBeAdded({ name: "Add new Image" });
+        if (newImages.length > 6) {
+            alert("You can only upload 6 images");
+        } else {
+            setImages(newImages);
+            setImageToBeAdded({ name: "Add new Image" });
+        }
     };
     const onSubmitHandler = event => {
         console.log(images);
@@ -83,7 +93,10 @@ const AdForm = ({ id, editValues, history }) => {
         fd.append("title", values.title);
         fd.append("description", values.description);
         fd.append("price", values.price);
-        fd.append("imageName", images);
+        for (let i = 0; i < images.length; i++) {
+            fd.append("imageName", images[i]);
+        }
+
         fd.append("expiresIn", values.expiresIn);
         fd.append("negotiable", values.negotiable);
         fd.append("condition", values.condition);
