@@ -25,25 +25,17 @@ class ProductsController extends ResponseController
 //
     }
 
-    public function store(MobileRequest $request)
+    public function store(Request $request)
     {
-        $inputs = $request->all();
 
+        dd($this->getImageNames($request));
+        return response()->json(['imageNames',$images]);
+        $inputs = $request->all();
         $description = new Ad();
         $description->setValue($inputs);
         $description->productType = 'mobile';
         $description->user_id = auth()->user()->id;
-
-        if($request->hasFile('imageName'))
-        {
-            $Ext = $request->file('imageName')->getClientOriginalExtension();
-            $fileNameToStore = '1'.'_'.time().'.'.$Ext;
-            $request->file('imageName')->storeAs('public/images',$fileNameToStore);
-        }
-        else{
-            $fileNameToStore = null;
-        }
-        $description->imageName = $fileNameToStore;
+        $description->imageName = $this->getImageNames($request);
         $description->saveOrFail();
 
         $mobile = new Mobile();
@@ -96,6 +88,22 @@ class ProductsController extends ResponseController
         return AdResource::collection($user->ad);
     }
 
+    public function getImageNames(Request $request)
+    {
+        $images = $request->file('imageName');
+        $imageNameArray =["randi" , "bhalu"];
+        if(!empty($images))
+        {
+           foreach ($images as $image)
+           {
+               $Ext = $image->getClientOriginalExtension();
+               $fileNameToStore = auth()->id().'_'.time().'.'.$Ext;
+               array_push($imageNameArray,$fileNameToStore);
+               $request->file('imageName')->storeAs('public/images',$fileNameToStore);
+           }
+        }
+        return implode(" ",$imageNameArray);
+    }
 
 
 

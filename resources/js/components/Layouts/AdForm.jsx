@@ -46,7 +46,6 @@ const AdForm = ({ id, editValues, history }) => {
         for (let i = 0; i < imagesObj[0].length; i++) {
             imagesArray.push(imagesObj[0][i]);
         }
-        console.log(imagesArray);
 
         setImages(imagesArray);
         setImagesLabel(`${imagesArray.length} images selected`);
@@ -79,6 +78,7 @@ const AdForm = ({ id, editValues, history }) => {
         setImageToBeAdded({ name: "Add new Image" });
     };
     const onSubmitHandler = event => {
+        console.log(images);
         const fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
@@ -93,6 +93,7 @@ const AdForm = ({ id, editValues, history }) => {
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
         event.preventDefault();
+        console.log(fd);
         if (editValues) {
             axios
                 .put(`/api/product/${id}`, fd, globalToken)
@@ -101,7 +102,11 @@ const AdForm = ({ id, editValues, history }) => {
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(history.push("/"))
+                .then(
+                    response => {
+                        // history.push("/");
+                        console.log(response.data.data);
+                    })
                 .catch(err => console.log(err));
         }
 
@@ -245,7 +250,7 @@ const AdForm = ({ id, editValues, history }) => {
                             value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Brand New" ? true : false
+                                values.condition === "NpBrand New" ? true : false
                             }
                         />
                         Brand New(not used)
@@ -393,7 +398,7 @@ const AdForm = ({ id, editValues, history }) => {
                             <option value="4GB">4GB</option>
                             <option value="6GB">6GB</option>
                             <option value="8GB">8GB</option>
-                            <option value="More than 8BG">More than 8BG</option>
+                            <option value="More than 8GB">More than 8GB</option>
                         </select>
                     </div>
                 </div>
@@ -422,7 +427,7 @@ const AdForm = ({ id, editValues, history }) => {
                             <option value="32GB">32GB</option>
                             <option value="128GB">128GB</option>
                             <option value="More than 128GB">
-                                More than 128BG
+                                More than 128GB
                             </option>
                         </select>
                     </div>

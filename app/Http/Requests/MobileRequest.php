@@ -24,7 +24,7 @@ class MobileRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+       return [
             'title' => 'required|max:255',
             'description' => 'required',
             'expiresIn' => 'required|integer',
@@ -35,7 +35,6 @@ class MobileRequest extends FormRequest
             'backCamera' =>'required',
             'RAM' =>'required',
             'internalStorage' =>'required',
-            'imageName' => 'image'
 
         ];
     }
