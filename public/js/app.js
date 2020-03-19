@@ -82973,13 +82973,16 @@ var AdForm = function AdForm(_ref) {
     var imagesArray = [];
     imagesObj.push(event.target.files);
 
-    for (var i = 0; i < imagesObj[0].length; i++) {
-      imagesArray.push(imagesObj[0][i]);
-    }
+    if (imagesObj[0].length > 6) {
+      alert("You Can only select 6 images");
+    } else {
+      for (var i = 0; i < imagesObj[0].length; i++) {
+        imagesArray.push(imagesObj[0][i]);
+      }
 
-    console.log(imagesArray);
-    setImages(imagesArray);
-    setImagesLabel("".concat(imagesArray.length, " images selected"));
+      setImages(imagesArray);
+      setImagesLabel("".concat(imagesArray.length, " images selected"));
+    }
   };
 
   var removeImage = function removeImage(img) {
@@ -83006,14 +83009,17 @@ var AdForm = function AdForm(_ref) {
   };
 
   var addNewImage = function addNewImage() {
-    var newImages = images.filter(function (i) {
-      return i.name !== "yeet";
-    });
+    var newImages = [].concat(images);
     newImages.push(imageToBeAdded.file);
-    setImages(newImages);
-    setImageToBeAdded({
-      name: "Add new Image"
-    });
+
+    if (newImages.length > 6) {
+      alert("You can only upload 6 images");
+    } else {
+      setImages(newImages);
+      setImageToBeAdded({
+        name: "Add new Image"
+      });
+    }
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
