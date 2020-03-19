@@ -88,7 +88,6 @@ const AdForm = ({ id, editValues, history }) => {
         }
     };
     const onSubmitHandler = event => {
-        console.log(images);
         const fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);

@@ -83026,7 +83026,6 @@ var AdForm = function AdForm(_ref) {
   };
 
   var onSubmitHandler = function onSubmitHandler(event) {
-    console.log(images);
     var fd = new FormData();
     fd.append("title", values.title);
     fd.append("description", values.description);
