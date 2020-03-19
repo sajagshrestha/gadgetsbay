@@ -27,7 +27,6 @@ const AdForm = ({ id, editValues, history }) => {
     const [imagesLabel, setImagesLabel] = useState("Select one or more images");
 
     useEffect(() => {
-        console.log(images);
         if (editValues) {
             setValues(editValues);
         }
@@ -54,7 +53,6 @@ const AdForm = ({ id, editValues, history }) => {
         }
         setImages(imagesArray);
         setImagesLabel(`${imagesArray.length} images selected`);
-
     };
     const removeImage = img => {
         const newImagesArray = images.filter(i => i !== img);
@@ -104,7 +102,9 @@ const AdForm = ({ id, editValues, history }) => {
         fd.append("backCamera", values.backCamera);
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
+        console.log(...fd);
         event.preventDefault();
+
         if (editValues) {
             axios
                 .put(`/api/product/${id}`, fd, globalToken)
@@ -261,7 +261,9 @@ const AdForm = ({ id, editValues, history }) => {
                             value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "NpBrand New" ? true : false
+                                values.condition === "NpBrand New"
+                                    ? true
+                                    : false
                             }
                         />
                         Brand New(not used)
