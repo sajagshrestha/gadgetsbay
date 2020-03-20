@@ -7,7 +7,8 @@ use App\Http\Resources\AdResource;
 use App\Mobile;
 use Illuminate\Http\Request;
 use App\Http\Requests\MobileRequest;
-use App\Http\Requests\EditAdMobile;
+use Illuminate\Support\Facades\Storage;
+
 
 class ProductsController extends ResponseController
 {
@@ -59,12 +60,17 @@ class ProductsController extends ResponseController
         $description = Ad::find($id);
         $mobile = $description->mobile;
 
+        $images = explode(" ",$description->imageName);
+        foreach ($images as $image)
+        {
+            Storage::delete('public/images/'.$image);
+        }
         $description->setValue($request->all());
+        $description->imageName = $this->getImageNames($request);
         $description->saveOrFail();
 
         $mobile->setValue($request->all());
         $mobile->saveOrFail();
-
 
         return new AdResource($description);
     }
