@@ -97,10 +97,10 @@ class ProductsController extends ResponseController
         $imageNameArray =[];
         if(!empty($images))
         {
-           foreach ($images as $image)
+           foreach ($images as $index=>$image)
            {
                $Ext = $image->getClientOriginalExtension();
-               $fileNameToStore = auth()->id().'_'.time().'.'.$Ext;
+               $fileNameToStore = auth()->id().'_'.time().'_'.$index.'.'.$Ext;
                array_push($imageNameArray,$fileNameToStore);
                $image->storeAs('public/images',$fileNameToStore);
            }
