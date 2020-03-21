@@ -79,7 +79,7 @@ class ProductsController extends ResponseController
     public function destroy($id)
     {
         $product = Ad::findOrFail($id);
-        $images = explode(" ",$description->imageName);
+        $images = explode(" ",$product->imageName);
         if ($product->delete()) {
         foreach ($images as $image)
         {
@@ -114,6 +114,9 @@ class ProductsController extends ResponseController
 
     }
 
-
+    public function getImages($imageName)
+    {
+    	return response()->file('public/images'.$imageName);
+    }
 
 }

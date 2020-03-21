@@ -77,3 +77,6 @@ Route::post('/filter','SearchController@filter');
 
 //user's product
 Route::get('/user/products','ProductsController@myProduct');
+
+
+Route::get('/image/{imageName}', 'ProductsController@getImages');
