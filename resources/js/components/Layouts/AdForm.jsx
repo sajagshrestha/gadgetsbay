@@ -25,15 +25,15 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         file: {}
     });
     const [imagesLabel, setImagesLabel] = useState("Select one or more images");
-
-    useEffect(() => {
-        if (editValues) {
+    if (editValues) {
+        useEffect(() => {
             setValues(editValues);
-        }
-        if (editImages.length !== 0) {
-            setImages(editImages);
-        }
-    }, [editImages.length, editValues]);
+            if (editImages.length !== 0) {
+                setImages(editImages);
+            }
+        }, [editImages.length, editValues]);
+    }
+
     const onChangeHandler = event => {
         setValues({
             ...values,
@@ -111,9 +111,9 @@ const AdForm = ({ id, editValues, editImages, history }) => {
                 .then(
                     // history.push("/myAds")
                     response => {
-                    console.log(response.data);
-                }
-                    )
+                        console.log(response.data);
+                    }
+                )
                 .catch(err => console.log(err));
         } else {
             axios
@@ -265,9 +265,7 @@ const AdForm = ({ id, editValues, editImages, history }) => {
                             value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "Brand New"
-                                    ? true
-                                    : false
+                                values.condition === "Brand New" ? true : false
                             }
                         />
                         Brand New(not used)
