@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 const EditAd = () => {
     const { pageTransition, pageVariants } = useContext(AnimateContext);
     const { id } = useParams();
+    const [editImages, setEditImages] = useState([]);
     const [editValues, setEditValues] = useState({
         title: "",
         description: "",
@@ -36,8 +37,26 @@ const EditAd = () => {
                 RAM: res.RAM,
                 internalStorage: res.internalStorage
             });
+            getImages(res);
         });
-    }, []);
+    }, [editImages.length]);
+    const getImages = async res => {
+        const promises = res.imageName.map(img => {
+            return axios
+                .get(`http://localhost:8000/storage/images/${img}`, {
+                    responseType: "blob"
+                })
+                .then(({ data }) => {
+                    let file = new File([data], `${img}`);
+                    return file;
+                });
+        });
+        const images = await Promise.all(promises).then(values => {
+            return values;
+        });
+        setEditImages(images.flat());
+    };
+
     return (
         <motion.div
             initial="out"
@@ -46,7 +65,7 @@ const EditAd = () => {
             variants={pageVariants}
             transition={pageTransition}
         >
-            <AdForm editValues={editValues} id={id} />
+            <AdForm editValues={editValues} id={id} editImages={editImages} />
         </motion.div>
     );
 };

@@ -4,7 +4,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../App";
 
-const AdForm = ({ id, editValues, history }) => {
+const AdForm = ({ id, editValues, editImages, history }) => {
     const { globalToken } = useContext(UserContext);
     const [values, setValues] = useState({
         title: "",
@@ -30,7 +30,10 @@ const AdForm = ({ id, editValues, history }) => {
         if (editValues) {
             setValues(editValues);
         }
-    }, [editValues]);
+        if (editImages.length !== 0) {
+            setImages(editImages);
+        }
+    }, [editImages.length, editValues]);
     const onChangeHandler = event => {
         setValues({
             ...values,
@@ -47,7 +50,7 @@ const AdForm = ({ id, editValues, history }) => {
             for (let i = 0; i < imagesObj[0].length; i++) {
                 imagesArray.push(imagesObj[0][i]);
             }
-
+            console.log(imagesArray[0]);
             setImages(imagesArray);
             setImagesLabel(`${imagesArray.length} images selected`);
         }
@@ -113,11 +116,10 @@ const AdForm = ({ id, editValues, history }) => {
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(
-                    response => {
-                        history.push("/");
-                        console.log(response.data.data);
-                    })
+                .then(response => {
+                    history.push("/");
+                    console.log(response.data.data);
+                })
                 .catch(err => console.log(err));
         }
 
