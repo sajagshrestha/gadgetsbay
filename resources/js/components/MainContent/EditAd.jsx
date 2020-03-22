@@ -32,10 +32,10 @@ const EditAd = () => {
                 negotiable: res.negotiable,
                 condition: res.condition,
                 usedFor: res.usedFor,
-                frontCamera: res.FrontCamera,
-                backCamera: res.backCamera,
-                RAM: res.RAM,
-                internalStorage: res.internalStorage
+                frontCamera: res.mobile.frontCamera,
+                backCamera: res.mobile.backCamera,
+                RAM: res.mobile.RAM,
+                internalStorage: res.mobile.internalStorage
             });
             getImages(res);
         });
@@ -43,7 +43,7 @@ const EditAd = () => {
     const getImages = async res => {
         const promises = res.imageName.map(img => {
             return axios
-                .get(`http://localhost:8000/storage/images/${img}`, {
+                .get(`/storage/images/${img}`, {
                     responseType: "blob"
                 })
                 .then(({ data }) => {

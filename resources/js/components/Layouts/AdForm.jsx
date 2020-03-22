@@ -50,7 +50,6 @@ const AdForm = ({ id, editValues, editImages, history }) => {
             for (let i = 0; i < imagesObj[0].length; i++) {
                 imagesArray.push(imagesObj[0][i]);
             }
-            console.log(imagesArray[0]);
             setImages(imagesArray);
             setImagesLabel(`${imagesArray.length} images selected`);
         }
@@ -105,13 +104,16 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         fd.append("backCamera", values.backCamera);
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
-        console.log(...fd);
         event.preventDefault();
-
         if (editValues) {
             axios
                 .put(`/api/product/${id}`, fd, globalToken)
-                .then(history.push("/myAds"))
+                .then(
+                    // history.push("/myAds")
+                    response => {
+                    console.log(response.data);
+                }
+                    )
                 .catch(err => console.log(err));
         } else {
             axios
@@ -263,7 +265,7 @@ const AdForm = ({ id, editValues, editImages, history }) => {
                             value="Brand New"
                             onChange={onChangeHandler}
                             checked={
-                                values.condition === "NpBrand New"
+                                values.condition === "Brand New"
                                     ? true
                                     : false
                             }

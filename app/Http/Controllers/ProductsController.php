@@ -55,8 +55,9 @@ class ProductsController extends ResponseController
         return new AdResource($product);
     }
 
-    public function update(MobileRequest $request, $id)
+    public function update(Request $request, $id)
     {
+    	return response()->json(['data'=>$request->all()]);
         $description = Ad::find($id);
         $mobile = $description->mobile;
 
