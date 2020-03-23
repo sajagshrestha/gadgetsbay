@@ -104,7 +104,10 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         fd.append("backCamera", values.backCamera);
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
-        fd.append("_method", "put");
+        if (editValues) {
+            fd.append("_method", "put");
+        }
+
         event.preventDefault();
         if (editValues) {
             axios
