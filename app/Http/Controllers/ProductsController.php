@@ -52,6 +52,7 @@ class ProductsController extends ResponseController
     public function show($id)
     {
         $product = Ad::findOrFail($id);
+        if(!(auth()->id()==$product->user_id))
         return new AdResource($product);
     }
 

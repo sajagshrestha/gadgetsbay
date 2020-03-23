@@ -21,7 +21,7 @@ class SearchController extends Controller
 
     public function mostViewed()
     {
-    	$products = Ad::take(10)->get()->sortBy('views');
+    	$products = Ad::orderBy('views', 'desc')->take(10)->get();
     	return AdResource::collection($products);
     }
 
