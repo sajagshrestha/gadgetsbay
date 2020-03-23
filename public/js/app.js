@@ -83795,10 +83795,11 @@ var AdForm = function AdForm(_ref) {
     fd.append("backCamera", values.backCamera);
     fd.append("RAM", values.RAM);
     fd.append("internalStorage", values.internalStorage);
+    fd.append("_method", "put");
     event.preventDefault();
 
     if (editValues) {
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.put("/api/product/".concat(id), fd, globalToken).then( // history.push("/myAds")
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/api/product/".concat(id), fd, globalToken).then( // history.push("/myAds")
       function (response) {
         console.log(response.data);
       })["catch"](function (err) {

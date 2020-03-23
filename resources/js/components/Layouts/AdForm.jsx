@@ -104,10 +104,11 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         fd.append("backCamera", values.backCamera);
         fd.append("RAM", values.RAM);
         fd.append("internalStorage", values.internalStorage);
+        fd.append("_method", "put");
         event.preventDefault();
         if (editValues) {
             axios
-                .put(`/api/product/${id}`, fd, globalToken)
+                .post(`/api/product/${id}`, fd, globalToken)
                 .then(
                     // history.push("/myAds")
                     response => {
