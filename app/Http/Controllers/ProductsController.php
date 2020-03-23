@@ -57,7 +57,6 @@ class ProductsController extends ResponseController
 
     public function update(Request $request, $id)
     {
-    	return response()->json(['data'=>$request->all()]);
         $description = Ad::find($id);
         $mobile = $description->mobile;
 

@@ -112,20 +112,12 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         if (editValues) {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
-                .then(
-                    // history.push("/myAds")
-                    response => {
-                        console.log(response.data);
-                    }
-                )
+                .then(history.push("/myAds"))
                 .catch(err => console.log(err));
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(response => {
-                    history.push("/");
-                    console.log(response.data.data);
-                })
+                .then(history.push("/"))
                 .catch(err => console.log(err));
         }
 
