@@ -7409,7 +7409,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".filter-container{\r\n\tmax-width: 200px;\r\n}", ""]);
+exports.push([module.i, ".filter-container{\r\n\tmax-width: 200px;\r\n\tdisplay: -webkit-box;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t        flex-direction: row;\r\n\tpadding: .5em 1em;\r\n\tbackground-color: #ccc;\r\n}\r\n\r\n.filter-component{\r\n\tpadding: 0 0 1em 0;\r\n}\r\n\r\n.price-component{\r\n\ttext-align: center;\r\n}", ""]);
 
 // exports
 
@@ -84707,6 +84707,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../App */ "./resources/js/components/App.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -84714,6 +84715,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -84728,14 +84730,32 @@ var DeatiledAdView = function DeatiledAdView() {
   var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
       id = _useParams.id;
 
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_3__["UserContext"]),
+      globalToken = _useContext.globalToken;
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/product/".concat(id)).then(function (response) {
-      return setAd(response.data.data);
-    })["catch"](function (error) {
-      return console.log(error);
-    });
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, ad.title);
+    if (localStorage.getItem("user")) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/product/".concat(id), {
+        headers: {
+          Authorization: "Bearer ".concat(JSON.parse(localStorage.getItem("user")).token)
+        }
+      }).then(function (response) {
+        setAd(response.data.data);
+        console.log(response.data);
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    } else {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/product/".concat(id)).then(function (response) {
+        setAd(response.data.data);
+        console.log(response.data);
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    }
+  }, []); // return <div>{ad.title}</div>;
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "lmao");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DeatiledAdView);
@@ -85077,7 +85097,7 @@ var Filter = function Filter(_ref) {
     event.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("api/filter", {
       title: filterValue.title,
-      // location: filterValue.location,
+      location: filterValue.location,
       condition: filterValue.condition,
       priceMoreThan: filterValue.priceMoreThan,
       priceLessThan: filterValue.priceLessThan,
@@ -85094,19 +85114,25 @@ var Filter = function Filter(_ref) {
     className: "filter-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: onSubmitHandler
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filter-component"
   }, "Search", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "",
     name: "title",
     value: filterValue.title,
     onChange: onChangeHandler
-  }), "Location", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filter-component"
+  }, "Location", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "",
     name: "location",
     value: filterValue.location,
     onChange: onChangeHandler
-  }), "Condition", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filter-component"
+  }, "Condition", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
     name: "condition",
     id: "condition",
     value: filterValue.condition,
@@ -85117,8 +85143,10 @@ var Filter = function Filter(_ref) {
     value: "Brand New"
   }, "Brand New"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "used"
-  }, "Used")), "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "price"
+  }, "Used"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filter-component"
+  }, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "price-component"
   }, "Rs", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "",
@@ -85131,7 +85159,9 @@ var Filter = function Filter(_ref) {
     name: "priceLessThan",
     value: filterValue.priceLessThan,
     onChange: onChangeHandler
-  })), "Price Negotiable", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filter-component"
+  }, "Price Negotiable", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "radio",
     name: "negotiable",
     value: "any",
@@ -85146,7 +85176,7 @@ var Filter = function Filter(_ref) {
     name: "negotiable",
     value: "fixed price",
     onChange: onChangeHandler
-  }), "No", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), "No"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit"
   }, " search "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "reset",

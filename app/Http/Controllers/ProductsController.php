@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ad;
+use App\UserFromBearerToken;
 use App\Http\Resources\AdResource;
 use App\Mobile;
 use Illuminate\Http\Request;
@@ -10,12 +11,19 @@ use App\Http\Requests\MobileRequest;
 use Illuminate\Support\Facades\Storage;
 
 
+
 class ProductsController extends ResponseController
 {
+
+    /**
+     * @var UserFromBearerToken
+     */
+    private $userFromToken;
 
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['show', 'index', 'search']]);
+        $this->userFromToken = new UserFromBearerToken();
     }
 
     public function index()
@@ -26,7 +34,7 @@ class ProductsController extends ResponseController
 //
     }
 
-    public function store(MobileRequest $request)
+    public function store(MobileRequest $reqest)
     {
         $inputs = $request->all();
         $description = new Ad();
@@ -49,10 +57,12 @@ class ProductsController extends ResponseController
     }
 
 
-    public function show($id)
+    public function show($id, Request $request)
     {
         $product = Ad::findOrFail($id);
-        if(auth()->id()!=$product->user_id || !auth()->user())
+        $token =$request->bearerToken();
+        // return response()->json(['set'=>isset($token),'token'=>$token]);
+        if(!isset($token) || $this->userFromToken->getUser($token) !=$product->user_id )
         {
         	$product->views++;
         	$product->save();
@@ -124,4 +134,8 @@ class ProductsController extends ResponseController
     	return response()->file('public/images'.$imageName);
     }
 
+    private function  getUser()
+    {
+    	return auth()->user();
+    }
 }
