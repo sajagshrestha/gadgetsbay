@@ -87,5 +87,5 @@ Route::get('/image/{imageName}', 'ProductsController@getImages');
 //post comment
 Route::post('/comment','CommentController@store');
 
-//get comments
+//comments of a ad
 Route::get('/comments/{ad_id}','CommentController@show');

@@ -58,6 +58,7 @@ class AuthenticationController extends ResponseController
             'email' => 'required|email|unique:users',
             'phone' => 'required|size:10',
             'password' => 'required|min:6|confirmed',
+            'phone' => 'required|size:10',
         ]);
         if ($validator->fails()) {
             return $this->responseUnprocessable($validator->errors());
@@ -100,6 +101,7 @@ class AuthenticationController extends ResponseController
             'email' => $data['email'],
             'phone'=> $data['phone'],
             'password' => Hash::make($data['password']),
+            'phone' => $data['phone'],
         ]);
     }
 

@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\Http\Requests\CommentRequest;
 use App\Http\Resources\CommentResource;
+<<<<<<< HEAD
 use App\UserFromBearerToken;
+=======
+>>>>>>> added comment api and other small fixes
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -15,6 +18,7 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->comment = $request->comment;
         $comment->ad_id = $request->ad_id;
+<<<<<<< HEAD
 
         $userFromToken = new UserFromBearerToken();
         $comment->user_id = $userFromToken->getUserId($request->bearerToken());
@@ -22,16 +26,28 @@ class CommentController extends Controller
             $comment->reply_id= $request->reply_id;
         $comment->save();
         return new CommentResource($comment);
+=======
+        $comment->user_id = $request->user_id;
+        if($request->reply_id)
+            $comment->reply_id= $request->reply_id;
+        $comment->save();
+        return $comment;
+>>>>>>> added comment api and other small fixes
     }
 
     public function show($ad_id)
     {
+<<<<<<< HEAD
 
         $comments = Comment::where('ad_id',$ad_id)->where('reply_id',null)->orderBy('created_at','desc')->get();
+=======
+        $comments = Comment::where('ad_id',$ad_id)->get();
+>>>>>>> added comment api and other small fixes
 
         return  CommentResource::collection($comments);
 
     }
+<<<<<<< HEAD
 
     public function replies($comment_id)
     {
@@ -39,4 +55,6 @@ class CommentController extends Controller
 
         return  CommentResource::collection($replyComment);
     }
+=======
+>>>>>>> added comment api and other small fixes
 }

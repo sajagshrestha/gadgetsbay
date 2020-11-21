@@ -26,8 +26,6 @@ class CommentRequest extends FormRequest
         return [
             'comment' => 'required',
             'ad_id' => 'required',
-
-
         ];
     }
 }

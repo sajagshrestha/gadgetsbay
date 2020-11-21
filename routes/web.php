@@ -19,9 +19,11 @@ use Illuminate\Http\Request;
 //
 //Route::resource('/product','ProductsController');
 
-Route::get( '/{path?}', function(){
-    return view( 'React-Index' );
-} )->where('path', '.*');
+
+
+ Route::get( '/{path?}', function(){
+     return view( 'React-Index' );
+ } )->where('path', '^api/[.*]');
 
 
 //Auth::routes();
