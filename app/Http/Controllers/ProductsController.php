@@ -34,7 +34,7 @@ class ProductsController extends ResponseController
 //
     }
 
-    public function store(MobileRequest $reqest)
+    public function store(MobileRequest $request)
     {
         $inputs = $request->all();
         $description = new Ad();
