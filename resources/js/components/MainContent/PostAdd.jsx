@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { AnimateContext } from "../App";
 import AdForm from "../Layouts/AdForm";
-import "./MainContent.css";
 const PostAdd = () => {
     const { pageTransition, pageVariants } = useContext(AnimateContext);
     return (
