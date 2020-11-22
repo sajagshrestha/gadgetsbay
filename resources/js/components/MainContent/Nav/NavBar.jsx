@@ -3,7 +3,7 @@ import Search from "../SearchBox/Search";
 import { Link, withRouter } from "react-router-dom";
 import { UserContext } from "../../App";
 import axios from "axios";
-import LogoImg from "../SVGassets/Logo.svg";
+import LogoImg from "../../SVGassets/Logo.svg";
 import { NavWrapper, Logo, NavLinks, RegisterButton } from "./Nav.styles";
 
 function NavBar({ history }) {
@@ -22,7 +22,7 @@ function NavBar({ history }) {
                 <img src={LogoImg} />
             </Logo>
             <NavLinks>
-                <div></div>
+                <Search />
                 <div className="links">
                     <Link className="my-link" to="/">
                         Home
@@ -75,6 +75,8 @@ function NavBar({ history }) {
                             </li>
                             <li>
                                 <RegisterButton
+                                    variant="contained"
+                                    color="primary"
                                     onClick={() => history.push("/register")}
                                 >
                                     Register

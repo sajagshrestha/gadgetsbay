@@ -5,16 +5,21 @@ export const HomeWrapper = styled.div``;
 export const HeroSection = styled.div`
     height: 90vh;
     display: grid;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 7fr 3fr;
+    grid-template-areas:
+        "img title"
+        "scroll scroll";
     grid-column-gap: 50px;
     .img-section {
+        grid-area: img;
         img {
             width: 100%;
             height: 100%;
         }
     }
     .title-section {
+        grid-area: title;
         display: grid;
         width: 100%;
         align-items: center;
@@ -44,10 +49,16 @@ export const HeroSection = styled.div`
             margin-top: 20px;
         }
     }
+    .scrolldown-section {
+        grid-area: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 export const PostAddButton = styled(RegisterButton)`
-    height: 50px;
-    width: 250px;
+    padding: 20px 10px;
+    width: 200px;
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 `;

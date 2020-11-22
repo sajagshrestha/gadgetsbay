@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const SearchWrapper = styled.div`
-    form {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+
+    /* form {
         display: flex;
         justify-content: space-between;
         border: 1px solid #e9e9e9;
@@ -34,5 +39,5 @@ export const SearchWrapper = styled.div`
     .search-button:hover {
         background: #111111;
         color: #f1f1f1;
-    }
+    } */
 `;

@@ -1,18 +1,19 @@
 import styled from "styled-components";
-
+import { Button } from "@material-ui/core";
 export const NavWrapper = styled.div`
     height: 5em;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    cursor: pointer;
-    margin-bottom: 20px;
+    grid-template-columns: 150px auto;
+
+    margin-bottom: 50px;
 `;
 export const Logo = styled.div`
     display: flex;
     align-items: center;
+    cursor: pointer;
     img {
         width: 120px;
-        height: 50px;
+        height: 60px;
     }
 `;
 export const NavLinks = styled.div`
@@ -26,6 +27,8 @@ export const NavLinks = styled.div`
         align-items: center;
         justify-content: space-between;
         a {
+            box-sizing: border-box;
+            padding: 5px;
             text-decoration: none;
             color: ${props => props.theme.textPrimary};
             font-weight: bold;
@@ -33,17 +36,7 @@ export const NavLinks = styled.div`
         }
     }
 `;
-export const RegisterButton = styled.div`
-    border: none;
-    background-color: ${props => props.theme.secondaryColor};
-    color: white;
-    border-radius: 20px;
-    padding: 10px 25px;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+export const RegisterButton = styled(Button)`
+    background-color: red;
+    border-radius: 0;
 `;

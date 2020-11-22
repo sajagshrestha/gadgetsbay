@@ -5,8 +5,8 @@ import { AnimateContext } from "../../App";
 import { withRouter } from "react-router-dom";
 import FeaturedProduct from "../FeaturedProduct";
 import { HomeWrapper, HeroSection, PostAddButton } from "./Home.styles";
-import Illustration from "../SVGassets/illustration.svg";
-import Logo from "../SVGassets/Logo.svg";
+import Illustration from "../../SVGassets/illustration.svg";
+import Logo from "../../SVGassets/Logo.svg";
 const Home = ({ history }) => {
     const { pageTransition, pageVariants } = useContext(AnimateContext);
     return (

@@ -2,12 +2,13 @@ import React, { useState, useContext } from "react";
 import { SearchContext } from "../../App.jsx";
 import { withRouter } from "react-router-dom";
 import { SearchWrapper } from "./Search.styles";
+import SearchBar from "material-ui-search-bar";
 const Search = ({ history }) => {
     const [search, setSearch] = useState("");
     const { setSearchedPosts } = useContext(SearchContext);
     const onSubmitHandler = event => {
         event.preventDefault();
-
+        console.log(search);
         axios
             .post("/api/filter", { title: search })
             .then(response => {
@@ -18,20 +19,29 @@ const Search = ({ history }) => {
             .catch(err => console.log(err));
     };
 
-    const onChangeHandler = event => {
-        setSearch(event.target.value);
+    const onChangeHandler = value => {
+        setSearch(value);
     };
     return (
         <SearchWrapper>
             <form onSubmit={onSubmitHandler}>
-                <input
+                <SearchBar
+                    style={{
+                        height: "40px",
+                        boxShadow: "none",
+                        border: "2px solid #F6F6F6"
+                    }}
+                    value={search}
+                    onChange={onChangeHandler}
+                />
+                {/* <input
                     type="text"
                     placeholder="Search Here"
                     className="search-input"
                     name="search"
                     onChange={onChangeHandler}
-                />
-                <span>
+                /> */}
+                {/* <span>
                     <button
                         type="submit"
                         className="search-button"
@@ -39,7 +49,7 @@ const Search = ({ history }) => {
                     >
                         <i className="fa fa-search"></i>
                     </button>
-                </span>
+                </span> */}
             </form>
         </SearchWrapper>
     );
