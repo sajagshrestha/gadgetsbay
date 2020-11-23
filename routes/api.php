@@ -89,3 +89,6 @@ Route::post('/comment','CommentController@store');
 
 //comments of a ad
 Route::get('/comments/{ad_id}','CommentController@show');
+
+//get replies
+Route::get('/replies/{comment_id}','CommentController@replies');

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Comment from "../Layouts/Comment";
 import { UserContext } from "../App";
 import Comment from "../Layouts/Comment";
 
@@ -32,6 +33,7 @@ const DeatiledAdView = () => {
 		}
 	}, []);
 
+<<<<<<< HEAD
 	const viewCommentBox = ad => {
 	    if(ad.id)
 	        return <Comment ad_id={ad.id} />
@@ -40,6 +42,21 @@ const DeatiledAdView = () => {
         {ad.title}
         {viewCommentBox(ad)}
     </div>;
+=======
+	const displayComments = ad =>
+    {
+        if(ad.id)
+        {
+            return  <Comment ad_id={ad.id} />
+        }
+    }
+	return (
+	    <div>
+            <div>{ad.title}</div>
+            {displayComments(ad)}
+        </div>
+    );
+>>>>>>> working on reply system
 
 };
 

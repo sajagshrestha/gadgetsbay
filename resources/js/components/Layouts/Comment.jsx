@@ -4,7 +4,7 @@ import "./comment.css";
 import Replies from "./Replies";
 import axios from "axios";
 const Comment = ({ad_id}) => {
-    console.log(ad_id)
+
     const [comments, setComments] = useState([]);
     const [comment,setComment] = useState({
         "comment": "",
