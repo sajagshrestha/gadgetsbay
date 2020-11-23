@@ -1,7 +1,6 @@
 //Import Dependency
 import React, { useReducer, useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 //Import Components
 import NavBar from "./MainContent/Nav/NavBar.jsx";
 import AllAds from "./MainContent/AllAds";
@@ -21,19 +20,7 @@ import { ThemeProvider } from "styled-components";
 export const UserContext = React.createContext();
 export const SearchContext = React.createContext();
 export const AnimateContext = React.createContext();
-//For page Transitions
-const pageVariants = {
-    in: {
-        opacity: 1
-    },
-    out: {
-        opacity: 0
-    }
-};
-const pageTransition = {
-    duration: 0.3,
-    transition: "linear"
-};
+
 //For Authentitcation
 const initialState = {
     isLoggedIn: false,
@@ -90,50 +77,29 @@ function App() {
                         value={{ searchedPosts, setSearchedPosts }}
                     >
                         <NavBar />
-                        <AnimatePresence ExitBeforeEnter>
-                            <AnimateContext.Provider
-                                value={{ pageTransition, pageVariants }}
-                            >
-                                <Switch>
-                                    <Route
-                                        path="/searchResults"
-                                        exact
-                                        component={SearchResults}
-                                    />
-                                    <Route path="/" exact component={Home} />
-                                    <Route
-                                        path="/post"
-                                        exact
-                                        component={PostAdd}
-                                    />
-                                    <Route
-                                        path="/register"
-                                        exact
-                                        component={Register}
-                                    />
-                                    <Route
-                                        path="/myAds"
-                                        exact
-                                        component={MyAds}
-                                    />
-                                    <Route
-                                        path="/edit/:id"
-                                        exact
-                                        component={EditAd}
-                                    />
-                                    <Route
-                                        path="/login"
-                                        exact
-                                        component={Login}
-                                    />
-                                    <Route
-                                        path={`/details/:id/:title`}
-                                        exact
-                                        component={DetailedAdView}
-                                    />
-                                </Switch>
-                            </AnimateContext.Provider>
-                        </AnimatePresence>
+
+                        <Switch>
+                            <Route
+                                path="/searchResults"
+                                exact
+                                component={SearchResults}
+                            />
+                            <Route path="/" exact component={Home} />
+                            <Route path="/post" exact component={PostAdd} />
+                            <Route
+                                path="/register"
+                                exact
+                                component={Register}
+                            />
+                            <Route path="/myAds" exact component={MyAds} />
+                            <Route path="/edit/:id" exact component={EditAd} />
+                            <Route path="/login" exact component={Login} />
+                            <Route
+                                path={`/details/:id/:title`}
+                                exact
+                                component={DetailedAdView}
+                            />
+                        </Switch>
                     </SearchContext.Provider>
                 </AppWrapper>
             </UserContext.Provider>

@@ -1,6 +1,4 @@
 import React, { useState, useContext } from "react";
-import { motion } from "framer-motion";
-import { AnimateContext } from "../App";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../App";
@@ -24,12 +22,12 @@ export const MytextField = props => {
 };
 
 const Login = () => {
-    const { pageTransition, pageVariants } = useContext(AnimateContext);
     const { user, dispatch } = React.useContext(UserContext);
     const initialValues = {
         email: "",
         password: ""
     };
+    const [errorText, setErrorText] = useState("");
     const validationSchema = yup.object({
         email: yup
             .string()
@@ -41,12 +39,10 @@ const Login = () => {
             .required()
     });
 
-    const onSubmitHandler = data => {
+    const onSubmitHandler = (data, actions) => {
         axios
             .post("/api/login", data)
             .then(res => {
-                console.log(res);
-
                 dispatch({
                     type: "login",
                     name: res.data.user.name,
@@ -60,8 +56,8 @@ const Login = () => {
                 localStorage.setItem("user", JSON.stringify(localUser));
             })
             .catch(error => {
-                alert("failed");
-                console.log(error);
+                actions.setSubmitting(false);
+                setErrorText("Invalid email or password");
             });
     };
 
@@ -69,70 +65,44 @@ const Login = () => {
         return <Redirect to="/" />;
     }
     return (
-        <motion.div
-            initial="out"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}
-        >
-            <LoginWrapper>
-                <div className="svg">
-                    <img src={LoginSvg} alt="login svg" />
-                </div>
-                <Formik
-                    initialValues={initialValues}
-                    validationSchema={validationSchema}
-                    onSubmit={data => onSubmitHandler(data)}
-                >
-                    {({ values, errors }) => (
-                        <Form className="login-form">
-                            <div className="form-title">Login</div>
-                            <div>
-                                <MytextField name="email" label="E-mail" />
-                            </div>
-                            <div>
-                                <MytextField
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                />
-                            </div>
+        <LoginWrapper>
+            <div className="svg">
+                <img src={LoginSvg} alt="login svg" />
+            </div>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={onSubmitHandler}
+            >
+                {({ isSubmitting }) => (
+                    <Form className="login-form">
+                        <div className="form-title">
+                            <div className="title-text">Login</div>
+                        </div>
+                        <div className="error-text">{errorText}</div>
+                        <div>
+                            <MytextField name="email" label="E-mail" />
+                        </div>
+                        <div>
+                            <MytextField
+                                name="password"
+                                label="Password"
+                                type="password"
+                            />
+                        </div>
 
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                type="submit"
-                            >
-                                Login
-                            </Button>
-                        </Form>
-                    )}
-                </Formik>
-            </LoginWrapper>
-            {/* <form onSubmit={onSubmitHandler} className="container mt-5">
-                <label htmlFor="">Email</label>
-                <input
-                    className="form-control"
-                    type="email"
-                    name="email"
-                    value={values.email}
-                    onChange={onChangeHandler}
-                />
-                <label htmlFor="">Password</label>
-                <input
-                    className="form-control"
-                    type="password"
-                    name="password"
-                    value={values.password}
-                    onChange={onChangeHandler}
-                />
-
-                <button type="submit" className="btn btn-success mt-4">
-                    Login
-                </button>
-            </form> */}
-        </motion.div>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            disabled={isSubmitting}
+                        >
+                            Login
+                        </Button>
+                    </Form>
+                )}
+            </Formik>
+        </LoginWrapper>
     );
 };
 

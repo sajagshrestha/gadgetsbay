@@ -1,12 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { motion } from "framer-motion";
-import { AnimateContext } from "../App";
 import { UserContext } from "../App";
 import { withRouter } from "react-router-dom";
 
 const MyAds = ({ history }) => {
-    const { pageTransition, pageVariants } = useContext(AnimateContext);
     const [ads, setAds] = useState([]);
     const { globalToken } = useContext(UserContext);
     useEffect(() => {
@@ -38,13 +35,7 @@ const MyAds = ({ history }) => {
             .catch(error => console.log(error));
     };
     return (
-        <motion.div
-            initial="out"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}
-        >
+        <div>
             {ads.map(Ad => (
                 <div key={Ad.id}>
                     <li>{Ad.title}</li>
@@ -52,7 +43,7 @@ const MyAds = ({ history }) => {
                     <button onClick={() => editAd(Ad.id)}>edit</button>
                 </div>
             ))}
-        </motion.div>
+        </div>
     );
 };
 export default withRouter(MyAds);

@@ -57,8 +57,15 @@ export const HeroSection = styled.div`
     }
 `;
 export const PostAddButton = styled(RegisterButton)`
-    padding: 20px 10px;
-    width: 200px;
-    display: flex;
-    font-size: 1.2rem;
+    && {
+        padding: 10px 30px;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+            0 1px 3px rgba(0, 0, 0, 0.08);
+        font-size: 1.2rem;
+        font-weight: bold;
+        &:hover {
+            background-color: #5469d4;
+        }
+    }
 `;

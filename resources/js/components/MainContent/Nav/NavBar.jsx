@@ -75,8 +75,6 @@ function NavBar({ history }) {
                             </li>
                             <li>
                                 <RegisterButton
-                                    variant="contained"
-                                    color="primary"
                                     onClick={() => history.push("/register")}
                                 >
                                     Register
