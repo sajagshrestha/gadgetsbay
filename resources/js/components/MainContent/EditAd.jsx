@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 import AdForm from "../Layouts/AdForm";
-import { motion } from "framer-motion";
-import { AnimateContext } from "../App";
 import { useParams } from "react-router-dom";
 
 const EditAd = () => {
@@ -58,15 +56,9 @@ const EditAd = () => {
     };
 
     return (
-        <motion.div
-            initial="out"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}
-        >
+        <div>
             <AdForm editValues={editValues} id={id} editImages={editImages} />
-        </motion.div>
+        </div>
     );
 };
 export default EditAd;
