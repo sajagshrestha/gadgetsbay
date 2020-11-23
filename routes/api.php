@@ -80,3 +80,12 @@ Route::get('/user/products','ProductsController@myProduct');
 
 
 Route::get('/image/{imageName}', 'ProductsController@getImages');
+
+
+//Comments
+
+//post comment
+Route::post('/comment','CommentController@store');
+
+//get comments
+Route::get('/comments/{ad_id}','CommentController@show');

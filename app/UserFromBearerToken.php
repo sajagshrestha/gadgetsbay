@@ -13,7 +13,7 @@ use \Illuminate\Http\Request;
 
 class UserFromBearerToken
 {
-function getUser($bearerToken) {
+function getUserId($bearerToken) {
   $tokenguard = new TokenGuard(
     App::make(ResourceServer::class),
     Auth::createUserProvider('users'),

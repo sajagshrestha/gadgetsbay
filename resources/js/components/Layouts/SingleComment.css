@@ -1,0 +1,41 @@
+.comment-container{
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-auto-rows: minmax(70px,auto);
+    padding: 0.4em 0.1em;
+    margin-top: 5px;
+}
+
+.comment-description{
+    padding: 0.1em;
+    font-size: 16px;
+
+}
+.user-name{
+    font-weight: bold;
+    font-size: 14px;
+    padding-right:  .3em;
+}
+.created-at{
+    font-size: 10px;
+    color: #707072;
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+}
+.reply-box{
+    font-size: 12px;
+}
+
+.comment-body{
+    height: auto;
+    padding: 0.1em 0;
+}
+
+.replies button{
+    border: none;
+    background-color:#fff;
+    color: #182cdc;
+    font-size:12px ;
+}

@@ -7,6 +7,7 @@ const Register = () => {
     const [values, setValues] = React.useState({
         name: "",
         email: "",
+        phone: "",
         password: "",
         password_confirmation: ""
     });
@@ -49,6 +50,14 @@ const Register = () => {
                 type="email"
                 name="email"
                 value={values.email}
+                onChange={onChangeHandler}
+            />
+            <label htmlFor="">Phone</label>
+            <input
+                className="form-control"
+                type="text"
+                name="phone"
+                value={values.phone}
                 onChange={onChangeHandler}
             />
             <label htmlFor="">Password</label>

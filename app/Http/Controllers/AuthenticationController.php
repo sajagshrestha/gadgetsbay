@@ -56,6 +56,7 @@ class AuthenticationController extends ResponseController
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
+            'phone' => 'required|size:10',
             'password' => 'required|min:6|confirmed',
         ]);
         if ($validator->fails()) {
@@ -97,6 +98,7 @@ class AuthenticationController extends ResponseController
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone'=> $data['phone'],
             'password' => Hash::make($data['password']),
         ]);
     }

@@ -17,10 +17,19 @@ class CreateCommentsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('ad_id');
             $table->text('comment');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('replies_count')->default(0);
+            $table->bigInteger('reply_id')->nullable()->default(null);
             $table->timestamps();
+
+
             $table->foreign('ad_id')
                 ->references('id')
                 ->on('ads')
+                ->onDelete('cascade');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

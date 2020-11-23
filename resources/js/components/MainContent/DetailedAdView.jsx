@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { UserContext } from "../App";
-
+import Comment from "../Layouts/Comment";
 
 const DeatiledAdView = () => {
 	const [ad, setAd] = useState({});
@@ -31,8 +31,16 @@ const DeatiledAdView = () => {
 			.catch(error => console.log(error));
 		}
 	}, []);
-	// return <div>{ad.title}</div>;
-	return <div>lmao</div>
+
+	const viewCommentBox = ad => {
+	    if(ad.id)
+	        return <Comment ad_id={ad.id} />
+    }
+	return <div>
+        {ad.title}
+        {viewCommentBox(ad)}
+    </div>;
+
 };
 
 export default DeatiledAdView;
