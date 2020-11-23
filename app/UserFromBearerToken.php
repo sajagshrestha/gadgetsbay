@@ -13,7 +13,7 @@ use \Illuminate\Http\Request;
 
 class UserFromBearerToken
 {
-<<<<<<< HEAD
+
 function getUserId($bearerToken) {
   $tokenguard = new TokenGuard(
     App::make(ResourceServer::class),
@@ -26,18 +26,4 @@ function getUserId($bearerToken) {
   $request->headers->set('Authorization', 'Bearer ' . $bearerToken);
   return $tokenguard->user($request)->id;
 }
-=======
-    function getUserId($bearerToken) {
-      $tokenGuard = new TokenGuard(
-        App::make(ResourceServer::class),
-        Auth::createUserProvider('users'),
-        App::make(TokenRepository::class),
-        App::make(ClientRepository::class),
-        App::make('encrypter')
-      );
-      $request = Request::create('/');
-      $request->headers->set('Authorization', 'Bearer ' . $bearerToken);
-      return $tokenGuard->user($request)->id;
-    }
->>>>>>> working on reply system
 }

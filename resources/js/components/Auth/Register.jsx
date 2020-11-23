@@ -10,7 +10,6 @@ const Register = () => {
         phone: "",
         password: "",
         password_confirmation: "",
-        phone:"",
     });
     const [redirect, setRedirect] = React.useState(false);
     const onSubmitHandler = event => {
@@ -71,7 +70,6 @@ const Register = () => {
             />
             <label htmlFor="">Confirm Password</label>
 
-<<<<<<< HEAD
             <input
                 className="form-control"
                 type="password"
@@ -83,28 +81,8 @@ const Register = () => {
                 Register
             </button>
         </form>
-=======
-                <input
-                    className="form-control"
-                    type="password"
-                    name="password_confirmation"
-                    value={values.password_confirmation}
-                    onChange={onChangeHandler}
-                />
-                <label htmlFor="">Phone No</label>
-                <input
-                    className="form-control"
-                    type="text"
-                    name="phone"
-                    value={values.phone}
-                    onChange={onChangeHandler}
-                />
-                <button type="submit" className="btn btn-success mt-4">
-                    Register
-                </button>
-            </form>
-        </motion.div>
->>>>>>> added comment api and other small fixes
+
+
     );
 };
 
