@@ -18,6 +18,7 @@ class CommentResource extends JsonResource
         return [
             'id' => $this->id,
             'comment' => $this->comment,
+            'ad_id' => $this->ad_id,
             'replies_count' => $this->replies_count,
             'created_at'=>$this->created_at->diffForHumans(),
             'user' => [

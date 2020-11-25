@@ -37,14 +37,18 @@ const Comment = ({ad_id}) => {
                 }})
             .then(response => {
                 console.log(response.data.data);
+                setComments([...comments,response.data.data
+                    ]
+                );
             }).catch(err => console.log(err));
         setComment({
             "comment": "",
             "reply_id": null,
             "ad_id":ad_id,
         });
-    }
 
+
+   }
     return (
         <div className="container">
         <form onSubmit={onSubmitHandler}>
@@ -66,7 +70,7 @@ const Comment = ({ad_id}) => {
         </form>
             {comments.map(comment => (
                 <div key={comment.id}>
-                    <SingleComment  comment={comment}  />
+                    <SingleComment  comment={comment}   />
                     <Replies comment={comment} />
                 </div>
 

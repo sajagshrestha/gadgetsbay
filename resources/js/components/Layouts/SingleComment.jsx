@@ -1,41 +1,47 @@
-import React from "react";
+import React,{useState} from "react";
 import "./SingleComment.css";
+import ReplyBox from "./ReplyBox";
 
 
-
-const SingleComment = ({comment}) =>
+const SingleComment = ({comment,updateReplies}) =>
 {
-
-    const viewRepliesButton = comment => {
-        if (comment.replies_count > 0) {
-            if (comment.replies_count ==1) {
-                return (
-                    <div className="replies">
-                        <button>
-                            View {comment.replies_count} Reply
-                        </button>
+    const onClickReplyBtnHandler =() => {
+        setReplyButton(
+            <div className="reply-box-container">
+                <div className="profile-avatar-wrapper">
+                    <div className="avatar">
+                        <img src="/images/ava.png"/>
                     </div>
-                );
-            }
-            else {
-                return (
-                    <div className="replies">
-                        <button>
-                            View {comment.replies_count} Replies
-                        </button>
-                    </div>
-                );
-            }
-        }
-
+                </div>
+                <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies}/>
+                <button  onClick={onCancelHandler} className="reply-button">
+                    CANCEL
+                </button>
+            </div>
+        );
     }
+
+    const onCancelHandler = () => {
+        setReplyButton(
+            <button  onClick={onClickReplyBtnHandler} className="reply-button">
+                REPLY
+            </button>
+        );
+    }
+
+    const [replyButton,setReplyButton] = useState(
+        <button  onClick={onClickReplyBtnHandler} className="reply-button">
+            REPLY
+        </button>
+    );
+
 
     return(
         <div className = "comment-container ">
             <div className="profile-avatar-wrapper">
-            <div className="avatar">
-                <img src="/images/ava.png"/>
-            </div>
+                <div className="avatar">
+                    <img src="/images/ava.png"/>
+                </div>
             </div>
             <div className="comment-description">
                 <div className="comment-head">
@@ -49,11 +55,8 @@ const SingleComment = ({comment}) =>
                 <div className="comment-body">
                     {comment.comment}
                 </div>
-                <div className="reply-box">
-                    REPLY
-                </div>
 
-
+                {replyButton}
             </div>
         </div>
     );

@@ -61,7 +61,7 @@ class ProductsController extends ResponseController
     {
         $product = Ad::findOrFail($id);
         $token =$request->bearerToken();
-        if(!isset($token) || $this->userFromToken->getUserId($token) !=$product->user_id )
+        if(!isset($token) && $this->userFromToken->getUserId($token) !=$product->user_id )
         {
         	$product->views++;
         	$product->save();

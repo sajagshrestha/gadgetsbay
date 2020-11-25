@@ -19,8 +19,15 @@ class CommentController extends Controller
 
         $userFromToken = new UserFromBearerToken();
         $comment->user_id = $userFromToken->getUserId($request->bearerToken());
-        if($request->reply_id)
-            $comment->reply_id= $request->reply_id;
+        if($request->reply_id) {
+            $parentComment = Comment::findorfail($request->reply_id);
+            if ($parentComment->reply_id !== null) {
+                $parentComment = Comment::findorfail($parentComment->reply_id);
+            }
+            $comment->reply_id = $parentComment->id;
+            $parentComment->replies_count++;
+            $parentComment->save();
+        }
         $comment->save();
         return new CommentResource($comment);
 
@@ -40,5 +47,6 @@ class CommentController extends Controller
 
         return  CommentResource::collection($replyComment);
     }
+
 
 }

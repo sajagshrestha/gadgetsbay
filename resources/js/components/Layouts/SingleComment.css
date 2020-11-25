@@ -24,18 +24,44 @@
     height: 50px;
     width: 50px;
 }
+.reply-button{
+    border: none;
+    background-color:#fff;
+    outline: none;
+}
+.reply-button:hover{
+    cursor: pointer;
+}
 .reply-box{
+    border-width: 0 0 2px 0;
+    outline: none;
+    padding: 0.5em;
+}
+.reply-box-container{
+    display: grid;
+    grid-template-columns: 40px auto;
     font-size: 12px;
 }
+.reply-box-container .avatar{
+    height: 30px;
+    width: 30px;
+}
+.reply-box-wrapper input{
+    width: 60%;
+}
+
+.button-container{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
 
 .comment-body{
     height: auto;
     padding: 0.1em 0;
 }
 
-.replies button{
-    border: none;
-    background-color:#fff;
-    color: #182cdc;
-    font-size:12px ;
-}
+

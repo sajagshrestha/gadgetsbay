@@ -1,0 +1,27 @@
+.replies{
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+
+.view-replies-btn{
+    grid-column: 2/3;
+    text-align: start;
+    border: none;
+    background-color:#fff;
+    color: #182cdc;
+    font-size:12px ;
+    outline: none;
+
+}
+.view-replies-btn:hover{
+    cursor: pointer;
+}
+
+
+.replies-container{
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+.reply{
+    grid-column: 2/3;
+}
