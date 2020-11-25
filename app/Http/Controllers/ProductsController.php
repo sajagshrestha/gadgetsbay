@@ -75,16 +75,17 @@ class ProductsController extends ResponseController
         $mobile = $description->mobile;
 
         $images = explode(" ",$description->imageName);
-        foreach ($images as $image)
-        {
-            Storage::delete('public/images/'.$image);
-        }
+
         $description->setValue($request->all());
         $description->imageName = $this->getImageNames($request);
-        $description->saveOrFail();
-
         $mobile->setValue($request->all());
-        $mobile->saveOrFail();
+        if($mobile->saveOrFail() && $description->saveOrFail())
+        {
+            foreach ($images as $image)
+            {
+                Storage::delete('public/images/'.$image);
+            }
+        }
 
         return new AdResource($description);
     }

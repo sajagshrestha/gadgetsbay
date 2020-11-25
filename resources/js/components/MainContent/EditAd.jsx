@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 import AdForm from "../Layouts/AdForm";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const EditAd = () => {
-    const { pageTransition, pageVariants } = useContext(AnimateContext);
     const { id } = useParams();
     const [editImages, setEditImages] = useState([]);
     const [editValues, setEditValues] = useState({
@@ -20,7 +20,13 @@ const EditAd = () => {
         internalStorage: ""
     });
     useEffect(() => {
-        axios.get(`/api/product/${id}`).then(response => {
+        axios.get(`/api/product/${id}`,{
+            headers: {
+                Authorization: `Bearer ${
+                    JSON.parse(localStorage.getItem("user")).token
+                }`
+            }
+        }).then(response => {
             const res = response.data.data;
             setEditValues({
                 title: res.title,
@@ -34,7 +40,8 @@ const EditAd = () => {
                 backCamera: res.mobile.backCamera,
                 RAM: res.mobile.RAM,
                 internalStorage: res.mobile.internalStorage
-            });
+            }
+            );
             getImages(res);
         });
     }, [editImages.length]);
