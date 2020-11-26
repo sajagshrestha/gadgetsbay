@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { UserContext } from "../App";
 import { withRouter } from "react-router-dom";
+import UserPanel from "../User Panel/UserPanel";
 
 const MyAds = ({ history }) => {
     const [ads, setAds] = useState([]);
@@ -36,6 +37,7 @@ const MyAds = ({ history }) => {
     };
     return (
         <div>
+            <UserPanel history={history}/>
             {ads.map(Ad => (
                 <div key={Ad.id}>
                     <li>{Ad.title}</li>
@@ -43,6 +45,7 @@ const MyAds = ({ history }) => {
                     <button onClick={() => editAd(Ad.id)}>edit</button>
                 </div>
             ))}
+
         </div>
     );
 };

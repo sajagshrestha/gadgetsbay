@@ -1,0 +1,47 @@
+.user-panel-container{
+
+    display: grid;
+    grid-template-columns:  2fr 8fr;
+
+}
+
+.user-panel-head{
+    display: grid;
+    grid-template-rows: 200px auto;
+    border: 1px black solid;
+}
+.profile-wrapper{
+    border-bottom: 1px black solid;
+    padding: 0.5em;
+    text-align: center;
+}
+.user-panel-head .avatar{
+    justify-self: center;
+    height: 100px;
+    width: 100px;
+    display: flex;
+
+}
+.panel-option-container{
+    /*padding: 0.5em;*/
+}
+
+.panel-option{
+    border-bottom: 1px black solid;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.avatar-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.ads-list{
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    grid-row-gap: 50px;
+    justify-content: space-between;
+
+}

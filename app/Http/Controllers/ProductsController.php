@@ -31,7 +31,6 @@ class ProductsController extends ResponseController
         //get all ads
         $products = Ad::paginate(10);
         return AdResource::collection($products);
-//
     }
 
     public function store(MobileRequest $request)
@@ -73,7 +72,6 @@ class ProductsController extends ResponseController
     {
         $description = Ad::find($id);
         $mobile = $description->mobile;
-
         $images = explode(" ",$description->imageName);
 
         $description->setValue($request->all());
@@ -107,7 +105,6 @@ class ProductsController extends ResponseController
     public function myProduct()
     {
         $user = auth()->user();
-//        $user->ad();
         return AdResource::collection($user->ad);
     }
 
@@ -134,8 +131,9 @@ class ProductsController extends ResponseController
     	return response()->file('public/images'.$imageName);
     }
 
-    private function  getUser()
-    {
-    	return auth()->user();
-    }
+
+
+
+
+
 }
