@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 import "./SingleComment.css";
 import ReplyBox from "./ReplyBox";
 
