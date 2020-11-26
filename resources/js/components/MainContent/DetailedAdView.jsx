@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Comment from "../Layouts/Comment";
+import Comment from "../comment/Comment";
 import { UserContext } from "../App";
 
 const DeatiledAdView = () => {

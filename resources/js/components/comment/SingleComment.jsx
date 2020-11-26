@@ -13,10 +13,8 @@ const SingleComment = ({comment,updateReplies}) =>
                         <img src="/images/ava.png"/>
                     </div>
                 </div>
-                <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies}/>
-                <button  onClick={onCancelHandler} className="reply-button">
-                    CANCEL
-                </button>
+                <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies} cancelHandler={onCancelHandler}/>
+
             </div>
         );
     }

@@ -4,7 +4,7 @@ import { UserContext } from "../App";
 import { motion } from "framer-motion";
 import { AnimateContext } from "../App";
 import { withRouter } from "react-router-dom";
-import Comment from "../Layouts/Comment";
+import Comment from "../comment/Comment";
 
 
 import FeaturedProduct from "./FeaturedProduct";

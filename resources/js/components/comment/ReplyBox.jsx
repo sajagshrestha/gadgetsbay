@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 
-const ReplyBox = ({ad_id ,reply_id,updateReplies}) => {
+const ReplyBox = ({ad_id ,reply_id,updateReplies,cancelHandler}) => {
     const [commentReply,setCommentReply] = useState({
         "comment": "",
         "reply_id": reply_id,
@@ -33,6 +33,7 @@ const ReplyBox = ({ad_id ,reply_id,updateReplies}) => {
             "comment": "",
 
         });
+        cancelHandler();
     }
 
 
@@ -50,9 +51,13 @@ const ReplyBox = ({ad_id ,reply_id,updateReplies}) => {
                     />
                     <div className="button-container">
 
+                        <button  onClick={cancelHandler} className="reply-button">
+                            CANCEL
+                        </button>
                         <button onSubmit={onSubmitHandler} className="reply-button">
                             REPLY
                         </button>
+
                     </div>
                 </div>
             </form>

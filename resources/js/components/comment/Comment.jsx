@@ -6,6 +6,7 @@ import axios from "axios";
 const Comment = ({ad_id}) => {
 
     const [comments, setComments] = useState([]);
+    const [reply, setReply] = useState([]);
     const [comment,setComment] = useState({
         "comment": "",
         "reply_id": null,
@@ -18,7 +19,7 @@ const Comment = ({ad_id}) => {
                 setComments(response.data.data);
             })
             .catch(error => console.log(error));
-    }, [comments.length]);
+    }, []);
     const onChangeHandler = event => {
         setComment({
             ...comment,
@@ -37,7 +38,8 @@ const Comment = ({ad_id}) => {
                 }})
             .then(response => {
                 console.log(response.data.data);
-                setComments([...comments,response.data.data
+                setComments([response.data.data,
+                    ...comments,
                     ]
                 );
             }).catch(err => console.log(err));
@@ -48,6 +50,10 @@ const Comment = ({ad_id}) => {
         });
 
 
+   }
+
+   const addReply = r => {
+        setReply(r);
    }
     return (
         <div className="container">
@@ -70,8 +76,16 @@ const Comment = ({ad_id}) => {
         </form>
             {comments.map(comment => (
                 <div key={comment.id}>
-                    <SingleComment  comment={comment}   />
-                    <Replies comment={comment} />
+                    <SingleComment  comment={comment} updateReplies={addReply}/>
+                    { reply.reply_id === comment.id?
+                        <Replies comment={comment} reply={reply}/>
+                            : <Replies comment={comment}/>
+
+                    }
+                    {
+
+
+                    }
                 </div>
 
             ))}

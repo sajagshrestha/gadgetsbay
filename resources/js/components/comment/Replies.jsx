@@ -3,15 +3,24 @@ import SingleComment from "./SingleComment";
 import axios from "axios";
 import "./Replies.css";
 
-const Replies = ({comment}) => {
+const Replies = ({comment,reply}) => {
     const [replyBox,setReplyBox] = useState('');
     const [replies,setReplies] = useState([]);
 
 
     useEffect(() => {
-        viewRepliesBtn();
-    }, []);
+        if(reply === undefined)
+        {
+            console.log("payena")
+            viewRepliesBtn();
 
+        }
+        else{
+            viewReplies();
+            console.log("i got it")
+        }
+
+    }, [reply]);
 
 
     const viewRepliesBtn = () => {
