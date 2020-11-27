@@ -101,7 +101,6 @@ class AuthenticationController extends ResponseController
             'email' => $data['email'],
             'phone'=> $data['phone'],
             'password' => Hash::make($data['password']),
-            'phone' => $data['phone'],
         ]);
     }
 

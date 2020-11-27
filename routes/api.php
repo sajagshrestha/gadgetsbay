@@ -81,6 +81,8 @@ Route::get('/user/products','ProductsController@myProduct');
 
 Route::get('/image/{imageName}', 'ProductsController@getImages');
 
+Route::get('/userstats','UserController@userStats');
+
 
 //Comments
 

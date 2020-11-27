@@ -3,6 +3,8 @@ import { SearchContext } from "../../App.jsx";
 import { withRouter } from "react-router-dom";
 import { SearchWrapper } from "./Search.styles";
 import SearchBar from "material-ui-search-bar";
+import axios from "axios";
+
 const Search = ({ history }) => {
     const [search, setSearch] = useState("");
     const { setSearchedPosts } = useContext(SearchContext);
@@ -13,7 +15,6 @@ const Search = ({ history }) => {
             .post("/api/filter", { title: search })
             .then(response => {
                 setSearchedPosts(response.data.data);
-
                 history.push("/searchResults");
             })
             .catch(err => console.log(err));

@@ -21,6 +21,8 @@ use Illuminate\Http\Request;
 
 
 
+
+
  Route::get( '/{path?}', function(){
      return view( 'React-Index' );
  } )->where('path', '.*');
