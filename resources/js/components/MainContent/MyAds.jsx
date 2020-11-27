@@ -20,7 +20,7 @@ const MyAds = ({ history }) => {
                 setAds(response.data.data);
             })
             .catch(error => console.log(error));
-    }, [ads.length]);
+    }, []);
     const editAd = id => {
         history.push(`/edit/${id}`);
     };
@@ -38,13 +38,6 @@ const MyAds = ({ history }) => {
     return (
         <div>
             <UserPanel history={history}/>
-            {ads.map(Ad => (
-                <div key={Ad.id}>
-                    <li>{Ad.title}</li>
-                    <button onClick={() => deleteAd(Ad.id)}>delete</button>
-                    <button onClick={() => editAd(Ad.id)}>edit</button>
-                </div>
-            ))}
 
         </div>
     );

@@ -2,13 +2,16 @@ import React,{useState,useEffect} from "react";
 import "./UserPanel.css";
 import HomeAdView from "../Layouts/HomeAdView";
 import axios from "axios";
+import UserDashboard from "./UserDashboard";
 
 
 
 const UserPanel =({history}) => {
 
     const [ads, setAds] = useState([]);
+    const [index,setIndex] = useState();
     const [filteredAds, setFilteredAds] = useState([]);
+    const [userStats,setUserStats] = useState({sold: 0, totalAds: 0, views: 0});
 
     useEffect(() => {
         axios
@@ -22,21 +25,40 @@ const UserPanel =({history}) => {
             .then(response => {
                 setAds(response.data.data);
                 setFilteredAds(ads);
-                console.log(ads)
             })
             .catch(error => console.log(error));
-    }, [ads.length]);
+        setIndex(null);
+        axios
+            .get('/api/userstats',{
+                headers: {
+                    Authorization: `Bearer ${
+                        JSON.parse(localStorage.getItem("user")).token
+                    }`
+                }
+            })
+            .then(response => {
+                setUserStats(response.data);
+            })
+            .catch(err=>console.log(err));
 
-    const onClickOptionHandler = index =>{
-        if(index != 0) {
-            setFilteredAds(
-                ads.filter(ad => ad.status == Number(index))
-            )
-            console.log(index)
+    }, []);
+
+    useEffect(()=> {
+        console.log(index)
+        if (index !== null)
+        {
+            if(index !== 0) {
+                setFilteredAds(
+                    ads.filter(ad => ad.status == Number(index))
+                )
+            }
+            else
+                setFilteredAds(ads)
         }
-        else
-            setFilteredAds(ads)
+    },[index])
 
+    const onClickOptionHandler = i =>{
+        setIndex(i);
     }
 
     const onEditHandler = id =>{
@@ -77,8 +99,8 @@ const UserPanel =({history}) => {
                     </div>
                 </div>
                 <div className="panel-option-container">
-                    <div className="panel-option">
-                        Home
+                    <div className="panel-option" onClick={() => onClickOptionHandler(null)}>
+                        Dashboard
                     </div>
                     <div className="panel-option" onClick={() => onClickOptionHandler(0)}>
                         All ads
@@ -95,19 +117,26 @@ const UserPanel =({history}) => {
                 </div>
             </div>
             <div className="ads-list">
-                {filteredAds.map(product => (
-                    <div key={product.id} >
-                        <HomeAdView product={product} />
-                        <div>
-                            <button onClick={()=> onEditHandler(product.id)}>
-                                Edit
-                            </button>
-                            <button onClick={()=> onDeleteHandler(product.id)}>
-                                Delete
-                            </button>
+                {
+                    index === null ?
+                        <UserDashboard userStats={userStats} />
+                        : <div>
+                            {filteredAds.map(product => (
+                                    <div key={product.id} >
+                                        <HomeAdView product={product} />
+                                        <div>
+                                            <button onClick={()=> onEditHandler(product.id)}>
+                                                Edit
+                                            </button>
+                                            <button onClick={()=> onDeleteHandler(product.id)}>
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
                         </div>
-                    </div>
-                ))}
+
+                }
 
 
             </div>

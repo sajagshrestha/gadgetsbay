@@ -15,7 +15,7 @@ class AdSearch
 
         $query = static::applyFiltersToQuery($filters, $query);
 
-        return $query->get();
+        return $query->where('status',1)->get();
     }
 
     private static function applyFiltersToQuery(
