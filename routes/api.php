@@ -83,6 +83,10 @@ Route::get('/image/{imageName}', 'ProductsController@getImages');
 
 Route::get('/userstats','UserController@userStats');
 
+//notification
+Route::get('/user/notifications','UserController@notification');
+
+
 
 //Comments
 
