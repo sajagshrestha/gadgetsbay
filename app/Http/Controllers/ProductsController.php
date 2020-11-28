@@ -58,14 +58,32 @@ class ProductsController extends ResponseController
 
     public function show($id, Request $request)
     {
-        $product = Ad::findOrFail($id);
-        $token =$request->bearerToken();
-        if(!isset($token) && $this->userFromToken->getUserId($token) !=$product->user_id )
+
+        if($product = Ad::find($id))
         {
-        	$product->views++;
-        	$product->save();
+            if($request->bearerToken())
+            {
+                $userFromToken = new UserFromBearerToken();
+                $user = $userFromToken->getUser($request);
+                if(!isset($user->id)) {
+                    return $this->responseUnprocessable([
+                        'error' => 'user not found'
+                    ]);
+                }
+                if($user->id != $product->id)
+                    $product->views++;
+            }
+            else
+                $product->views++;
+            $product->save();
+            return new AdResource($product);
         }
-        return new AdResource($product);
+        else{
+            return $this->responseUnprocessable([
+                'error' => 'product not found'
+            ]);
+        }
+
     }
 
     public function update(Request $request, $id)

@@ -9,14 +9,16 @@ abstract class ResponseController extends Controller
     /**
      * Returns a generic success (200) JSON response.
      *
-     * @param  string $message
+     * @param string $message
+     * @param null $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public function responseSuccess($message = 'Success.')
+    public function responseSuccess($message = 'Success.',$data = null)
     {
         return response()->json([
             'status' => 200,
             'message' => $message,
+            'data' =>$data
         ], 200);
     }
 

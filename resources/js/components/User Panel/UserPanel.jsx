@@ -12,6 +12,7 @@ const UserPanel =({history}) => {
     const [index,setIndex] = useState();
     const [filteredAds, setFilteredAds] = useState([]);
     const [userStats,setUserStats] = useState({sold: 0, totalAds: 0, views: 0});
+    const [notifications,setNotifications] = useState([]);
 
     useEffect(() => {
         axios
@@ -38,6 +39,18 @@ const UserPanel =({history}) => {
             })
             .then(response => {
                 setUserStats(response.data);
+            })
+            .catch(err=>console.log(err));
+        axios
+            .get('/api/user/notifications',{
+                headers: {
+                    Authorization: `Bearer ${
+                        JSON.parse(localStorage.getItem("user")).token
+                    }`
+                }
+            })
+            .then(response => {
+                setNotifications(response.data.data);
             })
             .catch(err=>console.log(err));
 
@@ -119,7 +132,7 @@ const UserPanel =({history}) => {
             <div className="ads-list">
                 {
                     index === null ?
-                        <UserDashboard userStats={userStats} />
+                        <UserDashboard userStats={userStats} activities={notifications} />
                         : <div>
                             {filteredAds.map(product => (
                                     <div key={product.id} >

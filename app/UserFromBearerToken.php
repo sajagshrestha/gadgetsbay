@@ -14,16 +14,15 @@ use \Illuminate\Http\Request;
 class UserFromBearerToken
 {
 
-function getUserId($bearerToken) {
-  $tokenguard = new TokenGuard(
+function getUser($request) {
+  $tokenGuard = new TokenGuard(
     App::make(ResourceServer::class),
     Auth::createUserProvider('users'),
     App::make(TokenRepository::class),
     App::make(ClientRepository::class),
     App::make('encrypter')
   );
-  $request = Request::create('/');
-  $request->headers->set('Authorization', 'Bearer ' . $bearerToken);
-  return $tokenguard->user($request)->id;
+
+  return $tokenGuard->user($request);
 }
 }

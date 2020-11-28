@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 
-const UserDashboard = ({userStats}) => {
+const UserDashboard = ({userStats,activities}) => {
 
+    console.log(activities)
     return(
         <div>
             <div className="">
@@ -30,21 +31,16 @@ const UserDashboard = ({userStats}) => {
                     Recent Activity
                 </div>
                 <div className="">
-                    <div className="">
-                        puru has commented on your post
-                    </div>
-                    <div className="">
-                        puru has commented on your post
-                    </div>
-                    <div className="">
-                        puru has commented on your post
-                    </div>
-                    <div className="">
-                        puru has commented on your post
-                    </div>
-                    <div className="">
-                        puru has commented on your post
-                    </div>
+                    {activities !== undefined ?
+                        <div>
+                            {activities.map(activity=>(
+                                <div key={activity.id}>
+                                    {activity.body}
+                                </div>
+                            ))}
+                        </div>
+                        :{}
+                    }
 
                 </div>
             </div>
