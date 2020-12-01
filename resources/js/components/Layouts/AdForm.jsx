@@ -3,6 +3,8 @@ import "./AdForm.css";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { UserContext } from "../App";
+import AdFormFormik from "../AdForm/AdForm"
+
 
 const AdForm = ({ id, editValues, editImages, history }) => {
     const { globalToken } = useContext(UserContext);
@@ -137,6 +139,7 @@ const AdForm = ({ id, editValues, editImages, history }) => {
     };
     return (
         <div className="container mt-5 ">
+            <AdFormFormik />
             <form onSubmit={onSubmitHandler} encType="multipart/form-data">
                 <div className="form-group row">
                     <label htmlFor="title" className="col-sm-2 col-form-label">
