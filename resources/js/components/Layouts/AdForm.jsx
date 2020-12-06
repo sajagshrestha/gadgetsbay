@@ -1,47 +1,80 @@
-import React, { useState, useContext, useEffect } from "react";
-import "./AdForm.css";
+import React, {useContext, useEffect, useState} from "react";
+import {useHistory} from "react-router-dom";
+import { Formik, Form, Field, useField, ErrorMessage } from "formik";
+import {
+    TextField,
+    MenuItem,
+    Radio,
+    FormControlLabel,
+    InputLabel,
+    Button
+} from "@material-ui/core";
+import * as yup from "yup";
+import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import axios from "axios";
-import { withRouter } from "react-router-dom";
-import { UserContext } from "../App";
-import AdFormFormik from "../AdForm/AdForm"
+import {UserContext} from "../App";
 
+const RadioButton = ({ label, ...props }) => {
+    const [field] = useField(props);
+    return (
+        <FormControlLabel
+            {...field}
+            control={<Radio />}
+            label={label}
+            className="RadioButton"
+        />
+    );
+};
 
-const AdForm = ({ id, editValues, editImages, history }) => {
+const MytextField = props => {
+    const [field, meta] = useField(props);
+    const errorText = meta.error && meta.touched ? meta.error : "";
+    return (
+        <StyledTextField>
+            <Field
+                {...props}
+                {...field}
+                variant="outlined"
+                fullWidth
+                as={TextField}
+                size="small"
+                helperText={errorText}
+                error={!!errorText}
+            />
+        </StyledTextField>
+    );
+};
+
+const AdForm = ({ id, editValues, editImages }) => {
     const { globalToken } = useContext(UserContext);
-    const [values, setValues] = useState({
-        title: "",
-        description: "",
-        price: "",
-        expiresIn: "",
-        negotiable: "",
-        condition: "",
-        usedFor: 0,
-        frontCamera: "",
-        backCamera: "",
-        RAM: "",
-        internalStorage: ""
-    });
     const [images, setImages] = useState([]);
     const [imageToBeAdded, setImageToBeAdded] = useState({
         name: "Add new Image",
         file: {}
     });
     const [imagesLabel, setImagesLabel] = useState("Select one or more images");
+    const initialValues = {
+        title: "",
+        description: "",
+        price: "",
+        expiresIn: "",
+        negotiable: "",
+        condition: "",
+        usedFor: "",
+        frontCamera: "",
+        backCamera: "",
+        RAM: "",
+        internalStorage: "",
+        imageName: []
+    };
+    const history = useHistory();
     if (editValues) {
         useEffect(() => {
-            setValues(editValues);
             if (editImages.length !== 0) {
                 setImages(editImages);
             }
         }, [editImages.length, editValues]);
     }
-
-    const onChangeHandler = event => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value
-        });
-    };
     const imageHandler = event => {
         const imagesObj = [];
         const imagesArray = [];
@@ -89,8 +122,10 @@ const AdForm = ({ id, editValues, editImages, history }) => {
             setImageToBeAdded({ name: "Add new Image" });
         }
     };
-    const onSubmitHandler = event => {
-        const fd = new FormData();
+
+    const onSubmitHandler = values => {
+
+        let fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
         fd.append("price", values.price);
@@ -108,370 +143,213 @@ const AdForm = ({ id, editValues, editImages, history }) => {
         fd.append("internalStorage", values.internalStorage);
         if (editValues) {
             fd.append("_method", "put");
-        }
-
-        event.preventDefault();
-        if (editValues) {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
-                .then(history.push("/myAds"))
+                .then( history.push(`/details/${id}/${values.title}`))
                 .catch(err => console.log(err));
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(history.push("/"))
-                .catch(err => console.log(err));
+                .then(history.push(`/details/${id}/${values.title}`))
+                    .catch(err => console.log(err));
         }
 
-        setValues({
-            title: "",
-            description: "",
-            price: "",
-            expiresIn: "",
-            negotiable: "",
-            condition: "",
-            usedFor: null,
-            frontCamera: "",
-            backCamera: "",
-            RAM: "",
-            internalStorage: ""
-        });
     };
+
+    const validationSchema = yup.object({
+        title: yup
+            .string()
+            .required()
+            .min(3),
+        description: yup.string(),
+        expiresIn: yup.number().required("required"),
+        price: yup
+            .number()
+            .typeError("price must be a number")
+            .required()
+            .positive()
+            .integer("please enter number value"),
+        negotiable: yup.string().required("Please select any"),
+        condition: yup.string().required("Please select any"),
+        usedFor: yup.number().typeError("Please enter a number value"),
+        frontCamera: yup.string().required("required"),
+        backCamera: yup.string().required("required"),
+        RAM: yup.string().required("required"),
+        internalStorage: yup.string().required("required")
+    });
     return (
-        <div className="container mt-5 ">
-            <AdFormFormik />
-            <form onSubmit={onSubmitHandler} encType="multipart/form-data">
-                <div className="form-group row">
-                    <label htmlFor="title" className="col-sm-2 col-form-label">
-                        Title
-                    </label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="title"
-                            name="title"
-                            placeholder="Enter title here"
-                            value={values.title}
-                            onChange={onChangeHandler}
-                        />
-                    </div>
-                </div>
-                <div className="form-group row">
-                    <label
-                        htmlFor="description"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Description
-                    </label>
-                    <div className="col-sm-10">
-                        <textarea
-                            className="form-control"
-                            id="descrition"
-                            placeholder="Enter description here"
-                            rows="4"
+        <AdFormWrapper>
+            <Formik
+                initialValues={editValues? editValues :initialValues}
+                onSubmit={onSubmitHandler}
+                validationSchema={validationSchema}
+            >
+                {({ values, isSubmitting, isValid, dirty,setFieldValue }) => (
+                    <Form>
+                        <MytextField name="title" label="Title" />
+                        <MytextField
                             name="description"
-                            value={values.description}
-                            onChange={onChangeHandler}
+                            as="textarea"
+                            label="Description"
+                            multiline
+                            rows={3}
                         />
-                    </div>
-                </div>
 
-                <div className="form-group row">
-                    <label
-                        htmlFor="expiresIn"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Expires In
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="expiresIn"
-                            id="expiresIn"
-                            className="form-control"
-                            value={values.expiresIn}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="14">2 Weeks</option>
-                            <option value="30">1 Month</option>
-                            <option value="60">2 Months</option>
-                            <option value="90">3 Months</option>
-                            <option value="120">4 Months</option>
-                        </select>
-                    </div>
-                </div>
+                        <MytextField name="expiresIn" label="Expires in" select>
+                            <MenuItem value={14}> 2 Weeks </MenuItem>
+                            <MenuItem value={30}> 1 Month </MenuItem>
+                            <MenuItem value={60}> 2 Months </MenuItem>
+                            <MenuItem value={90}> 3 Months </MenuItem>
+                            <MenuItem value={120}> 4 Months </MenuItem>
+                        </MytextField>
 
-                <div className="form-group row">
-                    <label htmlFor="price" className="col-sm-2 col-form-label">
-                        Price
-                    </label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="price"
-                            name="price"
-                            placeholder="Rs."
-                            value={values.price}
-                            onChange={onChangeHandler}
-                        />
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="negotiable"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Negotiable
-                    </label>
-                    <div className="col-sm-10">
-                        <input
-                            type="radio"
-                            name="negotiable"
-                            value="yes"
-                            onChange={onChangeHandler}
-                            checked={values.negotiable === "yes" ? true : false}
-                        />
-                        Yes
-                        <input
-                            type="radio"
-                            name="negotiable"
-                            value="fixed price"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.negotiable === "fixed price"
-                                    ? true
-                                    : false
-                            }
-                        />
-                        Fixed Price
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="condition"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Condition
-                    </label>
-                    <div className="col-sm-10">
-                        <input
-                            type="radio"
-                            name="condition"
-                            value="Brand New"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.condition === "Brand New" ? true : false
-                            }
-                        />
-                        Brand New(not used)
-                        <input
-                            type="radio"
-                            name="condition"
-                            value="Like New"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.condition === "Like New" ? true : false
-                            }
-                        />
-                        Like New(used few times)
-                        <input
-                            type="radio"
-                            name="condition"
-                            value="Excellent"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.condition === "Excellent" ? true : false
-                            }
-                        />
-                        Excellent
-                        <input
-                            type="radio"
-                            name="condition"
-                            value="Good/Fair"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.condition === "Good/Fair" ? true : false
-                            }
-                        />
-                        Good/Fair
-                        <input
-                            type="radio"
-                            name="condition"
-                            value="Not Working"
-                            onChange={onChangeHandler}
-                            checked={
-                                values.condition === "Not Working"
-                                    ? true
-                                    : false
-                            }
-                        />
-                        Not Working
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="usedFor"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Used For
-                    </label>
-                    <div className="col-sm-10">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="usedFor"
-                            name="usedFor"
-                            placeholder="in months"
-                            value={values.usedFor}
-                            onChange={onChangeHandler}
-                        />
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="frontCamera"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Front Camera
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="frontCamera"
-                            id="frontCamera"
-                            className="form-control"
-                            value={values.frontCamera}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="none">None</option>
-                            <option value="1MP">1MP</option>
-                            <option value="2MP">2MP</option>
-                            <option value="3MP">3MP</option>
-                            <option value="5MP">5MP</option>
-                            <option value="10MP">10MP</option>
-                            <option value="20MP">20MP</option>
-                            <option value="More than 20MP">
-                                More than 20MP
-                            </option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="backCamera"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Back Camera
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="backCamera"
-                            id="backCamera"
-                            className="form-control"
-                            value={values.backCamera}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="none">None</option>
-                            <option value="1MP">1MP</option>
-                            <option value="2MP">2MP</option>
-                            <option value="3MP">3MP</option>
-                            <option value="5MP">5MP</option>
-                            <option value="10MP">10MP</option>
-                            <option value="20MP">20MP</option>
-                            <option value="More than 20MP">
-                                More than 20MP
-                            </option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label htmlFor="RAM" className="col-sm-2 col-form-label">
-                        RAM
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="RAM"
-                            id="RAM"
-                            className="form-control"
-                            value={values.RAM}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="512MB or less">512MB or less</option>
-                            <option value="1GB">1GB</option>
-                            <option value="2GB">2GB</option>
-                            <option value="4GB">4GB</option>
-                            <option value="6GB">6GB</option>
-                            <option value="8GB">8GB</option>
-                            <option value="More than 8GB">More than 8GB</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label
-                        htmlFor="internalStorage"
-                        className="col-sm-2 col-form-label"
-                    >
-                        Internal Storage
-                    </label>
-                    <div className="col-sm-10">
-                        <select
-                            name="internalStorage"
-                            id="internalStorage"
-                            className="form-control"
-                            value={values.internalStorage}
-                            onChange={onChangeHandler}
-                        >
-                            <option value="" defaultValue hidden></option>
-                            <option value="1GB">1GB</option>
-                            <option value="2GB">2GB</option>
-                            <option value="4GB">4GB</option>
-                            <option value="8GB">8GB</option>
-                            <option value="16GB">16GB</option>
-                            <option value="32GB">32GB</option>
-                            <option value="128GB">128GB</option>
-                            <option value="More than 128GB">
-                                More than 128GB
-                            </option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="form-group row">
-                    <label className="col-sm-2 col-form-label">Photo</label>
-                    <div className="col-sm-10">
-                        <div className="custom-file">
-                            <input
-                                type="file"
-                                className="custom-file-input"
-                                id="customFile"
-                                name="imageName"
-                                onChange={imageHandler}
-                                multiple
-                                accept="image/*"
+                        <MytextField name="price" label="Price" />
+                        <div>
+                            <InputLabel> Negotiable </InputLabel>
+                            <RadioButton
+                                name="negotiable"
+                                type="radio"
+                                value="yes"
+                                label="Yes"
                             />
-                            {
-                                <label
-                                    className="custom-file-label"
-                                    htmlFor="customFile"
-                                >
-                                    {imagesLabel}
-                                </label>
-                            }
+                            <RadioButton
+                                name="negotiable"
+                                type="radio"
+                                value="no"
+                                label="No"
+                            />
+                            <ErrorMessage name="negotiable" />
                         </div>
-                    </div>
-                </div>
-                {images.length !== 0 ? (
+                        <div>
+                            <InputLabel> Condition </InputLabel>
+                            <RadioButton
+                                name="condition"
+                                value="Brand New"
+                                type="radio"
+                                label="Brand New"
+                            />
+                            <RadioButton
+                                name="condition"
+                                value="Like New"
+                                type="radio"
+                                label="Like New"
+                            />
+                            <RadioButton
+                                name="condition"
+                                value="Excellent"
+                                type="radio"
+                                label="Excellent"
+                            />
+                            <RadioButton
+                                name="condition"
+                                value="Good/Fair"
+                                type="radio"
+                                label="Good/Fair"
+                            />
+                            <RadioButton
+                                name="condition"
+                                value="Not Working"
+                                type="radio"
+                                label="Not Working"
+                            />
+                        </div>
+
+                        <MytextField
+                            name="usedFor"
+                            label="Used For (in months)"
+                        />
+
+                        <MytextField
+                            name="frontCamera"
+                            select
+                            label="Front Camera"
+                        >
+                            <MenuItem value="none"> None </MenuItem>
+                            <MenuItem value="1MP"> 1 MP </MenuItem>
+                            <MenuItem value="2MP"> 2 MP </MenuItem>
+                            <MenuItem value="3MP"> 3 MP </MenuItem>
+                            <MenuItem value="5MP"> 5 MP </MenuItem>
+                            <MenuItem value="10MP"> 10 MP </MenuItem>
+                            <MenuItem value="20MP"> 20 MP </MenuItem>
+                            <MenuItem value="More than 20MP">
+                                More than 20 MP
+                            </MenuItem>
+                        </MytextField>
+
+                        <MytextField
+                            name="backCamera"
+                            select
+                            label="Back Camera"
+                        >
+                            <MenuItem value="none"> None </MenuItem>
+                            <MenuItem value="1MP"> 1 MP </MenuItem>
+                            <MenuItem value="2MP"> 2 MP </MenuItem>
+                            <MenuItem value="3MP"> 3 MP </MenuItem>
+                            <MenuItem value="5MP"> 5 MP </MenuItem>
+                            <MenuItem value="10MP"> 10 MP </MenuItem>
+                            <MenuItem value="20MP"> 20 MP </MenuItem>
+                            <MenuItem value="More than 20MP">
+                                More than 20 MP
+                            </MenuItem>
+                        </MytextField>
+
+                        <MytextField name="RAM" select label="RAM">
+                            <MenuItem value="512MB or less">
+                                512 MB or less
+                            </MenuItem>
+                            <MenuItem value="1GB"> 1 GB </MenuItem>
+                            <MenuItem value="2GB"> 2 GB </MenuItem>
+                            <MenuItem value="4GB"> 4 GB </MenuItem>
+                            <MenuItem value="6GB"> 6 GB </MenuItem>
+                            <MenuItem value="8GB"> 8 GB </MenuItem>
+                            <MenuItem value="More than 8GB">
+                                More than 8 GB
+                            </MenuItem>
+                        </MytextField>
+
+                        <MytextField
+                            name="internalStorage"
+                            select
+                            label="Internal Storage"
+                        >
+                            <MenuItem value="1GB"> 1 GB </MenuItem>
+                            <MenuItem value="2GB"> 2 GB </MenuItem>
+                            <MenuItem value="4GB"> 4 GB </MenuItem>
+                            <MenuItem value="8GB"> 8 GB </MenuItem>
+                            <MenuItem value="16GB"> 16 GB </MenuItem>
+                            <MenuItem value="32GB"> 32 GB </MenuItem>
+                            <MenuItem value="128GB"> 128 GB </MenuItem>
+                            <MenuItem value="More than 128GB">
+                                More than 128 GB
+                            </MenuItem>
+                        </MytextField>
+                        <div className="form-group row">
+                            <label className="col-sm-2 col-form-label">
+                                Photo
+                            </label>
+                            <div className="col-sm-10">
+                                <div className="custom-file">
+                                    <input
+                                        type="file"
+                                        className="custom-file-input"
+                                        id="customFile"
+                                        name="imageName"
+                                        onChange={imageHandler}
+                                        multiple
+                                        accept="image/*"
+                                    />
+                                    {
+                                        <label
+                                            className="custom-file-label"
+                                            htmlFor="customFile"
+                                        >
+                                            {imagesLabel}
+                                        </label>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        {images.length !== 0 ? (
                     <div className="form-group row">
                         <label className="col-sm-2 col-form-label">
                             Select primary Photo
@@ -534,13 +412,23 @@ const AdForm = ({ id, editValues, editImages, history }) => {
                 ) : (
                     ""
                 )}
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            disabled={editValues ? false : isSubmitting || !isValid || !dirty}
 
-                <button type="submit" className="btn btn-primary mt-4">
-                    {editValues ? "edit" : "post"}
-                </button>
-            </form>
-        </div>
+
+                        >
+                            {editValues ? "Edit" : "Post"}
+                        </Button>
+
+                        <pre> {JSON.stringify(values, null, 4)} </pre>
+                    </Form>
+                )}
+            </Formik>
+        </AdFormWrapper>
     );
 };
 
-export default withRouter(AdForm);
+export default AdForm;

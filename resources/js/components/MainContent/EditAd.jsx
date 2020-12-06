@@ -6,7 +6,7 @@ import axios from "axios";
 const EditAd = () => {
     const { id } = useParams();
     const [editImages, setEditImages] = useState([]);
-    const [editValues, setEditValues] = useState({
+    const editValues = {
         title: "",
         description: "",
         price: "",
@@ -18,7 +18,7 @@ const EditAd = () => {
         backCamera: "",
         RAM: "",
         internalStorage: ""
-    });
+    };
     useEffect(() => {
         axios.get(`/api/product/${id}`,{
             headers: {
@@ -28,20 +28,17 @@ const EditAd = () => {
             }
         }).then(response => {
             const res = response.data.data;
-            setEditValues({
-                title: res.title,
-                description: res.description,
-                price: res.price,
-                expiresIn: res.expiresIn,
-                negotiable: res.negotiable,
-                condition: res.condition,
-                usedFor: res.usedFor,
-                frontCamera: res.mobile.frontCamera,
-                backCamera: res.mobile.backCamera,
-                RAM: res.mobile.RAM,
-                internalStorage: res.mobile.internalStorage
-            }
-            );
+            editValues.title= res.title
+            editValues.description= res.description
+            editValues.price= res.price
+            editValues.expiresIn= res.expiresIn
+            editValues.negotiable= res.negotiable
+            editValues.condition= res.condition
+            editValues.usedFor= res.usedFor
+            editValues.frontCamera= res.mobile.frontCamera
+            editValues.backCamera= res.mobile.backCamera
+            editValues.RAM= res.mobile.RAM
+            editValues.internalStorage= res.mobile.internalStorage
             getImages(res);
         });
     }, [editImages.length]);
