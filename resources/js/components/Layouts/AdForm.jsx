@@ -1,13 +1,20 @@
-import React, {useContext, useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Formik, Form, Field, useField, ErrorMessage } from "formik";
-import {TextField,MenuItem,Radio,FormControlLabel,InputLabel,Button} from "@material-ui/core";
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import SaveIcon from '@material-ui/icons/Save';
+import {
+    TextField,
+    MenuItem,
+    Radio,
+    FormControlLabel,
+    InputLabel,
+    Button
+} from "@material-ui/core";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import SaveIcon from "@material-ui/icons/Save";
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import axios from "axios";
-import {UserContext} from "../App";
+import { UserContext } from "../App";
 
 const RadioButton = ({ label, ...props }) => {
     const [field] = useField(props);
@@ -119,7 +126,6 @@ const AdForm = ({ id, editValues, editImages }) => {
     };
 
     const onSubmitHandler = values => {
-
         let fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
@@ -140,15 +146,14 @@ const AdForm = ({ id, editValues, editImages }) => {
             fd.append("_method", "put");
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
-                .then( history.push(`/details/${id}/${values.title}`))
+                .then(history.push(`/details/${id}/${values.title}`))
                 .catch(err => console.log(err));
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(history.push(`/details/${id}/${values.title}`))
-                    .catch(err => console.log(err));
+                .then(history.push(`/dashboard`))
+                .catch(err => console.log(err));
         }
-
     };
 
     const validationSchema = yup.object({
@@ -175,11 +180,11 @@ const AdForm = ({ id, editValues, editImages }) => {
     return (
         <AdFormWrapper>
             <Formik
-                initialValues={editValues? editValues :initialValues}
+                initialValues={editValues ? editValues : initialValues}
                 onSubmit={onSubmitHandler}
                 validationSchema={validationSchema}
             >
-                {({ values, isSubmitting, isValid, dirty,setFieldValue }) => (
+                {({ values, isSubmitting, isValid, dirty, setFieldValue }) => (
                     <Form>
                         <MytextField name="title" label="Title" />
                         <MytextField
@@ -345,80 +350,89 @@ const AdForm = ({ id, editValues, editImages }) => {
                             </div>
                         </div>
                         {images.length !== 0 ? (
-                    <div className="form-group row">
-                        <label className="col-sm-2 col-form-label">
-                            Select primary Photo
-                        </label>
-                        <div className="col-sm-10 images-container">
-                            <div className="primary-image-container">
-                                <img
-                                    src={URL.createObjectURL(images[0])}
-                                    alt="primary image"
-                                    className="primary-image"
-                                />
-                            </div>
-                            <div className="preview-plus-add">
-                                <div className="preview-image-container">
-                                    {images.map((img, index) => (
-                                        <div key={index}>
-                                            <img
-                                                src={URL.createObjectURL(img)}
-                                                className="preview-images"
-                                                onClick={() => setPrimary(img)}
-                                            />
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">
+                                    Select primary Photo
+                                </label>
+                                <div className="col-sm-10 images-container">
+                                    <div className="primary-image-container">
+                                        <img
+                                            src={URL.createObjectURL(images[0])}
+                                            alt="primary image"
+                                            className="primary-image"
+                                        />
+                                    </div>
+                                    <div className="preview-plus-add">
+                                        <div className="preview-image-container">
+                                            {images.map((img, index) => (
+                                                <div key={index}>
+                                                    <img
+                                                        src={URL.createObjectURL(
+                                                            img
+                                                        )}
+                                                        className="preview-images"
+                                                        onClick={() =>
+                                                            setPrimary(img)
+                                                        }
+                                                    />
+                                                    <input
+                                                        type="button"
+                                                        onClick={() =>
+                                                            removeImage(img)
+                                                        }
+                                                        value="X"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="add-more">
+                                            <div className="custom-file">
+                                                <input
+                                                    type="file"
+                                                    className="custom-file-input"
+                                                    id="inputGroupFile02"
+                                                    onChange={handleAddImage}
+                                                />
+                                                <label
+                                                    className="custom-file-label my-label"
+                                                    htmlFor="inputGroupFile02"
+                                                >
+                                                    {imageToBeAdded.name}
+                                                </label>
+                                            </div>
                                             <input
                                                 type="button"
-                                                onClick={() => removeImage(img)}
-                                                value="X"
+                                                onClick={() => addNewImage()}
+                                                disabled={
+                                                    imageToBeAdded.name ===
+                                                    "Add new Image"
+                                                        ? true
+                                                        : false
+                                                }
+                                                value="Add"
                                             />
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="add-more">
-                                    <div className="custom-file">
-                                        <input
-                                            type="file"
-                                            className="custom-file-input"
-                                            id="inputGroupFile02"
-                                            onChange={handleAddImage}
-                                        />
-                                        <label
-                                            className="custom-file-label my-label"
-                                            htmlFor="inputGroupFile02"
-                                        >
-                                            {imageToBeAdded.name}
-                                        </label>
                                     </div>
-                                    <input
-                                        type="button"
-                                        onClick={() => addNewImage()}
-                                        disabled={
-                                            imageToBeAdded.name ===
-                                            "Add new Image"
-                                                ? true
-                                                : false
-                                        }
-                                        value="Add"
-                                    />
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                ) : (
-                    ""
-                )}
+                        ) : (
+                            ""
+                        )}
                         <Button
                             variant="contained"
                             color="primary"
                             type="submit"
-                            disabled={editValues ? false : isSubmitting || !isValid || !dirty}
-                            startIcon={editValues ? <CloudUploadIcon /> : <SaveIcon />}
-
-
+                            disabled={
+                                editValues
+                                    ? false
+                                    : isSubmitting || !isValid || !dirty
+                            }
+                            startIcon={
+                                editValues ? <CloudUploadIcon /> : <SaveIcon />
+                            }
                         >
                             {editValues ? "Edit" : "Post"}
                         </Button>
-
                     </Form>
                 )}
             </Formik>
