@@ -1,11 +1,23 @@
 import React, { useContext, createContext, useEffect } from "react";
 import Search from "../SearchBox/Search";
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import { UserContext } from "../../App";
 import axios from "axios";
 import LogoImg from "../../SVGassets/Logo.svg";
 import { NavWrapper, Logo, NavLinks, RegisterButton } from "./Nav.styles";
 
+const MyNavLink = ({ children, ...props }) => {
+    return (
+        <NavLink
+            activeStyle={{
+                borderBottomColor: "#6C63FF"
+            }}
+            {...props}
+        >
+            {children}
+        </NavLink>
+    );
+};
 function NavBar({ history }) {
     const { user, dispatch, globalToken } = useContext(UserContext);
 
@@ -24,20 +36,20 @@ function NavBar({ history }) {
             <NavLinks>
                 <Search />
                 <div className="links">
-                    <Link className="my-link" to="/">
+                    <MyNavLink className="my-link" exact to="/">
                         Home
-                    </Link>
+                    </MyNavLink>
                     {user.isLoggedIn ? (
                         <React.Fragment>
                             <li>
-                                <Link className="my-link" to="/post">
+                                <MyNavLink className="my-link" to="/post">
                                     Post
-                                </Link>
+                                </MyNavLink>
                             </li>
                             <li>
-                                <Link className="my-link" to="/MyAds">
-                                    My Ads
-                                </Link>
+                                <MyNavLink className="my-link" to="/dashboard">
+                                    Dashboard
+                                </MyNavLink>
                             </li>
                             <li>
                                 <div className="dropdown show">
@@ -69,9 +81,9 @@ function NavBar({ history }) {
                     ) : (
                         <React.Fragment>
                             <li>
-                                <Link className="my-link" to="/login">
+                                <MyNavLink className="my-link" to="/login">
                                     Login
-                                </Link>
+                                </MyNavLink>
                             </li>
                             <li>
                                 <RegisterButton

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Ad from "./Ad.jsx";
 import "./AllAds.css";
-import FeaturedProduct from "./FeaturedProduct";
+import FeaturedProduct from "./Home/FeaturedProduct";
 
 const AllAds = () => {
     const [posts, setPost] = useState([]);
     useEffect(() => {
         axios.get("/api/products").then(response => {
-            console.log(response.data.data)
+            console.log(response.data.data);
             setPost(response.data.data);
         });
     }, []);
@@ -20,11 +20,7 @@ const AllAds = () => {
     //     </div>
     // );
 
-    return (
-
-        <FeaturedProduct />
-
-        );
+    return <FeaturedProduct />;
 };
 
 export default AllAds;

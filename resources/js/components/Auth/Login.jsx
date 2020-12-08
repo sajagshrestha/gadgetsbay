@@ -2,12 +2,12 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../App";
-import { Formik, Form, Field, useField } from "formik";
+import { Formik, Form, useField } from "formik";
 import * as yup from "yup";
-import { TextField, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { LoginWrapper, StyledTextField } from "./Auth.styles";
 import LoginSvg from "../SVGassets/login.svg";
-export const MytextField = props => {
+const LoginTextField = props => {
     const [field, meta] = useField(props);
     const errorText = meta.error && meta.touched ? meta.error : "";
     return (
@@ -56,6 +56,7 @@ const Login = () => {
                 localStorage.setItem("user", JSON.stringify(localUser));
             })
             .catch(error => {
+                console.log(error);
                 actions.setSubmitting(false);
                 setErrorText("Invalid email or password");
             });
@@ -81,10 +82,10 @@ const Login = () => {
                         </div>
                         <div className="error-text">{errorText}</div>
                         <div>
-                            <MytextField name="email" label="E-mail" />
+                            <LoginTextField name="email" label="E-mail" />
                         </div>
                         <div>
-                            <MytextField
+                            <LoginTextField
                                 name="password"
                                 label="Password"
                                 type="password"
@@ -95,6 +96,7 @@ const Login = () => {
                             variant="contained"
                             color="primary"
                             type="submit"
+                            size="large"
                             disabled={isSubmitting}
                         >
                             Login

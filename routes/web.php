@@ -21,14 +21,11 @@ use Illuminate\Http\Request;
 
 
 
-
-
- Route::get( '/{path?}', function(){
-     return view( 'React-Index' );
- } )->where('path', '.*');
-
-
+Route::get('{any}', function () {
+    return view('React-Index'); // or wherever your React app is bootstrapped.
+})->where('any', '.*');
 //Auth::routes();
+
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

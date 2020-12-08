@@ -5,48 +5,47 @@ import Comment from "../comment/Comment";
 import { UserContext } from "../App";
 
 const DeatiledAdView = () => {
-	const [ad, setAd] = useState({});
-	const { id } = useParams();
+    const [ad, setAd] = useState({});
+    const { id } = useParams();
     const { globalToken } = useContext(UserContext);
-	useEffect(() => {
-		if(localStorage.getItem("user"))
-		{
-		axios
-			.get(`/api/product/${id}`, {
-                headers: {
-                    Authorization: `Bearer ${
-                        JSON.parse(localStorage.getItem("user")).token
-                    }`
-                }
-            })
-			.then(response => {setAd(response.data.data);
-				console.log(response.data);})
-			.catch(error => console.log(error));
-		}
-		else{
-			axios
-			.get(`/api/product/${id}`)
-			.then(response => {setAd(response.data.data);
-				console.log(response.data);})
-			.catch(error => console.log(error));
-		}
-	}, []);
-
-	const displayComments = ad =>
-    {
-        if(ad.id)
-        {
-            return  <Comment ad_id={ad.id} />
+    useEffect(() => {
+        //for not incrementing view count when the owner views the adz
+        if (localStorage.getItem("user")) {
+            axios
+                .get(`/api/product/${id}`, {
+                    headers: {
+                        Authorization: `Bearer ${
+                            JSON.parse(localStorage.getItem("user")).token
+                        }`
+                    }
+                })
+                .then(response => {
+                    setAd(response.data.data);
+                    console.log(response.data);
+                })
+                .catch(error => console.log(error));
+        } else {
+            axios
+                .get(`/api/product/${id}`)
+                .then(response => {
+                    setAd(response.data.data);
+                    console.log(response.data);
+                })
+                .catch(error => console.log(error));
         }
-    }
-	return (
-	    <div>
+    }, []);
+
+    const displayComments = ad => {
+        if (ad.id) {
+            return <Comment ad_id={ad.id} />;
+        }
+    };
+    return (
+        <div>
             <div>{ad.title}</div>
             {displayComments(ad)}
         </div>
     );
-
-
 };
 
 export default DeatiledAdView;

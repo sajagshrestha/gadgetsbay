@@ -1,6 +1,6 @@
 //Import Dependency
 import React, { useReducer, useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 //Import Components
 import NavBar from "./MainContent/Nav/NavBar.jsx";
 import AllAds from "./MainContent/AllAds";
@@ -9,13 +9,14 @@ import FindAdd from "./MainContent/FindAdd";
 import Home from "./MainContent/Home/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
-import SearchResults from "./MainContent/SearchResults";
-import DetailedAdView from "./MainContent/DetailedAdView";
-import MyAds from "./MainContent/MyAds";
+import SearchResults from "./MainContent/SearchResults/SearchResults";
+import DetailedAdView from "./MainContent/Ads/DetailedAdView";
+import UserDashboard from "./MainContent/UserDashboard/UserDashboard";
 import EditAd from "./MainContent/EditAd";
 //Import styles
 import { AppWrapper, Theme } from "./App.styles";
 import { ThemeProvider } from "styled-components";
+
 //Export Contexts
 export const UserContext = React.createContext();
 export const SearchContext = React.createContext();
@@ -47,11 +48,10 @@ const reducer = (state, action) => {
 function App() {
     //For Authentication
     const [user, dispatch] = useReducer(reducer, initialState);
-    const globalToken = {
-        headers: { Authorization: `Bearer ${user.token}` }
-    };
+    const [globalToken, setGlobalToken] = useState({});
     //For Search
     const [searchedPosts, setSearchedPosts] = useState([]);
+    //
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser) {
@@ -59,6 +59,11 @@ function App() {
                 type: "login",
                 name: localUser.name,
                 token: localUser.token
+            });
+            setGlobalToken({
+                headers: {
+                    Authorization: `Bearer ${localUser.token}`
+                }
             });
         }
     }, [user.token]);
@@ -76,30 +81,39 @@ function App() {
                     <SearchContext.Provider
                         value={{ searchedPosts, setSearchedPosts }}
                     >
-                        <NavBar />
+                        <BrowserRouter>
+                            <NavBar />
 
-                        <Switch>
-                            <Route
-                                path="/searchResults"
-                                exact
-                                component={SearchResults}
-                            />
-                            <Route path="/" exact component={Home} />
-                            <Route path="/post" exact component={PostAdd} />
-                            <Route
-                                path="/register"
-                                exact
-                                component={Register}
-                            />
-                            <Route path="/myAds" exact component={MyAds} />
-                            <Route path="/edit/:id" exact component={EditAd} />
-                            <Route path="/login" exact component={Login} />
-                            <Route
-                                path={`/details/:id/:title`}
-                                exact
-                                component={DetailedAdView}
-                            />
-                        </Switch>
+                            <Switch>
+                                <Route
+                                    path="/searchResults/:title"
+                                    exact
+                                    component={SearchResults}
+                                />
+                                <Route path="/" exact component={Home} />
+                                <Route path="/post" exact component={PostAdd} />
+                                <Route
+                                    path="/register"
+                                    exact
+                                    component={Register}
+                                />
+                                <Route
+                                    path="/dashboard"
+                                    component={UserDashboard}
+                                />
+                                <Route
+                                    path="/edit/:id"
+                                    exact
+                                    component={EditAd}
+                                />
+                                <Route path="/login" exact component={Login} />
+                                <Route
+                                    path={`/details/:id/:title`}
+                                    exact
+                                    component={DetailedAdView}
+                                />
+                            </Switch>
+                        </BrowserRouter>
                     </SearchContext.Provider>
                 </AppWrapper>
             </UserContext.Provider>

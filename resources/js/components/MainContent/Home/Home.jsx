@@ -1,9 +1,12 @@
-import React, { useEffect, useContext } from "react";
-import { UserContext } from "../../App";
-
+import React from "react";
 import { withRouter } from "react-router-dom";
-import FeaturedProduct from "../FeaturedProduct";
-import { HomeWrapper, HeroSection, PostAddButton } from "./Home.styles";
+import FeaturedProduct from "./FeaturedProduct";
+import {
+    HomeWrapper,
+    HeroSection,
+    PostAddButton,
+    FeaturedProductSection
+} from "./Home.styles";
 import Illustration from "../../SVGassets/illustration.svg";
 import Logo from "../../SVGassets/Logo.svg";
 const Home = ({ history }) => {
@@ -24,16 +27,23 @@ const Home = ({ history }) => {
                         <PostAddButton>Post An Ad</PostAddButton>
                     </div>
                 </div>
-                <div className="scrolldown-section">scrool down</div>
+                <div className="scrolldown-section">
+                    <a href="#featured-section">Scroll Down</a>
+                </div>
             </HeroSection>
-            <div className="featured-products-container width-container">
+            <FeaturedProductSection id="featured-section">
                 <div className="title">Featured Products</div>
-                <FeaturedProduct url="mostviewed" />
-            </div>
-            <div className="featured-products-container width-container">
+                <div className="featured-products">
+                    <FeaturedProduct url="mostviewed" />
+                </div>
+            </FeaturedProductSection>
+
+            <FeaturedProductSection>
                 <div className="title">Most Recent</div>
-                <FeaturedProduct url="latest" />
-            </div>
+                <div className="featured-products">
+                    <FeaturedProduct url="latest" />{" "}
+                </div>
+            </FeaturedProductSection>
         </HomeWrapper>
     );
 };

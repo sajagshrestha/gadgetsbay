@@ -3,10 +3,10 @@ import { TextField, Button } from "@material-ui/core";
 export const LoginWrapper = styled.div`
     display: grid;
     height: 70vh;
-    grid-template-columns: 1fr 0.8fr;
-
+    grid-template-columns: 1.5fr 1fr;
+    margin-top: -30px;
     align-items: center;
-    justify-items: center;
+    justify-items: start;
     .svg {
         img {
             height: 100%;
@@ -14,18 +14,22 @@ export const LoginWrapper = styled.div`
         }
     }
     .login-form {
-        height: 420px;
+        height: 380px;
         width: 350px;
         display: grid;
-
-        grid-template-rows: 0.8fr 40px 1fr 1fr 1fr;
+        justify-self: end;
+        grid-template-rows: 0.8fr auto 1fr 1fr 1fr;
         align-items: center;
         justify-items: center;
-        border-radius: 10px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
         .form-title {
-            font-size: 2rem;
-            align-self: end;
+            font-size: 1.8rem;
+            .title-text {
+                font-family: ${props => props.theme.titleFont};
+            }
+
             color: ${props => props.theme.textPrimary};
         }
         .error-text {
@@ -33,8 +37,37 @@ export const LoginWrapper = styled.div`
             color: red;
         }
     }
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: 1fr 1fr;
+        .login-form {
+            width: 350px;
+        }
+    }
 `;
-
+export const RegisterWrapper = styled(LoginWrapper)`
+    .login-form {
+        height: 440px;
+        width: 370px;
+        align-items: start;
+        grid-template-rows: 0.8fr auto repeat(6, 1fr);
+        .form-title {
+            align-self: end;
+        }
+    }
+    .register-button {
+        align-self: start;
+        margin-top: 5px;
+    }
+    @media only screen and (min-width: 1600px) {
+        .login-form {
+            height: 500px;
+        }
+    }
+`;
 export const StyledTextField = styled(TextField)`
-    width: 280px;
+    && {
+        width: 270px;
+        .MuiOutlinedInput-input {
+        }
+    }
 `;

@@ -1,6 +1,5 @@
-import React, { PropTypes, useEffect, useState } from "react";
-import "./FeaturedProduct.css";
-import HomeAdView from "../Layouts/HomeAdView";
+import React, { useEffect, useState } from "react";
+import MiniAdCard from "../Ads/MiniAdCard";
 import axios from "axios";
 const FeaturedProduct = ({ url }) => {
     const [products, setProduct] = useState([]);
@@ -14,11 +13,11 @@ const FeaturedProduct = ({ url }) => {
     }, [products.length]);
 
     return (
-        <div className="featured-products">
+        <>
             {products.map(product => (
-                <HomeAdView product={product} key={product.id} />
+                <MiniAdCard product={product} key={product.id} />
             ))}
-        </div>
+        </>
     );
 };
 

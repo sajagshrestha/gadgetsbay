@@ -32,8 +32,8 @@ class AdResource extends JsonResource
             'user' => [
                 'name' => $this->user->name,
                 'id' => $this->user->id,
-                'phone' => $this->user->phone,
-                'email' => $this->user->email,
+                'phone' =>$this->user->phone,
+                'email'=>$this->user->email
             ]
         ];
 //        return parent::toArray($request);

@@ -27,12 +27,14 @@ export const NavLinks = styled.div`
         align-items: center;
         justify-content: space-between;
         a {
+            font-family: ${props => props.theme.titleFont};
             box-sizing: border-box;
-            padding: 5px;
+            padding: 0.5rem 1rem;
             text-decoration: none;
             color: ${props => props.theme.textPrimary};
-            font-weight: bold;
+            border: 2px solid transparent;
             font-size: 1rem;
+            font-weight: bold;
         }
     }
     @media screen and (max-width: 1400px) {
@@ -46,12 +48,13 @@ export const RegisterButton = styled(Button)`
     && {
         background-color: #6772e5;
         color: ${props => props.theme.primaryColor};
-        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-            0 1px 3px rgba(0, 0, 0, 0.08);
+
         padding: 7px 24px;
         font-size: 1rem;
         font-weight: bold;
         &:hover {
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+                0 1px 3px rgba(0, 0, 0, 0.08);
             background-color: #5469d4;
         }
         @media screen and (max-width: 1400px) {

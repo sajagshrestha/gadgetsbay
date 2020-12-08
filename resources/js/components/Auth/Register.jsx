@@ -1,89 +1,128 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import { Formik, Form, useField } from "formik";
+import { Button } from "@material-ui/core";
+import { withRouter } from "react-router-dom";
+import { RegisterWrapper, StyledTextField } from "./Auth.styles";
 
-import { Redirect } from "react-router-dom";
-
-const Register = () => {
-    const [values, setValues] = React.useState({
+import RegisterSVG from "../SVGassets/register.svg";
+import * as yup from "yup";
+const RegisterTextField = props => {
+    const [field, meta] = useField(props);
+    const errorText = meta.error && meta.touched ? meta.error : "";
+    return (
+        <StyledTextField
+            {...props}
+            {...field}
+            size="small"
+            helperText={errorText}
+            error={!!errorText}
+        />
+    );
+};
+const Register = ({ history }) => {
+    const initialValues = {
         name: "",
         email: "",
         phone: "",
         password: "",
-        password_confirmation: "",
+        password_confirmation: ""
+    };
+
+    const [errorText, setErrorText] = useState("");
+
+    const validationSchema = yup.object({
+        name: yup
+            .string()
+            .required()
+            .min(3)
+            .max(20),
+        email: yup
+            .string()
+            .required()
+            .email(),
+        phone: yup
+            .string()
+            .matches(/^(98)([0-9]{8})$/, "Enter a valid number")
+            .required(),
+        password: yup
+            .string()
+            .required()
+            .min(8),
+        password_confirmation: yup
+            .string()
+            .required()
+            .oneOf([yup.ref("password"), null], "Passwords must match")
     });
-    const [redirect, setRedirect] = React.useState(false);
-    const onSubmitHandler = event => {
-        event.preventDefault();
-        console.log(values);
+
+    const onSubmitHandler = (data, { setSubmitting }) => {
         axios
-            .post("/api/register", values)
+            .post("/api/register", data)
             .then(() => {
-                setRedirect(true);
+                setSubmitting(false);
+                history.push("/login");
             })
             .catch(error => {
-                alert("failed");
                 console.log(error);
+                setSubmitting(false);
+                setErrorText("Email or Phone already used");
             });
     };
-    const onChangeHandler = event => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value
-        });
-    };
-    if (redirect) {
-        return <Redirect to="login" />;
-    }
+
     return (
-        <form onSubmit={onSubmitHandler} className="container mt-5">
-            <label htmlFor="">Name</label>
-            <input
-                className="form-control"
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={onChangeHandler}
-            />
-            <label htmlFor="">Email</label>
-            <input
-                className="form-control"
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={onChangeHandler}
-            />
-            <label htmlFor="">Phone</label>
-            <input
-                className="form-control"
-                type="text"
-                name="phone"
-                value={values.phone}
-                onChange={onChangeHandler}
-            />
-            <label htmlFor="">Password</label>
-            <input
-                className="form-control"
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={onChangeHandler}
-            />
-            <label htmlFor="">Confirm Password</label>
+        <RegisterWrapper>
+            <div className="svg">
+                <img src={RegisterSVG} alt="register svg" />
+            </div>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={onSubmitHandler}
+            >
+                {({ isSubmitting }) => (
+                    <Form className="login-form">
+                        <div className="form-title">
+                            <div className="title-text">Register</div>
+                        </div>
+                        <div className="error-text">{errorText}</div>
+                        <div>
+                            <RegisterTextField name="name" label="Username" />
+                        </div>
+                        <div>
+                            <RegisterTextField name="email" label="E-mail" />
+                        </div>
+                        <div>
+                            <RegisterTextField name="phone" label="Phone" />
+                        </div>
+                        <div>
+                            <RegisterTextField
+                                name="password"
+                                label="Password"
+                                type="password"
+                            />
+                        </div>
+                        <div>
+                            <RegisterTextField
+                                name="password_confirmation"
+                                label="Re-type Password"
+                                type="password"
+                            />
+                        </div>
 
-            <input
-                className="form-control"
-                type="password"
-                name="password_confirmation"
-                value={values.password_confirmation}
-                onChange={onChangeHandler}
-            />
-            <button type="submit" className="btn btn-success mt-4">
-                Register
-            </button>
-        </form>
-
-
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="register-button"
+                        >
+                            Register
+                        </Button>
+                    </Form>
+                )}
+            </Formik>
+        </RegisterWrapper>
     );
 };
 
-export default Register;
+export default withRouter(Register);
