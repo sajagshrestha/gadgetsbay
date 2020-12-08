@@ -38,6 +38,9 @@ Route::delete('product/{id}', 'ProductsController@destroy');
 // Search product
 Route::post('/search', 'SearchController@search');
 
+//Mark as sold
+ROute::post('/masksold/{id}','ProductsController@markSold');
+
 //Authentication routes
 //login route
 Route::post('login', 'AuthenticationController@login');

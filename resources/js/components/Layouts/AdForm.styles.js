@@ -9,10 +9,10 @@ export const AdFormWrapper = styled.div `
         width: 60vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
-    
+
         justify-content: center;
         align-items: center;
-    
+
         border: solid 1px #ced4da;
         padding: 50px;
     }
@@ -36,7 +36,7 @@ export const AdFormWrapper = styled.div `
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 20px;
     }
-    
+
     .preview-images {
         height: 100px;
         width: 120px;
@@ -45,6 +45,9 @@ export const AdFormWrapper = styled.div `
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    Button {
+    margin: 10px 0px;
     }
 `;
 

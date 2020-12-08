@@ -1,14 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import { Formik, Form, Field, useField, ErrorMessage } from "formik";
-import {
-    TextField,
-    MenuItem,
-    Radio,
-    FormControlLabel,
-    InputLabel,
-    Button
-} from "@material-ui/core";
+import {TextField,MenuItem,Radio,FormControlLabel,InputLabel,Button} from "@material-ui/core";
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import SaveIcon from '@material-ui/icons/Save';
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import axios from "axios";
@@ -417,13 +412,13 @@ const AdForm = ({ id, editValues, editImages }) => {
                             color="primary"
                             type="submit"
                             disabled={editValues ? false : isSubmitting || !isValid || !dirty}
+                            startIcon={editValues ? <CloudUploadIcon /> : <SaveIcon />}
 
 
                         >
                             {editValues ? "Edit" : "Post"}
                         </Button>
 
-                        <pre> {JSON.stringify(values, null, 4)} </pre>
                     </Form>
                 )}
             </Formik>

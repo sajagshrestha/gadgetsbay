@@ -149,6 +149,42 @@ class ProductsController extends ResponseController
     	return response()->file('public/images'.$imageName);
     }
 
+    public function markSold($id, Request $request)
+    {
+        if($product = Ad::find($id))
+        {
+            if($request->bearerToken())
+            {
+                $userFromToken = new UserFromBearerToken();
+                $user = $userFromToken->getUser($request);
+                if(!isset($user->id)) {
+                    return $this->responseUnprocessable([
+                        'error' => 'user not found'
+                    ]);
+                }
+                if($user->id != $product->user_id)
+                {
+                    return $this->responseUnprocessable([
+                        'error' => 'You are not authorized to change status of this product'
+                    ]);
+                }
+                $product->status = 2;
+                $product->save();
+                return new AdResource($product);
+            }
+            else
+                return $this->responseUnprocessable([
+                    'error' => 'Please login to view your products'
+                ]);
+
+        }
+        else{
+            return $this->responseUnprocessable([
+                'error' => 'product not found'
+            ]);
+        }
+    }
+
 
 
 
