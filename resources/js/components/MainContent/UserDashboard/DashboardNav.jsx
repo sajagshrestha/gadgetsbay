@@ -1,4 +1,3 @@
-import { Button } from "@material-ui/core";
 import React from "react";
 import { NavLink, useRouteMatch } from "react-router-dom";
 import { DashboardNavWrapper } from "./UserDashboard.styles";

@@ -1,10 +1,7 @@
 import React from "react";
 import MiniAdCard from "../Ads/MiniAdCard";
 import { Tooltip, Fab } from "@material-ui/core";
-import EditIcon from "@material-ui/icons/Edit";
-import CheckIcon from "@material-ui/icons/Check";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
-import ConfirmDelete from "./ConfirmDelete";
+
 import styled from "styled-components";
 const MyFab = styled(Fab)`
     && {

@@ -36,7 +36,7 @@ class AdResource extends JsonResource
                 'email'=>$this->user->email
             ]
         ];
-//        return parent::toArray($request);
+
 
 
     }
