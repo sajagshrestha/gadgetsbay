@@ -123,7 +123,7 @@ class ProductsController extends ResponseController
     public function myProduct()
     {
         $user = auth()->user();
-        return AdResource::collection($user->ad);
+        return AdResource::collection($user->ad->sortByDesc('created_at'));
     }
 
     public function getImageNames(Request $request)
