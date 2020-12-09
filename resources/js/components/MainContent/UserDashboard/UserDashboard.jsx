@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import DashboardNav from "./DashboardNav.jsx";
 import { Route, Switch, useHistory, useRouteMatch } from "react-router-dom";
@@ -8,30 +8,21 @@ import SoldAds from "./SoldAds";
 import ExpiredAds from "./ExpiredAds";
 import { MyAdsWrapper } from "./UserDashboard.styles";
 import ConfirmDelete from "./ConfirmDelete";
-import NotificationSnackbar from "../../NotificationSnackbar";
+import { SnackbarContext } from "../../App";
 
 const UserDashboard = () => {
     const history = useHistory();
     const { path } = useRouteMatch();
 
     const [ads, setAds] = useState([]);
-    const [snackbar, setSnackbar] = useState({
-        isOpen: false,
-        message: "",
-        severity: ""
-    });
+
     const [openConfirm, setOpenConfirm] = useState(false);
     const [deleteId, setDeleteId] = useState(null);
 
+    const { snackbarDispatch } = useContext(SnackbarContext);
     const confirmDeleteHandler = id => {
         setOpenConfirm(true);
         setDeleteId(id);
-    };
-    const snackbarHandler = () => {
-        setSnackbar({
-            ...snackbar,
-            isOpen: true
-        });
     };
 
     const onEditHandler = id => {
@@ -49,9 +40,15 @@ const UserDashboard = () => {
             })
             .then(response => {
                 setAds(ads.filter(ad => ad.id !== response.data.data.id));
-                snackbarHandler();
+                snackbarDispatch({
+                    type: "success",
+                    message: "Your ad has beendeleted successfully"
+                });
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error);
+                snackbarDispatch({ type: "error" });
+            });
     };
 
     useEffect(() => {
@@ -103,18 +100,6 @@ const UserDashboard = () => {
                     handleClose={() => setOpenConfirm(false)}
                     id={deleteId}
                     onDeleteHandler={onDeleteHandler}
-                    snackbarHandler={snackbarHandler}
-                />
-                <NotificationSnackbar
-                    open={snackbar.isOpen}
-                    handleClose={() =>
-                        setSnackbar({
-                            ...snackbar,
-                            isOpen: false
-                        })
-                    }
-                    message="Your ad has been deleted successfully"
-                    severity="success"
                 />
             </MyAdsWrapper>
         </>

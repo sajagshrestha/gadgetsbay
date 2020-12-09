@@ -3,9 +3,7 @@ import React, { useReducer, useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 //Import Components
 import NavBar from "./MainContent/Nav/NavBar.jsx";
-import AllAds from "./MainContent/AllAds";
 import PostAdd from "./MainContent/PostAdd";
-import FindAdd from "./MainContent/FindAdd";
 import Home from "./MainContent/Home/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
@@ -13,6 +11,8 @@ import SearchResults from "./MainContent/SearchResults/SearchResults";
 import DetailedAdView from "./MainContent/Ads/DetailedAdView";
 import UserDashboard from "./MainContent/UserDashboard/UserDashboard";
 import EditAd from "./MainContent/EditAd";
+import NotificationSnackbar from "./NotificationSnackbar";
+
 //Import styles
 import { AppWrapper, Theme } from "./App.styles";
 import { ThemeProvider } from "styled-components";
@@ -20,8 +20,7 @@ import { ThemeProvider } from "styled-components";
 //Export Contexts
 export const UserContext = React.createContext();
 export const SearchContext = React.createContext();
-export const AnimateContext = React.createContext();
-
+export const SnackbarContext = React.createContext();
 //For Authentitcation
 const initialState = {
     isLoggedIn: false,
@@ -43,6 +42,35 @@ const reducer = (state, action) => {
             return;
     }
 };
+//For Snackbar
+const snackbarInitialState = {
+    isOpen: false,
+    message: "",
+    severity: ""
+};
+const snackbarReducer = (state, action) => {
+    switch (action.type) {
+        case "error":
+            return {
+                isOpen: true,
+                message: "Something went wrong",
+                severity: "error"
+            };
+        case "success":
+            return {
+                isopen: true,
+                message: action.message,
+                severity: "success"
+            };
+        case "close":
+            return {
+                ...state,
+                isOpen: false
+            };
+        default:
+            return;
+    }
+};
 
 //Main App
 function App() {
@@ -52,6 +80,14 @@ function App() {
     //For Search
     const [searchedPosts, setSearchedPosts] = useState([]);
     //
+    //For Snackbar
+    const [snackbar, snackbarDispatch] = useReducer(
+        snackbarReducer,
+        snackbarInitialState
+    );
+
+    //
+
     useEffect(() => {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser) {
@@ -77,45 +113,65 @@ function App() {
                     globalToken: globalToken
                 }}
             >
-                <AppWrapper>
-                    <SearchContext.Provider
-                        value={{ searchedPosts, setSearchedPosts }}
-                    >
-                        <BrowserRouter>
-                            <NavBar />
+                <SnackbarContext.Provider
+                    value={{ snackbarDispatch: snackbarDispatch }}
+                >
+                    <AppWrapper>
+                        <SearchContext.Provider
+                            value={{ searchedPosts, setSearchedPosts }}
+                        >
+                            <BrowserRouter>
+                                <NavBar />
 
-                            <Switch>
-                                <Route
-                                    path="/searchResults/:title"
-                                    exact
-                                    component={SearchResults}
+                                <Switch>
+                                    <Route
+                                        path="/searchResults/:title"
+                                        exact
+                                        component={SearchResults}
+                                    />
+                                    <Route path="/" exact component={Home} />
+                                    <Route
+                                        path="/post"
+                                        exact
+                                        component={PostAdd}
+                                    />
+                                    <Route
+                                        path="/register"
+                                        exact
+                                        component={Register}
+                                    />
+                                    <Route
+                                        path="/dashboard"
+                                        component={UserDashboard}
+                                    />
+                                    <Route
+                                        path="/edit/:id"
+                                        exact
+                                        component={EditAd}
+                                    />
+                                    <Route
+                                        path="/login"
+                                        exact
+                                        component={Login}
+                                    />
+                                    <Route
+                                        path={`/details/:id/:title`}
+                                        exact
+                                        component={DetailedAdView}
+                                    />
+                                </Switch>
+                                <NotificationSnackbar
+                                    open={snackbar.isOpen}
+                                    handleClose={() =>
+                                        snackbarDispatch({ type: "close" })
+                                    }
+                                    message={snackbar.message}
+                                    severity={snackbar.severity}
                                 />
-                                <Route path="/" exact component={Home} />
-                                <Route path="/post" exact component={PostAdd} />
-                                <Route
-                                    path="/register"
-                                    exact
-                                    component={Register}
-                                />
-                                <Route
-                                    path="/dashboard"
-                                    component={UserDashboard}
-                                />
-                                <Route
-                                    path="/edit/:id"
-                                    exact
-                                    component={EditAd}
-                                />
-                                <Route path="/login" exact component={Login} />
-                                <Route
-                                    path={`/details/:id/:title`}
-                                    exact
-                                    component={DetailedAdView}
-                                />
-                            </Switch>
-                        </BrowserRouter>
-                    </SearchContext.Provider>
-                </AppWrapper>
+                            </BrowserRouter>
+                        </SearchContext.Provider>
+                    </AppWrapper>
+                </SnackbarContext.Provider>
             </UserContext.Provider>
         </ThemeProvider>
     );

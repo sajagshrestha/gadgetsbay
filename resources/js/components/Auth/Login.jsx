@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../App";
@@ -22,7 +22,7 @@ const LoginTextField = props => {
 };
 
 const Login = () => {
-    const { user, dispatch } = React.useContext(UserContext);
+    const { user, dispatch } = useContext(UserContext);
     const initialValues = {
         email: "",
         password: ""
