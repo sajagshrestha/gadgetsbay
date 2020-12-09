@@ -42,7 +42,7 @@ const UserDashboard = () => {
                 setAds(ads.filter(ad => ad.id !== response.data.data.id));
                 snackbarDispatch({
                     type: "success",
-                    message: "Your ad has beendeleted successfully"
+                    message: "Your ad has been deleted successfully"
                 });
             })
             .catch(error => {

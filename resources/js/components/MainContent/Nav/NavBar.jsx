@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Search from "../SearchBox/Search";
 import { NavLink, withRouter } from "react-router-dom";
 import { UserContext } from "../../App";

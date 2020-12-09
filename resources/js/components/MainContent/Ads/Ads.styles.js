@@ -72,6 +72,7 @@ export const DetailsGrid = styled.div`
 `;
 
 export const MiniAdCardWrapper = styled.div`
+
     height: 320px;
     width: 220px;
     display: grid;

@@ -58,7 +58,7 @@ const snackbarReducer = (state, action) => {
             };
         case "success":
             return {
-                isopen: true,
+                isOpen: true,
                 message: action.message,
                 severity: "success"
             };

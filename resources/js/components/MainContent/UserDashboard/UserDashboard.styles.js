@@ -17,6 +17,7 @@ export const DashboardNavWrapper = styled.div`
 
 export const MyAdsWrapper = styled(FeaturedProductSection)`
     margin-top: 4em;
+
     .my-ads {
     }
     .icons {

@@ -25,6 +25,7 @@ export const NavLinks = styled.div`
     .links {
         display: flex;
         align-items: center;
+        list-style: none;
         justify-content: space-between;
         a {
             font-family: ${props => props.theme.titleFont};
