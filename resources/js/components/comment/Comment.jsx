@@ -4,6 +4,11 @@ import "./comment.css";
 import Replies from "./Replies";
 import axios from "axios";
 import { SnackbarContext } from "../App";
+import {Button, TextField} from "@material-ui/core";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import SaveIcon from "@material-ui/icons/Save";
+
+
 const Comment = ({ad_id}) => {
 
     const { snackbarDispatch } = useContext(SnackbarContext);
@@ -31,7 +36,7 @@ const Comment = ({ad_id}) => {
             comment: event.target.value,
         });
     }
-    const onSubmitHandler = event =>
+    const onSubmitHandler = (event) =>
     {
         event.preventDefault();
         axios
@@ -66,20 +71,22 @@ const Comment = ({ad_id}) => {
     return (
         <div className="container">
         <form onSubmit={onSubmitHandler}>
-            <input
-                type="text"
+            <TextField
                 placeholder="write a comment"
+                multiline
+                fullWidth
                 name="comment"
                 value={comment.comment}
                 onChange={onChangeHandler}
             />
             <span>
-                <button
-                    type="submit"
-                    className="search-button"
-                    id="searchButton"
-                >Post
-                </button>
+                 <Button
+                     variant="contained"
+                     color="primary"
+                     type="submit"
+                 >
+                    Post
+                 </Button>
             </span>
         </form>
             {comments.map(comment => (
@@ -88,11 +95,6 @@ const Comment = ({ad_id}) => {
                     { reply.reply_id === comment.id?
                         <Replies comment={comment} reply={reply}/>
                             : <Replies comment={comment}/>
-
-                    }
-                    {
-
-
                     }
                 </div>
 

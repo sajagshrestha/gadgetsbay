@@ -37,7 +37,7 @@ const SingleComment = ({comment,updateReplies}) =>
     return(
         <div className = "comment-container ">
             <div className="profile-avatar-wrapper">
-                <div className="avatar">
+                <div className="profile-avatar-icon">
                     <img src="/images/ava.png"/>
                 </div>
             </div>

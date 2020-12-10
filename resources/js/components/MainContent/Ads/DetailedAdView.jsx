@@ -4,6 +4,7 @@ import axios from "axios";
 import ProductImageGallery from "./ProductImageGallery";
 import { UserContext } from "../../App";
 import { DetailedAdViewWrapper, DetailsGrid } from "./Ads.styles";
+import Comment from "../../comment/Comment";
 
 const DeatiledAdView = () => {
     const [images, setImages] = useState([]);
@@ -93,6 +94,7 @@ const DeatiledAdView = () => {
                     <div className="grid-items">{ad.description}</div>
                 </DetailsGrid>
             </div>
+            {ad.id ? <Comment ad_id={ad.id}/> : ''}
         </div>
     );
 };
