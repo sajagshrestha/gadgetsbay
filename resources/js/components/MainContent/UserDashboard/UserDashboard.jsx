@@ -64,7 +64,10 @@ const UserDashboard = () => {
                 .then(response => {
                     setAds(response.data.data);
                 })
-                .catch(error => console.log(error));
+                .catch(error => {
+                    console.log(error)
+                    snackbarDispatch({ type: "error" });
+                });
         }
     }, [ads.length]);
     return (

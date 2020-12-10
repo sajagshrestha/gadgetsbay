@@ -3,10 +3,12 @@ import axios from "axios";
 import { UserContext } from "../App";
 import { withRouter } from "react-router-dom";
 import UserPanel from "../User Panel/UserPanel";
-
+import { SnackbarContext } from "../../App";
 const MyAds = ({ history }) => {
     const [ads, setAds] = useState([]);
     const { globalToken } = useContext(UserContext);
+    const { snackbarDispatch } = useContext(SnackbarContext);
+
     useEffect(() => {
         axios
             .get("/api/user/products", {
@@ -19,7 +21,10 @@ const MyAds = ({ history }) => {
             .then(response => {
                 setAds(response.data.data);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error);
+                snackbarDispatch({ type: "error" });
+            });
     }, []);
     const editAd = id => {
         history.push(`/edit/${id}`);
@@ -33,7 +38,10 @@ const MyAds = ({ history }) => {
                 });
                 setAds(newAds);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error);
+                snackbarDispatch({ type: "error" });
+            });
     };
     return (
         <div>

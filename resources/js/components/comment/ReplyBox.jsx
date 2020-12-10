@@ -1,7 +1,9 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import axios from "axios";
+import { SnackbarContext } from "../App";
 
 const ReplyBox = ({ad_id ,reply_id,updateReplies,cancelHandler}) => {
+    const { snackbarDispatch } = useContext(SnackbarContext);
     const [commentReply,setCommentReply] = useState({
         "comment": "",
         "reply_id": reply_id,
@@ -25,7 +27,10 @@ const ReplyBox = ({ad_id ,reply_id,updateReplies,cancelHandler}) => {
             .then(response => {
                 console.log(response.data.data);
                 updateReplies(response.data.data);
-            }).catch(err => console.log(err));
+            }).catch(err => {
+            console.log(err);
+            snackbarDispatch({type:"error"});
+        });
         console.log(commentReply);
 
         setCommentReply({

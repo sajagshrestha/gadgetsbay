@@ -19,7 +19,7 @@ const AllMyAds = ({ ads, confirmDeleteHandler }) => {
     return (
         <>
             {ads.map(ad => (
-                <div key={ad.id} className="my-ads">
+                <div key={ad.id} className="my-products">
                     <MiniAdCard product={ad} type="myAds" />
                     <div className="icons" style={{ justifyContent: "center" }}>
                         <Tooltip title={<TooltipTitle title="Delete" />}>

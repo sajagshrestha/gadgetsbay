@@ -56,9 +56,8 @@ class AuthenticationController extends ResponseController
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'phone' => 'required|size:10',
             'password' => 'required|min:6|confirmed',
-            'phone' => 'required|size:10',
+            'phone' => 'required|size:10|unique:users',
         ]);
         if ($validator->fails()) {
             return $this->responseUnprocessable($validator->errors());

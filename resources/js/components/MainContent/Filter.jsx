@@ -3,11 +3,12 @@ import axios from "axios";
 import "./Filter.css"
 import { SearchContext } from "../App.jsx";
 import { withRouter } from "react-router-dom";
+import { SnackbarContext } from "../../App";
 
 const Filter = ({ history }) =>{
 
 	 const { setSearchedPosts } = useContext(SearchContext);
-
+    const { snackbarDispatch } = useContext(SnackbarContext);
 	const [filterValue,setFilterValue] = useState({
 		title:"",
 		priceLessThan:"",
@@ -55,7 +56,11 @@ const Filter = ({ history }) =>{
 				setSearchedPosts(response.data.data);
 				history.push("/searchResults");
 			})
-			.catch(err => console.log(err));
+			.catch(err => {
+                console.log(err)
+                snackbarDispatch({type:"error"});
+
+            });
 
 	};
 
@@ -106,7 +111,7 @@ const Filter = ({ history }) =>{
 				<input type="radio" name="negotiable" value="yes" onChange = {onChangeHandler}/>Yes
 				<input type="radio" name="negotiable" value="fixed price" onChange = {onChangeHandler}/>No
 			</div>
-			
+
 			<button type="submit" > search </button>
 			<button type="reset" onClick= {resetField}> clear </button>
 

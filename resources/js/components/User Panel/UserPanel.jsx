@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import "./UserPanel.css";
 import HomeAdView from "../Layouts/HomeAdView";
 import axios from "axios";
 import UserDashboard from "./UserDashboard";
-
+import { SnackbarContext } from "../../App";
 
 
 const UserPanel =({history}) => {
@@ -13,6 +13,8 @@ const UserPanel =({history}) => {
     const [filteredAds, setFilteredAds] = useState([]);
     const [userStats,setUserStats] = useState({sold: 0, totalAds: 0, views: 0});
     const [notifications,setNotifications] = useState([]);
+    const { snackbarDispatch } = useContext(SnackbarContext);
+
 
     useEffect(() => {
         axios
@@ -27,7 +29,10 @@ const UserPanel =({history}) => {
                 setAds(response.data.data);
                 setFilteredAds(ads);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                snackbarDispatch({type:"error"});
+            });
         setIndex(null);
         axios
             .get('/api/userstats',{
@@ -40,7 +45,10 @@ const UserPanel =({history}) => {
             .then(response => {
                 setUserStats(response.data);
             })
-            .catch(err=>console.log(err));
+            .catch(err=> {
+                console.log(err)
+                snackbarDispatch({type:"error"});
+            });
         axios
             .get('/api/user/notifications',{
                 headers: {
@@ -52,7 +60,10 @@ const UserPanel =({history}) => {
             .then(response => {
                 setNotifications(response.data.data);
             })
-            .catch(err=>console.log(err));
+            .catch(err=> {
+                console.log(err)
+                snackbarDispatch({type:"error"});
+            });
 
     }, []);
 
@@ -94,7 +105,10 @@ const UserPanel =({history}) => {
                     filteredAds.filter(ad => ad.id !== response.data.data.id)
                 )
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                snackbarDispatch({type:"error"});
+            });
     }
 
     return (

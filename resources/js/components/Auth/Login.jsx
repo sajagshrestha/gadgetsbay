@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { UserContext } from "../App";
@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { Button } from "@material-ui/core";
 import { LoginWrapper, StyledTextField } from "./Auth.styles";
 import LoginSvg from "../SVGassets/login.svg";
+
 const LoginTextField = props => {
     const [field, meta] = useField(props);
     const errorText = meta.error && meta.touched ? meta.error : "";
@@ -59,6 +60,7 @@ const Login = () => {
                 console.log(error);
                 actions.setSubmitting(false);
                 setErrorText("Invalid email or password");
+
             });
     };
 

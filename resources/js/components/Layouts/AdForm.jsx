@@ -14,6 +14,7 @@ import SaveIcon from "@material-ui/icons/Save";
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import axios from "axios";
+import { SnackbarContext } from "../App";
 import { UserContext } from "../App";
 
 const RadioButton = ({ label, ...props }) => {
@@ -54,6 +55,7 @@ const AdForm = ({ id, editValues, editImages }) => {
         name: "Add new Image",
         file: {}
     });
+    const { snackbarDispatch } = useContext(SnackbarContext);
     const [imagesLabel, setImagesLabel] = useState("Select one or more images");
     const initialValues = {
         title: "",
@@ -146,13 +148,32 @@ const AdForm = ({ id, editValues, editImages }) => {
             fd.append("_method", "put");
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
-                .then(history.push(`/details/${id}/${values.title}`))
-                .catch(err => console.log(err));
+                .then(res => {
+                    history.push(`/details/${res.id}/${res.title}`)
+                    snackbarDispatch({
+                        type:"success",
+                        message:"Edit successful",
+                    });
+                })
+                .catch(err => {
+                    console.log(err)
+                    snackbarDispatch({type:"error"});
+                });
         } else {
             axios
                 .post("/api/product", fd, globalToken)
-                .then(history.push(`/dashboard`))
-                .catch(err => console.log(err));
+                .then(res => {
+                    history.push(`/details/${res.id}/${res.title}`)
+                    snackbarDispatch({
+                        type: "success",
+                        message: "Post successful",
+                    })
+                })
+                .catch(err => {
+                    console.log(err)
+                    snackbarDispatch({type:"error"});
+
+                });
         }
     };
 

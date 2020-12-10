@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState,useContext} from "react";
 import SingleComment from "./SingleComment";
 import "./comment.css";
 import Replies from "./Replies";
 import axios from "axios";
+import { SnackbarContext } from "../App";
 const Comment = ({ad_id}) => {
 
+    const { snackbarDispatch } = useContext(SnackbarContext);
     const [comments, setComments] = useState([]);
     const [reply, setReply] = useState([]);
     const [comment,setComment] = useState({
@@ -18,7 +20,10 @@ const Comment = ({ad_id}) => {
             .then(response => {
                 setComments(response.data.data);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                snackbarDispatch({type:"error"});
+            });
     }, []);
     const onChangeHandler = event => {
         setComment({
@@ -42,7 +47,10 @@ const Comment = ({ad_id}) => {
                     ...comments,
                     ]
                 );
-            }).catch(err => console.log(err));
+            }).catch(err => {
+            console.log(err)
+            snackbarDispatch({type:"error"});
+        });
         setComment({
             "comment": "",
             "reply_id": null,

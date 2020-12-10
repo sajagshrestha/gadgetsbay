@@ -30,7 +30,7 @@ const ActiveAds = ({ ads, onEditHandler, confirmDeleteHandler }) => {
     return (
         <>
             {activeAds.map(ad => (
-                <div key={ad.id} className="my-ads">
+                <div key={ad.id} className="my-products">
                     <MiniAdCard product={ad} type="myAds" />
                     <div className="icons">
                         <Tooltip title={<TooltipTitle title="Edit" />}>

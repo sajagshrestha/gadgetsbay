@@ -1,23 +1,23 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import SingleComment from "./SingleComment";
 import axios from "axios";
 import "./Replies.css";
+import { SnackbarContext } from "../App";
 
 const Replies = ({comment,reply}) => {
     const [replyBox,setReplyBox] = useState('');
     const [replies,setReplies] = useState([]);
+    const { snackbarDispatch } = useContext(SnackbarContext);
 
 
     useEffect(() => {
         if(reply === undefined)
         {
-            console.log("payena")
             viewRepliesBtn();
 
         }
         else{
             viewReplies();
-            console.log("i got it")
         }
 
     }, [reply]);
@@ -52,7 +52,10 @@ const Replies = ({comment,reply}) => {
             .then(response => {
                 setReplies(response.data.data);
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                snackbarDispatch({type:"error"});
+            });
 
         setReplyBox(
             <div className="replies">
