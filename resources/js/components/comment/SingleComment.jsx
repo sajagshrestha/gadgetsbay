@@ -9,12 +9,14 @@ const SingleComment = ({comment,updateReplies}) =>
         setReplyButton(
             <div className="reply-box-container">
                 <div className="profile-avatar-wrapper">
-                    <div className="avatar">
+                    <div className="profile-avatar-icon">
                         <img src="/images/ava.png"/>
                     </div>
                 </div>
-                <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies} cancelHandler={onCancelHandler}/>
+                <div>
+                    <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies} cancelHandler={onCancelHandler}/>
 
+                </div>
             </div>
         );
     }

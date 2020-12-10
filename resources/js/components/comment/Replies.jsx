@@ -71,6 +71,7 @@ const Replies = ({comment,reply}) => {
             ...replies,
             reply
         ])
+
     }
     return (
         <div>
