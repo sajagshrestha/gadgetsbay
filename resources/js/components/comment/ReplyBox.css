@@ -1,0 +1,37 @@
+.reply-box {
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.reply-box button {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    /* padding: 0.1em; */
+}
+
+.reply-box-wrapper {
+    grid-column: 2/3;
+    justify-content: flex-start;
+    padding: 0.1em;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    column-gap: 5px;
+}
+.reply-form-wrapper{
+    width: 60%;
+}
+
+.profile-avatar-icon-reply img{
+    height: 35px;
+    width: 35px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.reply-button{
+    text-align: right;
+}

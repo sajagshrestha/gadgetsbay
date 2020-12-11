@@ -1,0 +1,37 @@
+.comment-container{
+    padding-top:1em;
+    width: 75%;
+}
+
+/* .single-comment-wrap{
+    margin-top:0.5em;
+    
+} */
+
+.comment-form{
+    /* width: 60%; */
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    /* row-gap: 2px; */
+    /* grid-auto-rows: minmax(60px,auto); */
+}
+.comment-field{
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    
+}
+.comment-field{
+    height: 100%;
+
+}
+.profile-avatar-wrapper-comment img{
+    height: 60px;
+    width: 60px;
+}
+.comment-btn{
+    display: flex;
+    height: 75%;
+    justify-self: end;
+    margin-top:-5px ;
+}

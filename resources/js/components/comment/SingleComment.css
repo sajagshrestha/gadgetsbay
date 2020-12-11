@@ -1,16 +1,18 @@
-.comment-container{
+.single-comment-container{
     display: grid;
-    grid-template-columns: 60px auto;
-    grid-auto-rows: minmax(70px,auto);
-    padding: 0.4em 0.1em;
-    margin-top: 5px;
+    grid-template-columns: 50px auto;
+    grid-auto-rows: minmax(50px,auto);
+    margin-top: 10px;
 }
 
-.comment-description{
-    padding: 0.1em;
-    font-size: 16px;
-
+.profile-avatar-wrapper{
+    margin-right: 5px;
 }
+.profile-avatar-icon img{
+    height: 50px;
+    width: 50px;
+}
+
 .user-name{
     font-weight: bold;
     font-size: 14px;
@@ -20,13 +22,13 @@
     font-size: 10px;
     color: #707072;
 }
-.profile-avatar-wrapper{
-    margin-right: 5px;
+
+.comment-description{
+    padding: 0.1em;
+    font-size: 16px;
+
 }
-.profile-avatar-icon img{
-    height: 50px;
-    width: 50px;
-}
+
 .reply-button{
     border: none;
     background-color:#fff;
@@ -35,36 +37,3 @@
 .reply-button:hover{
     cursor: pointer;
 }
-.reply-box{
-    border-width: 0 0 2px 0;
-    outline: none;
-    padding: 0.5em;
-}
-.reply-box-container{
-    display: grid;
-    grid-template-columns: 40px auto;
-    font-size: 12px;
-}
-.reply-box-container .profile-avatar-icon img{
-    height: 40px;
-    width: 40px;
-}
-.reply-box-wrapper input{
-    width: 60%;
-}
-
-.button-container{
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-
-
-.comment-body{
-    height: auto;
-    padding: 0.1em 0;
-}
-
-

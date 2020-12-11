@@ -1,27 +1,23 @@
-.replies{
+.replies-container {
     display: grid;
-    grid-template-columns: 60px auto;
+    grid-template-columns: 50px 1fr;
+}
+.replies{
+    grid-column: 2/3;
 }
 
-.view-replies-btn{
+.replies-btn {
     grid-column: 2/3;
     text-align: start;
     border: none;
-    background-color:#fff;
+    background-color: #fff;
     color: #182cdc;
-    font-size:12px ;
+    font-size: 12px;
     outline: none;
-
+    margin-top: 5px;
 }
-.view-replies-btn:hover{
+
+.replies-btn:hover {
     cursor: pointer;
 }
 
-
-.replies-container{
-    display: grid;
-    grid-template-columns: 60px auto;
-}
-.reply{
-    grid-column: 2/3;
-}

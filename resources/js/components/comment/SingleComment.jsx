@@ -1,43 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import "./SingleComment.css";
-import ReplyBox from "./ReplyBox";
 
-
-const SingleComment = ({comment,updateReplies}) =>
+const SingleComment = ({comment}) =>
 {
-    const onClickReplyBtnHandler =() => {
-        setReplyButton(
-            <div className="reply-box-container">
-                <div className="profile-avatar-wrapper">
-                    <div className="profile-avatar-icon">
-                        <img src="/images/ava.png"/>
-                    </div>
-                </div>
-                <div>
-                    <ReplyBox ad_id={comment.ad_id} reply_id={comment.id} updateReplies={updateReplies} cancelHandler={onCancelHandler}/>
-
-                </div>
-            </div>
-        );
-    }
-
-    const onCancelHandler = () => {
-        setReplyButton(
-            <button  onClick={onClickReplyBtnHandler} className="reply-button">
-                REPLY
-            </button>
-        );
-    }
-
-    const [replyButton,setReplyButton] = useState(
-        <button  onClick={onClickReplyBtnHandler} className="reply-button">
-            REPLY
-        </button>
-    );
-
-
     return(
-        <div className = "comment-container ">
+        <div className = "single-comment-container ">
             <div className="profile-avatar-wrapper">
                 <div className="profile-avatar-icon">
                     <img src="/images/ava.png"/>
@@ -56,12 +23,9 @@ const SingleComment = ({comment,updateReplies}) =>
                     {comment.comment}
                 </div>
 
-                {replyButton}
             </div>
         </div>
     );
-
-
 };
 
 export default SingleComment;

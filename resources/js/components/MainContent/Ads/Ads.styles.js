@@ -69,6 +69,7 @@ export const DetailsGrid = styled.div`
             else return "5px 0";
         }};
     }
+    border-bottom: ${props => props.theme.border};
 `;
 
 export const MiniAdCardWrapper = styled.div`
@@ -211,3 +212,4 @@ export const MainAdCardWrapper = styled.div`
         grid-template-columns: 2fr 3fr 1fr;
     }
 `;
+

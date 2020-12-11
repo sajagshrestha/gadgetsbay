@@ -1,24 +1,23 @@
-import React, {useEffect, useState,useContext} from "react";
-import SingleComment from "./SingleComment";
-import "./comment.css";
-import Replies from "./Replies";
+import React, { useState, useEffect,useContext } from "react";
 import axios from "axios";
+import { Button, TextField } from "@material-ui/core";
+import SingleComment from "./SingleComment";
+import ReplyBox from "./ReplyBox";
 import { SnackbarContext } from "../App";
-import {Button, TextField} from "@material-ui/core";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
-import SaveIcon from "@material-ui/icons/Save";
+import Replies from "./Replies";
+import "./Comment.css";
 
-
-const Comment = ({ad_id}) => {
-
-    const { snackbarDispatch } = useContext(SnackbarContext);
-    const [comments, setComments] = useState([]);
-    const [reply, setReply] = useState([]);
-    const [comment,setComment] = useState({
-        "comment": "",
-        "reply_id": null,
-        "ad_id":ad_id,
+const Comment = ({ ad_id }) => {
+    const [comment, setComment] = useState({
+        comment: "",
+        reply_id: null,
+        ad_id: ad_id
     });
+    const [comments, setComments] = useState([]);
+    const [reply, setReply] = useState();
+    const [disablePost, setDisablePost] = useState(false);
+    const { snackbarDispatch } = useContext(SnackbarContext);
+
     useEffect(() => {
         axios
             .get(`/api/comments/${ad_id}`)
@@ -26,78 +25,89 @@ const Comment = ({ad_id}) => {
                 setComments(response.data.data);
             })
             .catch(error => {
-                console.log(error)
+                console.log(error);
                 snackbarDispatch({type:"error"});
             });
     }, []);
+
     const onChangeHandler = event => {
         setComment({
             ...comment,
-            comment: event.target.value,
+            comment: event.target.value
         });
-    }
-    const onSubmitHandler = (event) =>
-    {
+    };
+    const onSubmitHandler = event => {
+        setDisablePost(true);
         event.preventDefault();
         axios
-            .post('/api/comment',comment,{
+            .post("/api/comment", comment, {
                 headers: {
                     Authorization: `Bearer ${
                         JSON.parse(localStorage.getItem("user")).token
                     }`
-                }})
+                }
+            })
             .then(response => {
                 console.log(response.data.data);
-                setComments([response.data.data,
-                    ...comments,
-                    ]
-                );
-            }).catch(err => {
-            console.log(err)
-            snackbarDispatch({type:"error"});
-        });
+                setComments([response.data.data, ...comments]);
+                setDisablePost(false);
+            })
+            .catch(err => {
+                console.log(err);
+                snackbarDispatch({type:"error"});
+            });
         setComment({
-            "comment": "",
-            "reply_id": null,
-            "ad_id":ad_id,
+            ...comment,
+            comment: ""
         });
-
-
-   }
-
-   const addReply = r => {
+    };
+    const addReply = r => {
         setReply(r);
-   }
+    };
     return (
-        <div className="container">
-        <form onSubmit={onSubmitHandler}>
-            <TextField
-                placeholder="write a comment"
-                multiline
-                fullWidth
-                name="comment"
-                value={comment.comment}
-                onChange={onChangeHandler}
-            />
-            <span>
-                 <Button
-                     variant="contained"
-                     color="primary"
-                     type="submit"
-                 >
-                    Post
-                 </Button>
-            </span>
-        </form>
-            {comments.map(comment => (
-                <div key={comment.id}>
-                    <SingleComment  comment={comment} updateReplies={addReply}/>
-                    { reply.reply_id === comment.id?
-                        <Replies comment={comment} reply={reply}/>
-                            : <Replies comment={comment}/>
-                    }
+        <div className="comment-container" >
+            <form onSubmit={onSubmitHandler} className="comment-form">
+                <div className="comment-field">
+                    <div className="profile-avatar-wrapper-comment">
+                        <img src="/images/ava.png" />
+                    </div>
+                    <TextField
+                    placeholder="write a comment"
+                    multiline
+                    fullWidth
+                    name="comment"
+                    value={comment.comment}
+                    onChange={onChangeHandler}
+                    className="comment-text-field"
+                />
                 </div>
+               <div className="comment-btn">
 
+                <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    disabled={disablePost}
+                    size="small"
+                >
+                    Post
+                </Button>
+               </div>
+            </form>
+            {comments.map(c => (
+                <div key={c.id} className="single-comment-wrap">
+                    <SingleComment comment={c} />
+                    <ReplyBox
+                        ad_id={ad_id}
+                        reply_id={c.id}
+                        updateReplies={addReply}
+                    />
+                    {reply && reply.reply_id === c.id ? (
+                        <Replies comment={c} reply={reply} />
+                    ) : (
+                        <Replies comment={c} />
+                    )}
+                </div>
             ))}
         </div>
     );

@@ -1,91 +1,86 @@
-import React,{useState,useEffect,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import SingleComment from "./SingleComment";
 import axios from "axios";
 import "./Replies.css";
 import { SnackbarContext } from "../App";
+import ReplyBox from "./ReplyBox";
 
-const Replies = ({comment,reply}) => {
-    const [replyBox,setReplyBox] = useState('');
-    const [replies,setReplies] = useState([]);
+const Replies = ({ comment, reply }) => {
+    const [replies, setReplies] = useState([]);
+    const [showReplies, setShowReplies] = useState(false);
     const { snackbarDispatch } = useContext(SnackbarContext);
 
-
     useEffect(() => {
-        if(reply === undefined)
-        {
-            viewRepliesBtn();
-
+        if (reply != undefined) {
+            addReply(reply);
+        } else {
+            axios
+                .get(`/api/replies/${comment.id}`)
+                .then(response => {
+                    setReplies(response.data.data);
+                })
+                .catch(error => {
+                    console.log(error);
+                    snackbarDispatch({ type: "error" });
+                });
         }
-        else{
-            viewReplies();
-        }
-
     }, [reply]);
 
+    const displayReplies = () => {
+        setShowReplies(true);
+    };
+    const hideReplies = () => {
+        setShowReplies(false);
+    };
 
-    const viewRepliesBtn = () => {
-        if (comment.replies_count > 0) {
-            if (comment.replies_count ===1) {
-                setReplyBox(
-                    <div className="replies">
-                        <button  onClick={viewReplies} className="view-replies-btn">
-                            View {comment.replies_count} Reply
-                        </button>
-                    </div>)
-            }
-            else {
-                setReplyBox (
-                    <div className="replies">
-                        <button  onClick={viewReplies} className="view-replies-btn">
-                            View {comment.replies_count} Replies
-                        </button>
-                    </div>
-                );
-            }
-        }
-        setReplies([]);
-    }
-
-    const viewReplies = () => {
-        axios
-            .get(`/api/replies/${comment.id}`)
-            .then(response => {
-                setReplies(response.data.data);
-            })
-            .catch(error => {
-                console.log(error)
-                snackbarDispatch({type:"error"});
-            });
-
-        setReplyBox(
-            <div className="replies">
-                <button  onClick={viewRepliesBtn} className="view-replies-btn">
-                    Hide Replies
-                </button>
-
-        </div>)
-    }
-
-    const updateReplies = reply => {
-        setReplies([
-            ...replies,
-            reply
-        ])
-
-    }
+    const addReply = r => {
+        comment.replies_count++;
+        setReplies([...replies, r]);
+        displayReplies();
+    };
     return (
         <div>
             <div className="replies-container">
-                    <div className="reply">
-                        {replies.map(reply => (
-                            <SingleComment  comment={reply}  key={reply.id} updateReplies={updateReplies}/>
-                        ))}
+                {comment.replies_count ? (
+                    <div className="replies">
+                        {showReplies ? (
+                            <div >
+                                <div >
+                                    {replies.map(reply => (
+                                        <div key={reply.id}>
+                                            <SingleComment comment={reply} />
+                                            <ReplyBox
+                                                ad_id={comment.ad_id}
+                                                reply_id={comment.id}
+                                                updateReplies={addReply}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                                <button
+                                    onClick={hideReplies}
+                                    className="replies-btn"
+                                >
+                                    Hide Replies
+                                </button>
+                            </div>
+                        ) : (
+                            <button
+                                onClick={displayReplies}
+                                className="replies-btn"
+                            >
+                                {comment.replies_count > 1
+                                    ? `View ${comment.replies_count} Replies`
+                                    : `View ${comment.replies_count} Reply`}
+                            </button>
+                        )}
                     </div>
+                ) : (
+                    ""
+                )}
             </div>
-            {replyBox}
-
         </div>
     );
-}
+};
 
-export  default Replies;
+export default Replies;
