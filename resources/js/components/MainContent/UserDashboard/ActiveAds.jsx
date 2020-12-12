@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from "react";
 import MiniAdCard from "../Ads/MiniAdCard";
-import { Tooltip, Fab } from "@material-ui/core";
+import { Tooltip } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
-import styled from "styled-components";
+import { MyFab } from "./UserDashboard.styles";
+import { TooltipTitle } from "./AllMyAds";
 
-const MyFab = styled(Fab)`
-    && {
-        background-color: ${props => props.mycolor};
-        &:hover {
-            background-color: ${props => props.mycolorhover};
-        }
-    }
-`;
-
-const TooltipTitle = ({ title }) => {
-    return <h1 style={{ fontSize: "0.8rem" }}>{title}</h1>;
-};
-
-const ActiveAds = ({ ads, onEditHandler, confirmDeleteHandler }) => {
+const ActiveAds = ({
+    ads,
+    onEditHandler,
+    confirmDeleteHandler,
+    markAsSoldHandler
+}) => {
     const [activeAds, setActiveAds] = useState([]);
+
+    const removeFromActiveAd = id => {
+        setActiveAds(activeAds.filter(ad => ad.id !== id));
+    };
 
     useEffect(() => {
         let filteredAds = ads.filter(ad => ad.status === 1);
@@ -63,6 +60,10 @@ const ActiveAds = ({ ads, onEditHandler, confirmDeleteHandler }) => {
                                 color="primary"
                                 mycolor="#4caf50"
                                 mycolorhover="#449647"
+                                onClick={() => {
+                                    removeFromActiveAd(ad.id);
+                                    markAsSoldHandler(ad.id);
+                                }}
                             >
                                 <CheckIcon />
                             </MyFab>

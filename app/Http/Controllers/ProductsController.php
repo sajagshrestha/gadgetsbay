@@ -22,7 +22,7 @@ class ProductsController extends ResponseController
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['show', 'index', 'search']]);
+        $this->middleware('auth:api', ['except' => ['show', 'index', 'search','markSold']]);
         $this->userFromToken = new UserFromBearerToken();
     }
 
@@ -168,7 +168,7 @@ class ProductsController extends ResponseController
                         'error' => 'You are not authorized to change status of this product'
                     ]);
                 }
-                $product->status = 2;
+                $product->status = $request->status;
                 $product->save();
                 return new AdResource($product);
             }

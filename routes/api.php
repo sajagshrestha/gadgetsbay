@@ -39,7 +39,7 @@ Route::delete('product/{id}', 'ProductsController@destroy');
 Route::post('/search', 'SearchController@search');
 
 //Mark as sold
-ROute::post('/masksold/{id}','ProductsController@markSold');
+ROute::post('/marksold/{id}','ProductsController@markSold');
 
 //Authentication routes
 //login route

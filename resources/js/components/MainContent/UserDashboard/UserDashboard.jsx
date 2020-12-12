@@ -51,6 +51,65 @@ const UserDashboard = () => {
             });
     };
 
+    const markAsSoldHandler = id => {
+        axios
+            .post(
+                `/api/marksold/${id}`,
+                { status: 2 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${
+                            JSON.parse(localStorage.getItem("user")).token
+                        }`
+                    }
+                }
+            )
+            .then(res => {
+                let adsArray = ads;
+                const index = ads.findIndex(ad => ad.id === res.data.data.id);
+                adsArray[index] = res.data.data;
+
+                setAds(adsArray);
+
+                snackbarDispatch({
+                    type: "success",
+                    message: "Your ad has been marked as sold"
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                snackbarDispatch({ type: "error" });
+            });
+    };
+    const unmarkHandler = id => {
+        axios
+            .post(
+                `/api/marksold/${id}`,
+                { status: 1 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${
+                            JSON.parse(localStorage.getItem("user")).token
+                        }`
+                    }
+                }
+            )
+            .then(res => {
+                let adsArray = ads;
+                const index = ads.findIndex(ad => ad.id === res.data.data.id);
+                adsArray[index] = res.data.data;
+
+                setAds(adsArray);
+                snackbarDispatch({
+                    type: "success",
+                    message: "Your ad has been marked as active"
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                snackbarDispatch({ type: "error" });
+            });
+    };
     useEffect(() => {
         {
             axios
@@ -65,11 +124,11 @@ const UserDashboard = () => {
                     setAds(response.data.data);
                 })
                 .catch(error => {
-                    console.log(error)
+                    console.log(error);
                     snackbarDispatch({ type: "error" });
                 });
         }
-    }, [ads.length]);
+    }, []);
     return (
         <>
             <DashboardNav />
@@ -81,10 +140,15 @@ const UserDashboard = () => {
                                 ads={ads}
                                 onEditHandler={onEditHandler}
                                 confirmDeleteHandler={confirmDeleteHandler}
+                                markAsSoldHandler={markAsSoldHandler}
                             />
                         </Route>
                         <Route exact path={`${path}/sold-ads`}>
-                            <SoldAds ads={ads} />
+                            <SoldAds
+                                ads={ads}
+                                unmarkHandler={unmarkHandler}
+                                confirmDeleteHandler={confirmDeleteHandler}
+                            />
                         </Route>
                         <Route exact path={`${path}/expired-ads`}>
                             <ExpiredAds ads={ads} />

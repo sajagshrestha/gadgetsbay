@@ -1,18 +1,10 @@
 import React from "react";
 import MiniAdCard from "../Ads/MiniAdCard";
-import { Tooltip, Fab } from "@material-ui/core";
-import styled from "styled-components";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import { Tooltip } from "@material-ui/core";
 
-const MyFab = styled(Fab)`
-    && {
-        background-color: ${props => props.mycolor};
-        &:hover {
-            background-color: ${props => props.mycolorhover};
-        }
-    }
-`;
-const TooltipTitle = ({ title }) => {
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import { MyFab } from "./UserDashboard.styles";
+export const TooltipTitle = ({ title }) => {
     return <h1 style={{ fontSize: "0.8rem" }}>{title}</h1>;
 };
 const AllMyAds = ({ ads, confirmDeleteHandler }) => {
