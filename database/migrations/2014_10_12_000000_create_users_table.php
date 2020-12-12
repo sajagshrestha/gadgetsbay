@@ -20,14 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->bigInteger('phone')->unique();
             $table->string('password');
-<<<<<<< HEAD
-=======
-           
-<<<<<<< HEAD
->>>>>>> 53e555d... register page redesign completed
-=======
->>>>>>> 21a401223d1c15667b17e81546a71a43409d3373
->>>>>>> 7d6c830ee756d9a3789368e47283e8e23ae5bc4d
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 import { Formik, Form, Field, useField, ErrorMessage } from "formik";
 import {
     TextField,
@@ -11,10 +12,12 @@ import {
 } from "@material-ui/core";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import SaveIcon from "@material-ui/icons/Save";
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from "@material-ui/icons/Delete";
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
-import axios from "axios";
 import { SnackbarContext } from "../App";
+import Location from "./Location";
 import { UserContext } from "../App";
 
 export const RadioButton = ({ label, ...props }) => {
@@ -48,6 +51,16 @@ const MytextField = props => {
     );
 };
 
+const MyLocationField = props => {
+    const [field, meta, helpers] = useField(props);
+    const errorText = meta.error && meta.touched ? meta.error : "";
+    const { setValue } = helpers;
+    return (
+        <StyledTextField>
+            <Location updateValue={setValue} meta={meta} />
+        </StyledTextField>
+    );
+};
 const AdForm = ({ id, editValues, editImages }) => {
     const { globalToken } = useContext(UserContext);
     const [images, setImages] = useState([]);
@@ -60,6 +73,7 @@ const AdForm = ({ id, editValues, editImages }) => {
     const initialValues = {
         title: "",
         description: "",
+        location: "",
         price: "",
         expiresIn: "",
         negotiable: "",
@@ -135,7 +149,7 @@ const AdForm = ({ id, editValues, editImages }) => {
         for (let i = 0; i < images.length; i++) {
             fd.append("imageName[]", images[i]);
         }
-
+        fd.append("location", values.location);
         fd.append("expiresIn", values.expiresIn);
         fd.append("negotiable", values.negotiable);
         fd.append("condition", values.condition);
@@ -189,6 +203,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             .required()
             .positive()
             .integer("please enter number value"),
+        location: yup.string().required(),
         negotiable: yup.string().required("Please select any"),
         condition: yup.string().required("Please select any"),
         usedFor: yup.number().typeError("Please enter a number value"),
@@ -238,7 +253,12 @@ const AdForm = ({ id, editValues, editImages }) => {
                                 value="no"
                                 label="No"
                             />
-                            <ErrorMessage name="negotiable" />
+                            <div className="error-text">
+                                <ErrorMessage name="negotiable" />
+                            </div>
+                        </div>
+                        <div>
+                            <MyLocationField name="location" />
                         </div>
                         <div>
                             <InputLabel> Condition </InputLabel>
@@ -272,6 +292,9 @@ const AdForm = ({ id, editValues, editImages }) => {
                                 type="radio"
                                 label="Not Working"
                             />
+                            <div className="error-text">
+                                <ErrorMessage name="condition" />
+                            </div>
                         </div>
 
                         <MytextField
@@ -343,21 +366,31 @@ const AdForm = ({ id, editValues, editImages }) => {
                                 More than 128 GB
                             </MenuItem>
                         </MytextField>
-                        <div className="form-group row">
-                            <label className="col-sm-2 col-form-label">
-                                Photo
-                            </label>
-                            <div className="col-sm-10">
+                        <div className="">
+                            <label className="">Photo</label>
+                            <div className="">
                                 <div className="custom-file">
                                     <input
-                                        type="file"
-                                        className="custom-file-input"
                                         id="customFile"
                                         name="imageName"
+                                        type="file"
                                         onChange={imageHandler}
+                                        className="custom-file-input"
                                         multiple
+                                        hidden
                                         accept="image/*"
                                     />
+                                    <label htmlFor="customFile">
+                                        <Button
+                                            variant="outlined"
+                                            component="span"
+                                            startIcon={<CloudUploadIcon />}
+                                            className="file-upload"
+                                        >
+                                            Upload
+                                        </Button>
+                                    </label>
+
                                     {
                                         <label
                                             className="custom-file-label"
@@ -370,11 +403,9 @@ const AdForm = ({ id, editValues, editImages }) => {
                             </div>
                         </div>
                         {images.length !== 0 ? (
-                            <div className="form-group row">
-                                <label className="col-sm-2 col-form-label">
-                                    Select primary Photo
-                                </label>
-                                <div className="col-sm-10 images-container">
+                            <div className="">
+                                <label className="">Select primary Photo</label>
+                                <div className=" images-container">
                                     <div className="primary-image-container">
                                         <img
                                             src={URL.createObjectURL(images[0])}
@@ -395,30 +426,51 @@ const AdForm = ({ id, editValues, editImages }) => {
                                                             setPrimary(img)
                                                         }
                                                     />
-                                                    <input
-                                                        type="button"
-                                                        onClick={() =>
-                                                            removeImage(img)
-                                                        }
-                                                        value="X"
-                                                    />
+
+                                                    <IconButton>
+                                                        <DeleteIcon
+                                                            onClick={() =>
+                                                                removeImage(img)
+                                                            }
+                                                        />
+                                                    </IconButton>
                                                 </div>
                                             ))}
                                         </div>
                                         <div className="add-more">
                                             <div className="custom-file">
-                                                <input
+                                                {/* <input
                                                     type="file"
                                                     className="custom-file-input"
                                                     id="inputGroupFile02"
                                                     onChange={handleAddImage}
+                                                /> */}
+                                                <input
+                                                    className="custom-file-input"
+                                                    id="inputGroupFile02"
+                                                    onChange={handleAddImage}
+                                                    type="file"
+                                                    className="custom-file-input"
+                                                    hidden
                                                 />
-                                                <label
+                                                <label htmlFor="inputGroupFile02">
+                                                    <Button
+                                                        variant="outlined"
+                                                        component="span"
+                                                        startIcon={
+                                                            <CloudUploadIcon />
+                                                        }
+                                                        className="file-upload"
+                                                    >
+                                                        {imageToBeAdded.name}
+                                                    </Button>
+                                                </label>
+                                                {/* <label
                                                     className="custom-file-label my-label"
                                                     htmlFor="inputGroupFile02"
                                                 >
                                                     {imageToBeAdded.name}
-                                                </label>
+                                                </label> */}
                                             </div>
                                             <input
                                                 type="button"
@@ -442,14 +494,11 @@ const AdForm = ({ id, editValues, editImages }) => {
                             variant="contained"
                             color="primary"
                             type="submit"
-                            disabled={
-                                editValues
-                                    ? false
-                                    : isSubmitting || !isValid || !dirty
-                            }
+                            disabled={editValues ? false : isSubmitting}
                             startIcon={
                                 editValues ? <CloudUploadIcon /> : <SaveIcon />
                             }
+                            className="ad-form-button"
                         >
                             {editValues ? "Edit" : "Post"}
                         </Button>

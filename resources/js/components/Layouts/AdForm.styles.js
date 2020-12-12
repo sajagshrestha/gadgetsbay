@@ -46,13 +46,21 @@ export const AdFormWrapper = styled.div `
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    Button {
-    margin: 10px 0px;
+    .ad-form-button {
+        margin: 10px 0px;
+    }
+    .error-text {
+        color: red;
+        font-size:10px;
+    }
+    .file-upload{
+        margin:10px 10px 10px 0;
     }
 `;
 
 export const StyledTextField = styled.div `
-    width: 280px;
+    // width: minmax(280px,400px);
+    max-width:30%;
     margin: 20px 0px;
     display:block;
 `;

@@ -1,33 +1,52 @@
-import React,{useState} from "react";
-// import "./Location.css";
-import PlacesAutoComplete from "react-places-autocomplete";
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import axios from "axios";
 
-const Location = () => {
-	const [location,SetLocation] = useState('');
-	
-	const onSelectHandler = (value) =>{};
+const Location = ({ updateValue, meta }) => {
+    const [suggestions, setSuggestions] = React.useState([]);
 
-	return (
-		<div>
-			<PlacesAutoComplete value={location} onChange={SetLocation} onSelect={onSelectHandler}>
-			{({ getInputProps, suggestions, getSuggestionItemProps, loading }) =>
-				(
-					<div>
-						<input {...getInputProps({className : 'location-input form-control'})}/>
-						<div>
-							{loading ? <div>...loading</div> : null}
-							{suggestions.map((suggestion) => {
-							return <div>{suggestion.description}</div>
-							})}
-						</div>
-					</div>
+    const errorText = meta.error && meta.touched ? meta.error : "";
+    const onChangeHandler = data => {
+        let apikey = "aMR5m8XBOeByt_k5Y_VsmqGbCZ5PsQP4a8Lp7kpPY2M";
+        let country = "country=NPL";
+        let url = `https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json`;
+        let query = `query=${data}`;
+        let maxResult = "maxresults=5";
+        if (data.length > 2) {
+            axios
+                .get(`${url}?${query}&apikey=${apikey}&${country}&${maxResult}`)
+                .then(res => {
+                    setSuggestions(res.data.suggestions);
+                })
+                .catch(e => console.log(e));
+        }
+    };
 
-				)}	
-			</PlacesAutoComplete>
-		</div>
-		);
-
+    return (
+        <Autocomplete
+            options={suggestions ? suggestions : [{ label: "Not Found" }]}
+            getOptionLabel={option => option.label}
+            getOptionSelected={option => option.label}
+            onChange={(event, newValue) => {
+                newValue ? updateValue(newValue.label) : updateValue(null);
+            }}
+            onInputChange={(event, newInputValue) => {
+                onChangeHandler(newInputValue);
+            }}
+            renderInput={params => (
+                <TextField
+                    {...params}
+                    size="small"
+                    label="Location"
+                    name="location"
+                    variant="outlined"
+                    helperText={errorText}
+                    error={!!errorText}
+                />
+            )}
+        />
+    );
 };
-
 
 export default Location;

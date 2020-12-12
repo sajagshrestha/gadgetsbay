@@ -31,6 +31,7 @@ class Ad extends Model
         $this->negotiable = $inputs['negotiable'];
         $this->condition = $inputs['condition'];
         $this->usedFor = $inputs['usedFor'];
+        $this->location = $inputs['location'];
 
         if(isset($inputs['expiresIn'])) {
 

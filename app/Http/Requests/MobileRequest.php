@@ -30,6 +30,7 @@ class MobileRequest extends FormRequest
             'expiresIn' => 'required|integer',
             'price' => 'required|integer',
             'negotiable' => 'required',
+            'location' => 'required',
             'condition' => 'required',
             'frontCamera' =>'required',
             'backCamera' =>'required',
