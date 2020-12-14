@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Carbon\Carbon;
 
 class AdResource extends JsonResource
 {
@@ -15,6 +16,11 @@ class AdResource extends JsonResource
      */
     public function toArray($request)
     {
+        $expired = false;
+        $today = Carbon::now();
+        if($today->toDateString() >$this->expires_on)
+            $expired= true;
+
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -26,8 +32,10 @@ class AdResource extends JsonResource
             'usedFor' => $this->usedFor,
             'imageName' => explode(" ",$this->imageName),
             'status' => $this->status,
+            'location'=>$this->location,
             'views'=> $this->views,
             'created_at' => $this->created_at,
+            'expired' => $expired,
             'mobile' => $this->mobile,
             'user' => [
                 'name' => $this->user->name,

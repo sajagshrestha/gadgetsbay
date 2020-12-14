@@ -62,6 +62,9 @@ const DeatiledAdView = () => {
                             <div className="grid-items">
                                 Email: {ad.user.email}
                             </div>
+                            <div className="grid-items">
+                                Location: {ad.location}
+                            </div>
                         </DetailsGrid>
                     ) : (
                         ""

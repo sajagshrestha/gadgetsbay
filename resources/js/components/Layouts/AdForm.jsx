@@ -14,6 +14,7 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import SaveIcon from "@material-ui/icons/Save";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
+import AddAPhoto from "@material-ui/icons/AddAPhoto"
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import { SnackbarContext } from "../App";
@@ -141,7 +142,7 @@ const AdForm = ({ id, editValues, editImages }) => {
         }
     };
 
-    const onSubmitHandler = values => {
+    const onSubmitHandler = (values,action) => {
         let fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
@@ -163,7 +164,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`);
+                    history.push(`/details/${res.data.data.id}/${res.data.data.title}`);
                     snackbarDispatch({
                         type: "success",
                         message: "Edit successful"
@@ -177,7 +178,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post("/api/product", fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`);
+                    history.push(`/details/${res.data.data.id}/${res.data.data.title}`);
                     snackbarDispatch({
                         type: "success",
                         message: "Post successful"
@@ -186,6 +187,7 @@ const AdForm = ({ id, editValues, editImages }) => {
                 .catch(err => {
                     console.log(err);
                     snackbarDispatch({ type: "error" });
+                    action.setSubmitting(false);
                 });
         }
     };
@@ -240,6 +242,9 @@ const AdForm = ({ id, editValues, editImages }) => {
 
                         <MytextField name="price" label="Price" />
                         <div>
+                            <MyLocationField name="location" />
+                        </div>
+                        <div>
                             <InputLabel> Negotiable </InputLabel>
                             <RadioButton
                                 name="negotiable"
@@ -257,9 +262,7 @@ const AdForm = ({ id, editValues, editImages }) => {
                                 <ErrorMessage name="negotiable" />
                             </div>
                         </div>
-                        <div>
-                            <MyLocationField name="location" />
-                        </div>
+
                         <div>
                             <InputLabel> Condition </InputLabel>
                             <RadioButton
@@ -366,9 +369,11 @@ const AdForm = ({ id, editValues, editImages }) => {
                                 More than 128 GB
                             </MenuItem>
                         </MytextField>
-                        <div className="">
-                            <label className="">Photo</label>
-                            <div className="">
+                        <div className="form-group row">
+                            <label className="col-sm-2 col-form-label">
+                                Photo
+                            </label>
+                            <div className="col-sm-10">
                                 <div className="custom-file">
                                     <input
                                         id="customFile"
@@ -403,9 +408,11 @@ const AdForm = ({ id, editValues, editImages }) => {
                             </div>
                         </div>
                         {images.length !== 0 ? (
-                            <div className="">
-                                <label className="">Select primary Photo</label>
-                                <div className=" images-container">
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">
+                                    Select primary Photo
+                                </label>
+                                <div className="col-sm-10 images-container">
                                     <div className="primary-image-container">
                                         <img
                                             src={URL.createObjectURL(images[0])}
@@ -426,34 +433,29 @@ const AdForm = ({ id, editValues, editImages }) => {
                                                             setPrimary(img)
                                                         }
                                                     />
-
-                                                    <IconButton>
-                                                        <DeleteIcon
-                                                            onClick={() =>
-                                                                removeImage(img)
-                                                            }
-                                                        />
+                                                    <IconButton
+                                                        onClick={() =>
+                                                            removeImage(img)
+                                                        }
+                                                    >
+                                                        <DeleteIcon />
                                                     </IconButton>
                                                 </div>
                                             ))}
                                         </div>
                                         <div className="add-more">
                                             <div className="custom-file">
-                                                {/* <input
-                                                    type="file"
-                                                    className="custom-file-input"
-                                                    id="inputGroupFile02"
-                                                    onChange={handleAddImage}
-                                                /> */}
                                                 <input
+                                                    type="file"
                                                     className="custom-file-input"
                                                     id="inputGroupFile02"
                                                     onChange={handleAddImage}
-                                                    type="file"
-                                                    className="custom-file-input"
                                                     hidden
                                                 />
-                                                <label htmlFor="inputGroupFile02">
+                                                <label
+                                                    htmlFor="inputGroupFile02"
+                                                    className="custom-file-label my-label"
+                                                >
                                                     <Button
                                                         variant="outlined"
                                                         component="span"
@@ -465,14 +467,8 @@ const AdForm = ({ id, editValues, editImages }) => {
                                                         {imageToBeAdded.name}
                                                     </Button>
                                                 </label>
-                                                {/* <label
-                                                    className="custom-file-label my-label"
-                                                    htmlFor="inputGroupFile02"
-                                                >
-                                                    {imageToBeAdded.name}
-                                                </label> */}
                                             </div>
-                                            <input
+                                            {/* <input
                                                 type="button"
                                                 onClick={() => addNewImage()}
                                                 disabled={
@@ -482,7 +478,18 @@ const AdForm = ({ id, editValues, editImages }) => {
                                                         : false
                                                 }
                                                 value="Add"
-                                            />
+                                            /> */}
+                                            <IconButton
+                                                onClick={() => addNewImage()}
+                                                disabled={
+                                                    imageToBeAdded.name ===
+                                                    "Add new Image"
+                                                        ? true
+                                                        : false
+                                                }
+                                            >
+                                                <AddAPhoto />
+                                            </IconButton>
                                         </div>
                                     </div>
                                 </div>

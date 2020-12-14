@@ -9,6 +9,7 @@ use App\Mobile;
 use Illuminate\Http\Request;
 use App\Http\Requests\MobileRequest;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 
 
@@ -19,16 +20,20 @@ class ProductsController extends ResponseController
      * @var UserFromBearerToken
      */
     private $userFromToken;
+    private $today; 
 
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['show', 'index', 'search','markSold']]);
         $this->userFromToken = new UserFromBearerToken();
+        $this->today = Carbon::now();
+
     }
 
     public function index()
     {
         //get all ads
+        
         $products = Ad::paginate(10);
         return AdResource::collection($products);
     }
@@ -121,7 +126,7 @@ class ProductsController extends ResponseController
     }
 
     public function myProduct()
-    {
+    {where('expires_on','>=',$this->today)->
         $user = auth()->user();
         return AdResource::collection($user->ad->sortByDesc('created_at'));
     }

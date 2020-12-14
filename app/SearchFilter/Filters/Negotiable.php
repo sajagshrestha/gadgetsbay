@@ -9,10 +9,13 @@ class Negotiable implements Filter
 {
     public static function apply($builder, $value)
     {
-        if($value!="any"|| $value!= "")
+        if(!($value=="any"|| $value== ""))
         {
             return $builder->where('negotiable', '=' ,"$value" );
         }
+
+        return $builder->where('negotiable', 'like' ,"%" );
+
     }
 
 }

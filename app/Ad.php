@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Ad extends Model
@@ -25,6 +26,9 @@ class Ad extends Model
 
      function setValue(array $inputs)
     {
+        $date = Carbon::now();
+        $date = $date->addDays($inputs['expiresIn']);
+
         $this->title = $inputs['title'];
         $this->description = $inputs['description'];
         $this->price = $inputs['price'];
@@ -32,14 +36,10 @@ class Ad extends Model
         $this->condition = $inputs['condition'];
         $this->usedFor = $inputs['usedFor'];
         $this->location = $inputs['location'];
-
-        if(isset($inputs['expiresIn'])) {
-
-            $this->expiresIn = $inputs['expiresIn'];
-        }
+        $this->expiresIn = $inputs['expiresIn'];
+        $this->expires_on = $date;
 
     }
-
 
 
 }

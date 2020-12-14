@@ -15,13 +15,13 @@ const MainAdCard = ({ post }) => {
                 <div className="specs">
                     {" "}
                     <p>
-                        RAM: {post.mobile.RAM} | Storage: {post.mobile.storage}{" "}
+                        RAM: {post.mobile.RAM} | Storage: {post.mobile.internalStorage}{" "}
                         | Front Camera: {post.mobile.frontCamera} | Back Camera:{" "}
                         {post.mobile.backCamera}
                     </p>
                 </div>
                 <div className="description">{post.description}</div>
-                <div className="seller-info">Seller: {post.user.name}</div>
+                <div className="seller-info">Seller: {post.user.name} | Location: {post.location}</div>
             </div>
             <div className="price-wrapper">
                 <p>Price</p>
