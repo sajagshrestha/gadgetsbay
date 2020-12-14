@@ -17,7 +17,7 @@ import axios from "axios";
 import { SnackbarContext } from "../App";
 import { UserContext } from "../App";
 
-const RadioButton = ({ label, ...props }) => {
+export const RadioButton = ({ label, ...props }) => {
     const [field] = useField(props);
     return (
         <FormControlLabel
@@ -149,30 +149,29 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`)
+                    history.push(`/details/${res.id}/${res.title}`);
                     snackbarDispatch({
-                        type:"success",
-                        message:"Edit successful",
+                        type: "success",
+                        message: "Edit successful"
                     });
                 })
                 .catch(err => {
-                    console.log(err)
-                    snackbarDispatch({type:"error"});
+                    console.log(err);
+                    snackbarDispatch({ type: "error" });
                 });
         } else {
             axios
                 .post("/api/product", fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`)
+                    history.push(`/details/${res.id}/${res.title}`);
                     snackbarDispatch({
                         type: "success",
-                        message: "Post successful",
-                    })
+                        message: "Post successful"
+                    });
                 })
                 .catch(err => {
-                    console.log(err)
-                    snackbarDispatch({type:"error"});
-
+                    console.log(err);
+                    snackbarDispatch({ type: "error" });
                 });
         }
     };

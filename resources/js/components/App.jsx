@@ -125,8 +125,7 @@ function App() {
 
                                 <Switch>
                                     <Route
-                                        path="/searchResults/:title"
-                                        exact
+                                        path="/searchResults"
                                         component={SearchResults}
                                     />
                                     <Route path="/" exact component={Home} />

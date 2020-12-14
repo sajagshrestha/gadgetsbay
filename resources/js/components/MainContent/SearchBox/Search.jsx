@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import { SearchWrapper } from "./Search.styles";
 import SearchBar from "material-ui-search-bar";
-import axios from "axios";
 const Search = ({ history }) => {
     const [search, setSearch] = useState("");
     const onSubmitHandler = event => {
         event.preventDefault();
-        history.push(`/searchResults/${search}`);
+        history.push(`/searchResults?title=${search}`);
+        setSearch("");
     };
 
     const onChangeHandler = value => {
