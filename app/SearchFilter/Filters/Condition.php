@@ -9,13 +9,14 @@ class Condition implements Filter
 {
     public static function apply($builder, $value)
     {
-        if($value == 'Brand New')
+        if($value == 'Any')
         {
-            return $builder->where('condition', '=' ,"Brand New" );
+            return $builder->where('condition', 'like' ,'%' );
         }
         else
         {
-            return $builder->where('condition', '<>' ,"Brand New" );
+            return $builder->where('condition', '=' ,$value );
+
         }
 
     }

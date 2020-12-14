@@ -54,7 +54,7 @@ const UserDashboard = () => {
     const markAsSoldHandler = id => {
         axios
             .post(
-                `/api/marksold/${id}`,
+                `/api/changestatus/${id}`,
                 { status: 2 },
                 {
                     headers: {
@@ -84,7 +84,7 @@ const UserDashboard = () => {
     const unmarkHandler = id => {
         axios
             .post(
-                `/api/marksold/${id}`,
+                `/api/changestatus/${id}`,
                 { status: 1 },
                 {
                     headers: {

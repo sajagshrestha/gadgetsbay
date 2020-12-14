@@ -12,6 +12,17 @@ import {
 import queryString from "query-string";
 import { useHistory, useLocation } from "react-router-dom";
 import { FilterWrapper } from "./SearchResultsAndAllAds.styles";
+import {StyledTextField} from "../../Layouts/AdForm.styles";
+import Location from "../../Layouts/Location";
+
+const MyLocationField = props => {
+    const [field, meta, helpers] = useField(props);
+    const errorText = meta.error && meta.touched ? meta.error : "";
+    const { setValue } = helpers;
+    return (
+            <Location updateValue={setValue} meta={meta} />
+    );
+};
 
 const RadioButton = ({ label, ...props }) => {
     const [field] = useField(props);
@@ -61,6 +72,7 @@ const Filter = () => {
                             as={TextField}
                             label="Search ads"
                         />
+                        <MyLocationField name="location" />
                         <Field
                             name="condition"
                             size="small"

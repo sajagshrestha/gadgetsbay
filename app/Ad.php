@@ -24,10 +24,9 @@ class Ad extends Model
 
     protected $guarded = [];
 
-     function setValue(array $inputs)
+     function setValue(array $inputs,bool $edit)
     {
-        $date = Carbon::now();
-        $date = $date->addDays($inputs['expiresIn']);
+
 
         $this->title = $inputs['title'];
         $this->description = $inputs['description'];
@@ -37,7 +36,11 @@ class Ad extends Model
         $this->usedFor = $inputs['usedFor'];
         $this->location = $inputs['location'];
         $this->expiresIn = $inputs['expiresIn'];
-        $this->expires_on = $date;
+        if(!$edit) {
+            $date = Carbon::now();
+            $date = $date->addDays($inputs['expiresIn']);
+            $this->expires_on = $date;
+        }
 
     }
 

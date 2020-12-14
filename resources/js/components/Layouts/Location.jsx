@@ -15,13 +15,8 @@ const Location = ({ updateValue, meta }) => {
 
     const formatLocation = (str) =>{
         let arr = str.slice(6);
-        arr = arr.slice(",")
-        for(var i = arr.length-1;i++;i>=0){
-            console.log(arr[i]);
-        }
-        let val = arr[1] + " , " + arr[2];
-        console.log(arr);
-        console.log("br")
+        arr = arr.split(",")
+        arr = arr.reverse().toString();
     }
 
     const onChangeHandler = data => {
@@ -31,11 +26,18 @@ const Location = ({ updateValue, meta }) => {
                 .then(res => {
                     let suggs =  res.data.suggestions;
                     let locations = [];
-                    suggs.map(sugg => {
-                        // locations.push(sugg.label.split(","))
-                        formatLocation(sugg.label)
-                    });
-                    setSuggestions(res.data.suggestions);
+                    let location = "";
+                    if(suggs !== undefined)
+                    {
+                        suggs.map(sugg => {
+                            location = sugg.label.slice(6);
+                            location = location.split(",");
+                            location = location.reverse().toString();
+                            locations.push(location);
+                        });
+                    }
+
+                    setSuggestions(locations);
                 })
                 .catch(e => console.log(e));
 
@@ -44,8 +46,8 @@ const Location = ({ updateValue, meta }) => {
     return (
         <Autocomplete
             options={suggestions ? suggestions : [{ label: "Not Found" }]}
-            getOptionLabel={option => option.label}
-            getOptionSelected={option => option.label}
+            // getOptionLabel={option => option}
+            // getOptionSelected={option => option.label}
             onChange={(event, newValue) => {
                 newValue ? updateValue(newValue.label) : updateValue(null);
             }}

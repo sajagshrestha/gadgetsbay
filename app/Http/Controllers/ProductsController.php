@@ -20,7 +20,7 @@ class ProductsController extends ResponseController
      * @var UserFromBearerToken
      */
     private $userFromToken;
-    private $today; 
+    private $today;
 
     public function __construct()
     {
@@ -33,7 +33,7 @@ class ProductsController extends ResponseController
     public function index()
     {
         //get all ads
-        
+
         $products = Ad::paginate(10);
         return AdResource::collection($products);
     }
@@ -42,7 +42,7 @@ class ProductsController extends ResponseController
     {
         $inputs = $request->all();
         $description = new Ad();
-        $description->setValue($inputs);
+        $description->setValue($inputs,false);
         $description->productType = 'mobile';
         $description->user_id = auth()->user()->id;
         $description->imageName = $this->getImageNames($request);
@@ -97,10 +97,10 @@ class ProductsController extends ResponseController
         $mobile = $description->mobile;
         $images = explode(" ",$description->imageName);
 
-        $description->setValue($request->all());
+        $description->setValue($request->all(),true);
         $description->imageName = $this->getImageNames($request);
         $mobile->setValue($request->all());
-        if($mobile->saveOrFail() && $description->saveOrFail())
+        if($mobile->save() && $description->save())
         {
             foreach ($images as $image)
             {
@@ -126,7 +126,7 @@ class ProductsController extends ResponseController
     }
 
     public function myProduct()
-    {where('expires_on','>=',$this->today)->
+    {
         $user = auth()->user();
         return AdResource::collection($user->ad->sortByDesc('created_at'));
     }
@@ -154,7 +154,7 @@ class ProductsController extends ResponseController
     	return response()->file('public/images'.$imageName);
     }
 
-    public function markSold($id, Request $request)
+    public function changeStatus($id, Request $request)
     {
         if($product = Ad::find($id))
         {
@@ -173,7 +173,16 @@ class ProductsController extends ResponseController
                         'error' => 'You are not authorized to change status of this product'
                     ]);
                 }
-                $product->status = $request->status;
+                if($request->status == "renew")
+                {
+                    $date = Carbon::now();
+                    $date = $date->addDays($product->expiresIn);
+                    $product->expires_on = $date;
+                }
+                else
+                {
+                    $product->status = $request->status;
+                }
                 $product->save();
                 return new AdResource($product);
             }
