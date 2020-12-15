@@ -12,7 +12,8 @@ import DetailedAdView from "./MainContent/Ads/DetailedAdView";
 import UserDashboard from "./MainContent/UserDashboard/UserDashboard";
 import EditAd from "./MainContent/EditAd";
 import NotificationSnackbar from "./NotificationSnackbar";
-
+//protected Routes
+import ProtectedRoute from "./ProtectedRoute";
 //Import styles
 import { AppWrapper, Theme } from "./App.styles";
 import { ThemeProvider } from "styled-components";
@@ -139,10 +140,10 @@ function App() {
                                         exact
                                         component={Register}
                                     />
-                                    <Route
-                                        path="/dashboard"
-                                        component={UserDashboard}
-                                    />
+                                    <ProtectedRoute path="/dashboard">
+                                        <UserDashboard />
+                                    </ProtectedRoute>
+
                                     <Route
                                         path="/edit/:id"
                                         exact
