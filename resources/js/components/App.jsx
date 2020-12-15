@@ -130,11 +130,9 @@ function App() {
                                         component={SearchResults}
                                     />
                                     <Route path="/" exact component={Home} />
-                                    <Route
-                                        path="/post"
-                                        exact
-                                        component={PostAdd}
-                                    />
+                                    <ProtectedRoute path="/post" exact>
+                                        <PostAdd />
+                                    </ProtectedRoute>
                                     <Route
                                         path="/register"
                                         exact
@@ -144,11 +142,9 @@ function App() {
                                         <UserDashboard />
                                     </ProtectedRoute>
 
-                                    <Route
-                                        path="/edit/:id"
-                                        exact
-                                        component={EditAd}
-                                    />
+                                    <ProtectedRoute path="/edit/:id" exact>
+                                        <EditAd />
+                                    </ProtectedRoute>
                                     <Route
                                         path="/login"
                                         exact

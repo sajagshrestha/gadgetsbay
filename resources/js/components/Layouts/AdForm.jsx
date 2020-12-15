@@ -149,7 +149,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`);
+                    history.push(`/dashboard`);
                     snackbarDispatch({
                         type: "success",
                         message: "Edit successful"
@@ -163,7 +163,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post("/api/product", fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.id}/${res.title}`);
+                    history.push(`/dashboard`);
                     snackbarDispatch({
                         type: "success",
                         message: "Post successful"
