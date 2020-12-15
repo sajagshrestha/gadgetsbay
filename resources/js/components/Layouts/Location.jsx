@@ -45,11 +45,11 @@ const Location = ({ updateValue, meta }) => {
 
     return (
         <Autocomplete
-            options={suggestions ? suggestions : [{ label: "Not Found" }]}
+            options={suggestions ? suggestions : [ "Not Found" ]}
             // getOptionLabel={option => option}
-            // getOptionSelected={option => option.label}
+            // getOptionSelected={option => option}
             onChange={(event, newValue) => {
-                newValue ? updateValue(newValue.label) : updateValue(null);
+                newValue ? updateValue(newValue) : updateValue(null);
             }}
             onInputChange={(event, newInputValue) => {
                 onChangeHandler(newInputValue);

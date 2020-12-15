@@ -223,6 +223,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             >
                 {({ values, isSubmitting, isValid, dirty, setFieldValue }) => (
                     <Form>
+                        {JSON.stringify(values,null,2)}
                         <MytextField name="title" label="Title" />
                         <MytextField
                             name="description"
