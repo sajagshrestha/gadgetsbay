@@ -12,7 +12,8 @@ import DetailedAdView from "./MainContent/Ads/DetailedAdView";
 import UserDashboard from "./MainContent/UserDashboard/UserDashboard";
 import EditAd from "./MainContent/EditAd";
 import NotificationSnackbar from "./NotificationSnackbar";
-
+//protected Routes
+import ProtectedRoute from "./ProtectedRoute";
 //Import styles
 import { AppWrapper, Theme } from "./App.styles";
 import { ThemeProvider } from "styled-components";
@@ -129,25 +130,21 @@ function App() {
                                         component={SearchResults}
                                     />
                                     <Route path="/" exact component={Home} />
-                                    <Route
-                                        path="/post"
-                                        exact
-                                        component={PostAdd}
-                                    />
+                                    <ProtectedRoute path="/post" exact>
+                                        <PostAdd />
+                                    </ProtectedRoute>
                                     <Route
                                         path="/register"
                                         exact
                                         component={Register}
                                     />
-                                    <Route
-                                        path="/dashboard"
-                                        component={UserDashboard}
-                                    />
-                                    <Route
-                                        path="/edit/:id"
-                                        exact
-                                        component={EditAd}
-                                    />
+                                    <ProtectedRoute path="/dashboard">
+                                        <UserDashboard />
+                                    </ProtectedRoute>
+
+                                    <ProtectedRoute path="/edit/:id" exact>
+                                        <EditAd />
+                                    </ProtectedRoute>
                                     <Route
                                         path="/login"
                                         exact

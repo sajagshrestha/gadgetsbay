@@ -14,7 +14,7 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import SaveIcon from "@material-ui/icons/Save";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
-import AddAPhoto from "@material-ui/icons/AddAPhoto"
+import AddAPhoto from "@material-ui/icons/AddAPhoto";
 import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import { SnackbarContext } from "../App";
@@ -142,7 +142,7 @@ const AdForm = ({ id, editValues, editImages }) => {
         }
     };
 
-    const onSubmitHandler = (values,action) => {
+    const onSubmitHandler = (values, action) => {
         let fd = new FormData();
         fd.append("title", values.title);
         fd.append("description", values.description);
@@ -164,7 +164,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.data.data.id}/${res.data.data.title}`);
+                    history.push(`/dashboard`);
                     snackbarDispatch({
                         type: "success",
                         message: "Edit successful"
@@ -178,7 +178,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post("/api/product", fd, globalToken)
                 .then(res => {
-                    history.push(`/details/${res.data.data.id}/${res.data.data.title}`);
+                    history.push(`/dashboard`);
                     snackbarDispatch({
                         type: "success",
                         message: "Post successful"
@@ -223,7 +223,7 @@ const AdForm = ({ id, editValues, editImages }) => {
             >
                 {({ values, isSubmitting, isValid, dirty, setFieldValue }) => (
                     <Form>
-                        {JSON.stringify(values,null,2)}
+                        {JSON.stringify(values, null, 2)}
                         <MytextField name="title" label="Title" />
                         <MytextField
                             name="description"

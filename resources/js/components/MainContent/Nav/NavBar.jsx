@@ -22,10 +22,18 @@ function NavBar({ history }) {
     const { user, dispatch, globalToken } = useContext(UserContext);
 
     const logoutUser = () => {
-        axios.get("api/logout", globalToken).then(res => {
-            dispatch({ type: "logout" });
-            localStorage.removeItem("user");
-        });
+        axios
+            .get("api/logout", {
+                headers: {
+                    Authorization: `Bearer ${
+                        JSON.parse(localStorage.getItem("user")).token
+                    }`
+                }
+            })
+            .then(res => {
+                localStorage.removeItem("user");
+                dispatch({ type: "logout" });
+            });
     };
 
     return (

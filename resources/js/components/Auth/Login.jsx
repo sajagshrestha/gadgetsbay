@@ -1,6 +1,6 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, useLocation } from "react-router-dom";
 import { UserContext } from "../App";
 import { Formik, Form, useField } from "formik";
 import * as yup from "yup";
@@ -24,6 +24,7 @@ const LoginTextField = props => {
 
 const Login = () => {
     const { user, dispatch } = useContext(UserContext);
+    const { state } = useLocation();
     const initialValues = {
         email: "",
         password: ""
@@ -60,12 +61,11 @@ const Login = () => {
                 console.log(error);
                 actions.setSubmitting(false);
                 setErrorText("Invalid email or password");
-
             });
     };
 
     if (user.isLoggedIn) {
-        return <Redirect to="/" />;
+        return <Redirect to={state?.from || "/"} />;
     }
     return (
         <LoginWrapper>
