@@ -93,36 +93,49 @@ class ProductsController extends ResponseController
 
     public function update(Request $request, $id)
     {
+        $user = auth()->user();
         $description = Ad::find($id);
-        $mobile = $description->mobile;
-        $images = explode(" ",$description->imageName);
-
-        $description->setValue($request->all(),true);
-        $description->imageName = $this->getImageNames($request);
-        $mobile->setValue($request->all());
-        if($mobile->save() && $description->save())
+        if($user->id==$description->user_id)
         {
-            foreach ($images as $image)
-            {
-                Storage::delete('public/images/'.$image);
-            }
-        }
+            $mobile = $description->mobile;
+            $images = explode(" ",$description->imageName);
 
-        return new AdResource($description);
+            $description->setValue($request->all(),true);
+            $description->imageName = $this->getImageNames($request);
+            $mobile->setValue($request->all());
+            if($mobile->save() && $description->save())
+            {
+                foreach ($images as $image)
+                {
+                    Storage::delete('public/images/'.$image);
+                }
+            }
+
+            return new AdResource($description);
+        }
+        else
+            return $this->responseUnauthorized(['you are not authorized to edit this ad.']);
     }
 
 
     public function destroy($id)
     {
+        $user = auth()->user();
         $product = Ad::findOrFail($id);
-        $images = explode(" ",$product->imageName);
-        if ($product->delete()) {
-        foreach ($images as $image)
+        if($user->id==$product->user_id)
         {
-            Storage::delete('public/images/'.$image);
+            $images = explode(" ",$product->imageName);
+            if ($product->delete()) {
+                foreach ($images as $image)
+                {
+                    Storage::delete('public/images/'.$image);
+                }
+                    return new AdResource($product);
+            }
         }
-            return new AdResource($product);
-        }
+        else
+            return $this->responseUnauthorized();
+    
     }
 
     public function myProduct()

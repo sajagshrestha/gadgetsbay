@@ -52,11 +52,21 @@ const snackbarInitialState = {
 const snackbarReducer = (state, action) => {
     switch (action.type) {
         case "error":
-            return {
-                isOpen: true,
-                message: "Something went wrong",
-                severity: "error"
-            };
+            if(action.message)
+            {
+                return {
+                    isOpen: true,
+                    message: action.message,
+                    severity: "error"
+                };
+            }
+            else{
+                return {
+                    isOpen: true,
+                    message: "Something went wrong",
+                    severity: "error"
+                };
+            }
         case "success":
             return {
                 isOpen: true,

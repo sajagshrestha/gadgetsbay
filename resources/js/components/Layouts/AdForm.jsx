@@ -57,9 +57,26 @@ const MyLocationField = props => {
     const errorText = meta.error && meta.touched ? meta.error : "";
     const { setValue } = helpers;
     return (
-        <StyledTextField>
-            <Location updateValue={setValue} meta={meta} />
-        </StyledTextField>
+        <div>
+            {field.value ? (
+                <StyledTextField>
+                    <Location
+                        updateValue={setValue}
+                        meta={meta}
+                        field={field}
+                        edit={props.edit}
+                    />
+                </StyledTextField>
+            ) : (
+                <StyledTextField>
+                    <Location
+                        updateValue={setValue}
+                        meta={meta}
+                        edit={props.edit}
+                    />
+                </StyledTextField>
+            )}
+        </div>
     );
 };
 const AdForm = ({ id, editValues, editImages }) => {
@@ -164,7 +181,9 @@ const AdForm = ({ id, editValues, editImages }) => {
             axios
                 .post(`/api/product/${id}`, fd, globalToken)
                 .then(res => {
-                    history.push(`/dashboard`);
+                    history.push(
+                        `/details/${res.data.data.id}/${res.data.data.title}`
+                    );
                     snackbarDispatch({
                         type: "success",
                         message: "Edit successful"
@@ -172,13 +191,20 @@ const AdForm = ({ id, editValues, editImages }) => {
                 })
                 .catch(err => {
                     console.log(err);
-                    snackbarDispatch({ type: "error" });
+                    console.log(err.response.data.errors[0]);
+                    snackbarDispatch({
+                        type: "error",
+                        message: err.response.data.errors[0],
+                        // message: "Edit successful"
+                    });
                 });
         } else {
             axios
                 .post("/api/product", fd, globalToken)
                 .then(res => {
-                    history.push(`/dashboard`);
+                    history.push(
+                        `/details/${res.data.data.id}/${res.data.data.title}`
+                    );
                     snackbarDispatch({
                         type: "success",
                         message: "Post successful"
@@ -223,7 +249,6 @@ const AdForm = ({ id, editValues, editImages }) => {
             >
                 {({ values, isSubmitting, isValid, dirty, setFieldValue }) => (
                     <Form>
-                        {JSON.stringify(values, null, 2)}
                         <MytextField name="title" label="Title" />
                         <MytextField
                             name="description"
@@ -243,7 +268,10 @@ const AdForm = ({ id, editValues, editImages }) => {
 
                         <MytextField name="price" label="Price" />
                         <div>
-                            <MyLocationField name="location" />
+                            <MyLocationField
+                                name="location"
+                                edit={editValues ? true : false}
+                            />
                         </div>
                         <div>
                             <InputLabel> Negotiable </InputLabel>

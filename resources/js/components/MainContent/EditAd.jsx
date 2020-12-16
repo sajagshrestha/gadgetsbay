@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import AdForm from "../Layouts/AdForm";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { SnackbarContext } from "../App";
+import { UserContext } from "../App";
+
+
 const EditAd = () => {
     const { id } = useParams();
     const [editImages, setEditImages] = useState([]);
+    const { globalToken } = useContext(UserContext);
+    const { snackbarDispatch } = useContext(SnackbarContext);
     const editValues = {
         title: "",
         description: "",
         price: "",
         expiresIn: "",
         negotiable: "",
+        location:"",
         condition: "",
         usedFor: "",
         frontCamera: "",
@@ -20,22 +27,17 @@ const EditAd = () => {
     };
     useEffect(() => {
         axios
-            .get(`/api/product/${id}`, {
-                headers: {
-                    Authorization: `Bearer ${
-                        JSON.parse(localStorage.getItem("user")).token
-                    }`
-                }
-            })
+            .get(`/api/product/${id}`, globalToken)
             .then(response => {
                 const res = response.data.data;
                 editValues.title = res.title;
                 editValues.description = res.description;
                 editValues.price = res.price;
+                editValues.location = res.location;
                 editValues.expiresIn = res.expiresIn;
                 editValues.negotiable = res.negotiable;
                 editValues.condition = res.condition;
-                editValues.usedFor = res.usedFor;
+                res.usedFor ? editValues.usedFor = res.usedFor : editValues.usedFor = 0;
                 editValues.frontCamera = res.mobile.frontCamera;
                 editValues.backCamera = res.mobile.backCamera;
                 editValues.RAM = res.mobile.RAM;
@@ -52,7 +54,11 @@ const EditAd = () => {
                 .then(({ data }) => {
                     let file = new File([data], `${img}`);
                     return file;
-                });
+                })
+                .catch(err => {
+                    console.log(err);
+                    snackbarDispatch({ type: "error" });
+                });;
         });
         const images = await Promise.all(promises).then(values => {
             return values;
