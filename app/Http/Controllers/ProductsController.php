@@ -24,7 +24,7 @@ class ProductsController extends ResponseController
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['show', 'index', 'search','markSold']]);
+        $this->middleware('auth:api', ['except' => ['show', 'index', 'search','changeStatus']]);
         $this->userFromToken = new UserFromBearerToken();
         $this->today = Carbon::now();
 
@@ -40,6 +40,7 @@ class ProductsController extends ResponseController
 
     public function store(MobileRequest $request)
     {
+        // return $request->token();
         $inputs = $request->all();
         $description = new Ad();
         $description->setValue($inputs,false);
@@ -95,6 +96,7 @@ class ProductsController extends ResponseController
     {
         $user = auth()->user();
         $description = Ad::find($id);
+
         if($user->id==$description->user_id)
         {
             $mobile = $description->mobile;
