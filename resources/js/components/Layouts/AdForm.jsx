@@ -179,7 +179,13 @@ const AdForm = ({ id, editValues, editImages }) => {
         if (editValues) {
             fd.append("_method", "put");
             axios
-                .post(`/api/product/${id}`, fd, globalToken)
+                .post(`/api/product/${id}`, fd, {
+                    headers: {
+                        Authorization: `Bearer ${
+                            JSON.parse(localStorage.getItem("user")).token
+                        }`
+                    }
+                })
                 .then(res => {
                     history.push(
                         `/details/${res.data.data.id}/${res.data.data.title}`
@@ -194,13 +200,19 @@ const AdForm = ({ id, editValues, editImages }) => {
                     console.log(err.response.data.errors[0]);
                     snackbarDispatch({
                         type: "error",
-                        message: err.response.data.errors[0],
+                        message: err.response.data.errors[0]
                         // message: "Edit successful"
                     });
                 });
         } else {
             axios
-                .post("/api/product", fd, globalToken)
+                .post("/api/product", fd, {
+                    headers: {
+                        Authorization: `Bearer ${
+                            JSON.parse(localStorage.getItem("user")).token
+                        }`
+                    }
+                })
                 .then(res => {
                     history.push(
                         `/details/${res.data.data.id}/${res.data.data.title}`
