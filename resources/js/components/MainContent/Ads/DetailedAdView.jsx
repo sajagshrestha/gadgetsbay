@@ -1,17 +1,21 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductImageGallery from "./ProductImageGallery";
-import { UserContext } from "../../App";
 import { DetailedAdViewWrapper, DetailsGrid } from "./Ads.styles";
 import Comment from "../../comment/Comment";
+import { LoadingSpinner } from "../../App.styles";
+import { CircularProgress } from "@material-ui/core";
 
 const DeatiledAdView = () => {
     const [images, setImages] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
     const [ad, setAd] = useState({});
     const { id } = useParams();
 
     useEffect(() => {
+        setIsLoading(true);
         axios.get(`/api/product/${id}`).then(response => {
             const res = response.data.data;
             setAd(res);
@@ -22,8 +26,16 @@ const DeatiledAdView = () => {
                 };
             });
             setImages(imageArray, ad);
+            setIsLoading(false);
         });
     }, [images.length]);
+    if (isLoading) {
+        return (
+            <LoadingSpinner loaderHeight="50vh">
+                <CircularProgress />
+            </LoadingSpinner>
+        );
+    }
     return (
         <div>
             <DetailedAdViewWrapper>
@@ -97,7 +109,7 @@ const DeatiledAdView = () => {
                     <div className="grid-items">{ad.description}</div>
                 </DetailsGrid>
             </div>
-            {ad.id ? <Comment ad_id={ad.id}/> : ''}
+            {ad.id ? <Comment ad_id={ad.id} /> : ""}
         </div>
     );
 };
