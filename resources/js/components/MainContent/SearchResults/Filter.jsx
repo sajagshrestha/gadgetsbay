@@ -17,7 +17,15 @@ import Location from "../../Layouts/Location";
 const MyLocationField = props => {
     const [field, meta, helpers] = useField(props);
     const { setValue } = helpers;
-    return <Location updateValue={setValue} meta={meta} field={field} />;
+    return (
+        <div>
+            {field.value ? (
+                <Location updateValue={setValue} meta={meta} field={field} />
+            ) : (
+                <Location updateValue={setValue} meta={meta} />
+            )}
+        </div>
+    );
 };
 
 const RadioButton = ({ label, ...props }) => {
