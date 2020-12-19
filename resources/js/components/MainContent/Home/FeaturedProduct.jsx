@@ -21,7 +21,7 @@ const FeaturedProduct = ({ url }) => {
                 console.log(error);
                 snackbarDispatch({ type: "error" });
             });
-    }, [products.length]);
+    }, []);
 
     return (
         <>

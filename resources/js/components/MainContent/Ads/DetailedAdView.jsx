@@ -28,7 +28,7 @@ const DeatiledAdView = () => {
             setImages(imageArray, ad);
             setIsLoading(false);
         });
-    }, [images.length]);
+    }, []);
     if (isLoading) {
         return (
             <LoadingSpinner loaderHeight="50vh">
