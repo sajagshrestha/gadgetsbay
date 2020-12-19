@@ -6,39 +6,42 @@ import {
     AdsAndFilterWrapper,
     AdsWrapper
 } from "./SearchResultsAndAllAds.styles";
+import { LoadingSpinner } from "../../App.styles";
 import Filter from "./Filter";
 import axios from "axios";
+import { CircularProgress } from "@material-ui/core";
+
 const SearchResults = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const { search } = useLocation();
     const query = queryString.parse(search);
     const [searchedPosts, setSearchedPosts] = useState([]);
 
     useEffect(() => {
+        setIsLoading(true);
         axios.post("/api/filter", query).then(res => {
             setSearchedPosts(res.data.data);
+            setIsLoading(false);
         });
     }, [search]);
-    // if (searchedPosts.length === 0) {
-    //     return (
-    //         <div className="search-result">
-    //             <Filter />
-    //             No Results Found
-    //         </div>
-    //     );
-    // }
+
     return (
         <AdsAndFilterWrapper>
             <Filter />
-            {searchedPosts.length === 0 ? (
-                <AdsWrapper>No results Found</AdsWrapper>
-            ) : (
-                <AdsWrapper>
-                    {searchedPosts.map(post => (
+            <AdsWrapper>
+                {isLoading ? (
+                    <LoadingSpinner loaderHeight="50vh">
+                        <CircularProgress />
+                    </LoadingSpinner>
+                ) : searchedPosts.length === 0 ? (
+                    "No results found"
+                ) : (
+                    searchedPosts.map(post => (
                         // <Ad key={post.id} post={post} />
                         <MainAdCard key={post.id} post={post} />
-                    ))}
-                </AdsWrapper>
-            )}
+                    ))
+                )}
+            </AdsWrapper>
         </AdsAndFilterWrapper>
     );
 };

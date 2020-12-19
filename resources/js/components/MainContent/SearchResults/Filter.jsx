@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Formik, Form, Field, useField } from "formik";
 import {
     Button,
@@ -12,16 +12,12 @@ import {
 import queryString from "query-string";
 import { useHistory, useLocation } from "react-router-dom";
 import { FilterWrapper } from "./SearchResultsAndAllAds.styles";
-import {StyledTextField} from "../../Layouts/AdForm.styles";
 import Location from "../../Layouts/Location";
 
 const MyLocationField = props => {
     const [field, meta, helpers] = useField(props);
-    const errorText = meta.error && meta.touched ? meta.error : "";
     const { setValue } = helpers;
-    return (
-            <Location updateValue={setValue} meta={meta} />
-    );
+    return <Location updateValue={setValue} meta={meta} field={field} />;
 };
 
 const RadioButton = ({ label, ...props }) => {
@@ -40,7 +36,7 @@ const Filter = () => {
     const history = useHistory();
     const { search } = useLocation();
     const spreadValues = {
-        title: "spread",
+        title: "",
         priceLessThan: "",
         priceMoreThan: "",
         location: "",

@@ -9,10 +9,12 @@ import ExpiredAds from "./ExpiredAds";
 import { MyAdsWrapper } from "./UserDashboard.styles";
 import ConfirmDelete from "./ConfirmDelete";
 import { SnackbarContext } from "../../App";
-
+import { CircularProgress } from "@material-ui/core";
+import { LoadingSpinner } from "../../App.styles";
 const UserDashboard = () => {
     const history = useHistory();
     const { path } = useRouteMatch();
+    const [isLoading, setIsLoading] = useState(true);
 
     const [ads, setAds] = useState([]);
 
@@ -112,6 +114,7 @@ const UserDashboard = () => {
     };
     useEffect(() => {
         {
+            setIsLoading(true);
             axios
                 .get("/api/user/products", {
                     headers: {
@@ -122,6 +125,7 @@ const UserDashboard = () => {
                 })
                 .then(response => {
                     setAds(response.data.data);
+                    setIsLoading(false);
                 })
                 .catch(error => {
                     console.log(error);
@@ -132,43 +136,49 @@ const UserDashboard = () => {
     return (
         <>
             <DashboardNav />
-            <MyAdsWrapper>
-                <div className="featured-products">
-                    <Switch>
-                        <Route exact path={path}>
-                            <ActiveAds
-                                ads={ads}
-                                onEditHandler={onEditHandler}
-                                confirmDeleteHandler={confirmDeleteHandler}
-                                markAsSoldHandler={markAsSoldHandler}
-                            />
-                        </Route>
-                        <Route exact path={`${path}/sold-ads`}>
-                            <SoldAds
-                                ads={ads}
-                                unmarkHandler={unmarkHandler}
-                                confirmDeleteHandler={confirmDeleteHandler}
-                            />
-                        </Route>
-                        <Route exact path={`${path}/expired-ads`}>
-                            <ExpiredAds ads={ads} />
-                        </Route>
-                        <Route exact path={`${path}/all-my-ads`}>
-                            <AllMyAds
-                                ads={ads}
-                                onEditHandler={onEditHandler}
-                                confirmDeleteHandler={confirmDeleteHandler}
-                            />
-                        </Route>
-                    </Switch>
-                </div>
-                <ConfirmDelete
-                    open={openConfirm}
-                    handleClose={() => setOpenConfirm(false)}
-                    id={deleteId}
-                    onDeleteHandler={onDeleteHandler}
-                />
-            </MyAdsWrapper>
+            {isLoading ? (
+                <LoadingSpinner loaderHeight="50vh">
+                    <CircularProgress />
+                </LoadingSpinner>
+            ) : (
+                <MyAdsWrapper>
+                    <div className="featured-products">
+                        <Switch>
+                            <Route exact path={path}>
+                                <ActiveAds
+                                    ads={ads}
+                                    onEditHandler={onEditHandler}
+                                    confirmDeleteHandler={confirmDeleteHandler}
+                                    markAsSoldHandler={markAsSoldHandler}
+                                />
+                            </Route>
+                            <Route exact path={`${path}/sold-ads`}>
+                                <SoldAds
+                                    ads={ads}
+                                    unmarkHandler={unmarkHandler}
+                                    confirmDeleteHandler={confirmDeleteHandler}
+                                />
+                            </Route>
+                            <Route exact path={`${path}/expired-ads`}>
+                                <ExpiredAds ads={ads} />
+                            </Route>
+                            <Route exact path={`${path}/all-my-ads`}>
+                                <AllMyAds
+                                    ads={ads}
+                                    onEditHandler={onEditHandler}
+                                    confirmDeleteHandler={confirmDeleteHandler}
+                                />
+                            </Route>
+                        </Switch>
+                    </div>
+                    <ConfirmDelete
+                        open={openConfirm}
+                        handleClose={() => setOpenConfirm(false)}
+                        id={deleteId}
+                        onDeleteHandler={onDeleteHandler}
+                    />
+                </MyAdsWrapper>
+            )}
         </>
     );
 };

@@ -14,3 +14,9 @@ export const AppWrapper = styled.div`
 
     margin: 0 auto;
 `;
+export const LoadingSpinner = styled.div`
+    height: ${props => (props.loaderHeight ? props.loaderHeight : "100%")};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;

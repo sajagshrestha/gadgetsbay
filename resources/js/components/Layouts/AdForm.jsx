@@ -19,7 +19,6 @@ import * as yup from "yup";
 import { AdFormWrapper, StyledTextField } from "./AdForm.styles";
 import { SnackbarContext } from "../App";
 import Location from "./Location";
-import { UserContext } from "../App";
 
 export const RadioButton = ({ label, ...props }) => {
     const [field] = useField(props);
@@ -54,7 +53,6 @@ const MytextField = props => {
 
 const MyLocationField = props => {
     const [field, meta, helpers] = useField(props);
-    const errorText = meta.error && meta.touched ? meta.error : "";
     const { setValue } = helpers;
     return (
         <div>
@@ -80,7 +78,6 @@ const MyLocationField = props => {
     );
 };
 const AdForm = ({ id, editValues, editImages }) => {
-    const { globalToken } = useContext(UserContext);
     const [images, setImages] = useState([]);
     const [imageToBeAdded, setImageToBeAdded] = useState({
         name: "Add new Image",
