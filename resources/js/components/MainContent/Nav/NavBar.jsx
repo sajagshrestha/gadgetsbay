@@ -1,16 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Search from "../SearchBox/Search";
 import { NavLink, withRouter } from "react-router-dom";
 import { UserContext } from "../../App";
 import axios from "axios";
 import LogoImg from "../../SVGassets/Logo.svg";
-import { NavWrapper, Logo, NavLinks, RegisterButton } from "./Nav.styles";
-
+import {
+    NavWrapper,
+    DropDown,
+    LogoutButton,
+    Logo,
+    NavLinks,
+    RegisterButton
+} from "./Nav.styles";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 const MyNavLink = ({ children, ...props }) => {
     return (
         <NavLink
             activeStyle={{
-                borderBottomColor: "#6C63FF"
+                color: "black",
+                fontWeight: "bold"
             }}
             {...props}
         >
@@ -19,9 +27,11 @@ const MyNavLink = ({ children, ...props }) => {
     );
 };
 function NavBar({ history }) {
-    const { user, dispatch, globalToken } = useContext(UserContext);
+    const { user, dispatch } = useContext(UserContext);
+    const [open, setOpen] = useState(false);
 
     const logoutUser = () => {
+        setOpen(false);
         axios
             .get("api/logout", {
                 headers: {
@@ -60,30 +70,19 @@ function NavBar({ history }) {
                                 </MyNavLink>
                             </li>
                             <li>
-                                <div className="dropdown show">
-                                    <button
-                                        className="my-dropdown-button dropdown-toggle"
-                                        role="button"
-                                        id="dropdownMenuLink"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        {user.name}
-                                    </button>
-
-                                    <div
-                                        className="dropdown-menu"
-                                        aria-labelledby="dropdownMenuLink"
-                                    >
-                                        <button
-                                            className="dropdown-item"
-                                            onClick={() => logoutUser()}
-                                        >
-                                            Logout
-                                        </button>
-                                    </div>
-                                </div>
+                                <LogoutButton
+                                    variant="contained"
+                                    color="primary"
+                                    onClick={() => setOpen(!open)}
+                                >
+                                    {user.name}
+                                    <ArrowDropDownIcon />
+                                </LogoutButton>
+                                {open && (
+                                    <DropDown onClick={logoutUser}>
+                                        <div className="logout">Logout</div>
+                                    </DropDown>
+                                )}
                             </li>
                         </React.Fragment>
                     ) : (
@@ -95,6 +94,8 @@ function NavBar({ history }) {
                             </li>
                             <li>
                                 <RegisterButton
+                                    color="primary"
+                                    variant="contained"
                                     onClick={() => history.push("/register")}
                                 >
                                     Register

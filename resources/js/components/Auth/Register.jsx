@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Formik, Form, useField } from "formik";
 import { Button } from "@material-ui/core";
@@ -37,7 +37,7 @@ const Register = ({ history }) => {
             .string()
             .required()
             .min(3)
-            .max(20),
+            .max(10),
         email: yup
             .string()
             .required()
@@ -62,18 +62,19 @@ const Register = ({ history }) => {
             .then(() => {
                 setSubmitting(false);
                 history.push("/login");
-                snackbarDispatch({type:"success",
-                message:"Successfully registered"});
-
+                snackbarDispatch({
+                    type: "success",
+                    message: "Successfully registered"
+                });
             })
             .catch(error => {
                 console.log(error);
                 setSubmitting(false);
                 let e = Array();
-                const errMessage =  Object.values(error.response.data.errors)
-                let i=0;
-                for ( i=0; i < errMessage.length;i++) {
-                     e.push(errMessage[i][0])
+                const errMessage = Object.values(error.response.data.errors);
+
+                for (let i = 0; i < errMessage.length; i++) {
+                    e.push(errMessage[i][0]);
                 }
                 setErrorText(e);
             });
@@ -94,9 +95,11 @@ const Register = ({ history }) => {
                         <div className="form-title">
                             <div className="title-text">Register</div>
                         </div>
-                        <div className="error-text">{errorText.map(err =>
-                            <div>{err}</div>
-                        )}</div>
+                        <div className="error-text">
+                            {errorText.map(err => (
+                                <div>{err}</div>
+                            ))}
+                        </div>
                         <div>
                             <RegisterTextField name="name" label="Username" />
                         </div>

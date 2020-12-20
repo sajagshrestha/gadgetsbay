@@ -5,7 +5,7 @@ export const NavWrapper = styled.div`
     display: grid;
     grid-template-columns: 150px auto;
 
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
 `;
 export const Logo = styled.div`
     display: flex;
@@ -18,7 +18,7 @@ export const Logo = styled.div`
 `;
 export const NavLinks = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
     grid-column-gap: 20px;
     align-items: center;
     justify-items: space-between;
@@ -47,20 +47,35 @@ export const NavLinks = styled.div`
 `;
 export const RegisterButton = styled(Button)`
     && {
-        background-color: #6772e5;
-        color: ${props => props.theme.primaryColor};
-
         padding: 7px 24px;
-        font-size: 1rem;
-        font-weight: bold;
-        &:hover {
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-                0 1px 3px rgba(0, 0, 0, 0.08);
-            background-color: #5469d4;
-        }
+        font-size: 0.9rem;
+
         @media screen and (max-width: 1400px) {
             padding: 5px 20px;
             font-size: 0.9rem;
         }
+    }
+`;
+export const LogoutButton = styled(Button)`
+    && {
+        width: 8.5rem;
+    }
+`;
+export const DropDown = styled.div`
+    position: absolute;
+    top: 4em;
+
+    height: 2.5rem;
+    width: 8.5rem;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+        0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+
+    .logout {
+        margin: auto;
+        cursor: pointer;
+    }
+    :hover {
+        background-color: #f1f1f1;
     }
 `;
