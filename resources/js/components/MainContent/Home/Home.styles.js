@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "@material-ui/core";
 import { RegisterButton } from "../Nav/Nav.styles";
 export const HomeWrapper = styled.div`
     display: grid;
@@ -9,7 +10,7 @@ export const HomeWrapper = styled.div`
 export const HeroSection = styled.div`
     height: 85vh;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 7fr 3fr;
     grid-template-areas:
         "img title"
@@ -52,8 +53,12 @@ export const HeroSection = styled.div`
             }
         }
         .post-add-section {
+            width: 100%;
             align-self: start;
             margin-top: 20px;
+            display: grid;
+
+            justify-items: center;
         }
     }
     .scrolldown-section {
@@ -63,21 +68,29 @@ export const HeroSection = styled.div`
         justify-content: center;
     }
 `;
-export const PostAddButton = styled(RegisterButton)`
-    && {
-        padding: 10px 30px;
-        width: 200px;
+// export const PostAddButton = styled(RegisterButton)`
+//     && {
+//         padding: 10px 30px;
+//         width: 200px;
 
+//         font-size: 1.2rem;
+//         font-weight: bold;
+//         &:hover {
+//             box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+//                 0 1px 3px rgba(0, 0, 0, 0.08);
+//             background-color: #5469d4;
+//         }
+//     }
+// `;
+
+export const PostAdButton = styled(Button)`
+    && {
+        padding: 10px 20px;
+        width: 15rem;
         font-size: 1.2rem;
         font-weight: bold;
-        &:hover {
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-                0 1px 3px rgba(0, 0, 0, 0.08);
-            background-color: #5469d4;
-        }
     }
 `;
-
 export const FeaturedProductSection = styled.div`
     display: grid;
     grid-template-rows: auto auto;

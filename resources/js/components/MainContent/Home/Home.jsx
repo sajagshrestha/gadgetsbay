@@ -4,7 +4,7 @@ import FeaturedProduct from "./FeaturedProduct";
 import {
     HomeWrapper,
     HeroSection,
-    PostAddButton,
+    PostAdButton,
     FeaturedProductSection,
     ScrollDownButton
 } from "./Home.styles";
@@ -25,7 +25,27 @@ const Home = ({ history }) => {
                         A MARKETPLACE FOR BUYING AND SELLING USED GADGETS
                     </div>
                     <div className="post-add-section">
-                        <PostAddButton>Post An Ad</PostAddButton>
+                        <PostAdButton
+                            size="large"
+                            color="primary"
+                            variant="contained"
+                        >
+                            Post an Ad
+                        </PostAdButton>
+                        {/* <PostAdButton
+                            variant="outlined"
+                            color="primary"
+                            size="large"
+                        >
+                            Browse Ads
+                        </PostAdButton> */}
+
+                        {/* <PostAddButton color="primary" variant="outlined">
+                            Post An Ad
+                        </PostAddButton>
+                        <PostAddButton color="primary" variant="outlined">
+                            Post An Ad
+                        </PostAddButton> */}
                     </div>
                 </div>
                 <div className="scrolldown-section">
