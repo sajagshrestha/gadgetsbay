@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
-import { RegisterButton } from "../Nav/Nav.styles";
+
 export const HomeWrapper = styled.div`
     display: grid;
     grid-template-rows: auto auto;
@@ -131,8 +131,8 @@ export const ScrollDownButton = styled.a`
         }
     }
     .arrow span {
-        width: 1rem;
-        height: 1rem;
+        width: 1.1rem;
+        height: 1.1rem;
         display: block;
         border: 2px solid transparent;
         border-right-color: ${props => props.theme.textPrimary};

@@ -73,10 +73,10 @@ function NavBar({ history }) {
                                 <LogoutButton
                                     variant="contained"
                                     color="primary"
-                                    endIcon={<ArrowDropDownIcon />}
                                     onClick={() => setOpen(!open)}
                                 >
                                     {user.name}
+                                    <ArrowDropDownIcon />
                                 </LogoutButton>
                                 {open && (
                                     <DropDown onClick={logoutUser}>

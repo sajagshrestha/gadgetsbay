@@ -58,7 +58,7 @@ export const RegisterButton = styled(Button)`
 `;
 export const LogoutButton = styled(Button)`
     && {
-        width: 8rem;
+        width: 8.5rem;
     }
 `;
 export const DropDown = styled.div`
@@ -66,7 +66,7 @@ export const DropDown = styled.div`
     top: 4em;
 
     height: 2.5rem;
-    width: 8rem;
+    width: 8.5rem;
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
         0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
     display: flex;
