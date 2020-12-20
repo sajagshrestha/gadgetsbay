@@ -5,7 +5,8 @@ import {
     HomeWrapper,
     HeroSection,
     PostAddButton,
-    FeaturedProductSection
+    FeaturedProductSection,
+    ScrollDownButton
 } from "./Home.styles";
 import Illustration from "../../SVGassets/illustration.svg";
 import Logo from "../../SVGassets/Logo.svg";
@@ -28,7 +29,14 @@ const Home = ({ history }) => {
                     </div>
                 </div>
                 <div className="scrolldown-section">
-                    <a href="#featured-section">Scroll Down</a>
+                    <ScrollDownButton href="#featured-section">
+                        <div className="mouse">
+                            <span></span>
+                        </div>
+                        <div className="arrow">
+                            <span></span>
+                        </div>
+                    </ScrollDownButton>
                 </div>
             </HeroSection>
             <FeaturedProductSection id="featured-section">

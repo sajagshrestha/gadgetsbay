@@ -7,7 +7,7 @@ export const HomeWrapper = styled.div`
 `;
 
 export const HeroSection = styled.div`
-    height: 89.5vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 7fr 3fr;
@@ -46,9 +46,7 @@ export const HeroSection = styled.div`
             font-size: 1.3rem;
             font-weight: bold;
             margin-top: 5px;
-            color: ${props => {
-                props.theme.textPrimary;
-            }};
+            color: ${props => props.theme.textPrimary};
             @media only screen and (min-width: 1650px) {
                 width: 500px;
             }
@@ -95,5 +93,65 @@ export const FeaturedProductSection = styled.div`
         grid-template-columns: repeat(4, 220px);
         grid-row-gap: 50px;
         justify-content: space-between;
+    }
+`;
+
+export const ScrollDownButton = styled.a`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mouse {
+        width: 2rem;
+        height: 4rem;
+        border: 2px solid;
+        border-color: ${props => props.theme.textPrimary};
+        border-radius: 1rem;
+        display: flex;
+        span {
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            background-color: ${props => props.theme.textPrimary};
+            border-radius: 50%;
+            margin: auto;
+            animation: move-wheel 1s linear infinite;
+        }
+    }
+    .arrow span {
+        width: 1rem;
+        height: 1rem;
+        display: block;
+        border: 2px solid transparent;
+        border-right-color: ${props => props.theme.textPrimary};
+        border-bottom-color: ${props => props.theme.textPrimary};
+        transform: rotate(45deg);
+        animation: arrow-down 0.5s alternate infinite;
+    }
+    @keyframes move-wheel {
+        0% {
+            opacity: 0;
+            transform: translateY(-1rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(1rem);
+        }
+    }
+    @keyframes arrow-down {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 `;
