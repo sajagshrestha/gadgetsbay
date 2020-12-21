@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation, Redirect } from "react-router-dom";
 import { UserContext } from "../App";
 import { Formik, Form, useField } from "formik";
 import * as yup from "yup";
@@ -23,8 +23,7 @@ const LoginTextField = props => {
 };
 
 const Login = () => {
-    const history = useHistory();
-    const { dispatch } = useContext(UserContext);
+    const { user, dispatch } = useContext(UserContext);
     const { state } = useLocation();
     const initialValues = {
         email: "",
@@ -46,18 +45,17 @@ const Login = () => {
         axios
             .post("/api/login", data)
             .then(res => {
-                dispatch({
-                    type: "login",
-                    name: res.data.user.name,
-                    token: res.data.access_token
-                });
                 const localUser = {
                     isLoggedIn: true,
                     name: res.data.user.name,
                     token: res.data.access_token
                 };
                 localStorage.setItem("user", JSON.stringify(localUser));
-                history.push(state?.from || "/");
+                dispatch({
+                    type: "login",
+                    name: res.data.user.name,
+                    token: res.data.access_token
+                });
             })
             .catch(error => {
                 console.log(error);
@@ -66,9 +64,9 @@ const Login = () => {
             });
     };
 
-    // if (user.isLoggedIn) {
-    //     return <Redirect to={state?.from || "/"} />;
-    // }
+    if (user.isLoggedIn) {
+        return <Redirect to={state?.from || "/"} />;
+    }
     return (
         <LoginWrapper>
             <div className="svg">
