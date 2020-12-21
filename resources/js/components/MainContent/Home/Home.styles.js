@@ -114,6 +114,7 @@ export const FeaturedProductSection = styled.div`
         display: grid;
         grid-template-columns: repeat(4, 15rem);
         justify-content: space-between;
+        grid-row-gap: 2rem;
     }
 `;
 
