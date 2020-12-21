@@ -160,7 +160,10 @@ const UserDashboard = () => {
                                 />
                             </Route>
                             <Route exact path={`${path}/expired-ads`}>
-                                <ExpiredAds ads={ads} />
+                                <ExpiredAds
+                                    ads={ads}
+                                    confirmDeleteHandler={confirmDeleteHandler}
+                                />
                             </Route>
                             <Route exact path={`${path}/all-my-ads`}>
                                 <AllMyAds

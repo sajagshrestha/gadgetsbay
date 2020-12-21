@@ -14,8 +14,9 @@ const SoldAds = ({ ads, unmarkHandler, confirmDeleteHandler }) => {
     };
 
     useEffect(() => {
-        let filteredAds = ads.filter(ad => ad.status === 2);
-
+        let filteredAds = ads.filter(
+            ad => ad.status === 2 && ad.expired === false
+        );
         setSoldAds(filteredAds);
     }, [ads]);
     return (

@@ -20,7 +20,9 @@ const ActiveAds = ({
     };
 
     useEffect(() => {
-        let filteredAds = ads.filter(ad => ad.status === 1);
+        let filteredAds = ads.filter(
+            ad => ad.status === 1 && ad.expired === false
+        );
         setActiveAds(filteredAds);
     }, [ads]);
 
