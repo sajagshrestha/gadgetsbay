@@ -214,3 +214,12 @@ export const MainAdCardWrapper = styled.div`
         grid-template-columns: 2fr 3fr 1fr;
     }
 `;
+
+export const CommentSection = styled.div`
+    margin-top: 3rem;
+    .comment-title {
+        font-family: ${props => props.theme.titleFont};
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+`;

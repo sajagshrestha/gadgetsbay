@@ -1,11 +1,12 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Button, TextField } from "@material-ui/core";
 import SingleComment from "./SingleComment";
 import ReplyBox from "./ReplyBox";
-import { SnackbarContext } from "../App";
+import { SnackbarContext, UserContext } from "../App";
 import Replies from "./Replies";
 import "./Comment.css";
+import { Link } from "react-router-dom";
 
 const Comment = ({ ad_id }) => {
     const [comment, setComment] = useState({
@@ -17,6 +18,7 @@ const Comment = ({ ad_id }) => {
     const [reply, setReply] = useState();
     const [disablePost, setDisablePost] = useState(false);
     const { snackbarDispatch } = useContext(SnackbarContext);
+    const { user } = useContext(UserContext);
 
     useEffect(() => {
         axios
@@ -26,7 +28,7 @@ const Comment = ({ ad_id }) => {
             })
             .catch(error => {
                 console.log(error);
-                snackbarDispatch({type:"error"});
+                snackbarDispatch({ type: "error" });
             });
     }, []);
 
@@ -54,7 +56,7 @@ const Comment = ({ ad_id }) => {
             })
             .catch(err => {
                 console.log(err);
-                snackbarDispatch({type:"error"});
+                snackbarDispatch({ type: "error" });
             });
         setComment({
             ...comment,
@@ -65,50 +67,63 @@ const Comment = ({ ad_id }) => {
         setReply(r);
     };
     return (
-        <div className="comment-container" >
-            <form onSubmit={onSubmitHandler} className="comment-form">
-                <div className="comment-field">
-                    <div className="profile-avatar-wrapper-comment">
-                        <img src="/images/ava.png" />
+        <div className="comment-container">
+            {user.isLoggedIn ? (
+                <form onSubmit={onSubmitHandler} className="comment-form">
+                    <div className="comment-field">
+                        <div className="profile-avatar-wrapper-comment">
+                            <img src="/images/ava.png" />
+                        </div>
+                        <TextField
+                            placeholder="write a comment"
+                            multiline
+                            fullWidth
+                            name="comment"
+                            value={comment.comment}
+                            onChange={onChangeHandler}
+                            className="comment-text-field"
+                        />
                     </div>
-                    <TextField
-                    placeholder="write a comment"
-                    multiline
-                    fullWidth
-                    name="comment"
-                    value={comment.comment}
-                    onChange={onChangeHandler}
-                    className="comment-text-field"
-                />
+                    <div className="comment-btn">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            type="submit"
+                            disabled={disablePost}
+                            size="small"
+                        >
+                            Post
+                        </Button>
+                    </div>
+                </form>
+            ) : (
+                <div className="login-suggestion">
+                    <span>
+                        <Link to="/login">Login</Link> to post a comment
+                    </span>
                 </div>
-               <div className="comment-btn">
+            )}
 
-                <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    disabled={disablePost}
-                    size="small"
-                >
-                    Post
-                </Button>
-               </div>
-            </form>
-            {comments.map(c => (
-                <div key={c.id} className="single-comment-wrap">
-                    <SingleComment comment={c} />
-                    <ReplyBox
-                        ad_id={ad_id}
-                        reply_id={c.id}
-                        updateReplies={addReply}
-                    />
-                    {reply && reply.reply_id === c.id ? (
-                        <Replies comment={c} reply={reply} />
-                    ) : (
-                        <Replies comment={c} />
-                    )}
-                </div>
-            ))}
+            {comments.length === 0
+                ? "Be the first to comment in this post"
+                : comments.map(c => (
+                      <div key={c.id} className="single-comment-wrap">
+                          <SingleComment comment={c} />
+                          {user.isLoggedIn && (
+                              <ReplyBox
+                                  ad_id={ad_id}
+                                  reply_id={c.id}
+                                  updateReplies={addReply}
+                              />
+                          )}
+
+                          {reply && reply.reply_id === c.id ? (
+                              <Replies comment={c} reply={reply} />
+                          ) : (
+                              <Replies comment={c} />
+                          )}
+                      </div>
+                  ))}
         </div>
     );
 };

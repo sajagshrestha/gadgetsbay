@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductImageGallery from "./ProductImageGallery";
-import { DetailedAdViewWrapper, DetailsGrid } from "./Ads.styles";
+import {
+    DetailedAdViewWrapper,
+    DetailsGrid,
+    CommentSection
+} from "./Ads.styles";
 import Comment from "../../comment/Comment";
 import { LoadingSpinner } from "../../App.styles";
 import { CircularProgress } from "@material-ui/core";
@@ -111,7 +115,10 @@ const DeatiledAdView = () => {
                     <div className="grid-items">{ad.description}</div>
                 </DetailsGrid>
             </div>
-            {ad.id ? <Comment ad_id={ad.id} /> : ""}
+            <CommentSection>
+                <div className="comment-title">Comments</div>
+                {ad.id ? <Comment ad_id={ad.id} /> : ""}
+            </CommentSection>
         </div>
     );
 };

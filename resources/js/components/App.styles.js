@@ -11,7 +11,7 @@ export const Theme = {
 
 export const AppWrapper = styled.div`
     width: 80%;
-
+    max-width: 1920px;
     margin: 0 auto;
 `;
 export const LoadingSpinner = styled.div`
