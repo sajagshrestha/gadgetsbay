@@ -55,8 +55,10 @@ const DeatiledAdView = () => {
                             </span>
                         </div>
                         <div className="grid-items">
-                            Condition: {ad.condition} (Used for {ad.usedFor}{" "}
-                            months)
+                            Condition: {ad.condition}{" "}
+                            {ad.usedFor &&
+                                `(Used for ${ad.usedFor}
+                            months)`}
                         </div>
                         <div className="grid-items">
                             Negotiable: {ad.negotiable}
