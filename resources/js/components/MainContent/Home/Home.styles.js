@@ -94,12 +94,21 @@ export const PostAdButton = styled(Button)`
 export const FeaturedProductSection = styled.div`
     display: grid;
     grid-template-rows: auto auto;
-    grid-row-gap: 20px;
+    grid-row-gap: 2rem;
+    margin-bottom: 2rem;
+    .title-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            font-family: ${props => props.theme.titleFont};
 
-    .title {
-        font-family: ${props => props.theme.titleFont};
-
-        font-size: 1.5rem;
+            font-size: 1.5rem;
+        }
+        a {
+            color: #3f51b5;
+            font-size: 1.1rem;
+        }
     }
     .featured-products {
         display: grid;

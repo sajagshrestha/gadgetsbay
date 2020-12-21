@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import FeaturedProduct from "./FeaturedProduct";
 import {
     HomeWrapper,
@@ -60,14 +60,20 @@ const Home = ({ history }) => {
                 </div>
             </HeroSection>
             <FeaturedProductSection id="featured-section">
-                <div className="title">Featured Products</div>
+                <div className="title-section">
+                    <div className="title">Featured Products</div>
+                    <Link to="/searchResults?title=">SEE ALL</Link>
+                </div>
                 <div className="featured-products">
                     <FeaturedProduct url="mostviewed" />
                 </div>
             </FeaturedProductSection>
 
             <FeaturedProductSection>
-                <div className="title">Most Recent</div>
+                <div className="title-section">
+                    <div className="title">Most Recent</div>
+                    <Link to="/searchResults?title=">SEE ALL</Link>
+                </div>
                 <div className="featured-products">
                     <FeaturedProduct url="latest" />{" "}
                 </div>
