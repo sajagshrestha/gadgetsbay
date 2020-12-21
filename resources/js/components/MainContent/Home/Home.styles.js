@@ -112,8 +112,7 @@ export const FeaturedProductSection = styled.div`
     }
     .featured-products {
         display: grid;
-        grid-template-columns: repeat(4, 220px);
-        grid-row-gap: 50px;
+        grid-template-columns: repeat(4, 15rem);
         justify-content: space-between;
     }
 `;

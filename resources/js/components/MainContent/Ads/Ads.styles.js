@@ -73,12 +73,13 @@ export const DetailsGrid = styled.div`
 `;
 
 export const MiniAdCardWrapper = styled.div`
-
-    height: 320px;
-    width: 220px;
+    cursor: pointer;
+    height: 21rem;
+    width: 15rem;
     display: grid;
-    grid-template-rows: 200px 100px;
-    grid-row-gap: 10px;
+    grid-template-rows: 13rem 9rem;
+    grid-template-columns: 15rem;
+   
     transition: all 0.2s ease-out;
     color: #0c0c0c;
     box-shadow: ${props =>
@@ -100,10 +101,11 @@ export const MiniAdCardWrapper = styled.div`
         width: 100%;
     }
     .home-title-info {
+        
         display: grid;
         align-self: center;
-        grid-template-columns: 200px;
-        grid-template-rows: 25px 30px 30px;
+        grid-template-columns: 13rem;
+        grid-template-rows: 1.6rem 2rem 2rem;
         justify-content: center;
         min-width: 0;
         min-height: 0;
@@ -212,4 +214,3 @@ export const MainAdCardWrapper = styled.div`
         grid-template-columns: 2fr 3fr 1fr;
     }
 `;
-
