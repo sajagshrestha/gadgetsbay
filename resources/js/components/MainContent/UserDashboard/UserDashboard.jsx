@@ -134,7 +134,7 @@ const UserDashboard = () => {
         }
     }, []);
     return (
-        <>
+        <div style={{ minHeight: "80vh" }}>
             <DashboardNav />
             {isLoading ? (
                 <LoadingSpinner loaderHeight="50vh">
@@ -182,7 +182,7 @@ const UserDashboard = () => {
                     />
                 </MyAdsWrapper>
             )}
-        </>
+        </div>
     );
 };
 

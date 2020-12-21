@@ -12,6 +12,7 @@ import DetailedAdView from "./MainContent/Ads/DetailedAdView";
 import UserDashboard from "./MainContent/UserDashboard/UserDashboard";
 import EditAd from "./MainContent/EditAd";
 import NotificationSnackbar from "./NotificationSnackbar";
+import Footer from "./MainContent/Footer/Footer";
 //protected Routes
 import ProtectedRoute from "./ProtectedRoute";
 //Import styles
@@ -52,15 +53,13 @@ const snackbarInitialState = {
 const snackbarReducer = (state, action) => {
     switch (action.type) {
         case "error":
-            if(action.message)
-            {
+            if (action.message) {
                 return {
                     isOpen: true,
                     message: action.message,
                     severity: "error"
                 };
-            }
-            else{
+            } else {
                 return {
                     isOpen: true,
                     message: "Something went wrong",
@@ -174,6 +173,7 @@ function App() {
                                     message={snackbar.message}
                                     severity={snackbar.severity}
                                 />
+                                <Footer />
                             </BrowserRouter>
                         </SearchContext.Provider>
                     </AppWrapper>

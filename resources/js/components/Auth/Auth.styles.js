@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { TextField, Button } from "@material-ui/core";
 export const LoginWrapper = styled.div`
     display: grid;
-    height: 70vh;
+
+    min-height: 75vh;
     grid-template-columns: 1.5fr 1fr;
     margin-top: -30px;
     align-items: center;
