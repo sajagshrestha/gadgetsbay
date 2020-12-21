@@ -29,6 +29,7 @@ const Home = ({ history }) => {
                             size="large"
                             color="primary"
                             variant="contained"
+                            onClick={() => history.push("/post")}
                         >
                             Post an Ad
                         </PostAdButton>
