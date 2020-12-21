@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const AdsAndFilterWrapper = styled.div`
     display: grid;
     grid-template-columns: 300px auto;
+    min-height: 71vh;
 `;
 
 export const AdsWrapper = styled.div`
